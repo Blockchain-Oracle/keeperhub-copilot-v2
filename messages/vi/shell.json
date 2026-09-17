@@ -1,0 +1,267 @@
+{
+  "nav": {
+    "primary": "Điều hướng chính",
+    "beta": "beta",
+    "items": {
+      "chat": {
+        "name": "Trò chuyện",
+        "description": "Hỏi bất cứ điều gì on-chain."
+      },
+      "history": {
+        "name": "Lịch sử",
+        "description": "Xem lại các cuộc trò chuyện trước, kèm cả biên nhận."
+      },
+      "activity": {
+        "name": "Hoạt động",
+        "description": "Mọi thứ ví tổ chức đã chạy."
+      },
+      "automations": {
+        "name": "Tự động hóa",
+        "description": "Các quy trình KeeperHub chạy cho bạn."
+      },
+      "actions": {
+        "name": "Thao tác",
+        "description": "Mọi thao tác KeeperHub có thể chạy, đọc hoặc ghi."
+      },
+      "gettingStarted": {
+        "name": "Bắt đầu",
+        "description": "Kết nối KeeperHub và đặt câu hỏi đầu tiên."
+      },
+      "mcp": {
+        "name": "Thiết lập MCP",
+        "description": "Dùng KeeperHub từ Claude, Cursor hoặc bất kỳ MCP client nào."
+      },
+      "howItWorks": {
+        "name": "Cách hoạt động",
+        "description": "Điều gì chạy tự do và điều gì chờ bạn bấm."
+      }
+    },
+    "groups": {
+      "build": {
+        "name": "Xây dựng",
+        "description": "Tự động hóa những gì KeeperHub chạy."
+      },
+      "learn": {
+        "name": "Tìm hiểu",
+        "description": "Hướng dẫn về copilot và KeeperHub."
+      }
+    },
+    "sections": {
+      "automate": {
+        "name": "Tự động hóa",
+        "description": "Quy trình và thao tác"
+      },
+      "guides": {
+        "name": "Hướng dẫn",
+        "description": "Bắt đầu tại đây"
+      }
+    }
+  },
+  "mobileNav": {
+    "label": "Điều hướng chính trên di động",
+    "openAll": "Mở toàn bộ điều hướng",
+    "more": "Thêm",
+    "eyebrow": "Điều hướng",
+    "title": "Mọi thứ trong KeeperHub Copilot",
+    "description": "Tự động hóa, duyệt xem hoặc tìm hiểu. Mỗi mục có một nơi riêng.",
+    "allDestinations": "Tất cả mục của KeeperHub Copilot"
+  },
+  "connect": {
+    "connect": "Kết nối KeeperHub",
+    "connecting": "Đang kết nối…",
+    "unreachable": "Không kết nối được KeeperHub",
+    "noOrgWallet": "Chưa có ví tổ chức"
+  },
+  "accountMenu": {
+    "open": "Mở menu tài khoản",
+    "noWalletTitle": "Tổ chức này chưa có ví",
+    "walletLabel": "Ví tổ chức {address}",
+    "noWalletLabel": "Chưa có ví tổ chức",
+    "noWallet": "Chưa có ví",
+    "menu": "Tài khoản",
+    "orgWallet": "Ví tổ chức",
+    "spentToday": "Đã chi hôm nay",
+    "spentTitle": "Giá trị đã chuyển hôm nay trên các mạng EVM, so với hạn mức hằng ngày KeeperHub áp dụng.",
+    "spentTitleDefault": "Giá trị đã chuyển hôm nay trên các mạng EVM, so với hạn mức hằng ngày KeeperHub áp dụng (mặc định của KeeperHub).",
+    "limitUnavailable": "KeeperHub hiện chưa báo được hạn mức hằng ngày.",
+    "copyAddress": "Sao chép địa chỉ",
+    "viewOnExplorer": "Xem trên explorer",
+    "disconnect": "Ngắt kết nối"
+  },
+  "moneyPill": {
+    "unavailable": "Số dư trên mạng này hiện không khả dụng",
+    "noWallet": "Tổ chức này chưa có ví",
+    "addFunds": "Nạp tiền",
+    "balance": "Số dư ví tổ chức {amount} {symbol}. Nạp tiền",
+    "balanceUnavailable": "Chưa lấy được số dư ví tổ chức. Nạp tiền"
+  },
+  "networkPill": {
+    "label": "Mạng: {name}",
+    "mainnets": "Mainnet",
+    "testnets": "Testnet",
+    "loading": "Đang tải danh sách mạng…",
+    "unavailable": "Danh sách mạng của KeeperHub hiện không khả dụng."
+  },
+  "language": {
+    "title": "Chọn ngôn ngữ",
+    "description": "Ứng dụng, trò chuyện và giọng nói sẽ dùng ngôn ngữ này.",
+    "switched": "Giờ sẽ trả lời bằng {language}",
+    "switchedDescription": "Trò chuyện trả lời bằng ngôn ngữ này từ tin nhắn tiếp theo của bạn, còn giọng nói từ phiên tiếp theo."
+  },
+  "appStrip": {
+    "label": "Giới thiệu KeeperHub Copilot",
+    "lines": {
+      "readsRun": "Thao tác đọc chạy tự do. Mọi thao tác ghi đều chờ bạn bấm",
+      "orgWalletSigns": "Ví tổ chức KeeperHub của bạn ký. Không cần ví trình duyệt"
+    },
+    "howItWorks": "Cách hoạt động",
+    "dismiss": "Ẩn"
+  },
+  "marquee": {
+    "networks": "MẠNG",
+    "unavailable": "KHÔNG KHẢ DỤNG",
+    "loading": "ĐANG TẢI"
+  },
+  "capabilityPending": {
+    "waiting": "Chưa kết nối · đang chờ {dependency}"
+  },
+  "writeRecovery": {
+    "landed": "Một thao tác trước đó đã hoàn tất",
+    "landedReceipt": "{name}. Biên nhận nằm trong Hoạt động.",
+    "landedRecorded": "{name}. Đã được ghi lại trong Hoạt động.",
+    "failed": "Một thao tác trước đó không thành công",
+    "failedDescription": "{name}. KeeperHub ghi nhận là thất bại. Không có gì được thử lại.",
+    "expired": "Không thể xác minh một thao tác trước đó",
+    "expiredDescription": "{name} đã bắt đầu từ hơn một ngày trước và chưa bao giờ được xác nhận. Hãy kiểm tra Hoạt động trước khi thử lại.",
+    "pending": "{count, plural, other {# thao tác trước đó vẫn đang được kiểm tra}}",
+    "pendingDescription": "KeeperHub chưa xác nhận. Không có gì tự động được thử lại."
+  },
+  "signIn": {
+    "eyebrow": "KeeperHub · Kết nối",
+    "description": "Copilot đăng nhập qua tài khoản KeeperHub của bạn. Ví của tổ chức bạn sẽ ký, và chỉ ký những gì bạn phê duyệt.",
+    "continueWithKeeperHub": "Tiếp tục với KeeperHub",
+    "continueHint": "tiếp tục",
+    "footer": "Ví tổ chức ký · không cần ví trình duyệt",
+    "errors": {
+      "denied": "Bạn đã hủy trên KeeperHub, nên chưa có gì được kết nối.",
+      "failed": "KeeperHub chưa hoàn tất việc đăng nhập cho bạn. Hãy thử lại."
+    },
+    "status": {
+      "online": "KeeperHub trực tuyến",
+      "unreachable": "Không kết nối được KeeperHub",
+      "checking": "đang kiểm tra KeeperHub"
+    }
+  },
+  "signInGate": {
+    "eyebrow": "KeeperHub · Thẻ định danh",
+    "title": "Nhập <em>thông tin đăng nhập</em>.",
+    "body": "Copilot đọc trạng thái chuỗi và hành động thông qua tài khoản KeeperHub <highlight>của bạn</highlight>. Đăng nhập một lần; ví của tổ chức bạn ký những gì bạn phê duyệt.",
+    "retry": "Không kết nối được KeeperHub · thử lại",
+    "writesWait": "Mọi thao tác ghi vẫn chờ bạn bấm.",
+    "counts": "{actions, plural, other {# thao tác}} · {integrations, plural, other {# tích hợp}}",
+    "networks": "{count, plural, other {# mạng}}",
+    "networksUnknown": "— mạng"
+  },
+  "tutorial": {
+    "steps": {
+      "welcome": {
+        "title": "Chào mừng đến với KeeperHub Copilot",
+        "description": "Khung trò chuyện dành cho KeeperHub. Hỏi bằng lời thường về giá, số dư, chuyển tiền hoặc tự động hóa. Copilot chọn thao tác KeeperHub phù hợp và hiển thị kết quả dưới dạng thẻ."
+      },
+      "readsRun": {
+        "title": "Đọc thì chạy, ghi thì chờ",
+        "description": "Mọi thứ chỉ để xem, như giá hay số dư, chạy ngay lập tức. Mọi thứ chuyển giá trị sẽ dừng lại thành một thẻ với mọi trường đã điền sẵn. Hãy sửa, chạy thử, rồi phê duyệt hoặc từ chối. Không có gì được chuyển cho đến khi bạn bấm."
+      },
+      "orgWallet": {
+        "title": "Ví tổ chức của bạn ký",
+        "description": "Bạn đăng nhập bằng tài khoản KeeperHub, không phải ví trình duyệt. Ví mà KeeperHub giữ cho tổ chức của bạn sẽ ký những gì bạn phê duyệt, trong hạn mức hằng ngày KeeperHub áp dụng."
+      },
+      "money": {
+        "title": "Tiền của bạn nằm ở đâu",
+        "description": "Ô số dư trên thanh tiêu đề là ví tổ chức của bạn trên mạng bạn đã chọn. Chạm + để xem địa chỉ và mã QR để nạp tiền. Số dư của mỗi mạng là riêng biệt và không bao giờ cộng dồn với mạng khác."
+      },
+      "connect": {
+        "title": "Kết nối để bắt đầu",
+        "description": "Đăng nhập sẽ mở KeeperHub, rồi đưa bạn quay lại ngay đây."
+      }
+    },
+    "skip": "Bỏ qua",
+    "next": "Tiếp",
+    "done": "Bắt đầu",
+    "lastStep": "Bước cuối",
+    "connectTitle": "Kết nối KeeperHub để bắt đầu",
+    "connectNote": "Đăng nhập một lần. Mọi thao tác đọc và mọi thao tác ghi đã phê duyệt đều chạy qua tổ chức KeeperHub của bạn.",
+    "progress": "Bước {step} trên {total}"
+  },
+  "addFunds": {
+    "eyebrow": "Nạp tiền · {network, select, testnet {testnet} other {mainnet}}",
+    "title": "Nạp tiền vào ví tổ chức",
+    "description": "Gửi {symbol} trên {network} vào ví tổ chức KeeperHub của bạn. Ví này trả phí gas cho những gì bạn phê duyệt. Chỉ gửi trên mạng này.",
+    "connectFirst": "Hãy kết nối KeeperHub trước.",
+    "noWallet": "Tổ chức này chưa có ví. KeeperHub tạo một ví cho mỗi tổ chức; hãy kiểm tra phần cài đặt KeeperHub của bạn.",
+    "orgWallet": "Ví tổ chức",
+    "copyAddress": "Sao chép địa chỉ ví tổ chức",
+    "copied": "đã sao chép ✓",
+    "scanToSend": "quét để gửi",
+    "nativeOn": "{symbol} trên {network}",
+    "checking": "Đang kiểm tra số dư…",
+    "unavailable": "Số dư không khả dụng",
+    "startInChat": "Bắt đầu trong trò chuyện",
+    "checkAgain": "Kiểm tra lại số dư",
+    "rereads": "Số dư được đọc lại khi bạn quay lại tab này.",
+    "viewOnExplorer": "Xem trên explorer"
+  },
+  "receiptWelcome": {
+    "eyebrow": "Biên nhận đầu tiên",
+    "title": "Thao tác đầu tiên của bạn đã hoàn tất",
+    "body": "KeeperHub đã chạy và chuỗi đã xác nhận. Biên nhận nằm trong Hoạt động, và mọi biên nhận sau đó cũng sẽ nằm ở đó.",
+    "keepGoing": "Tiếp tục"
+  },
+  "palette": {
+    "trigger": "Tìm kiếm",
+    "title": "Tìm trong KeeperHub Copilot",
+    "search": "Tìm trang, mạng và thao tác",
+    "placeholder": "Tìm trang, mạng và thao tác…",
+    "results": "Kết quả",
+    "moreActions": "Thêm {count} · xem mọi thao tác",
+    "moreNetworks": "Thêm {count} · gõ tiếp để thu hẹp",
+    "loadingActions": "Đang tải thao tác…",
+    "actionsFailed": "Không tải được thao tác. Hãy đóng và mở lại.",
+    "noResults": "Không có kết quả cho “{query}”",
+    "noResultsHint": "Thử “aave”, “sepolia” hoặc “hoạt động”.",
+    "move": "di chuyển",
+    "open": "mở",
+    "close": "đóng",
+    "resultCount": "{count, plural, other {# kết quả}}",
+    "signs": "cần ký",
+    "selected": "Đã chọn",
+    "here": "đang ở đây",
+    "switched": "Đã chuyển sang {network}",
+    "switchedDescription": "Câu hỏi và thẻ mới sẽ dùng mạng này.",
+    "sections": {
+      "page": "Trang",
+      "network": "Mạng",
+      "language": "Ngôn ngữ",
+      "action": "Thao tác"
+    },
+    "testnet": "Testnet",
+    "mainnet": "Mainnet",
+    "chain": "chuỗi {id}",
+    "languageSubtitle": "Ngôn ngữ · {code}",
+    "languageKeywords": "ngôn ngữ language languages"
+  },
+  "toast": {
+    "close": "Đóng thông báo"
+  },
+  "identicon": {
+    "label": "identicon của {address}",
+    "noAccount": "identicon khi chưa có tài khoản"
+  },
+  "integrationMark": {
+    "form": "Thông tin của bạn",
+    "search": "Danh mục thao tác"
+  },
+  "chainMark": {
+    "fallback": "Chuỗi {id}"
+  }
+}

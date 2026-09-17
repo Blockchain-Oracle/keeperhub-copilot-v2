@@ -1,0 +1,12 @@
+{
+  "title": "KeeperHub Copilot",
+  "titleTemplate": "%s · KeeperHub Copilot",
+  "description": "オンチェーンの操作を、ふだんの言葉で依頼できます。あらゆる情報を読み取り、価値を動かす操作はすべて自分で承認し、一文を常設の KeeperHub オートメーションに変えられます。",
+  "chat": "チャット",
+  "history": "履歴",
+  "activity": "アクティビティ",
+  "automations": "オートメーション",
+  "automation": "オートメーション",
+  "receiptNotShared": "受領書は共有されていません",
+  "receiptDescription": "KeeperHub がオンチェーンで実行したアクションです。KeeperHub Copilot から共有されました。"
+}

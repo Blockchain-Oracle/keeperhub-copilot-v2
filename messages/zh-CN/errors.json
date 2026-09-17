@@ -1,0 +1,22 @@
+{
+  "unauthorized": "连接 KeeperHub 以继续。",
+  "session": "你的 KeeperHub 会话已结束。连接 KeeperHub 以继续。",
+  "server_error": "我们这边出了点问题。请稍后重试。",
+  "not_found": "此内容已不可用。",
+  "bad_request": "无法读取该请求。",
+  "upstream_error": "KeeperHub 未按预期响应。请稍后重试。",
+  "transport": "无法连接到 KeeperHub。请检查网络连接后重试。",
+  "rate_limited": "KeeperHub 繁忙。请稍后重试。",
+  "insufficient_scope": "此操作需要更多 KeeperHub 访问权限。请重新连接并允许授权。",
+  "archived": "此对话已归档。请开始新的聊天。",
+  "waiting": "请先处理上方的卡片或表单。",
+  "not_shareable": "只有通过交易执行的操作才能分享。",
+  "validation_failed": "部分信息不符合要求。请检查后重试。",
+  "write_not_available": "暂时无法从这里发送此操作。",
+  "quarantined": "无法运行此操作：Copilot 无法确定它会做什么。",
+  "automation_only": "KeeperHub 只会将其作为自动化中的一个步骤来运行。",
+  "tool_error": "无法完成此操作。",
+  "deactivated": "此自动化已在 KeeperHub 中关闭。",
+  "on_demand": "此自动化仅在手动启动时运行。",
+  "invalid_chain": "不支持该网络。"
+}

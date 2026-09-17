@@ -1,0 +1,267 @@
+{
+  "nav": {
+    "primary": "Primary navigation",
+    "beta": "beta",
+    "items": {
+      "chat": {
+        "name": "Chat",
+        "description": "Ask for anything on-chain."
+      },
+      "history": {
+        "name": "History",
+        "description": "Replay past conversations, receipts and all."
+      },
+      "activity": {
+        "name": "Activity",
+        "description": "Everything the org wallet has run."
+      },
+      "automations": {
+        "name": "Automations",
+        "description": "Workflows KeeperHub runs for you."
+      },
+      "actions": {
+        "name": "Actions",
+        "description": "Every action KeeperHub can run, read or write."
+      },
+      "gettingStarted": {
+        "name": "Getting started",
+        "description": "Connect KeeperHub and ask your first question."
+      },
+      "mcp": {
+        "name": "MCP setup",
+        "description": "Use KeeperHub from Claude, Cursor or any MCP client."
+      },
+      "howItWorks": {
+        "name": "How it works",
+        "description": "What runs freely and what waits for your click."
+      }
+    },
+    "groups": {
+      "build": {
+        "name": "Build",
+        "description": "Automate what KeeperHub runs."
+      },
+      "learn": {
+        "name": "Learn",
+        "description": "Guides for the copilot and KeeperHub."
+      }
+    },
+    "sections": {
+      "automate": {
+        "name": "Automate",
+        "description": "Workflows and actions"
+      },
+      "guides": {
+        "name": "Guides",
+        "description": "Start here"
+      }
+    }
+  },
+  "mobileNav": {
+    "label": "Mobile primary navigation",
+    "openAll": "Open all navigation",
+    "more": "More",
+    "eyebrow": "Navigate",
+    "title": "Everything in KeeperHub Copilot",
+    "description": "Automate, browse, or learn. Every destination has one home.",
+    "allDestinations": "All KeeperHub Copilot destinations"
+  },
+  "connect": {
+    "connect": "Connect KeeperHub",
+    "connecting": "Connecting…",
+    "unreachable": "KeeperHub unreachable",
+    "noOrgWallet": "No org wallet"
+  },
+  "accountMenu": {
+    "open": "Open account menu",
+    "noWalletTitle": "This org has no wallet yet",
+    "walletLabel": "Org wallet {address}",
+    "noWalletLabel": "No org wallet",
+    "noWallet": "No wallet",
+    "menu": "Account",
+    "orgWallet": "Org wallet",
+    "spentToday": "Spent today",
+    "spentTitle": "Value moved today across EVM networks, against the daily limit KeeperHub enforces.",
+    "spentTitleDefault": "Value moved today across EVM networks, against the daily limit KeeperHub enforces (KeeperHub's default).",
+    "limitUnavailable": "KeeperHub could not report the daily limit just now.",
+    "copyAddress": "Copy address",
+    "viewOnExplorer": "View on explorer",
+    "disconnect": "Disconnect"
+  },
+  "moneyPill": {
+    "unavailable": "The balance on this network is unavailable right now",
+    "noWallet": "This org has no wallet yet",
+    "addFunds": "Add funds",
+    "balance": "Org wallet balance {amount} {symbol}. Add funds",
+    "balanceUnavailable": "Org wallet balance not available. Add funds"
+  },
+  "networkPill": {
+    "label": "Network: {name}",
+    "mainnets": "Mainnets",
+    "testnets": "Testnets",
+    "loading": "Loading networks…",
+    "unavailable": "KeeperHub's network list is unavailable right now."
+  },
+  "language": {
+    "title": "Choose a language",
+    "description": "The app, chat and voice use this language.",
+    "switched": "Replies now in {language}",
+    "switchedDescription": "Chat answers in it from your next message, and voice from its next session."
+  },
+  "appStrip": {
+    "label": "About KeeperHub Copilot",
+    "lines": {
+      "readsRun": "Reads run freely. Every write waits for your click",
+      "orgWalletSigns": "Your KeeperHub org wallet signs. No browser wallet"
+    },
+    "howItWorks": "How it works",
+    "dismiss": "Dismiss"
+  },
+  "marquee": {
+    "networks": "NETWORKS",
+    "unavailable": "UNAVAILABLE",
+    "loading": "LOADING"
+  },
+  "capabilityPending": {
+    "waiting": "Not connected yet · waiting on {dependency}"
+  },
+  "writeRecovery": {
+    "landed": "An earlier action landed",
+    "landedReceipt": "{name}. Its receipt is in Activity.",
+    "landedRecorded": "{name}. It's recorded in Activity.",
+    "failed": "An earlier action did not go through",
+    "failedDescription": "{name}. KeeperHub recorded it as failed. Nothing was retried.",
+    "expired": "An earlier action could not be verified",
+    "expiredDescription": "{name} started over a day ago and never confirmed. Check Activity before trying it again.",
+    "pending": "{count, plural, one {An earlier action is still being checked} other {# earlier actions are still being checked}}",
+    "pendingDescription": "KeeperHub has not confirmed it yet. Nothing is retried on its own."
+  },
+  "signIn": {
+    "eyebrow": "KeeperHub · Connect",
+    "description": "Copilot signs in through your KeeperHub account. Your org's wallet signs, and only what you approve.",
+    "continueWithKeeperHub": "Continue with KeeperHub",
+    "continueHint": "continue",
+    "footer": "Org wallet signs · no browser wallet",
+    "errors": {
+      "denied": "You cancelled on KeeperHub, so nothing was connected.",
+      "failed": "KeeperHub did not finish signing you in. Try again."
+    },
+    "status": {
+      "online": "KeeperHub online",
+      "unreachable": "KeeperHub unreachable",
+      "checking": "checking KeeperHub"
+    }
+  },
+  "signInGate": {
+    "eyebrow": "KeeperHub · Identity card",
+    "title": "Insert your <em>credentials</em>.",
+    "body": "Copilot reads chain state and acts through <highlight>your</highlight> KeeperHub account. Sign in once; your org's wallet signs what you approve.",
+    "retry": "KeeperHub unreachable · retry",
+    "writesWait": "Every write still waits for your click.",
+    "counts": "{actions, plural, one {# action} other {# actions}} · {integrations, plural, one {# integration} other {# integrations}}",
+    "networks": "{count, plural, one {# network} other {# networks}}",
+    "networksUnknown": "— networks"
+  },
+  "tutorial": {
+    "steps": {
+      "welcome": {
+        "title": "Welcome to KeeperHub Copilot",
+        "description": "A chat for KeeperHub. Ask in plain words for prices, balances, transfers or automations. Copilot picks the KeeperHub action that does it and shows the result as a card."
+      },
+      "readsRun": {
+        "title": "Reads run, writes wait",
+        "description": "Anything that only looks, like a price or a balance, runs straight away. Anything that moves value stops as a card with every field filled in. Edit it, dry-run it, then approve or decline. Nothing moves until you click."
+      },
+      "orgWallet": {
+        "title": "Your org wallet signs",
+        "description": "You sign in with your KeeperHub account, not a browser wallet. The wallet KeeperHub keeps for your organisation signs what you approve, inside the daily limit KeeperHub enforces."
+      },
+      "money": {
+        "title": "Where your money sits",
+        "description": "The pill in the header is your org wallet on the network you picked. Tap + for its address and a QR code to fund it. Each network's balance is its own and never added to another."
+      },
+      "connect": {
+        "title": "Connect to start",
+        "description": "Signing in opens KeeperHub, then brings you straight back here."
+      }
+    },
+    "skip": "Skip",
+    "next": "Next",
+    "done": "Get started",
+    "lastStep": "Last step",
+    "connectTitle": "Connect KeeperHub to start",
+    "connectNote": "One sign-in. Every read and every approved write runs through your KeeperHub organisation.",
+    "progress": "Step {step} of {total}"
+  },
+  "addFunds": {
+    "eyebrow": "Add funds · {network, select, testnet {testnet} other {mainnet}}",
+    "title": "Fund your org wallet",
+    "description": "Send {symbol} on {network} to your KeeperHub org wallet. It pays the gas for what you approve. Send on this network only.",
+    "connectFirst": "Connect KeeperHub first.",
+    "noWallet": "This organisation has no wallet yet. KeeperHub creates one for each organisation; check your KeeperHub settings.",
+    "orgWallet": "Org wallet",
+    "copyAddress": "Copy org wallet address",
+    "copied": "copied ✓",
+    "scanToSend": "scan to send",
+    "nativeOn": "{symbol} on {network}",
+    "checking": "Checking balance…",
+    "unavailable": "Balance unavailable",
+    "startInChat": "Start in chat",
+    "checkAgain": "Check balance again",
+    "rereads": "Balances re-read when you come back to this tab.",
+    "viewOnExplorer": "View on explorer"
+  },
+  "receiptWelcome": {
+    "eyebrow": "First receipt",
+    "title": "Your first action landed",
+    "body": "KeeperHub ran it and the chain confirmed it. Its receipt is in Activity, and every one after it lands there too.",
+    "keepGoing": "Keep going"
+  },
+  "palette": {
+    "trigger": "Search",
+    "title": "Search KeeperHub Copilot",
+    "search": "Search pages, networks and actions",
+    "placeholder": "Search pages, networks and actions…",
+    "results": "Results",
+    "moreActions": "{count} more · browse every action",
+    "moreNetworks": "{count} more · keep typing to narrow",
+    "loadingActions": "Loading actions…",
+    "actionsFailed": "Actions couldn't load. Close and open this again.",
+    "noResults": "No results for “{query}”",
+    "noResultsHint": "Try “aave”, “sepolia” or “activity”.",
+    "move": "move",
+    "open": "open",
+    "close": "close",
+    "resultCount": "{count, plural, one {# result} other {# results}}",
+    "signs": "signs",
+    "selected": "Selected",
+    "here": "here",
+    "switched": "Switched to {network}",
+    "switchedDescription": "New questions and cards use this network.",
+    "sections": {
+      "page": "Pages",
+      "network": "Networks",
+      "language": "Languages",
+      "action": "Actions"
+    },
+    "testnet": "Testnet",
+    "mainnet": "Mainnet",
+    "chain": "chain {id}",
+    "languageSubtitle": "Language · {code}",
+    "languageKeywords": "language languages"
+  },
+  "toast": {
+    "close": "Close toast"
+  },
+  "identicon": {
+    "label": "identicon for {address}",
+    "noAccount": "identicon for no account"
+  },
+  "integrationMark": {
+    "form": "Your details",
+    "search": "Action catalog"
+  },
+  "chainMark": {
+    "fallback": "Chain {id}"
+  }
+}

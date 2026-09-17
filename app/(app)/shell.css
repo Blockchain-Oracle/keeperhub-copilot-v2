@@ -1,0 +1,335 @@
+/*
+ * The Masayume shell rules that are not utilities: the strip height every fixed
+ * offset reads, the ticker and strip keyframes, and the toast lift above the
+ * phone pill. Kept out of globals.css, which stays Portaldot's.
+ *
+ *   --appstrip          references/masayume/web/src/styles/yosuku/part-02.css, part-15.css
+ *   keyframes           part-02.css (marqueeScroll, appstripIn, appstripLead),
+ *                       styles/tutorial.css (tutorial-step-in)
+ *   --toast-offset      styles/tokens.css (pill-nav clearance 64px + 8px)
+ */
+
+:root {
+  --appstrip: 0px; /* absent by default: nothing reserves space it does not use */
+  --toast-offset: calc(env(safe-area-inset-bottom, 0px) + 72px);
+}
+
+[data-strip="on"] {
+  --appstrip: 34px;
+}
+
+@media (max-width: 720px) {
+  [data-strip="on"] {
+    --appstrip: 28px;
+  }
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes appstrip-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes appstrip-lead {
+  0%, 62%, 100% { opacity: 0.34; }
+  22% { opacity: 1; }
+}
+
+/* Each tutorial step re-keys and rises in: translateY(20px) scale(.95) → rest. */
+@keyframes tutorial-step-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/*
+ * The chat launcher's living details — DeepBookie apps/web/src/app/globals.css:101-171
+ * (live-pulse, pulse-up, spark-dot, drift). pulse-up's green halo takes Portaldot's
+ * violet; reduced motion is already clamped by Portaldot's globals.
+ */
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+.live-dot {
+  animation: live-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-up {
+  0%, 100% { transform: translateY(0); box-shadow: 0 0 0 0 oklch(0.66 0.22 288 / 0); }
+  45% { transform: translateY(-2px); box-shadow: 0 0 0 4px oklch(0.66 0.22 288 / 0.14); }
+}
+.pulse-up {
+  animation: pulse-up 2.6s ease-in-out infinite;
+}
+
+@keyframes spark-dot {
+  0% { offset-distance: 0%; }
+  100% { offset-distance: 100%; }
+}
+.spark-dot {
+  animation: spark-dot 4.5s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+.drift {
+  animation: drift 3s ease-in-out infinite;
+}
+
+/*
+ * The tools line's running label — 21st serafimcloud/tool-group
+ * (references/_notes/21st/21st-12423.txt), which injects this as a style tag.
+ * Its dark greys take our muted and foreground inks.
+ */
+@keyframes tool-shimmer {
+  from { background-position: 100% center; }
+  to { background-position: 0% center; }
+}
+.tool-shimmer {
+  display: inline-block;
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    var(--fg-muted) 0%,
+    var(--fg-muted) 40%,
+    var(--foreground) 50%,
+    var(--fg-muted) 60%,
+    var(--fg-muted) 100%
+  );
+  background-repeat: no-repeat;
+  animation: tool-shimmer 2s linear infinite;
+}
+
+/*
+ * Voice (decision 31): components/voice/voice-glow.tsx, voice-bar.tsx and the
+ * composer's talk button. The glow and pulse take 21st botsnew354/ia-siri-chat's
+ * idea in Portaldot colours: telemetry cyan into violet, pending amber while a
+ * card waits, destructive on error. --voice-level (0–1) and --band (0–1) are
+ * written by the voice engine's level listener, never by React renders.
+ */
+@property --orb-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --bar-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes voice-orb-spin {
+  to { --orb-angle: 360deg; }
+}
+
+@keyframes voice-bar-spin {
+  to { --bar-angle: 360deg; }
+}
+
+@keyframes voice-orb-breathe {
+  0%, 100% { filter: saturate(1.15) brightness(1); }
+  50% { filter: saturate(0.85) brightness(0.82); }
+}
+
+@keyframes voice-bar-in {
+  from { opacity: 0; transform: translateY(6px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes composer-talk-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in oklch, var(--primary) 45%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 9px color-mix(in oklch, var(--primary) 0%, transparent); }
+}
+
+.voice-orb,
+.voice-bar {
+  --voice-level: 0;
+  --glow-a: var(--telemetry);
+  --glow-b: var(--primary);
+  --glow-c: oklch(0.72 0.16 250);
+}
+
+.voice-orb[data-phase="waiting"],
+.voice-bar[data-phase="waiting"] {
+  --glow-a: var(--pending);
+  --glow-b: oklch(0.7 0.16 50);
+  --glow-c: var(--pending);
+}
+
+.voice-orb[data-phase="error"],
+.voice-bar[data-phase="error"] {
+  --glow-a: var(--destructive);
+  --glow-b: oklch(0.52 0.2 25);
+  --glow-c: var(--destructive);
+}
+
+.voice-orb {
+  isolation: isolate;
+  --orb-blur: 12px;
+}
+
+.voice-orb-hero {
+  --orb-blur: 38px;
+}
+
+.voice-orb-halo,
+.voice-orb-core,
+.voice-orb-sheen {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.voice-orb-halo {
+  inset: -38%;
+  z-index: -1;
+  background: radial-gradient(
+    circle,
+    color-mix(in oklch, var(--glow-a) 60%, transparent) 0%,
+    color-mix(in oklch, var(--glow-b) 32%, transparent) 42%,
+    transparent 70%
+  );
+  filter: blur(var(--orb-blur));
+  opacity: calc(0.45 + var(--voice-level) * 0.55);
+  transform: scale(calc(0.82 + var(--voice-level) * 0.5));
+  transition: transform 120ms ease-out, opacity 120ms ease-out;
+}
+
+.voice-orb-core {
+  inset: 0;
+  background: conic-gradient(from var(--orb-angle), var(--glow-a), var(--glow-b), var(--glow-c), var(--glow-a));
+  transform: scale(calc(1 + var(--voice-level) * 0.12));
+  transition: transform 100ms ease-out;
+  animation: voice-orb-spin 6s linear infinite;
+  filter: saturate(1.15);
+}
+
+.voice-orb-sheen {
+  inset: 0;
+  background:
+    radial-gradient(circle at 32% 26%, oklch(1 0 0 / 55%), transparent 40%),
+    radial-gradient(circle at 72% 80%, oklch(0 0 0 / 40%), transparent 55%);
+  mix-blend-mode: soft-light;
+}
+
+.voice-orb[data-phase="waiting"] .voice-orb-core {
+  animation: voice-orb-spin 16s linear infinite, voice-orb-breathe 2.4s ease-in-out infinite;
+}
+
+.voice-orb[data-phase="connecting"] .voice-orb-core {
+  animation-duration: 1.4s;
+  opacity: 0.75;
+}
+
+.voice-orb[data-phase="error"] .voice-orb-core {
+  animation: none;
+}
+
+.voice-bar {
+  position: relative;
+  isolation: isolate;
+  animation: voice-bar-in 320ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+/* A light ring running round the capsule's edge. */
+.voice-bar::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--bar-angle),
+    color-mix(in oklch, var(--glow-a) 25%, transparent) 0deg,
+    var(--glow-a) 70deg,
+    var(--glow-b) 150deg,
+    color-mix(in oklch, var(--glow-b) 25%, transparent) 220deg,
+    var(--glow-c) 300deg,
+    color-mix(in oklch, var(--glow-a) 25%, transparent) 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: voice-bar-spin 4s linear infinite;
+  pointer-events: none;
+}
+
+/* The glow behind it, swelling with the voice. */
+.voice-bar::after {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  z-index: -1;
+  border-radius: inherit;
+  background:
+    radial-gradient(55% 140% at 10% 50%, color-mix(in oklch, var(--glow-a) 40%, transparent), transparent 70%),
+    radial-gradient(55% 140% at 90% 50%, color-mix(in oklch, var(--glow-b) 30%, transparent), transparent 70%);
+  filter: blur(18px);
+  opacity: calc(0.35 + var(--voice-level) * 0.55);
+  transition: opacity 150ms ease-out;
+  pointer-events: none;
+}
+
+.voice-bar[data-phase="waiting"]::before {
+  animation-duration: 12s;
+}
+
+.voice-bar[data-phase="error"]::before {
+  animation: none;
+}
+
+.voice-band {
+  height: calc(4px + var(--band, 0) * 22px);
+  background: linear-gradient(to top, var(--glow-a), var(--glow-b));
+  transition: height 90ms ease-out;
+}
+
+.composer-talk {
+  animation: composer-talk-pulse 2.8s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voice-orb-core,
+  .voice-bar,
+  .voice-bar::before,
+  .composer-talk {
+    animation: none;
+  }
+  .voice-orb-halo,
+  .voice-orb-core,
+  .voice-band {
+    transition: none;
+  }
+}
+
+/*
+ * The voice form sheet (decision 33): it rises out of the voice bar with the
+ * bar's spring, edged in the pending glow a waiting card has.
+ */
+@keyframes voice-form-rise {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+
+.voice-form-sheet {
+  box-shadow:
+    0 0 0 1px color-mix(in oklch, var(--pending) 45%, transparent),
+    0 18px 60px -24px color-mix(in oklch, var(--primary) 60%, transparent);
+  animation: voice-form-rise 380ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voice-form-sheet {
+    animation: none;
+  }
+}

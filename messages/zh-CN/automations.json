@@ -1,0 +1,369 @@
+{
+  "actions": {
+    "authorize": "授权",
+    "authorizing": "授权中…",
+    "edit": "编辑",
+    "turnOn": "开启",
+    "turnOff": "关闭",
+    "turningOn": "开启中…",
+    "runNow": "立即运行",
+    "running": "运行中…",
+    "checkAgain": "再次检查",
+    "openAutomation": "打开自动化 →"
+  },
+  "acknowledge": {
+    "goAhead": "仍然继续。我已阅读警告。",
+    "turnOn": "仍然开启。我已阅读警告。",
+    "run": "仍然运行。我已阅读警告。"
+  },
+  "failures": {
+    "noAnswer": "KeeperHub 没有响应。",
+    "noAnswerConnection": "KeeperHub 没有响应。请检查网络连接后重试。",
+    "checkFailed": "KeeperHub 的检查无法运行。",
+    "notTurnedOn": "KeeperHub 未能将其开启。",
+    "notChanged": "KeeperHub 未更改该自动化。",
+    "dryRunFailed": "KeeperHub 无法模拟运行此自动化。",
+    "runNotStarted": "无法启动运行。",
+    "runNotStartedConnection": "无法启动运行。请检查网络连接后重试。"
+  },
+  "view": {
+    "trigger": {
+      "manual": "按需运行：有人点击“立即运行”时",
+      "webhook": "其 Webhook URL 被调用时",
+      "schedule": "按计划运行",
+      "block": "{count, plural, other {每 {every} 个区块}}",
+      "event": "{event} 事件触发时",
+      "tempoPayment": "收到 Tempo 付款时"
+    },
+    "rows": {
+      "cron": "Cron",
+      "timezone": "时区",
+      "contract": "合约",
+      "recipient": "接收方",
+      "token": "代币",
+      "memo": "备注",
+      "condition": "继续条件"
+    },
+    "stepFallback": "步骤",
+    "actionLabel": {
+      "checking": "检查中…",
+      "checkFailed": "检查失败",
+      "blocked": "无法继续",
+      "acknowledge": "确认已知晓警告"
+    },
+    "frame": {
+      "saving": {
+        "meta": "保存中",
+        "status": "正在保存到 KeeperHub…"
+      },
+      "savingChanges": {
+        "meta": "保存中",
+        "status": "正在将更改保存到 KeeperHub…"
+      },
+      "starting": {
+        "meta": "启动中",
+        "status": "正在 KeeperHub 中启动运行…"
+      },
+      "deleting": {
+        "meta": "删除中",
+        "status": "正在从 KeeperHub 删除…"
+      },
+      "cancelled": {
+        "meta": "已取消",
+        "status": "已取消"
+      },
+      "notSent": {
+        "meta": "未发送",
+        "status": "未发送"
+      },
+      "cancelling": {
+        "meta": "取消中",
+        "status": "取消中…"
+      },
+      "noAnswer": {
+        "meta": "无响应",
+        "status": "已授权，未存储响应"
+      },
+      "turningOn": {
+        "meta": "开启中",
+        "status": "正在 KeeperHub 中开启…"
+      },
+      "turningOff": {
+        "meta": "关闭中",
+        "status": "正在 KeeperHub 中关闭…"
+      },
+      "neverAuthorized": {
+        "meta": "从未授权",
+        "status": "从未授权"
+      },
+      "authorizing": {
+        "meta": "授权中",
+        "status": "授权中…"
+      },
+      "edited": {
+        "meta": "已编辑",
+        "status": "已编辑，等待你授权"
+      },
+      "awaiting": {
+        "meta": "等待授权",
+        "status": "等待你授权"
+      },
+      "live": {
+        "meta": "生效中",
+        "status": "已保存并开启"
+      },
+      "savedOff": {
+        "meta": "已保存 · 关闭",
+        "status": "已保存，处于关闭状态"
+      },
+      "saved": {
+        "meta": "已保存",
+        "status": "更改已保存"
+      },
+      "deleted": {
+        "meta": "已删除",
+        "status": "已从 KeeperHub 删除"
+      },
+      "executed": {
+        "meta": "已执行",
+        "status": "已执行"
+      },
+      "failed": {
+        "meta": "失败",
+        "status": "运行失败"
+      },
+      "stillRunning": {
+        "meta": "仍在运行",
+        "status": "仍在运行"
+      },
+      "running": {
+        "meta": "运行中",
+        "status": "正在 KeeperHub 中运行…"
+      },
+      "started": {
+        "meta": "已启动",
+        "status": "已启动"
+      },
+      "turnedOn": {
+        "meta": "已开启",
+        "status": "已开启"
+      },
+      "turnedOff": {
+        "meta": "已关闭",
+        "status": "已关闭"
+      }
+    },
+    "stamp": {
+      "live": "生效中",
+      "saved": "已保存",
+      "deleted": "已删除",
+      "executed": "已执行",
+      "void": "作废",
+      "on": "开启",
+      "off": "关闭"
+    },
+    "kicker": {
+      "create": "新建自动化",
+      "update": "更改自动化",
+      "run": "自动化运行",
+      "delete": "删除自动化",
+      "turnOn": "开启自动化",
+      "turnOff": "关闭自动化"
+    },
+    "title": {
+      "create": "新建自动化",
+      "update": "更改一个自动化",
+      "run": "运行 {name}",
+      "runAny": "运行一个自动化",
+      "delete": "删除 {name}",
+      "deleteAny": "删除一个自动化",
+      "turnOn": "开启 {name}",
+      "turnOnAny": "开启一个自动化",
+      "turnOff": "关闭 {name}",
+      "turnOffAny": "关闭一个自动化"
+    },
+    "form": {
+      "name": "名称",
+      "cron": "计划（cron）",
+      "timezone": "时区",
+      "network": "网络",
+      "every": "每 N 个区块",
+      "contract": "合约",
+      "event": "事件名称",
+      "abi": "合约 ABI",
+      "abiPlaceholder": "已验证的合约可留空",
+      "recipient": "收款地址",
+      "token": "代币",
+      "memo": "备注",
+      "stepField": "步骤 {number} · {label}"
+    }
+  },
+  "card": {
+    "declinedRun": "你拒绝了此次运行。未运行任何内容。",
+    "declinedProposal": "你拒绝了此提议。KeeperHub 中未做任何更改。",
+    "checkValues": "检查这些值",
+    "starts": "启动方式",
+    "steps": "步骤",
+    "automation": "自动化",
+    "change": "更改",
+    "notSent": "你的回答未送达 KeeperHub。请检查网络连接后重试。",
+    "noAnswer": "此操作已授权，但 KeeperHub 的响应未能送达此聊天。可在自动化页面查看最终结果。",
+    "archived": "聊天归档前无人授权此操作。未做任何更改。",
+    "updatedOn": "它处于开启状态，因此新版本会从下次启动时开始运行。",
+    "updatedKept": "它会保持原来的开启或关闭状态。",
+    "deleted": "已连同运行历史一并删除。它不会再出现在自动化页面上。"
+  },
+  "savedFollowUp": {
+    "onDemand": "有人在其页面上点击“立即运行”时，它才会运行。",
+    "archived": "已保存为关闭状态。其页面会显示之后是否已被开启。",
+    "live": "已开启。从现在起，KeeperHub 会自动启动它。",
+    "off": "它处于关闭状态。阅读 KeeperHub 的检查结果后将其开启，它就会自动启动。"
+  },
+  "runFollowUp": {
+    "started": "已启动。可在该自动化的页面查看运行结果。",
+    "running": "正在 KeeperHub 中运行。完成后此卡片会更新。",
+    "executed": "已执行。",
+    "transaction": "交易",
+    "failed": "运行在 KeeperHub 中失败。其页面会显示是哪个步骤中止了运行。",
+    "stale": "五分钟后仍在运行。结果将显示在其页面和动态中。"
+  },
+  "previewBlock": {
+    "checking": "正在向 KeeperHub 核查",
+    "label": "KeeperHub 检查",
+    "blocked": "已阻止",
+    "warned": "请阅读警告",
+    "ready": "就绪",
+    "changes": "更改内容"
+  },
+  "subjectBlock": {
+    "steps": "步骤",
+    "noSteps": "还没有步骤"
+  },
+  "triggerBlock": {
+    "network": "网络"
+  },
+  "stepDetail": {
+    "movesValue": "转移资产"
+  },
+  "stepList": {
+    "off": "关闭"
+  },
+  "listCard": {
+    "meta": "{count, plural, other {# 个自动化}}",
+    "empty": "还没有自动化",
+    "steps": "{count, plural, other {# 个步骤}}"
+  },
+  "detailCard": {
+    "unreadableMeta": "无法读取",
+    "unreadable": "无法读取此自动化",
+    "statusMeta": {
+      "live": "生效中",
+      "manual": "按需",
+      "off": "关闭",
+      "deactivated": "已停用"
+    },
+    "steps": "步骤",
+    "noSteps": "还没有步骤",
+    "recentRuns": "最近运行",
+    "runsUnavailable": "暂时无法获取 KeeperHub 的运行历史。",
+    "noRuns": "还没有运行记录。"
+  },
+  "statusBadge": {
+    "live": "生效中",
+    "manual": "按需",
+    "off": "关闭",
+    "deactivated": "已停用"
+  },
+  "triggerLabel": {
+    "manual": "按需运行",
+    "transfer": "转账时运行",
+    "other": "{type} 触发器"
+  },
+  "duration": {
+    "milliseconds": "{ms} 毫秒",
+    "seconds": "{seconds} 秒",
+    "minutes": "{minutes} 分 {seconds} 秒"
+  },
+  "runStatus": {
+    "executed": "已执行",
+    "failed": "失败",
+    "cancelled": "已取消",
+    "skipped": "已跳过",
+    "running": "运行中"
+  },
+  "board": {
+    "title": "自动化",
+    "subtitle": "KeeperHub 为该组织运行的工作流。打开任意一个查看其步骤和运行记录，或立即运行。",
+    "filterLabel": "显示",
+    "filters": {
+      "all": "全部",
+      "live": "生效中",
+      "manual": "按需",
+      "off": "关闭"
+    },
+    "sortLabel": "排序",
+    "sorts": {
+      "updated": "最近更新",
+      "name": "名称"
+    },
+    "loadFailed": "暂时无法加载自动化",
+    "retry": "重试",
+    "emptyTitle": "还没有自动化",
+    "emptyBody": "让聊天帮你创建一个，或在 KeeperHub 中创建。无论哪种方式，它都会连同步骤和运行记录显示在这里。",
+    "createPrompt": "帮我创建一个自动化。",
+    "createInChat": "在聊天中创建 →",
+    "openKeeperHub": "打开 KeeperHub ↗",
+    "noneInView": "此视图中没有自动化。",
+    "columns": {
+      "automation": "自动化",
+      "status": "状态",
+      "steps": "步骤",
+      "networks": "网络",
+      "updated": "更新时间"
+    },
+    "open": "打开 →"
+  },
+  "detail": {
+    "back": "← 自动化",
+    "missingTitle": "此自动化不可用",
+    "missingBody": "它可能已被删除，或属于其他组织。",
+    "loadFailed": "暂时无法加载此自动化。{message}",
+    "created": "创建于 <time></time>",
+    "deactivated": "此自动化已在 KeeperHub 中停用。",
+    "stats": {
+      "trigger": "触发器",
+      "steps": "步骤",
+      "networks": "网络",
+      "lastRun": "上次运行",
+      "updated": "更新时间"
+    },
+    "steps": "步骤",
+    "noSteps": "此自动化还没有步骤。",
+    "recentRuns": "最近运行",
+    "justStarted": "你刚刚启动的运行",
+    "stillRunning": "仍在运行。结果将显示在这里和动态中。",
+    "runsUnavailable": "暂时无法获取 KeeperHub 的运行历史。",
+    "noRuns": "还没有运行记录。",
+    "runSource": "运行",
+    "viewTx": "查看",
+    "moreTx": "+{count} 笔"
+  },
+  "runDialog": {
+    "runningDryRun": "正在模拟运行…",
+    "acknowledge": "确认已知晓警告",
+    "trigger": "触发器",
+    "steps": "步骤",
+    "networks": "网络",
+    "explainer": "所有步骤将立即运行。转移资产的步骤会直接执行，不会再次停下。",
+    "dryRunLoading": "正在模拟运行",
+    "dryRun": "模拟运行",
+    "dryRunReason": "{reason} 你授权的就是上方显示的确切内容。",
+    "noWarnings": "无警告",
+    "checked": "{count, plural, other {已检查 # 个步骤}}。",
+    "checkedSkipped": "{count, plural, other {已检查 # 个步骤}}，{skipped} 个无法检查。"
+  },
+  "switchDialog": {
+    "onExplainer": "开启后，KeeperHub 会自动启动它，其步骤将直接运行，不会再次停下。",
+    "offExplainer": "关闭后，KeeperHub 不再自动启动它。“立即运行”仍然可用。"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "title": "KeeperHub Copilot",
+  "titleTemplate": "%s · KeeperHub Copilot",
+  "description": "Yêu cầu thao tác on-chain bằng ngôn ngữ thường ngày. Đọc mọi dữ liệu, tự phê duyệt mọi thao tác chuyển giá trị, và biến một câu nói thành tự động hóa KeeperHub chạy thường trực.",
+  "chat": "Trò chuyện",
+  "history": "Lịch sử",
+  "activity": "Hoạt động",
+  "automations": "Tự động hóa",
+  "automation": "Tự động hóa",
+  "receiptNotShared": "Biên nhận không được chia sẻ",
+  "receiptDescription": "Một thao tác KeeperHub đã thực hiện on-chain, được chia sẻ từ KeeperHub Copilot."
+}

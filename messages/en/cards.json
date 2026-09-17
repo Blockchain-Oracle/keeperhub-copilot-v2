@@ -1,0 +1,395 @@
+{
+  "receipt": {
+    "issued": "ISSUED"
+  },
+  "labels": {
+    "amount": "Amount",
+    "recipient": "Recipient",
+    "network": "Network",
+    "token": "Token",
+    "spender": "Spender",
+    "allowance": "Allowance",
+    "allowanceBaseUnits": "Allowance (base units)",
+    "arguments": "Arguments",
+    "valueSent": "Value sent",
+    "chainId": "Chain id",
+    "contractAddress": "Contract address",
+    "functionName": "Function name",
+    "functionArgs": "Function args",
+    "value": "Value",
+    "gasLimitMultiplier": "Gas limit multiplier",
+    "priorityFeeGwei": "Priority fee gwei",
+    "abi": "ABI",
+    "integrationId": "Integration id"
+  },
+  "checks": {
+    "amountDot": "Enter an amount with a dot for decimals, e.g. 0.5.",
+    "chooseNetwork": "Choose a network.",
+    "addressForNetwork": "Enter a valid address for this network.",
+    "chooseListedOption": "Choose one of the listed options."
+  },
+  "fix": {
+    "number": "Enter a number.",
+    "yesNo": "Choose yes or no.",
+    "address": "Enter an address that starts with 0x and has 40 hex characters.",
+    "uint": "Enter a whole number with no decimal point or sign.",
+    "int": "Enter a whole number. A leading minus sign is allowed.",
+    "bytes": "Enter a 0x hex value with an even number of digits.",
+    "datetime": "Enter a date and time.",
+    "other": "Check this value and try again."
+  },
+  "effectClass": {
+    "valueMovingWrite": "value-moving write",
+    "authorizationGrant": "authorization grant",
+    "configManagementWrite": "config management write",
+    "offChainSend": "off-chain send",
+    "listingPayment": "listing payment",
+    "read": "read"
+  },
+  "write": {
+    "noPreview": "No preview is possible for this action. You confirm the exact instruction shown below.",
+    "unavailable": "Contract calls on Solana are not available in this release. Ask for a Solana read through a protocol action instead.",
+    "chip": {
+      "simulated": "Simulated",
+      "noPreview": "No preview",
+      "needsCredential": "Needs credential",
+      "proposed": "Proposed"
+    },
+    "facts": {
+      "gasEstimate": "Gas estimate",
+      "gasUnits": "{units} units",
+      "returns": "Returns"
+    },
+    "meta": {
+      "executed": "EXECUTED",
+      "cancelled": "CANCELLED",
+      "notSent": "NOT SENT",
+      "cancelling": "CANCELLING",
+      "noReceipt": "NO RECEIPT",
+      "sending": "SENDING",
+      "neverAuthorized": "NEVER AUTHORIZED",
+      "notAvailable": "NOT AVAILABLE",
+      "needsCredential": "NEEDS CREDENTIAL",
+      "authorizing": "AUTHORIZING",
+      "edited": "EDITED",
+      "awaiting": "AWAITING AUTHORIZATION"
+    },
+    "status": {
+      "executed": "Executed",
+      "cancelled": "Cancelled",
+      "notSent": "Not sent",
+      "cancelling": "Cancelling…",
+      "noReceipt": "Authorized, no receipt stored",
+      "sending": "Sending through KeeperHub…",
+      "neverAuthorized": "Never authorized",
+      "notAvailable": "Not available in this release",
+      "needsCredential": "Needs a credential first",
+      "authorizing": "Authorizing…",
+      "edited": "Edited, awaiting your authorization",
+      "awaiting": "Awaiting your authorization"
+    },
+    "authorize": {
+      "authorizing": "Authorizing…",
+      "notAvailable": "Not available",
+      "needsCredential": "Needs a credential",
+      "dryRunning": "Running dry run…",
+      "dryRunFailed": "Dry run failed",
+      "acknowledge": "Acknowledge the warning",
+      "authorize": "Authorize"
+    },
+    "verb": {
+      "contractWrite": "Contract write",
+      "write": "Write"
+    },
+    "title": {
+      "approve": "Approve a spender",
+      "call": "Call {name}",
+      "send": "Send {amount} {unit}"
+    },
+    "kicker": {
+      "valueMoving": "Value-moving write",
+      "authorizationGrant": "Authorization grant"
+    },
+    "dryRunUnprepared": "The dry run could not be prepared.",
+    "declined": "You declined this proposal. Nothing was sent.",
+    "applyDryRun": "Dry run these values",
+    "applyValues": "Use these values",
+    "acknowledge": "Send it anyway. I understand it is expected to fail and may still cost gas.",
+    "notReached": "Your answer did not reach KeeperHub. Check your connection and try again.",
+    "receiptMissing": "This was authorized, but its receipt never reached this chat. Activity shows how it ended.",
+    "archived": "Nobody authorized this before the chat was archived. Nothing was sent.",
+    "edit": "Edit",
+    "discard": "Discard",
+    "transfer": {
+      "from": "from",
+      "to": "to",
+      "orgWallet": "org wallet",
+      "amount": "amount"
+    },
+    "dryRun": {
+      "label": "Dry run",
+      "cannot": "KeeperHub cannot dry-run this action. You authorize exactly what is shown above.",
+      "running": "running dry run",
+      "wouldNotSucceed": "This would not succeed.",
+      "wouldRevert": "The transaction would revert.",
+      "wouldSucceed": "would succeed"
+    },
+    "tx": {
+      "label": "Tx",
+      "explorer": "Explorer",
+      "verified": "Verified",
+      "yes": "yes",
+      "no": "no"
+    }
+  },
+  "moneyMover": {
+    "unknownNetwork": "Unknown network",
+    "chain": "Chain {id}",
+    "send": "Send",
+    "approve": "Approve",
+    "summary": "Sent {amount} to {address}.",
+    "unlimitedWarning": "This approves an unlimited allowance. The spender could move any amount of this token.",
+    "unlimited": "Unlimited",
+    "veryLarge": "Very large",
+    "enterAmount": "Enter an amount.",
+    "noComma": "Use a dot for decimals (0.5) and no thousands separators.",
+    "maxDecimals": "Enter an amount with at most {decimals} decimal places."
+  },
+  "writeForm": {
+    "tokenPlaceholder": "Empty sends the network's own currency"
+  },
+  "editCheck": {
+    "unreadable": "This proposal could not be read.",
+    "automationFixed": "Which automation this changes cannot be changed here. Ask again to propose it fresh.",
+    "notEditable": "This action cannot be edited.",
+    "tokenAddress": "Enter a valid token address, or leave it empty to send the native currency.",
+    "callFixed": "This part of the call cannot be changed here. Ask again to propose it fresh.",
+    "argumentsList": "Enter the arguments as a JSON list.",
+    "spender": "Enter a valid spender address.",
+    "allowance": "Enter a whole number of base units.",
+    "actionFixed": "The action cannot be changed here. Ask again to propose it fresh.",
+    "actionGone": "This action is no longer available.",
+    "hiddenSetting": "This hidden setting cannot be changed.",
+    "startFixed": "The kind of start cannot be changed here. Ask again to propose it fresh.",
+    "stepsFixed": "Which steps run, and their order, cannot be changed here. Ask again to propose it fresh."
+  },
+  "toolMeta": {
+    "integration": {
+      "search": "Action catalog",
+      "form": "Your details"
+    },
+    "title": {
+      "lookupFor": "Looked up actions for \"{query}\"",
+      "lookup": "Looked up actions",
+      "protocolAction": "Protocol action",
+      "calledFunction": "Called {name}",
+      "contractCall": "Contract call",
+      "transfer": "Transfer",
+      "walletIntegration": "Read a wallet integration",
+      "listAutomations": "Listed automations",
+      "getAutomation": "Read an automation",
+      "createNamed": "Proposed the automation \"{name}\"",
+      "create": "Proposed an automation",
+      "turnOff": "Proposed turning an automation off",
+      "turnOn": "Proposed turning an automation on",
+      "updateNamed": "Proposed changes to \"{name}\"",
+      "update": "Proposed changes to an automation",
+      "run": "Proposed running an automation",
+      "holdings": "Read the org wallet's holdings",
+      "askNamed": "Asked you for details: {title}",
+      "ask": "Asked you for details",
+      "delete": "Proposed deleting an automation"
+    },
+    "detail": {
+      "action": "action",
+      "name": "name",
+      "starts": "starts",
+      "step": "step {position}",
+      "error": "error",
+      "notCompleted": "not completed",
+      "result": "result",
+      "state": "state"
+    }
+  },
+  "format": {
+    "addressEnding": "address ending {last}",
+    "hashEnding": "hash ending {last}"
+  },
+  "renderer": {
+    "formUnanswerable": "This form could not be answered.",
+    "toolCallIncomplete": "This tool call could not complete.",
+    "needsCredential": "This action needs a bound credential before it can run.",
+    "actionIncomplete": "This action could not complete."
+  },
+  "announce": {
+    "working": "Working.",
+    "capabilities": "Matching actions listed.",
+    "read": "{label}, read.",
+    "needsCredential": "{label}, needs a credential.",
+    "automations": "Automations listed.",
+    "automation": "Automation described.",
+    "holdings": "Org wallet holdings listed.",
+    "formOpen": "Details needed. Fill in the form.",
+    "formSent": "Details sent.",
+    "proposed": "{label}, waiting for your approval.",
+    "executing": "{label}, sending.",
+    "declined": "{label}, declined. Nothing ran.",
+    "automationDone": "Automation, done.",
+    "executed": "{label}, executed.",
+    "automationLabel": "Automation",
+    "resultLabel": "Result"
+  },
+  "error": {
+    "boundary": {
+      "notAvailable": "NOT AVAILABLE",
+      "paused": "PAUSED",
+      "needsAccess": "NEEDS ACCESS",
+      "reconnect": "RECONNECT",
+      "checkInputs": "CHECK INPUTS"
+    },
+    "void": "VOID",
+    "field": "field",
+    "connect": "Connect KeeperHub",
+    "reauthorize": "Reauthorize KeeperHub",
+    "rateLimited": "Discovery keeps working. Try the read again in a moment.",
+    "title": {
+      "action": "Action not completed",
+      "contractCall": "Contract call not completed",
+      "transfer": "Transfer not completed",
+      "walletRead": "Wallet read not completed",
+      "search": "Search not completed",
+      "other": "Not completed"
+    }
+  },
+  "read": {
+    "meta": {
+      "replaced": "REPLACED",
+      "edited": "EDITED",
+      "read": "READ"
+    },
+    "title": {
+      "contractRead": "Contract read",
+      "walletIntegration": "Wallet integration",
+      "read": "Read"
+    },
+    "alternatives": "Alternatives",
+    "request": "Request",
+    "runAgain": "Run again",
+    "working": "Working.",
+    "blocked": "Some parameters need adjusting before this can run.",
+    "result": "Result",
+    "contract": "contract",
+    "replaced": "Replaced by a newer card below.",
+    "edited": "Edited."
+  },
+  "price": {
+    "round": "ROUND {round}",
+    "updated": "updated",
+    "gathering": "gathering signal",
+    "historyUnavailable": "history unavailable",
+    "lastUpdates": "last {count} updates",
+    "expand": "expand"
+  },
+  "balance": {
+    "orgWallet": "ORG WALLET",
+    "meta": "BALANCE",
+    "scanToSend": "scan to send"
+  },
+  "holdings": {
+    "unreadableMeta": "UNREADABLE",
+    "unreadable": "the holdings could not be read",
+    "orgWallet": "ORG WALLET",
+    "nothing": "nothing held on any network",
+    "caveat": "Balances from KeeperHub. A token it couldn't read shows as 0.",
+    "networkUnavailable": "KeeperHub couldn't read this network just now."
+  },
+  "capability": {
+    "matches": "{count, plural, one {{count} MATCH} other {{count} MATCHES}}",
+    "none": "no matching actions",
+    "signs": "signs",
+    "more": "+ {count} more"
+  },
+  "needsCredential": {
+    "meta": "NEEDS CREDENTIAL",
+    "title": "Needs a credential",
+    "setup": "Set up the {integration} credential in KeeperHub, then ask again."
+  },
+  "skeleton": {
+    "working": "working",
+    "fetching": "FETCHING"
+  },
+  "stub": {
+    "unrenderable": "unrenderable card",
+    "meta": "RAW",
+    "couldNotDraw": "This card could not be drawn. The raw details are below.",
+    "rawDetails": "Raw details"
+  },
+  "parts": {
+    "items": "{count, plural, one {{count} item} other {{count} items}}",
+    "noData": "no data returned",
+    "value": "Value"
+  },
+  "fields": {
+    "required": "(required)",
+    "yes": "Yes",
+    "no": "No",
+    "fallbackNote": "This field keeps its current value. Edit the others and run again.",
+    "none": "None.",
+    "help": "Help: {label}",
+    "chooseNetwork": "Choose a network"
+  },
+  "form": {
+    "unreadableMeta": "UNREADABLE",
+    "unreadable": "this form could not be read",
+    "title": "Details needed",
+    "meta": {
+      "notSent": "NOT SENT",
+      "closed": "CLOSED",
+      "answered": "ANSWERED",
+      "fillingAbove": "FILLING IN ABOVE",
+      "detailsNeeded": "DETAILS NEEDED",
+      "neverAnswered": "NEVER ANSWERED"
+    },
+    "status": {
+      "notSent": "Your answer didn't reach KeeperHub",
+      "closed": "Closed without an answer",
+      "answered": "Sent to the assistant",
+      "fillingAbove": "Fill this in above the voice bar",
+      "waiting": "Waiting for your details",
+      "neverAnswered": "Never answered"
+    },
+    "useOrgWallet": "Use my org wallet",
+    "checkHighlighted": "Check the highlighted details.",
+    "sending": "Sending…",
+    "tokenPlaceholder": "Symbol or token address",
+    "issues": {
+      "unreadable": "The answer could not be read.",
+      "notAsked": "This detail wasn't asked for.",
+      "asText": "Enter this as text.",
+      "needed": "{label} is needed.",
+      "tooLong": "This is too long.",
+      "chooseToken": "Choose one of the listed tokens.",
+      "token": "Enter a token symbol or its address."
+    }
+  },
+  "share": {
+    "unreachable": "The share link could not be reached.",
+    "offline": "Check your connection and try again.",
+    "failed": "Sharing didn't work",
+    "copiedTitle": "Link copied",
+    "copiedBody": "Anyone with it sees this receipt, never your chat.",
+    "readyTitle": "Link ready",
+    "sheetTitle": "A KeeperHub receipt",
+    "offTitle": "Link turned off",
+    "offBody": "Anyone opening it now sees that it isn't shared.",
+    "ariaLabel": "Share receipt",
+    "share": "Share",
+    "checking": "Checking…",
+    "copyLink": "Copy link",
+    "createAndCopy": "Create and copy link",
+    "shareSheet": "Share…",
+    "openLink": "Open link",
+    "stop": "Stop sharing",
+    "explainer": "Anyone with the link sees the action, network, amount, recipient and transaction. Never your chat."
+  }
+}

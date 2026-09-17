@@ -1,0 +1,22 @@
+{
+  "unauthorized": "Hubungkan KeeperHub untuk melanjutkan.",
+  "session": "Sesi KeeperHub Anda telah berakhir. Hubungkan KeeperHub untuk melanjutkan.",
+  "server_error": "Terjadi kesalahan di pihak kami. Coba lagi sebentar lagi.",
+  "not_found": "Ini sudah tidak tersedia.",
+  "bad_request": "Permintaan itu tidak dapat dibaca.",
+  "upstream_error": "KeeperHub tidak merespons seperti yang diharapkan. Coba lagi sebentar lagi.",
+  "transport": "KeeperHub tidak dapat dijangkau. Periksa koneksi Anda dan coba lagi.",
+  "rate_limited": "KeeperHub sedang sibuk. Coba lagi sebentar lagi.",
+  "insufficient_scope": "Ini memerlukan akses lebih ke KeeperHub. Hubungkan ulang dan izinkan.",
+  "archived": "Percakapan ini telah diarsipkan. Mulai obrolan baru.",
+  "waiting": "Tanggapi kartu atau formulir di atas terlebih dahulu.",
+  "not_shareable": "Hanya aksi yang dijalankan dengan transaksi yang dapat dibagikan.",
+  "validation_failed": "Beberapa detail tidak sesuai. Periksa dan coba lagi.",
+  "write_not_available": "Aksi ini belum dapat dikirim dari sini.",
+  "quarantined": "Aksi ini tidak dapat dijalankan: Copilot tidak dapat memastikan apa yang dilakukannya.",
+  "automation_only": "KeeperHub hanya menjalankan ini sebagai langkah di dalam otomatisasi.",
+  "tool_error": "Ini tidak dapat diselesaikan.",
+  "deactivated": "Otomatisasi ini dinonaktifkan di KeeperHub.",
+  "on_demand": "Otomatisasi ini hanya berjalan saat dimulai.",
+  "invalid_chain": "Jaringan itu tidak didukung."
+}

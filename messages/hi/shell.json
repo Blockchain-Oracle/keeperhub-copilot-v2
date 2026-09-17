@@ -1,0 +1,267 @@
+{
+  "nav": {
+    "primary": "मुख्य नेविगेशन",
+    "beta": "बीटा",
+    "items": {
+      "chat": {
+        "name": "चैट",
+        "description": "ऑन-चेन कुछ भी माँगें।"
+      },
+      "history": {
+        "name": "इतिहास",
+        "description": "पुरानी बातचीत फिर से देखें, रसीदों समेत।"
+      },
+      "activity": {
+        "name": "गतिविधि",
+        "description": "संगठन वॉलेट ने जो कुछ भी चलाया।"
+      },
+      "automations": {
+        "name": "ऑटोमेशन",
+        "description": "वर्कफ़्लो जो KeeperHub आपके लिए चलाता है।"
+      },
+      "actions": {
+        "name": "कार्रवाइयाँ",
+        "description": "हर कार्रवाई जो KeeperHub चला सकता है, रीड या राइट।"
+      },
+      "gettingStarted": {
+        "name": "शुरुआत करें",
+        "description": "KeeperHub कनेक्ट करें और अपना पहला सवाल पूछें।"
+      },
+      "mcp": {
+        "name": "MCP सेटअप",
+        "description": "Claude, Cursor या किसी भी MCP क्लाइंट से KeeperHub का उपयोग करें।"
+      },
+      "howItWorks": {
+        "name": "यह कैसे काम करता है",
+        "description": "क्या बेरोकटोक चलता है और क्या आपके क्लिक का इंतज़ार करता है।"
+      }
+    },
+    "groups": {
+      "build": {
+        "name": "बनाएँ",
+        "description": "KeeperHub जो चलाता है, उसे ऑटोमेट करें।"
+      },
+      "learn": {
+        "name": "सीखें",
+        "description": "Copilot और KeeperHub के लिए गाइड।"
+      }
+    },
+    "sections": {
+      "automate": {
+        "name": "ऑटोमेट करें",
+        "description": "वर्कफ़्लो और कार्रवाइयाँ"
+      },
+      "guides": {
+        "name": "गाइड",
+        "description": "यहाँ से शुरू करें"
+      }
+    }
+  },
+  "mobileNav": {
+    "label": "मोबाइल मुख्य नेविगेशन",
+    "openAll": "पूरा नेविगेशन खोलें",
+    "more": "और",
+    "eyebrow": "नेविगेट करें",
+    "title": "KeeperHub Copilot में सब कुछ",
+    "description": "ऑटोमेट करें, ब्राउज़ करें या सीखें। हर गंतव्य का एक ही ठिकाना है।",
+    "allDestinations": "KeeperHub Copilot के सभी गंतव्य"
+  },
+  "connect": {
+    "connect": "KeeperHub कनेक्ट करें",
+    "connecting": "कनेक्ट हो रहा है…",
+    "unreachable": "KeeperHub तक पहुँच नहीं",
+    "noOrgWallet": "कोई संगठन वॉलेट नहीं"
+  },
+  "accountMenu": {
+    "open": "खाता मेनू खोलें",
+    "noWalletTitle": "इस संगठन का अभी कोई वॉलेट नहीं है",
+    "walletLabel": "संगठन वॉलेट {address}",
+    "noWalletLabel": "कोई संगठन वॉलेट नहीं",
+    "noWallet": "कोई वॉलेट नहीं",
+    "menu": "खाता",
+    "orgWallet": "संगठन वॉलेट",
+    "spentToday": "आज खर्च",
+    "spentTitle": "EVM नेटवर्क पर आज स्थानांतरित मूल्य, KeeperHub द्वारा लागू दैनिक सीमा के मुकाबले।",
+    "spentTitleDefault": "EVM नेटवर्क पर आज स्थानांतरित मूल्य, KeeperHub द्वारा लागू दैनिक सीमा के मुकाबले (KeeperHub का डिफ़ॉल्ट)।",
+    "limitUnavailable": "KeeperHub अभी दैनिक सीमा नहीं बता सका।",
+    "copyAddress": "पता कॉपी करें",
+    "viewOnExplorer": "एक्सप्लोरर पर देखें",
+    "disconnect": "डिस्कनेक्ट करें"
+  },
+  "moneyPill": {
+    "unavailable": "इस नेटवर्क पर बैलेंस अभी उपलब्ध नहीं है",
+    "noWallet": "इस संगठन का अभी कोई वॉलेट नहीं है",
+    "addFunds": "फंड जोड़ें",
+    "balance": "संगठन वॉलेट बैलेंस {amount} {symbol}। फंड जोड़ें",
+    "balanceUnavailable": "संगठन वॉलेट बैलेंस उपलब्ध नहीं। फंड जोड़ें"
+  },
+  "networkPill": {
+    "label": "नेटवर्क: {name}",
+    "mainnets": "मेननेट",
+    "testnets": "टेस्टनेट",
+    "loading": "नेटवर्क लोड हो रहे हैं…",
+    "unavailable": "KeeperHub की नेटवर्क सूची अभी उपलब्ध नहीं है।"
+  },
+  "language": {
+    "title": "भाषा चुनें",
+    "description": "ऐप, चैट और आवाज़ इसी भाषा का उपयोग करते हैं।",
+    "switched": "अब जवाब {language} में",
+    "switchedDescription": "चैट आपके अगले संदेश से इसी भाषा में जवाब देगा, और आवाज़ अपने अगले सत्र से।"
+  },
+  "appStrip": {
+    "label": "KeeperHub Copilot के बारे में",
+    "lines": {
+      "readsRun": "रीड बेरोकटोक चलते हैं। हर राइट आपके क्लिक का इंतज़ार करता है",
+      "orgWalletSigns": "आपका KeeperHub संगठन वॉलेट हस्ताक्षर करता है। कोई ब्राउज़र वॉलेट नहीं"
+    },
+    "howItWorks": "यह कैसे काम करता है",
+    "dismiss": "हटाएँ"
+  },
+  "marquee": {
+    "networks": "नेटवर्क",
+    "unavailable": "अनुपलब्ध",
+    "loading": "लोड हो रहा है"
+  },
+  "capabilityPending": {
+    "waiting": "अभी कनेक्ट नहीं · {dependency} का इंतज़ार"
+  },
+  "writeRecovery": {
+    "landed": "पहले की एक कार्रवाई पूरी हुई",
+    "landedReceipt": "{name}। इसकी रसीद गतिविधि में है।",
+    "landedRecorded": "{name}। यह गतिविधि में दर्ज है।",
+    "failed": "पहले की एक कार्रवाई पूरी नहीं हुई",
+    "failedDescription": "{name}। KeeperHub ने इसे विफल के रूप में दर्ज किया। कुछ भी दोबारा नहीं आज़माया गया।",
+    "expired": "पहले की एक कार्रवाई सत्यापित नहीं हो सकी",
+    "expiredDescription": "{name} एक दिन से भी पहले शुरू हुई और उसकी कभी पुष्टि नहीं हुई। दोबारा आज़माने से पहले गतिविधि जाँचें।",
+    "pending": "{count, plural, one {पहले की एक कार्रवाई अभी भी जाँची जा रही है} other {पहले की # कार्रवाइयाँ अभी भी जाँची जा रही हैं}}",
+    "pendingDescription": "KeeperHub ने अभी तक इसकी पुष्टि नहीं की है। अपने आप कुछ भी दोबारा नहीं आज़माया जाता।"
+  },
+  "signIn": {
+    "eyebrow": "KeeperHub · कनेक्ट",
+    "description": "Copilot आपके KeeperHub खाते से साइन इन करता है। आपके संगठन का वॉलेट हस्ताक्षर करता है, और केवल उसी पर जो आप स्वीकृत करते हैं।",
+    "continueWithKeeperHub": "KeeperHub के साथ जारी रखें",
+    "continueHint": "जारी रखें",
+    "footer": "संगठन वॉलेट हस्ताक्षर करता है · कोई ब्राउज़र वॉलेट नहीं",
+    "errors": {
+      "denied": "आपने KeeperHub पर रद्द कर दिया, इसलिए कुछ भी कनेक्ट नहीं हुआ।",
+      "failed": "KeeperHub आपका साइन इन पूरा नहीं कर सका। फिर से कोशिश करें।"
+    },
+    "status": {
+      "online": "KeeperHub ऑनलाइन",
+      "unreachable": "KeeperHub तक पहुँच नहीं",
+      "checking": "KeeperHub की जाँच हो रही है"
+    }
+  },
+  "signInGate": {
+    "eyebrow": "KeeperHub · पहचान पत्र",
+    "title": "अपने <em>क्रेडेंशियल</em> डालें।",
+    "body": "Copilot <highlight>आपके</highlight> KeeperHub खाते के ज़रिए चेन की स्थिति पढ़ता है और कार्रवाई करता है। एक बार साइन इन करें; आप जो स्वीकृत करते हैं, उस पर आपके संगठन का वॉलेट हस्ताक्षर करता है।",
+    "retry": "KeeperHub तक पहुँच नहीं · फिर से कोशिश करें",
+    "writesWait": "हर राइट अब भी आपके क्लिक का इंतज़ार करता है।",
+    "counts": "{actions, plural, one {# कार्रवाई} other {# कार्रवाइयाँ}} · {integrations, plural, one {# इंटीग्रेशन} other {# इंटीग्रेशन}}",
+    "networks": "{count, plural, one {# नेटवर्क} other {# नेटवर्क}}",
+    "networksUnknown": "— नेटवर्क"
+  },
+  "tutorial": {
+    "steps": {
+      "welcome": {
+        "title": "KeeperHub Copilot में आपका स्वागत है",
+        "description": "KeeperHub के लिए एक चैट। कीमतें, बैलेंस, ट्रांसफ़र या ऑटोमेशन सरल शब्दों में माँगें। Copilot वह KeeperHub कार्रवाई चुनता है जो यह काम करती है और नतीजा एक कार्ड के रूप में दिखाता है।"
+      },
+      "readsRun": {
+        "title": "रीड चलते हैं, राइट इंतज़ार करते हैं",
+        "description": "जो केवल देखता है, जैसे कीमत या बैलेंस, वह तुरंत चलता है। जो मूल्य स्थानांतरित करता है, वह हर फ़ील्ड भरे एक कार्ड के रूप में रुक जाता है। उसे संपादित करें, उसका परीक्षण रन करें, फिर स्वीकृत या अस्वीकार करें। आपके क्लिक करने तक कुछ भी स्थानांतरित नहीं होता।"
+      },
+      "orgWallet": {
+        "title": "आपका संगठन वॉलेट हस्ताक्षर करता है",
+        "description": "आप अपने KeeperHub खाते से साइन इन करते हैं, ब्राउज़र वॉलेट से नहीं। KeeperHub आपके संगठन के लिए जो वॉलेट रखता है, वही आपकी स्वीकृत चीज़ों पर हस्ताक्षर करता है, KeeperHub द्वारा लागू दैनिक सीमा के भीतर।"
+      },
+      "money": {
+        "title": "आपका पैसा कहाँ है",
+        "description": "हेडर में दिखने वाली पिल आपके चुने हुए नेटवर्क पर आपका संगठन वॉलेट है। उसका पता और फंड भेजने के लिए QR कोड देखने को + पर टैप करें। हर नेटवर्क का बैलेंस अलग है और कभी किसी दूसरे में जोड़ा नहीं जाता।"
+      },
+      "connect": {
+        "title": "शुरू करने के लिए कनेक्ट करें",
+        "description": "साइन इन करने पर KeeperHub खुलता है, फिर आप सीधे यहीं वापस आ जाते हैं।"
+      }
+    },
+    "skip": "छोड़ें",
+    "next": "आगे",
+    "done": "शुरू करें",
+    "lastStep": "आखिरी चरण",
+    "connectTitle": "शुरू करने के लिए KeeperHub कनेक्ट करें",
+    "connectNote": "एक साइन-इन। हर रीड और हर स्वीकृत राइट आपके KeeperHub संगठन के ज़रिए चलता है।",
+    "progress": "चरण {step} / {total}"
+  },
+  "addFunds": {
+    "eyebrow": "फंड जोड़ें · {network, select, testnet {testnet} other {mainnet}}",
+    "title": "अपने संगठन वॉलेट में फंड डालें",
+    "description": "{network} पर {symbol} अपने KeeperHub संगठन वॉलेट में भेजें। आप जो स्वीकृत करते हैं, उसकी गैस यही चुकाता है। केवल इसी नेटवर्क पर भेजें।",
+    "connectFirst": "पहले KeeperHub कनेक्ट करें।",
+    "noWallet": "इस संगठन का अभी कोई वॉलेट नहीं है। KeeperHub हर संगठन के लिए एक वॉलेट बनाता है; अपनी KeeperHub सेटिंग्स जाँचें।",
+    "orgWallet": "संगठन वॉलेट",
+    "copyAddress": "संगठन वॉलेट का पता कॉपी करें",
+    "copied": "कॉपी हो गया ✓",
+    "scanToSend": "भेजने के लिए स्कैन करें",
+    "nativeOn": "{network} पर {symbol}",
+    "checking": "बैलेंस जाँचा जा रहा है…",
+    "unavailable": "बैलेंस उपलब्ध नहीं",
+    "startInChat": "चैट में शुरू करें",
+    "checkAgain": "बैलेंस फिर से जाँचें",
+    "rereads": "इस टैब पर लौटने पर बैलेंस फिर से पढ़े जाते हैं।",
+    "viewOnExplorer": "एक्सप्लोरर पर देखें"
+  },
+  "receiptWelcome": {
+    "eyebrow": "पहली रसीद",
+    "title": "आपकी पहली कार्रवाई पूरी हुई",
+    "body": "KeeperHub ने इसे चलाया और चेन ने इसकी पुष्टि की। इसकी रसीद गतिविधि में है, और आगे की हर रसीद भी वहीं आएगी।",
+    "keepGoing": "आगे बढ़ें"
+  },
+  "palette": {
+    "trigger": "खोजें",
+    "title": "KeeperHub Copilot में खोजें",
+    "search": "पेज, नेटवर्क और कार्रवाइयाँ खोजें",
+    "placeholder": "पेज, नेटवर्क और कार्रवाइयाँ खोजें…",
+    "results": "नतीजे",
+    "moreActions": "{count} और · हर कार्रवाई ब्राउज़ करें",
+    "moreNetworks": "{count} और · सीमित करने के लिए टाइप करते रहें",
+    "loadingActions": "कार्रवाइयाँ लोड हो रही हैं…",
+    "actionsFailed": "कार्रवाइयाँ लोड नहीं हो सकीं। इसे बंद करके फिर से खोलें।",
+    "noResults": "“{query}” के लिए कोई नतीजा नहीं",
+    "noResultsHint": "“aave”, “sepolia” या “गतिविधि” आज़माएँ।",
+    "move": "नेविगेट",
+    "open": "खोलें",
+    "close": "बंद करें",
+    "resultCount": "{count, plural, one {# नतीजा} other {# नतीजे}}",
+    "signs": "हस्ताक्षर",
+    "selected": "चयनित",
+    "here": "यहाँ",
+    "switched": "{network} पर स्विच किया गया",
+    "switchedDescription": "नए सवाल और कार्ड इसी नेटवर्क का उपयोग करते हैं।",
+    "sections": {
+      "page": "पेज",
+      "network": "नेटवर्क",
+      "language": "भाषाएँ",
+      "action": "कार्रवाइयाँ"
+    },
+    "testnet": "टेस्टनेट",
+    "mainnet": "मेननेट",
+    "chain": "चेन {id}",
+    "languageSubtitle": "भाषा · {code}",
+    "languageKeywords": "language languages भाषा भाषाएँ"
+  },
+  "toast": {
+    "close": "सूचना बंद करें"
+  },
+  "identicon": {
+    "label": "{address} का आइडेंटिकॉन",
+    "noAccount": "बिना खाते का आइडेंटिकॉन"
+  },
+  "integrationMark": {
+    "form": "आपके विवरण",
+    "search": "कार्रवाई सूची"
+  },
+  "chainMark": {
+    "fallback": "चेन {id}"
+  }
+}

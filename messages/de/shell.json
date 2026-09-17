@@ -1,0 +1,267 @@
+{
+  "nav": {
+    "primary": "Hauptnavigation",
+    "beta": "beta",
+    "items": {
+      "chat": {
+        "name": "Chat",
+        "description": "Frag nach allem, was on-chain möglich ist."
+      },
+      "history": {
+        "name": "Verlauf",
+        "description": "Frühere Unterhaltungen erneut ansehen, samt Belegen."
+      },
+      "activity": {
+        "name": "Aktivität",
+        "description": "Alles, was die Organisations-Wallet ausgeführt hat."
+      },
+      "automations": {
+        "name": "Automatisierungen",
+        "description": "Workflows, die KeeperHub für dich ausführt."
+      },
+      "actions": {
+        "name": "Aktionen",
+        "description": "Jede Aktion, die KeeperHub ausführen kann, lesend oder schreibend."
+      },
+      "gettingStarted": {
+        "name": "Erste Schritte",
+        "description": "Verbinde KeeperHub und stell deine erste Frage."
+      },
+      "mcp": {
+        "name": "MCP-Einrichtung",
+        "description": "Nutze KeeperHub aus Claude, Cursor oder jedem MCP-Client."
+      },
+      "howItWorks": {
+        "name": "So funktioniert’s",
+        "description": "Was frei läuft und was auf deinen Klick wartet."
+      }
+    },
+    "groups": {
+      "build": {
+        "name": "Bauen",
+        "description": "Automatisiere, was KeeperHub ausführt."
+      },
+      "learn": {
+        "name": "Lernen",
+        "description": "Anleitungen für den Copilot und KeeperHub."
+      }
+    },
+    "sections": {
+      "automate": {
+        "name": "Automatisieren",
+        "description": "Workflows und Aktionen"
+      },
+      "guides": {
+        "name": "Anleitungen",
+        "description": "Hier starten"
+      }
+    }
+  },
+  "mobileNav": {
+    "label": "Mobile Hauptnavigation",
+    "openAll": "Gesamte Navigation öffnen",
+    "more": "Mehr",
+    "eyebrow": "Navigation",
+    "title": "Alles in KeeperHub Copilot",
+    "description": "Automatisieren, stöbern oder lernen. Jedes Ziel hat genau einen Ort.",
+    "allDestinations": "Alle Ziele in KeeperHub Copilot"
+  },
+  "connect": {
+    "connect": "KeeperHub verbinden",
+    "connecting": "Verbinde…",
+    "unreachable": "KeeperHub nicht erreichbar",
+    "noOrgWallet": "Keine Organisations-Wallet"
+  },
+  "accountMenu": {
+    "open": "Kontomenü öffnen",
+    "noWalletTitle": "Diese Organisation hat noch keine Wallet",
+    "walletLabel": "Organisations-Wallet {address}",
+    "noWalletLabel": "Keine Organisations-Wallet",
+    "noWallet": "Keine Wallet",
+    "menu": "Konto",
+    "orgWallet": "Organisations-Wallet",
+    "spentToday": "Heute ausgegeben",
+    "spentTitle": "Heute über EVM-Netzwerke bewegter Wert, gemessen am Tageslimit, das KeeperHub durchsetzt.",
+    "spentTitleDefault": "Heute über EVM-Netzwerke bewegter Wert, gemessen am Tageslimit, das KeeperHub durchsetzt (Standardwert von KeeperHub).",
+    "limitUnavailable": "KeeperHub konnte das Tageslimit gerade nicht abrufen.",
+    "copyAddress": "Adresse kopieren",
+    "viewOnExplorer": "Im Explorer ansehen",
+    "disconnect": "Trennen"
+  },
+  "moneyPill": {
+    "unavailable": "Das Guthaben in diesem Netzwerk ist gerade nicht verfügbar",
+    "noWallet": "Diese Organisation hat noch keine Wallet",
+    "addFunds": "Einzahlen",
+    "balance": "Guthaben der Organisations-Wallet {amount} {symbol}. Einzahlen",
+    "balanceUnavailable": "Guthaben der Organisations-Wallet nicht verfügbar. Einzahlen"
+  },
+  "networkPill": {
+    "label": "Netzwerk: {name}",
+    "mainnets": "Mainnets",
+    "testnets": "Testnets",
+    "loading": "Netzwerke werden geladen…",
+    "unavailable": "Die Netzwerkliste von KeeperHub ist gerade nicht verfügbar."
+  },
+  "language": {
+    "title": "Sprache wählen",
+    "description": "App, Chat und Sprachfunktion nutzen diese Sprache.",
+    "switched": "Antworten jetzt auf {language}",
+    "switchedDescription": "Der Chat antwortet ab deiner nächsten Nachricht darin, die Sprachfunktion ab ihrer nächsten Sitzung."
+  },
+  "appStrip": {
+    "label": "Über KeeperHub Copilot",
+    "lines": {
+      "readsRun": "Abfragen laufen frei. Jeder Schreibvorgang wartet auf deinen Klick",
+      "orgWalletSigns": "Deine KeeperHub-Organisations-Wallet signiert. Keine Browser-Wallet"
+    },
+    "howItWorks": "So funktioniert’s",
+    "dismiss": "Ausblenden"
+  },
+  "marquee": {
+    "networks": "NETZWERKE",
+    "unavailable": "NICHT VERFÜGBAR",
+    "loading": "LÄDT"
+  },
+  "capabilityPending": {
+    "waiting": "Noch nicht verbunden · wartet auf {dependency}"
+  },
+  "writeRecovery": {
+    "landed": "Eine frühere Aktion ist durchgegangen",
+    "landedReceipt": "{name}. Der Beleg liegt unter Aktivität.",
+    "landedRecorded": "{name}. Unter Aktivität erfasst.",
+    "failed": "Eine frühere Aktion ist nicht durchgegangen",
+    "failedDescription": "{name}. KeeperHub hat sie als fehlgeschlagen erfasst. Nichts wurde wiederholt.",
+    "expired": "Eine frühere Aktion konnte nicht verifiziert werden",
+    "expiredDescription": "{name} wurde vor über einem Tag gestartet und nie bestätigt. Prüfe die Aktivität, bevor du es erneut versuchst.",
+    "pending": "{count, plural, one {Eine frühere Aktion wird noch geprüft} other {# frühere Aktionen werden noch geprüft}}",
+    "pendingDescription": "KeeperHub hat sie noch nicht bestätigt. Nichts wird von selbst wiederholt."
+  },
+  "signIn": {
+    "eyebrow": "KeeperHub · Verbinden",
+    "description": "Copilot meldet sich über dein KeeperHub-Konto an. Die Wallet deiner Organisation signiert, und zwar nur, was du freigibst.",
+    "continueWithKeeperHub": "Weiter mit KeeperHub",
+    "continueHint": "weiter",
+    "footer": "Organisations-Wallet signiert · keine Browser-Wallet",
+    "errors": {
+      "denied": "Du hast bei KeeperHub abgebrochen, daher wurde nichts verbunden.",
+      "failed": "KeeperHub hat die Anmeldung nicht abgeschlossen. Versuche es erneut."
+    },
+    "status": {
+      "online": "KeeperHub online",
+      "unreachable": "KeeperHub nicht erreichbar",
+      "checking": "prüfe KeeperHub"
+    }
+  },
+  "signInGate": {
+    "eyebrow": "KeeperHub · Ausweis",
+    "title": "Zeig deine <em>Zugangsdaten</em>.",
+    "body": "Copilot liest den Zustand der Chain und handelt über <highlight>dein</highlight> KeeperHub-Konto. Einmal anmelden; die Wallet deiner Organisation signiert, was du freigibst.",
+    "retry": "KeeperHub nicht erreichbar · erneut versuchen",
+    "writesWait": "Jeder Schreibvorgang wartet weiterhin auf deinen Klick.",
+    "counts": "{actions, plural, one {# Aktion} other {# Aktionen}} · {integrations, plural, one {# Integration} other {# Integrationen}}",
+    "networks": "{count, plural, one {# Netzwerk} other {# Netzwerke}}",
+    "networksUnknown": "— Netzwerke"
+  },
+  "tutorial": {
+    "steps": {
+      "welcome": {
+        "title": "Willkommen bei KeeperHub Copilot",
+        "description": "Ein Chat für KeeperHub. Frag in einfachen Worten nach Preisen, Guthaben, Transfers oder Automatisierungen. Copilot wählt die passende KeeperHub-Aktion und zeigt das Ergebnis als Karte."
+      },
+      "readsRun": {
+        "title": "Lesen läuft, Schreiben wartet",
+        "description": "Alles, was nur nachsieht, etwa ein Preis oder ein Guthaben, läuft sofort. Alles, was Werte bewegt, hält als Karte an, mit allen Feldern ausgefüllt. Bearbeite sie, mach einen Testlauf und gib sie dann frei oder lehne ab. Nichts bewegt sich, bevor du klickst."
+      },
+      "orgWallet": {
+        "title": "Deine Organisations-Wallet signiert",
+        "description": "Du meldest dich mit deinem KeeperHub-Konto an, nicht mit einer Browser-Wallet. Die Wallet, die KeeperHub für deine Organisation verwaltet, signiert, was du freigibst, innerhalb des Tageslimits, das KeeperHub durchsetzt."
+      },
+      "money": {
+        "title": "Wo dein Geld liegt",
+        "description": "Die Anzeige im Header ist deine Organisations-Wallet im gewählten Netzwerk. Tippe auf + für ihre Adresse und einen QR-Code zum Aufladen. Das Guthaben jedes Netzwerks steht für sich und wird nie mit einem anderen zusammengerechnet."
+      },
+      "connect": {
+        "title": "Zum Start verbinden",
+        "description": "Die Anmeldung öffnet KeeperHub und bringt dich danach direkt hierher zurück."
+      }
+    },
+    "skip": "Überspringen",
+    "next": "Weiter",
+    "done": "Los geht’s",
+    "lastStep": "Letzter Schritt",
+    "connectTitle": "Verbinde KeeperHub, um zu starten",
+    "connectNote": "Eine Anmeldung. Jede Abfrage und jeder freigegebene Schreibvorgang läuft über deine KeeperHub-Organisation.",
+    "progress": "Schritt {step} von {total}"
+  },
+  "addFunds": {
+    "eyebrow": "Einzahlen · {network, select, testnet {testnet} other {mainnet}}",
+    "title": "Organisations-Wallet aufladen",
+    "description": "Sende {symbol} auf {network} an deine KeeperHub-Organisations-Wallet. Damit wird das Gas für alles bezahlt, was du freigibst. Sende nur in diesem Netzwerk.",
+    "connectFirst": "Verbinde zuerst KeeperHub.",
+    "noWallet": "Diese Organisation hat noch keine Wallet. KeeperHub erstellt für jede Organisation eine; prüfe deine KeeperHub-Einstellungen.",
+    "orgWallet": "Organisations-Wallet",
+    "copyAddress": "Adresse der Organisations-Wallet kopieren",
+    "copied": "kopiert ✓",
+    "scanToSend": "scannen zum Senden",
+    "nativeOn": "{symbol} auf {network}",
+    "checking": "Guthaben wird geprüft…",
+    "unavailable": "Guthaben nicht verfügbar",
+    "startInChat": "Im Chat starten",
+    "checkAgain": "Guthaben erneut prüfen",
+    "rereads": "Guthaben werden neu gelesen, wenn du zu diesem Tab zurückkehrst.",
+    "viewOnExplorer": "Im Explorer ansehen"
+  },
+  "receiptWelcome": {
+    "eyebrow": "Erster Beleg",
+    "title": "Deine erste Aktion ist durchgegangen",
+    "body": "KeeperHub hat sie ausgeführt und die Chain hat sie bestätigt. Ihr Beleg liegt unter Aktivität, und jeder weitere landet ebenfalls dort.",
+    "keepGoing": "Weitermachen"
+  },
+  "palette": {
+    "trigger": "Suche",
+    "title": "KeeperHub Copilot durchsuchen",
+    "search": "Seiten, Netzwerke und Aktionen durchsuchen",
+    "placeholder": "Seiten, Netzwerke und Aktionen durchsuchen…",
+    "results": "Ergebnisse",
+    "moreActions": "{count} weitere · alle Aktionen durchsuchen",
+    "moreNetworks": "{count} weitere · tippe weiter, um einzugrenzen",
+    "loadingActions": "Aktionen werden geladen…",
+    "actionsFailed": "Aktionen konnten nicht geladen werden. Schließ die Suche und öffne sie erneut.",
+    "noResults": "Keine Ergebnisse für „{query}“",
+    "noResultsHint": "Probier „aave“, „sepolia“ oder „aktivität“.",
+    "move": "bewegen",
+    "open": "öffnen",
+    "close": "schließen",
+    "resultCount": "{count, plural, one {# Ergebnis} other {# Ergebnisse}}",
+    "signs": "signiert",
+    "selected": "Ausgewählt",
+    "here": "hier",
+    "switched": "Zu {network} gewechselt",
+    "switchedDescription": "Neue Fragen und Karten nutzen dieses Netzwerk.",
+    "sections": {
+      "page": "Seiten",
+      "network": "Netzwerke",
+      "language": "Sprachen",
+      "action": "Aktionen"
+    },
+    "testnet": "Testnet",
+    "mainnet": "Mainnet",
+    "chain": "Chain {id}",
+    "languageSubtitle": "Sprache · {code}",
+    "languageKeywords": "Sprache Sprachen language languages"
+  },
+  "toast": {
+    "close": "Hinweis schließen"
+  },
+  "identicon": {
+    "label": "Identicon für {address}",
+    "noAccount": "Identicon ohne Konto"
+  },
+  "integrationMark": {
+    "form": "Deine Angaben",
+    "search": "Aktionskatalog"
+  },
+  "chainMark": {
+    "fallback": "Chain {id}"
+  }
+}

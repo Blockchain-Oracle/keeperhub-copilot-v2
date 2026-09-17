@@ -1,0 +1,136 @@
+{
+  "floatingNav": {
+    "links": {
+      "features": "Tính năng",
+      "how": "Cách hoạt động",
+      "install": "Cài đặt",
+      "docs": "Tài liệu"
+    },
+    "openApp": "Mở ứng dụng",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu"
+  },
+  "statusTicker": {
+    "networksLive": "{count, plural, other {<number>#</number> mạng đang hoạt động}}",
+    "connecting": "đang kết nối keeperhub"
+  },
+  "hero": {
+    "prompts": {
+      "price": "Giá ETH trên Chainlink hiện là bao nhiêu?",
+      "balances": "Cho tôi xem số dư của tôi trên mọi chuỗi",
+      "send": "Gửi 10 USDC đến alice.eth trên Base",
+      "supply": "Gửi 50 USDC vào Aave, nhưng cho tôi biết APY trước",
+      "gas": "Báo tôi khi phí gas giảm xuống dưới 20 gwei"
+    },
+    "title": "Onchain, bằng <em>ngôn ngữ thường ngày</em><stop>.</stop>",
+    "subtitle": "Copilot của bạn cho KeeperHub. Hỏi bất cứ điều gì và nó trả lời ngay — nhưng không thao tác chuyển giá trị nào tự diễn ra. <highlight>Nó dừng lại, cho bạn xem chính xác thao tác, và chờ.</highlight>",
+    "inputLabel": "Hỏi copilot của bạn",
+    "placeholder": "Hỏi copilot của bạn…",
+    "submit": "Mở ứng dụng",
+    "enterHint": "nhấn enter để mở trong ứng dụng"
+  },
+  "features": {
+    "heading": {
+      "eyebrow": "CHỨC NĂNG",
+      "title": "Đọc thì chạy ngay. Ghi thì <em>dừng lại và hỏi</em>.",
+      "subtitle": "Đặt câu hỏi và nó trả lời ngay. Yêu cầu chuyển giá trị thì nó dừng lại, điền sẵn mọi trường, và chờ bạn bấm."
+    },
+    "spec": "THÔNG SỐ",
+    "items": {
+      "registry": {
+        "tag": "DANH MỤC · 442 THAO TÁC",
+        "title": "Được tạo tự động, không viết tay.",
+        "description": "Hoán đổi, chuyển khoản, cho vay, staking, cầu nối, nguồn giá, ví, hạn mức phê duyệt, cảnh báo — 442 thao tác trên 34 tích hợp, được tạo từ danh mục của chính KeeperHub và gắn với mã băm của một snapshot."
+      },
+      "effect": {
+        "tag": "TÁC ĐỘNG · 292 / 148",
+        "title": "Cơ chế chặn được suy ra.",
+        "description": "Mọi thao tác được phân loại theo tác động ngay từ danh mục — 292 thao tác đọc, 148 thao tác chuyển giá trị hoặc cấp quyền. Thao tác nào bộ phân loại không xếp được sẽ bị cách ly và từ chối chạy."
+      },
+      "confirm": {
+        "tag": "XÁC NHẬN",
+        "title": "Bạn phê duyệt gì thì chạy đúng như vậy.",
+        "description": "Thao tác ghi sẽ dừng cuộc trò chuyện và hiện một thẻ: mọi trường đã điền sẵn, mọi trường đều sửa được. Được mô phỏng trước khi nền tảng hỗ trợ xem trước, và ghi rõ khi không thể. Những gì bạn phê duyệt được thực thi đúng từng byte."
+      },
+      "failLoudly": {
+        "tag": "BÁO LỖI RÕ RÀNG",
+        "title": "Một biên nhận. Không chỉ là phản hồi.",
+        "description": "Thành công là một biên nhận on-chain đã xác minh — khối, hash, trạng thái, đọc lại từ chuỗi. Một công cụ trả về ok thì vẫn chưa chuyển gì cả."
+      },
+      "voice": {
+        "tag": "GIỌNG NÓI",
+        "title": "Giọng nói có thể hỏi. Giọng nói không thể gửi.",
+        "description": "Nói một câu hỏi, nói để xem trước — giọng nói làm được cả hai. Xác nhận thao tác ghi cần một cú bấm có chủ ý trên thẻ."
+      },
+      "ledger": {
+        "tag": "SỔ CÁI",
+        "title": "Bản ghi tồn tại lâu hơn cuộc trò chuyện.",
+        "description": "Mỗi lần thực thi được ghi thành một dữ kiện bền vững, tách khỏi nội dung hội thoại, nên xóa cuộc trò chuyện không bao giờ xóa bằng chứng. Số lượng luôn là chuỗi số nguyên theo đơn vị cơ sở từ đầu đến cuối và chỉ được định dạng ở lớp hiển thị."
+      }
+    }
+  },
+  "howItWorks": {
+    "heading": {
+      "eyebrow": "CÁCH HOẠT ĐỘNG",
+      "title": "Từ một câu nói đến biên nhận <em>đã xác minh</em>.",
+      "subtitle": "Năm bước. Đọc thì chạy ngay. Ghi thì dừng lại và hỏi."
+    },
+    "meta": "QUY TRÌNH · BƯỚC {num}",
+    "issued": "ĐÃ CẤP",
+    "pending": "ĐANG CHỜ",
+    "step": "BƯỚC",
+    "steps": {
+      "ask": {
+        "title": "Bạn hỏi bằng ngôn ngữ thường ngày",
+        "body": "Không SDK, không ABI, không calldata. Gõ điều bạn thực sự muốn làm, và copilot hiểu đó là ý định chứ không phải một lệnh."
+      },
+      "resolve": {
+        "title": "Nó xác định thao tác",
+        "body": "442 thao tác trên 34 tích hợp, được tạo từ danh mục của chính KeeperHub và gắn mã băm snapshot. Mỗi thao tác được phân loại theo tác động: 292 đọc, 148 chuyển giá trị hoặc cấp quyền."
+      },
+      "gate": {
+        "title": "Đọc thì chạy. Ghi thì dừng.",
+        "body": "Thao tác đọc trả lời ngay — không có rủi ro nào. Mọi thao tác chuyển giá trị sẽ hiện một thẻ thay vào đó: mọi trường điền sẵn, mọi trường đều sửa được."
+      },
+      "confirm": {
+        "title": "Bạn kiểm tra và xác nhận",
+        "body": "Các tham số được cố định ngay khi thẻ hiện ra. Thứ được thực thi giống từng byte với những gì bạn đã phê duyệt, không phải điều mô hình nói tiếp theo."
+      },
+      "receipt": {
+        "title": "Bạn nhận được biên nhận",
+        "body": "Thành công là biên nhận on-chain đã xác minh, không bao giờ chỉ là phản hồi của công cụ — được lưu thành bản ghi bền vững, nên xóa cuộc trò chuyện không bao giờ xóa bằng chứng."
+      }
+    }
+  },
+  "install": {
+    "heading": {
+      "eyebrow": "KẾT NỐI",
+      "title": "Một khóa vào KeeperHub <em>của bạn</em>.",
+      "subtitle": "Một khóa kh_ có quyền mcp:write kết nối mọi MCP client bạn đang dùng. Bản thân copilot đăng nhập bằng KeeperHub, nên nó chỉ cần cài đặt riêng của mình."
+    },
+    "createKey": "Tạo khóa · cả 442 thao tác",
+    "shellTab": "Shell"
+  },
+  "finalCta": {
+    "invitation": "LỜI MỜI",
+    "nonCustodial": "KHÔNG LƯU KÝ",
+    "title": "Đọc thì chạy ngay. Ghi thì <em>dừng lại và hỏi</em>.",
+    "body": "Hỏi bất cứ điều gì và câu trả lời đến ngay. Yêu cầu chuyển giá trị thì nó dừng lại, điền sẵn mọi trường, và chờ bạn bấm.",
+    "openApp": "Mở ứng dụng",
+    "signed": "ĐÃ KÝ",
+    "snapshot": "SNAPSHOT DANH MỤC <highlight>442 THAO TÁC</highlight>"
+  },
+  "footer": {
+    "tagline": "đọc chạy ngay, ghi dừng lại và hỏi",
+    "live": "TRỰC TUYẾN",
+    "networks": "MẠNG {count}",
+    "effectSplit": "292 ĐỌC / 148 GHI",
+    "nav": {
+      "features": "Tính năng",
+      "how": "Cách dùng",
+      "install": "Cài đặt",
+      "app": "Ứng dụng",
+      "docs": "Tài liệu"
+    }
+  }
+}

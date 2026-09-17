@@ -1,0 +1,57 @@
+{
+  "label": {
+    "connecting": "Đang kết nối…",
+    "listening": "Đang nghe",
+    "muted": "Đã tắt tiếng",
+    "speaking": "Đang nói",
+    "waitingCard": "Đang chờ thẻ của bạn",
+    "waitingForm": "Đang chờ thông tin của bạn",
+    "error": "Không khởi động được giọng nói",
+    "idle": "Giọng nói"
+  },
+  "hint": {
+    "connecting": "Hãy cho phép dùng micro nếu trình duyệt hỏi.",
+    "listening": "Nói chuyện với KeeperHub. Thẻ sẽ hiện trong khung trò chuyện.",
+    "muted": "Micro của bạn đang tắt. Bật tiếng để nói.",
+    "speaking": "KeeperHub đang trả lời.",
+    "waitingCard": "Cho phép hoặc hủy thẻ phía trên để tiếp tục.",
+    "waitingForm": "Điền biểu mẫu phía trên để tiếp tục."
+  },
+  "micProblem": {
+    "blocked": "Quyền truy cập micro đang bị chặn. Hãy cho phép trang này dùng micro trong trình duyệt để dùng giọng nói.",
+    "notFound": "Không tìm thấy micro. Hãy kết nối micro để dùng giọng nói.",
+    "inUse": "Micro đang được một ứng dụng khác sử dụng. Hãy đóng ứng dụng đó và thử lại.",
+    "other": "Không thể mở micro. Hãy thử lại."
+  },
+  "engine": {
+    "startFailed": "Không khởi động được giọng nói. Hãy thử lại.",
+    "startOffline": "Không khởi động được giọng nói. Hãy kiểm tra kết nối internet và thử lại.",
+    "connectFailed": "Giọng nói không kết nối được. Hãy thử lại sau giây lát.",
+    "formGone": "Biểu mẫu này không còn chờ nữa.",
+    "detailsFailed": "Không gửi được thông tin của bạn. Hãy thử lại.",
+    "detailsOffline": "Không gửi được thông tin của bạn. Hãy kiểm tra kết nối internet và thử lại.",
+    "ended": {
+      "title": "Đã kết thúc giọng nói",
+      "description": "Mỗi phiên giọng nói kéo dài mười phút. Nhấn micro để bắt đầu lại."
+    },
+    "dropped": {
+      "title": "Giọng nói bị ngắt kết nối",
+      "description": "Nhấn micro để bắt đầu lại."
+    }
+  },
+  "bar": {
+    "group": "Hội thoại giọng nói",
+    "close": "Đóng giọng nói",
+    "mutedWhileAnswering": "Đã tắt tiếng trong lúc bạn trả lời trên màn hình",
+    "mute": "Tắt tiếng",
+    "unmute": "Bật tiếng",
+    "end": "Kết thúc"
+  },
+  "hero": {
+    "examples": "Thử “Giá ETH là bao nhiêu?” hoặc “Gửi 0 ETH cho chính tôi trên Base Sepolia”."
+  },
+  "formSheet": {
+    "detailsNeeded": "Cần thông tin",
+    "fallbackTitle": "Một vài thông tin"
+  }
+}

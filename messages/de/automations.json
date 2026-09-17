@@ -1,0 +1,369 @@
+{
+  "actions": {
+    "authorize": "Autorisieren",
+    "authorizing": "Wird autorisiert…",
+    "edit": "Bearbeiten",
+    "turnOn": "Einschalten",
+    "turnOff": "Ausschalten",
+    "turningOn": "Wird eingeschaltet…",
+    "runNow": "Jetzt ausführen",
+    "running": "Läuft…",
+    "checkAgain": "Erneut prüfen",
+    "openAutomation": "Automatisierung öffnen →"
+  },
+  "acknowledge": {
+    "goAhead": "Trotzdem fortfahren. Ich habe die Warnungen gelesen.",
+    "turnOn": "Trotzdem einschalten. Ich habe die Warnungen gelesen.",
+    "run": "Trotzdem ausführen. Ich habe die Warnungen gelesen."
+  },
+  "failures": {
+    "noAnswer": "KeeperHub hat nicht geantwortet.",
+    "noAnswerConnection": "KeeperHub hat nicht geantwortet. Prüfe deine Verbindung und versuche es erneut.",
+    "checkFailed": "Die Prüfung von KeeperHub konnte nicht laufen.",
+    "notTurnedOn": "KeeperHub hat sie nicht eingeschaltet.",
+    "notChanged": "KeeperHub hat die Automatisierung nicht geändert.",
+    "dryRunFailed": "KeeperHub konnte für diese Automatisierung keinen Testlauf machen.",
+    "runNotStarted": "Der Lauf konnte nicht gestartet werden.",
+    "runNotStartedConnection": "Der Lauf konnte nicht gestartet werden. Prüfe deine Verbindung und versuche es erneut."
+  },
+  "view": {
+    "trigger": {
+      "manual": "Auf Abruf, wenn jemand auf „Jetzt ausführen“ drückt",
+      "webhook": "Wenn ihre Webhook-URL aufgerufen wird",
+      "schedule": "Nach Zeitplan",
+      "block": "{count, plural, one {Jeden Block} other {Alle {every} Blöcke}}",
+      "event": "Wenn {event} ausgelöst wird",
+      "tempoPayment": "Wenn eine Tempo-Zahlung eingeht"
+    },
+    "rows": {
+      "cron": "Cron",
+      "timezone": "Zeitzone",
+      "contract": "Contract",
+      "recipient": "An",
+      "token": "Token",
+      "memo": "Memo",
+      "condition": "Weiter, wenn"
+    },
+    "stepFallback": "Schritt",
+    "actionLabel": {
+      "checking": "Wird geprüft…",
+      "checkFailed": "Prüfung fehlgeschlagen",
+      "blocked": "Nicht möglich",
+      "acknowledge": "Warnungen bestätigen"
+    },
+    "frame": {
+      "saving": {
+        "meta": "SPEICHERT",
+        "status": "Wird in KeeperHub gespeichert…"
+      },
+      "savingChanges": {
+        "meta": "SPEICHERT",
+        "status": "Änderungen werden in KeeperHub gespeichert…"
+      },
+      "starting": {
+        "meta": "STARTET",
+        "status": "Lauf wird in KeeperHub gestartet…"
+      },
+      "deleting": {
+        "meta": "LÖSCHT",
+        "status": "Wird aus KeeperHub gelöscht…"
+      },
+      "cancelled": {
+        "meta": "ABGEBROCHEN",
+        "status": "Abgebrochen"
+      },
+      "notSent": {
+        "meta": "NICHT GESENDET",
+        "status": "Nicht gesendet"
+      },
+      "cancelling": {
+        "meta": "BRICHT AB",
+        "status": "Wird abgebrochen…"
+      },
+      "noAnswer": {
+        "meta": "KEINE ANTWORT",
+        "status": "Autorisiert, keine Antwort gespeichert"
+      },
+      "turningOn": {
+        "meta": "SCHALTET EIN",
+        "status": "Wird in KeeperHub eingeschaltet…"
+      },
+      "turningOff": {
+        "meta": "SCHALTET AUS",
+        "status": "Wird in KeeperHub ausgeschaltet…"
+      },
+      "neverAuthorized": {
+        "meta": "NIE AUTORISIERT",
+        "status": "Nie autorisiert"
+      },
+      "authorizing": {
+        "meta": "AUTORISIERUNG",
+        "status": "Wird autorisiert…"
+      },
+      "edited": {
+        "meta": "BEARBEITET",
+        "status": "Bearbeitet, wartet auf deine Autorisierung"
+      },
+      "awaiting": {
+        "meta": "WARTET AUF AUTORISIERUNG",
+        "status": "Wartet auf deine Autorisierung"
+      },
+      "live": {
+        "meta": "LIVE",
+        "status": "Gespeichert und eingeschaltet"
+      },
+      "savedOff": {
+        "meta": "GESPEICHERT · AUS",
+        "status": "Gespeichert, ausgeschaltet"
+      },
+      "saved": {
+        "meta": "GESPEICHERT",
+        "status": "Änderungen gespeichert"
+      },
+      "deleted": {
+        "meta": "GELÖSCHT",
+        "status": "Aus KeeperHub gelöscht"
+      },
+      "executed": {
+        "meta": "AUSGEFÜHRT",
+        "status": "Ausgeführt"
+      },
+      "failed": {
+        "meta": "FEHLGESCHLAGEN",
+        "status": "Der Lauf ist fehlgeschlagen"
+      },
+      "stillRunning": {
+        "meta": "LÄUFT NOCH",
+        "status": "Läuft noch"
+      },
+      "running": {
+        "meta": "LÄUFT",
+        "status": "Läuft in KeeperHub…"
+      },
+      "started": {
+        "meta": "GESTARTET",
+        "status": "Gestartet"
+      },
+      "turnedOn": {
+        "meta": "EINGESCHALTET",
+        "status": "Eingeschaltet"
+      },
+      "turnedOff": {
+        "meta": "AUSGESCHALTET",
+        "status": "Ausgeschaltet"
+      }
+    },
+    "stamp": {
+      "live": "LIVE",
+      "saved": "GESPEICHERT",
+      "deleted": "GELÖSCHT",
+      "executed": "AUSGEFÜHRT",
+      "void": "UNGÜLTIG",
+      "on": "AN",
+      "off": "AUS"
+    },
+    "kicker": {
+      "create": "Neue Automatisierung",
+      "update": "Automatisierung ändern",
+      "run": "Automatisierungslauf",
+      "delete": "Automatisierung löschen",
+      "turnOn": "Automatisierung einschalten",
+      "turnOff": "Automatisierung ausschalten"
+    },
+    "title": {
+      "create": "Neue Automatisierung",
+      "update": "Eine Automatisierung ändern",
+      "run": "{name} ausführen",
+      "runAny": "Eine Automatisierung ausführen",
+      "delete": "{name} löschen",
+      "deleteAny": "Eine Automatisierung löschen",
+      "turnOn": "{name} einschalten",
+      "turnOnAny": "Eine Automatisierung einschalten",
+      "turnOff": "{name} ausschalten",
+      "turnOffAny": "Eine Automatisierung ausschalten"
+    },
+    "form": {
+      "name": "Name",
+      "cron": "Zeitplan (Cron)",
+      "timezone": "Zeitzone",
+      "network": "Netzwerk",
+      "every": "Alle N Blöcke",
+      "contract": "Contract",
+      "event": "Event-Name",
+      "abi": "Contract-ABI",
+      "abiPlaceholder": "Bei verifiziertem Contract leer lassen",
+      "recipient": "Einzahlungsadresse",
+      "token": "Token",
+      "memo": "Memo",
+      "stepField": "Schritt {number} · {label}"
+    }
+  },
+  "card": {
+    "declinedRun": "Du hast diesen Lauf abgelehnt. Nichts wurde ausgeführt.",
+    "declinedProposal": "Du hast diesen Vorschlag abgelehnt. In KeeperHub wurde nichts geändert.",
+    "checkValues": "Prüfe diese Werte",
+    "starts": "Startet",
+    "steps": "Schritte",
+    "automation": "Automatisierung",
+    "change": "Änderung",
+    "notSent": "Deine Antwort hat KeeperHub nicht erreicht. Prüfe deine Verbindung und versuche es erneut.",
+    "noAnswer": "Das wurde autorisiert, aber die Antwort von KeeperHub ist nie in diesem Chat angekommen. Auf der Seite Automatisierungen siehst du, wie es ausging.",
+    "archived": "Niemand hat das autorisiert, bevor der Chat archiviert wurde. Nichts wurde geändert.",
+    "updatedOn": "Sie ist eingeschaltet, daher läuft ab dem nächsten Start die neue Version.",
+    "updatedKept": "Sie bleibt ein- oder ausgeschaltet wie bisher.",
+    "deleted": "Samt Laufverlauf gelöscht. Sie erscheint nicht mehr auf der Seite Automatisierungen."
+  },
+  "savedFollowUp": {
+    "onDemand": "Sie läuft, wenn jemand auf ihrer Seite auf „Jetzt ausführen“ drückt.",
+    "archived": "Ausgeschaltet gespeichert. Auf ihrer Seite siehst du, ob sie seitdem eingeschaltet wurde.",
+    "live": "Eingeschaltet. KeeperHub startet sie ab jetzt von selbst.",
+    "off": "Sie ist ausgeschaltet. Schalte sie ein, nachdem du die Prüfung von KeeperHub gelesen hast, dann startet sie von selbst."
+  },
+  "runFollowUp": {
+    "started": "Gestartet. Auf der Seite der Automatisierung siehst du, wie der Lauf ausging.",
+    "running": "Läuft in KeeperHub. Diese Karte aktualisiert sich, wenn er fertig ist.",
+    "executed": "Ausgeführt.",
+    "transaction": "Transaktion",
+    "failed": "Der Lauf ist in KeeperHub fehlgeschlagen. Auf ihrer Seite siehst du, welcher Schritt ihn gestoppt hat.",
+    "stale": "Läuft nach fünf Minuten noch. Das Ergebnis erscheint auf ihrer Seite und unter Aktivität."
+  },
+  "previewBlock": {
+    "checking": "Prüfung bei KeeperHub",
+    "label": "KeeperHub-Prüfung",
+    "blocked": "blockiert",
+    "warned": "Warnungen lesen",
+    "ready": "bereit",
+    "changes": "Was sich ändert"
+  },
+  "subjectBlock": {
+    "steps": "Schritte",
+    "noSteps": "noch keine Schritte"
+  },
+  "triggerBlock": {
+    "network": "Netzwerk"
+  },
+  "stepDetail": {
+    "movesValue": "bewegt Werte"
+  },
+  "stepList": {
+    "off": "aus"
+  },
+  "listCard": {
+    "meta": "{count, plural, one {# AUTOMATISIERUNG} other {# AUTOMATISIERUNGEN}}",
+    "empty": "noch keine Automatisierungen",
+    "steps": "{count, plural, one {# Schritt} other {# Schritte}}"
+  },
+  "detailCard": {
+    "unreadableMeta": "UNLESBAR",
+    "unreadable": "diese Automatisierung konnte nicht gelesen werden",
+    "statusMeta": {
+      "live": "LIVE",
+      "manual": "AUF ABRUF",
+      "off": "AUS",
+      "deactivated": "DEAKTIVIERT"
+    },
+    "steps": "Schritte",
+    "noSteps": "noch keine Schritte",
+    "recentRuns": "Letzte Läufe",
+    "runsUnavailable": "Der Laufverlauf von KeeperHub ist gerade nicht verfügbar.",
+    "noRuns": "Noch keine Läufe."
+  },
+  "statusBadge": {
+    "live": "LIVE",
+    "manual": "auf Abruf",
+    "off": "aus",
+    "deactivated": "deaktiviert"
+  },
+  "triggerLabel": {
+    "manual": "Läuft auf Abruf",
+    "transfer": "Läuft bei einem Transfer",
+    "other": "Trigger: {type}"
+  },
+  "duration": {
+    "milliseconds": "{ms} ms",
+    "seconds": "{seconds} s",
+    "minutes": "{minutes} min {seconds} s"
+  },
+  "runStatus": {
+    "executed": "Ausgeführt",
+    "failed": "Fehlgeschlagen",
+    "cancelled": "Abgebrochen",
+    "skipped": "Übersprungen",
+    "running": "Läuft"
+  },
+  "board": {
+    "title": "Automatisierungen",
+    "subtitle": "Workflows, die KeeperHub für diese Organisation ausführt. Öffne einen, um Schritte und Läufe zu sehen, oder führe ihn jetzt aus.",
+    "filterLabel": "Anzeigen",
+    "filters": {
+      "all": "Alle",
+      "live": "Live",
+      "manual": "Auf Abruf",
+      "off": "Aus"
+    },
+    "sortLabel": "Sortieren",
+    "sorts": {
+      "updated": "Zuletzt aktualisiert",
+      "name": "Name"
+    },
+    "loadFailed": "Automatisierungen konnten gerade nicht geladen werden",
+    "retry": "Erneut versuchen",
+    "emptyTitle": "Noch keine Automatisierungen",
+    "emptyBody": "Bitte den Chat, eine zu erstellen, oder erstelle sie in KeeperHub. So oder so erscheint sie hier mit ihren Schritten und Läufen.",
+    "createPrompt": "Hilf mir, eine Automatisierung zu erstellen.",
+    "createInChat": "Im Chat erstellen →",
+    "openKeeperHub": "KeeperHub öffnen ↗",
+    "noneInView": "Keine Automatisierungen in dieser Ansicht.",
+    "columns": {
+      "automation": "Automatisierung",
+      "status": "Status",
+      "steps": "Schritte",
+      "networks": "Netzwerke",
+      "updated": "Aktualisiert"
+    },
+    "open": "Öffnen →"
+  },
+  "detail": {
+    "back": "← Automatisierungen",
+    "missingTitle": "Diese Automatisierung ist nicht verfügbar",
+    "missingBody": "Sie wurde vielleicht gelöscht oder gehört zu einer anderen Organisation.",
+    "loadFailed": "Diese Automatisierung konnte gerade nicht geladen werden. {message}",
+    "created": "erstellt <time></time>",
+    "deactivated": "Diese Automatisierung ist in KeeperHub deaktiviert.",
+    "stats": {
+      "trigger": "Trigger",
+      "steps": "Schritte",
+      "networks": "Netzwerke",
+      "lastRun": "Letzter Lauf",
+      "updated": "Aktualisiert"
+    },
+    "steps": "Schritte",
+    "noSteps": "Diese Automatisierung hat noch keine Schritte.",
+    "recentRuns": "Letzte Läufe",
+    "justStarted": "Dein gerade gestarteter Lauf",
+    "stillRunning": "Läuft noch. Das Ergebnis erscheint hier und unter Aktivität.",
+    "runsUnavailable": "Der Laufverlauf von KeeperHub ist gerade nicht verfügbar.",
+    "noRuns": "Noch keine Läufe.",
+    "runSource": "Lauf",
+    "viewTx": "Ansehen",
+    "moreTx": "+{count} weitere"
+  },
+  "runDialog": {
+    "runningDryRun": "Testlauf läuft…",
+    "acknowledge": "Warnung bestätigen",
+    "trigger": "Trigger",
+    "steps": "Schritte",
+    "networks": "Netzwerke",
+    "explainer": "Alle Schritte laufen jetzt. Schritte, die Werte bewegen, werden ohne erneuten Halt ausgeführt.",
+    "dryRunLoading": "Testlauf läuft",
+    "dryRun": "Testlauf",
+    "dryRunReason": "{reason} Du autorisierst genau das, was oben gezeigt wird.",
+    "noWarnings": "keine Warnungen",
+    "checked": "{count, plural, one {# Schritt geprüft} other {# Schritte geprüft}}.",
+    "checkedSkipped": "{count, plural, one {# Schritt geprüft} other {# Schritte geprüft}}, {skipped} nicht prüfbar."
+  },
+  "switchDialog": {
+    "onExplainer": "Eingeschaltet startet KeeperHub sie von selbst, und ihre Schritte laufen ohne erneuten Halt.",
+    "offExplainer": "Ausgeschaltet startet KeeperHub sie nicht mehr von selbst. „Jetzt ausführen“ funktioniert weiterhin."
+  }
+}

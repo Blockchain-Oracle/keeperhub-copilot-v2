@@ -1,0 +1,57 @@
+{
+  "label": {
+    "connecting": "Conectando…",
+    "listening": "Ouvindo",
+    "muted": "Silenciado",
+    "speaking": "Falando",
+    "waitingCard": "Aguardando seu cartão",
+    "waitingForm": "Aguardando seus dados",
+    "error": "Não foi possível iniciar a voz",
+    "idle": "Voz"
+  },
+  "hint": {
+    "connecting": "Permita o microfone se o navegador pedir.",
+    "listening": "Fale com o KeeperHub. Os cartões aparecem no chat.",
+    "muted": "Seu microfone está desligado. Reative o som para falar.",
+    "speaking": "O KeeperHub está respondendo.",
+    "waitingCard": "Autorize ou cancele o cartão acima para continuar.",
+    "waitingForm": "Preencha o formulário acima para continuar."
+  },
+  "micProblem": {
+    "blocked": "O acesso ao microfone está bloqueado. Permita o acesso para este site no navegador para usar a voz.",
+    "notFound": "Nenhum microfone encontrado. Conecte um para usar a voz.",
+    "inUse": "Seu microfone está sendo usado por outro app. Feche esse app e tente novamente.",
+    "other": "Não foi possível abrir o microfone. Tente novamente."
+  },
+  "engine": {
+    "startFailed": "Não foi possível iniciar a voz. Tente novamente.",
+    "startOffline": "Não foi possível iniciar a voz. Verifique sua conexão e tente novamente.",
+    "connectFailed": "Não foi possível conectar a voz. Tente novamente em instantes.",
+    "formGone": "Este formulário não está mais aguardando.",
+    "detailsFailed": "Não foi possível enviar seus dados. Tente novamente.",
+    "detailsOffline": "Não foi possível enviar seus dados. Verifique sua conexão e tente novamente.",
+    "ended": {
+      "title": "Voz encerrada",
+      "description": "Uma sessão de voz dura dez minutos. Pressione o microfone para começar de novo."
+    },
+    "dropped": {
+      "title": "Voz desconectada",
+      "description": "Pressione o microfone para começar de novo."
+    }
+  },
+  "bar": {
+    "group": "Conversa por voz",
+    "close": "Fechar voz",
+    "mutedWhileAnswering": "Silenciado enquanto você responde na tela",
+    "mute": "Silenciar",
+    "unmute": "Reativar som",
+    "end": "Encerrar"
+  },
+  "hero": {
+    "examples": "Experimente “Qual é o preço do ETH?” ou “Envie 0 ETH para mim mesmo na Base Sepolia”."
+  },
+  "formSheet": {
+    "detailsNeeded": "Dados necessários",
+    "fallbackTitle": "Alguns dados"
+  }
+}

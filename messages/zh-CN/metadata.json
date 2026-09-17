@@ -1,0 +1,12 @@
+{
+  "title": "KeeperHub Copilot",
+  "titleTemplate": "%s · KeeperHub Copilot",
+  "description": "用自然语言发起链上操作。任何数据都能读取，任何转移资产的操作都由你批准，还能把一句话变成长期运行的 KeeperHub 自动化。",
+  "chat": "聊天",
+  "history": "历史记录",
+  "activity": "动态",
+  "automations": "自动化",
+  "automation": "自动化",
+  "receiptNotShared": "回执未分享",
+  "receiptDescription": "KeeperHub 在链上执行的一项操作，分享自 KeeperHub Copilot。"
+}

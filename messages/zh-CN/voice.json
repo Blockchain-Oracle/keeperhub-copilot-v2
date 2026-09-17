@@ -1,0 +1,57 @@
+{
+  "label": {
+    "connecting": "连接中…",
+    "listening": "正在聆听",
+    "muted": "已静音",
+    "speaking": "正在说话",
+    "waitingCard": "等待你处理卡片",
+    "waitingForm": "等待你填写信息",
+    "error": "语音无法启动",
+    "idle": "语音"
+  },
+  "hint": {
+    "connecting": "如果浏览器请求权限，请允许使用麦克风。",
+    "listening": "与 KeeperHub 对话。卡片会显示在聊天中。",
+    "muted": "麦克风已关闭。取消静音即可说话。",
+    "speaking": "KeeperHub 正在回答。",
+    "waitingCard": "请授权或取消上方的卡片以继续。",
+    "waitingForm": "请填写上方的表单以继续。"
+  },
+  "micProblem": {
+    "blocked": "麦克风访问被阻止。请在浏览器中允许此网站使用麦克风，以便使用语音。",
+    "notFound": "未找到麦克风。请连接麦克风后再使用语音。",
+    "inUse": "麦克风正被其他应用占用。请关闭该应用后重试。",
+    "other": "无法打开麦克风。请重试。"
+  },
+  "engine": {
+    "startFailed": "语音无法启动。请重试。",
+    "startOffline": "语音无法启动。请检查网络连接后重试。",
+    "connectFailed": "语音无法连接。请稍后重试。",
+    "formGone": "此表单已不再等待填写。",
+    "detailsFailed": "无法发送你的信息。请重试。",
+    "detailsOffline": "无法发送你的信息。请检查网络连接后重试。",
+    "ended": {
+      "title": "语音已结束",
+      "description": "每次语音会话最长十分钟。按下麦克风即可重新开始。"
+    },
+    "dropped": {
+      "title": "语音已断开",
+      "description": "按下麦克风即可重新开始。"
+    }
+  },
+  "bar": {
+    "group": "语音对话",
+    "close": "关闭语音",
+    "mutedWhileAnswering": "你在屏幕上作答时已静音",
+    "mute": "静音",
+    "unmute": "取消静音",
+    "end": "结束"
+  },
+  "hero": {
+    "examples": "试试“ETH 价格是多少？”或“在 Base Sepolia 上给自己发送 0 ETH”。"
+  },
+  "formSheet": {
+    "detailsNeeded": "需要填写信息",
+    "fallbackTitle": "补充几项信息"
+  }
+}

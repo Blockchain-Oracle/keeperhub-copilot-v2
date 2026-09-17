@@ -1,0 +1,136 @@
+{
+  "floatingNav": {
+    "links": {
+      "features": "Fonctionnalités",
+      "how": "Fonctionnement",
+      "install": "Installation",
+      "docs": "Docs"
+    },
+    "openApp": "Ouvrir l’app",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "statusTicker": {
+    "networksLive": "{count, plural, one {<number>#</number> réseau actif} other {<number>#</number> réseaux actifs}}",
+    "connecting": "connexion à keeperhub"
+  },
+  "hero": {
+    "prompts": {
+      "price": "Quel est le cours de l’ETH sur Chainlink en ce moment ?",
+      "balances": "Montrez-moi mes soldes sur toutes les chaînes",
+      "send": "Envoyez 10 USDC à alice.eth sur Base",
+      "supply": "Déposez 50 USDC sur Aave, mais donnez-moi d’abord l’APY",
+      "gas": "Prévenez-moi quand le gas passe sous 20 gwei"
+    },
+    "title": "Onchain, en <em>langage courant</em><stop>.</stop>",
+    "subtitle": "Votre copilote pour KeeperHub. Posez n’importe quelle question, il répond aussitôt — mais rien de ce qui déplace des fonds ne se produit jamais tout seul. <highlight>Il s’arrête, vous montre l’action exacte et attend.</highlight>",
+    "inputLabel": "Demandez à votre copilote",
+    "placeholder": "Demandez à votre copilote…",
+    "submit": "Ouvrir l’app",
+    "enterHint": "appuyez sur Entrée pour ouvrir dans l’app"
+  },
+  "features": {
+    "heading": {
+      "eyebrow": "CE QU’IL FAIT",
+      "title": "Les lectures s’enchaînent. Les écritures <em>s’arrêtent et vous consultent</em>.",
+      "subtitle": "Posez une question, il répond aussitôt. Demandez-lui de déplacer des fonds : il s’arrête, remplit chaque champ et attend votre clic."
+    },
+    "spec": "SPÉC",
+    "items": {
+      "registry": {
+        "tag": "REGISTRE · 442 ACTIONS",
+        "title": "Généré, pas écrit à la main.",
+        "description": "Swaps, transferts, prêts, staking, bridges, flux de prix, portefeuilles, autorisations de dépense, alertes — 442 actions sur 34 intégrations, générées à partir du registre de KeeperHub lui-même et rattachées à un hash de snapshot."
+      },
+      "effect": {
+        "tag": "EFFET · 292 / 148",
+        "title": "Le contrôle est déduit.",
+        "description": "Chaque action est classée selon son effet à partir du registre lui-même — 292 en lecture, 148 qui déplacent des fonds ou accordent une autorisation. Tout ce que le classificateur ne sait pas placer est mis en quarantaine et refuse de s’exécuter."
+      },
+      "confirm": {
+        "tag": "CONFIRMER",
+        "title": "Ce que vous approuvez est ce qui s’exécute.",
+        "description": "Une écriture interrompt la discussion et affiche une carte : chaque champ rempli, chaque champ modifiable. Simulée d’abord quand la plateforme permet un aperçu, clairement signalée quand ce n’est pas possible. Ce que vous avez approuvé est ce qui s’exécute, octet pour octet."
+      },
+      "failLoudly": {
+        "tag": "ÉCHEC EXPLICITE",
+        "title": "Un reçu. Pas un simple accusé.",
+        "description": "Le succès, c’est un reçu on-chain vérifié — bloc, hash, statut, relus depuis la chaîne. Un outil qui renvoie ok n’a encore rien déplacé."
+      },
+      "voice": {
+        "tag": "VOIX",
+        "title": "La voix peut demander. La voix ne peut pas envoyer.",
+        "description": "Posez une question à voix haute, demandez un aperçu à voix haute — la voix sait faire les deux. Confirmer une écriture exige un clic délibéré sur la carte."
+      },
+      "ledger": {
+        "tag": "GRAND LIVRE",
+        "title": "La trace survit à la discussion.",
+        "description": "Chaque exécution est enregistrée comme un fait durable, séparé de la transcription : supprimer une conversation ne supprime jamais la preuve. Les montants restent des chaînes d’entiers en unités de base de bout en bout et ne sont formatés qu’à l’affichage."
+      }
+    }
+  },
+  "howItWorks": {
+    "heading": {
+      "eyebrow": "FONCTIONNEMENT",
+      "title": "D’une phrase à un reçu <em>vérifié</em>.",
+      "subtitle": "Cinq étapes. Les lectures s’enchaînent. Les écritures s’arrêtent et vous consultent."
+    },
+    "meta": "CÉRÉMONIE · ÉTAPE {num}",
+    "issued": "ÉMIS",
+    "pending": "EN ATTENTE",
+    "step": "ÉTAPE",
+    "steps": {
+      "ask": {
+        "title": "Vous demandez, en langage courant",
+        "body": "Ni SDK, ni ABI, ni calldata. Écrivez ce que vous voulez vraiment faire, et le copilote le lit comme une intention plutôt que comme une commande."
+      },
+      "resolve": {
+        "title": "Il identifie l’action",
+        "body": "442 actions sur 34 intégrations, générées à partir du registre de KeeperHub lui-même et rattachées à un hash de snapshot. Chacune est classée selon son effet : 292 en lecture, 148 qui déplacent des fonds ou accordent une autorisation."
+      },
+      "gate": {
+        "title": "Les lectures s’enchaînent. Les écritures s’arrêtent.",
+        "body": "Une lecture répond immédiatement — rien n’est en jeu. Tout ce qui déplace des fonds affiche plutôt une carte : chaque champ rempli, chaque champ modifiable."
+      },
+      "confirm": {
+        "title": "Vous vérifiez et confirmez",
+        "body": "Les arguments sont figés dès que la carte s’affiche. Ce qui s’exécute correspond octet pour octet à ce que vous avez approuvé, et non à ce que le modèle dira ensuite."
+      },
+      "receipt": {
+        "title": "Vous recevez un reçu",
+        "body": "Le succès, c’est un reçu on-chain vérifié, jamais un simple accusé de l’outil — conservé comme trace durable : supprimer la conversation ne supprime jamais la preuve."
+      }
+    }
+  },
+  "install": {
+    "heading": {
+      "eyebrow": "CONNEXION",
+      "title": "Une seule clé pour <em>votre</em> KeeperHub.",
+      "subtitle": "Une clé kh_ avec le scope mcp:write connecte n’importe quel client MCP que vous utilisez déjà. Le copilote, lui, se connecte avec KeeperHub : il n’a besoin que de ses propres réglages."
+    },
+    "createKey": "Créer une clé · les 442 actions",
+    "shellTab": "Shell"
+  },
+  "finalCta": {
+    "invitation": "INVITATION",
+    "nonCustodial": "NON-CUSTODIAL",
+    "title": "Les lectures s’enchaînent. Les écritures <em>s’arrêtent et vous consultent</em>.",
+    "body": "Posez n’importe quelle question, la réponse arrive immédiatement. Demandez-lui de déplacer des fonds : il s’arrête, remplit chaque champ et attend votre clic.",
+    "openApp": "Ouvrir l’app",
+    "signed": "SIGNÉ",
+    "snapshot": "SNAPSHOT DU REGISTRE <highlight>442 ACTIONS</highlight>"
+  },
+  "footer": {
+    "tagline": "les lectures s’enchaînent, les écritures s’arrêtent et vous consultent",
+    "live": "EN LIGNE",
+    "networks": "RÉSEAUX {count}",
+    "effectSplit": "292 LECTURES / 148 ÉCRITURES",
+    "nav": {
+      "features": "Fonctionnalités",
+      "how": "Fonctionnement",
+      "install": "Installation",
+      "app": "App",
+      "docs": "Docs"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "history": {
+    "title": "Historique",
+    "subtitle": {
+      "empty": "Vos conversations, et ce que chacune a exécuté.",
+      "counts": "{conversations, plural, one {# conversation} other {# conversations}} · {executed, plural, one {# action exécutée} other {# actions exécutées}}"
+    },
+    "error": {
+      "title": "Impossible de charger votre historique",
+      "body": "Vos conversations sont toujours enregistrées. Nous n’avons simplement pas pu les récupérer.",
+      "retry": "Réessayer"
+    },
+    "empty": {
+      "title": "Aucune conversation pour l’instant",
+      "body": "Chaque conversation est enregistrée ici avec ce qu’elle a exécuté. Lancez une discussion pour créer la première.",
+      "openChat": "Ouvrir la discussion"
+    },
+    "card": {
+      "executed": "{count, plural, one {# exécutée} other {# exécutées}}",
+      "readsOnly": "lectures uniquement",
+      "open": "Ouvrir",
+      "seal": "Actions exécutées"
+    }
+  },
+  "activity": {
+    "title": "Activité",
+    "subtitle": "Ce qui a été exécuté via le copilote pour cette organisation, du plus récent au plus ancien. Heures en UTC.",
+    "filter": {
+      "label": "Afficher",
+      "actions": "Actions",
+      "reads": "Lectures",
+      "all": "Tout"
+    },
+    "error": {
+      "title": "Impossible de charger l’activité pour le moment",
+      "body": "Les enregistrements sont toujours là. Nous n’avons simplement pas pu les récupérer.",
+      "retry": "Réessayer"
+    },
+    "empty": {
+      "actions": {
+        "title": "Rien d’envoyé pour l’instant",
+        "body": "Les actions que vous autorisez dans la discussion apparaissent ici avec leurs reçus."
+      },
+      "reads": {
+        "title": "Aucune lecture pour l’instant",
+        "body": "Les prix, les soldes et toutes les autres consultations de l’assistant apparaissent ici."
+      },
+      "all": {
+        "title": "Rien ici pour l’instant",
+        "body": "Tout ce que le copilote exécute pour cette organisation apparaît ici, du plus récent au plus ancien."
+      },
+      "openChat": "Ouvrir la discussion"
+    },
+    "columns": {
+      "what": "Quoi",
+      "network": "Réseau",
+      "outcome": "Résultat",
+      "transaction": "Transaction",
+      "when": "Quand",
+      "from": "Origine"
+    },
+    "loadMore": "Charger plus",
+    "loadMoreFailed": "Impossible d’en charger plus. Réessayez.",
+    "view": "Voir",
+    "fromChat": "Discussion",
+    "fromAutomation": "Automatisation",
+    "verb": {
+      "send": "Envoi",
+      "contractCall": "Appel de contrat",
+      "walletIntegration": "Intégration de portefeuille",
+      "automationRun": "Exécution d’automatisation",
+      "automationCreated": "Nouvelle automatisation",
+      "automationChanged": "Automatisation modifiée",
+      "automationOn": "Automatisation activée",
+      "automationOff": "Automatisation désactivée",
+      "automationDeleted": "Automatisation supprimée"
+    },
+    "outcome": {
+      "executed": "Exécuté",
+      "running": "En cours",
+      "saved": "Enregistré",
+      "saving": "Enregistrement",
+      "on": "Activé",
+      "turningOn": "Activation",
+      "off": "Désactivé",
+      "turningOff": "Désactivation",
+      "deleted": "Supprimé",
+      "deleting": "Suppression",
+      "failed": "Échec",
+      "paidFailed": "Payé, échec",
+      "cancelled": "Annulé",
+      "expired": "Expiré",
+      "sending": "Envoi",
+      "read": "Lecture"
+    }
+  },
+  "sharedReceipt": {
+    "kicker": "Reçu partagé",
+    "stamp": "EXÉCUTÉ",
+    "executed": "Exécuté",
+    "verified": "Vérifié on-chain par KeeperHub",
+    "sent": "Envoyé via KeeperHub",
+    "tokens": "jetons",
+    "rows": {
+      "network": "Réseau",
+      "token": "Jeton",
+      "block": "Bloc",
+      "executed": "Exécuté"
+    },
+    "footnote": "Partagé depuis KeeperHub Copilot. Seules les informations on-chain publiques sont affichées.",
+    "tryCopilot": "Essayer KeeperHub Copilot",
+    "notFound": {
+      "title": "Ce reçu n’est pas partagé",
+      "body": "Le lien a été désactivé, ou il n’a jamais existé."
+    }
+  }
+}

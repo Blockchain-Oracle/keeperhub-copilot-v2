@@ -1,0 +1,267 @@
+{
+  "nav": {
+    "primary": "Ana gezinme",
+    "beta": "beta",
+    "items": {
+      "chat": {
+        "name": "Sohbet",
+        "description": "Zincir üstünde ne istersen sor."
+      },
+      "history": {
+        "name": "Geçmiş",
+        "description": "Geçmiş sohbetleri makbuzlarıyla birlikte yeniden aç."
+      },
+      "activity": {
+        "name": "Etkinlik",
+        "description": "Kuruluş cüzdanının çalıştırdığı her şey."
+      },
+      "automations": {
+        "name": "Otomasyonlar",
+        "description": "KeeperHub’ın senin için çalıştırdığı iş akışları."
+      },
+      "actions": {
+        "name": "Eylemler",
+        "description": "KeeperHub’ın çalıştırabildiği her eylem, okuma ya da yazma."
+      },
+      "gettingStarted": {
+        "name": "Başlarken",
+        "description": "KeeperHub’a bağlan ve ilk sorunu sor."
+      },
+      "mcp": {
+        "name": "MCP kurulumu",
+        "description": "KeeperHub’ı Claude, Cursor ya da herhangi bir MCP istemcisinden kullan."
+      },
+      "howItWorks": {
+        "name": "Nasıl çalışır",
+        "description": "Neyin serbestçe çalıştığı, neyin tıklamanı beklediği."
+      }
+    },
+    "groups": {
+      "build": {
+        "name": "Oluştur",
+        "description": "KeeperHub’ın çalıştırdıklarını otomatikleştir."
+      },
+      "learn": {
+        "name": "Öğren",
+        "description": "Copilot ve KeeperHub için rehberler."
+      }
+    },
+    "sections": {
+      "automate": {
+        "name": "Otomatikleştir",
+        "description": "İş akışları ve eylemler"
+      },
+      "guides": {
+        "name": "Rehberler",
+        "description": "Buradan başla"
+      }
+    }
+  },
+  "mobileNav": {
+    "label": "Mobil ana gezinme",
+    "openAll": "Tüm gezinmeyi aç",
+    "more": "Daha fazla",
+    "eyebrow": "Gezin",
+    "title": "KeeperHub Copilot’taki her şey",
+    "description": "Otomatikleştir, göz gezdir ya da öğren. Her sayfanın tek bir yeri var.",
+    "allDestinations": "Tüm KeeperHub Copilot sayfaları"
+  },
+  "connect": {
+    "connect": "KeeperHub’a bağlan",
+    "connecting": "Bağlanıyor…",
+    "unreachable": "KeeperHub’a ulaşılamıyor",
+    "noOrgWallet": "Kuruluş cüzdanı yok"
+  },
+  "accountMenu": {
+    "open": "Hesap menüsünü aç",
+    "noWalletTitle": "Bu kuruluşun henüz cüzdanı yok",
+    "walletLabel": "Kuruluş cüzdanı {address}",
+    "noWalletLabel": "Kuruluş cüzdanı yok",
+    "noWallet": "Cüzdan yok",
+    "menu": "Hesap",
+    "orgWallet": "Kuruluş cüzdanı",
+    "spentToday": "Bugün harcanan",
+    "spentTitle": "EVM ağlarında bugün taşınan değer, KeeperHub’ın uyguladığı günlük limite göre.",
+    "spentTitleDefault": "EVM ağlarında bugün taşınan değer, KeeperHub’ın uyguladığı günlük limite göre (KeeperHub varsayılanı).",
+    "limitUnavailable": "KeeperHub şu an günlük limiti bildiremedi.",
+    "copyAddress": "Adresi kopyala",
+    "viewOnExplorer": "Gezginde görüntüle",
+    "disconnect": "Bağlantıyı kes"
+  },
+  "moneyPill": {
+    "unavailable": "Bu ağdaki bakiye şu an alınamıyor",
+    "noWallet": "Bu kuruluşun henüz cüzdanı yok",
+    "addFunds": "Bakiye ekle",
+    "balance": "Kuruluş cüzdanı bakiyesi {amount} {symbol}. Bakiye ekle",
+    "balanceUnavailable": "Kuruluş cüzdanı bakiyesi alınamıyor. Bakiye ekle"
+  },
+  "networkPill": {
+    "label": "Ağ: {name}",
+    "mainnets": "Ana ağlar",
+    "testnets": "Test ağları",
+    "loading": "Ağlar yükleniyor…",
+    "unavailable": "KeeperHub’ın ağ listesi şu an alınamıyor."
+  },
+  "language": {
+    "title": "Bir dil seç",
+    "description": "Uygulama, sohbet ve ses bu dili kullanır.",
+    "switched": "Yanıt dili artık {language}",
+    "switchedDescription": "Sohbet bir sonraki mesajından, ses ise bir sonraki oturumundan itibaren bu dilde yanıt verir."
+  },
+  "appStrip": {
+    "label": "KeeperHub Copilot hakkında",
+    "lines": {
+      "readsRun": "Okumalar serbestçe çalışır. Her yazma tıklamanı bekler",
+      "orgWalletSigns": "KeeperHub kuruluş cüzdanın imzalar. Tarayıcı cüzdanı yok"
+    },
+    "howItWorks": "Nasıl çalışır",
+    "dismiss": "Kapat"
+  },
+  "marquee": {
+    "networks": "AĞLAR",
+    "unavailable": "ALINAMIYOR",
+    "loading": "YÜKLENİYOR"
+  },
+  "capabilityPending": {
+    "waiting": "Henüz bağlı değil · {dependency} bekleniyor"
+  },
+  "writeRecovery": {
+    "landed": "Önceki bir eylem gerçekleşti",
+    "landedReceipt": "{name}. Makbuzu Etkinlik’te.",
+    "landedRecorded": "{name}. Etkinlik’te kayıtlı.",
+    "failed": "Önceki bir eylem gerçekleşmedi",
+    "failedDescription": "{name}. KeeperHub bunu başarısız olarak kaydetti. Hiçbir şey yeniden denenmedi.",
+    "expired": "Önceki bir eylem doğrulanamadı",
+    "expiredDescription": "{name} bir günden uzun süre önce başladı ve hiç onaylanmadı. Yeniden denemeden önce Etkinlik’i kontrol et.",
+    "pending": "{count, plural, one {Önceki bir eylem hâlâ kontrol ediliyor} other {Önceki # eylem hâlâ kontrol ediliyor}}",
+    "pendingDescription": "KeeperHub bunu henüz onaylamadı. Hiçbir şey kendiliğinden yeniden denenmez."
+  },
+  "signIn": {
+    "eyebrow": "KeeperHub · Bağlan",
+    "description": "Copilot, KeeperHub hesabınla oturum açar. Kuruluşunun cüzdanı imzalar, yalnızca senin onayladıklarını.",
+    "continueWithKeeperHub": "KeeperHub ile devam et",
+    "continueHint": "devam et",
+    "footer": "Kuruluş cüzdanı imzalar · tarayıcı cüzdanı yok",
+    "errors": {
+      "denied": "KeeperHub’da iptal ettin, bu yüzden hiçbir şey bağlanmadı.",
+      "failed": "KeeperHub oturumunu açmayı tamamlamadı. Tekrar dene."
+    },
+    "status": {
+      "online": "KeeperHub çevrimiçi",
+      "unreachable": "KeeperHub’a ulaşılamıyor",
+      "checking": "KeeperHub kontrol ediliyor"
+    }
+  },
+  "signInGate": {
+    "eyebrow": "KeeperHub · Kimlik kartı",
+    "title": "<em>Kimlik bilgilerini</em> gir.",
+    "body": "Copilot zincir durumunu okur ve <highlight>senin</highlight> KeeperHub hesabınla hareket eder. Bir kez oturum aç; onayladıklarını kuruluşunun cüzdanı imzalar.",
+    "retry": "KeeperHub’a ulaşılamıyor · yeniden dene",
+    "writesWait": "Her yazma yine de tıklamanı bekler.",
+    "counts": "{actions, plural, one {# eylem} other {# eylem}} · {integrations, plural, one {# entegrasyon} other {# entegrasyon}}",
+    "networks": "{count, plural, one {# ağ} other {# ağ}}",
+    "networksUnknown": "— ağ"
+  },
+  "tutorial": {
+    "steps": {
+      "welcome": {
+        "title": "KeeperHub Copilot’a hoş geldin",
+        "description": "KeeperHub için bir sohbet. Fiyatları, bakiyeleri, transferleri ya da otomasyonları sade bir dille iste. Copilot bunu yapan KeeperHub eylemini seçer ve sonucu bir kart olarak gösterir."
+      },
+      "readsRun": {
+        "title": "Okumalar çalışır, yazmalar bekler",
+        "description": "Fiyat ya da bakiye gibi yalnızca bakan her şey hemen çalışır. Değer taşıyan her şey, tüm alanları doldurulmuş bir kart olarak durur. Düzenle, deneme çalıştırması yap, sonra onayla ya da reddet. Sen tıklayana kadar hiçbir şey hareket etmez."
+      },
+      "orgWallet": {
+        "title": "Kuruluş cüzdanın imzalar",
+        "description": "Tarayıcı cüzdanıyla değil, KeeperHub hesabınla oturum açarsın. KeeperHub’ın kuruluşun için tuttuğu cüzdan, KeeperHub’ın uyguladığı günlük limit dahilinde onayladıklarını imzalar."
+      },
+      "money": {
+        "title": "Paran nerede duruyor",
+        "description": "Üst kısımdaki rozet, seçtiğin ağdaki kuruluş cüzdanındır. Adresini ve cüzdana bakiye yüklemek için bir QR kodu görmek üzere + simgesine dokun. Her ağın bakiyesi kendine aittir ve asla bir başkasınınkiyle toplanmaz."
+      },
+      "connect": {
+        "title": "Başlamak için bağlan",
+        "description": "Oturum açmak KeeperHub’ı açar, sonra seni doğrudan buraya geri getirir."
+      }
+    },
+    "skip": "Atla",
+    "next": "İleri",
+    "done": "Başla",
+    "lastStep": "Son adım",
+    "connectTitle": "Başlamak için KeeperHub’a bağlan",
+    "connectNote": "Tek oturum açma. Her okuma ve onaylanan her yazma KeeperHub kuruluşun üzerinden çalışır.",
+    "progress": "Adım {step} / {total}"
+  },
+  "addFunds": {
+    "eyebrow": "Bakiye ekle · {network, select, testnet {testnet} other {mainnet}}",
+    "title": "Kuruluş cüzdanına bakiye yükle",
+    "description": "{network} ağında KeeperHub kuruluş cüzdanına {symbol} gönder. Onayladıklarının gas ücretini bu öder. Yalnızca bu ağda gönder.",
+    "connectFirst": "Önce KeeperHub’a bağlan.",
+    "noWallet": "Bu kuruluşun henüz cüzdanı yok. KeeperHub her kuruluş için bir cüzdan oluşturur; KeeperHub ayarlarını kontrol et.",
+    "orgWallet": "Kuruluş cüzdanı",
+    "copyAddress": "Kuruluş cüzdanı adresini kopyala",
+    "copied": "kopyalandı ✓",
+    "scanToSend": "göndermek için tara",
+    "nativeOn": "{network} ağında {symbol}",
+    "checking": "Bakiye kontrol ediliyor…",
+    "unavailable": "Bakiye alınamıyor",
+    "startInChat": "Sohbette başla",
+    "checkAgain": "Bakiyeyi yeniden kontrol et",
+    "rereads": "Bu sekmeye döndüğünde bakiyeler yeniden okunur.",
+    "viewOnExplorer": "Gezginde görüntüle"
+  },
+  "receiptWelcome": {
+    "eyebrow": "İlk makbuz",
+    "title": "İlk eylemin gerçekleşti",
+    "body": "KeeperHub çalıştırdı ve zincir onayladı. Makbuzu Etkinlik’te; sonraki her makbuz da oraya düşer.",
+    "keepGoing": "Devam et"
+  },
+  "palette": {
+    "trigger": "Ara",
+    "title": "KeeperHub Copilot’ta ara",
+    "search": "Sayfaları, ağları ve eylemleri ara",
+    "placeholder": "Sayfaları, ağları ve eylemleri ara…",
+    "results": "Sonuçlar",
+    "moreActions": "{count} tane daha · tüm eylemlere göz at",
+    "moreNetworks": "{count} tane daha · daraltmak için yazmaya devam et",
+    "loadingActions": "Eylemler yükleniyor…",
+    "actionsFailed": "Eylemler yüklenemedi. Bunu kapatıp yeniden aç.",
+    "noResults": "“{query}” için sonuç yok",
+    "noResultsHint": "“aave”, “sepolia” ya da “etkinlik” dene.",
+    "move": "gezin",
+    "open": "aç",
+    "close": "kapat",
+    "resultCount": "{count, plural, one {# sonuç} other {# sonuç}}",
+    "signs": "imzalar",
+    "selected": "Seçili",
+    "here": "burada",
+    "switched": "{network} ağına geçildi",
+    "switchedDescription": "Yeni sorular ve kartlar bu ağı kullanır.",
+    "sections": {
+      "page": "Sayfalar",
+      "network": "Ağlar",
+      "language": "Diller",
+      "action": "Eylemler"
+    },
+    "testnet": "Test ağı",
+    "mainnet": "Ana ağ",
+    "chain": "zincir {id}",
+    "languageSubtitle": "Dil · {code}",
+    "languageKeywords": "dil diller language"
+  },
+  "toast": {
+    "close": "Bildirimi kapat"
+  },
+  "identicon": {
+    "label": "{address} için kimlik simgesi",
+    "noAccount": "hesapsız kimlik simgesi"
+  },
+  "integrationMark": {
+    "form": "Bilgilerin",
+    "search": "Eylem kataloğu"
+  },
+  "chainMark": {
+    "fallback": "Zincir {id}"
+  }
+}

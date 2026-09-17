@@ -1,0 +1,136 @@
+{
+  "floatingNav": {
+    "links": {
+      "features": "Funktionen",
+      "how": "So funktioniert’s",
+      "install": "Installieren",
+      "docs": "Doku"
+    },
+    "openApp": "App öffnen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "statusTicker": {
+    "networksLive": "{count, plural, one {<number>#</number> Netzwerk live} other {<number>#</number> Netzwerke live}}",
+    "connecting": "verbinde mit keeperhub"
+  },
+  "hero": {
+    "prompts": {
+      "price": "Wie hoch ist der ETH-Preis bei Chainlink gerade?",
+      "balances": "Zeig mir meine Guthaben auf allen Chains",
+      "send": "Sende 10 USDC an alice.eth auf Base",
+      "supply": "Zahl 50 USDC bei Aave ein und nenn mir vorher die APY",
+      "gas": "Sag mir Bescheid, wenn Gas unter 20 gwei fällt"
+    },
+    "title": "Onchain, in <em>einfachen Worten</em><stop>.</stop>",
+    "subtitle": "Dein Copilot für KeeperHub. Frag irgendwas, und er antwortet sofort — aber nichts, was Werte bewegt, passiert einfach so. <highlight>Er hält an, zeigt dir die genaue Aktion und wartet.</highlight>",
+    "inputLabel": "Frag deinen Copilot",
+    "placeholder": "Frag deinen Copilot…",
+    "submit": "App öffnen",
+    "enterHint": "Enter drücken, um in der App zu öffnen"
+  },
+  "features": {
+    "heading": {
+      "eyebrow": "WAS ER KANN",
+      "title": "Lesen läuft. Schreiben <em>hält an und fragt</em>.",
+      "subtitle": "Stell eine Frage, und er antwortet sofort. Bitte ihn, Werte zu bewegen, und er hält an, füllt jedes Feld aus und wartet auf deinen Klick."
+    },
+    "spec": "SPEZ",
+    "items": {
+      "registry": {
+        "tag": "REGISTRY · 442 AKTIONEN",
+        "title": "Generiert, nicht handgeschrieben.",
+        "description": "Swaps, Transfers, Lending, Staking, Bridges, Preisfeeds, Wallets, Allowances, Alerts — 442 Aktionen über 34 Integrationen, generiert aus KeeperHubs eigener Registry und an einen Snapshot-Hash gebunden."
+      },
+      "effect": {
+        "tag": "WIRKUNG · 292 / 148",
+        "title": "Die Schranke wird abgeleitet.",
+        "description": "Jede Aktion wird direkt aus der Registry nach ihrer Wirkung eingestuft — 292 lesen, 148 bewegen Werte oder erteilen Berechtigungen. Alles, was der Klassifikator nicht zuordnen kann, kommt in Quarantäne und wird nicht ausgeführt."
+      },
+      "confirm": {
+        "tag": "BESTÄTIGEN",
+        "title": "Was du freigibst, wird ausgeführt.",
+        "description": "Ein Schreibvorgang hält den Chat an und zeigt eine Karte: jedes Feld ausgefüllt, jedes Feld bearbeitbar. Zuerst simuliert, wo die Plattform eine Vorschau erlaubt, klar gekennzeichnet, wo nicht. Was du freigegeben hast, wird ausgeführt, Byte für Byte."
+      },
+      "failLoudly": {
+        "tag": "LAUT SCHEITERN",
+        "title": "Ein Beleg. Kein bloßes OK.",
+        "description": "Erfolg ist ein verifizierter On-Chain-Beleg — Block, Hash, Status, direkt von der Chain zurückgelesen. Ein Tool, das ok meldet, hat noch nichts bewegt."
+      },
+      "voice": {
+        "tag": "SPRACHE",
+        "title": "Per Sprache fragen ja. Per Sprache senden nein.",
+        "description": "Sprich eine Frage, sprich eine Vorschau — per Sprache geht beides. Einen Schreibvorgang bestätigst du nur mit einem bewussten Klick auf die Karte."
+      },
+      "ledger": {
+        "tag": "LEDGER",
+        "title": "Der Nachweis überdauert den Chat.",
+        "description": "Jede Ausführung wird als dauerhafter Eintrag getrennt vom Chatverlauf gespeichert, sodass das Löschen einer Unterhaltung nie den Nachweis löscht. Beträge bleiben durchgehend ganzzahlige Strings in Basiseinheiten und werden erst bei der Anzeige formatiert."
+      }
+    }
+  },
+  "howItWorks": {
+    "heading": {
+      "eyebrow": "SO FUNKTIONIERT’S",
+      "title": "Vom Satz zum <em>verifizierten</em> Beleg.",
+      "subtitle": "Fünf Schritte. Lesen läuft. Schreiben hält an und fragt."
+    },
+    "meta": "ABLAUF · SCHRITT {num}",
+    "issued": "AUSGESTELLT",
+    "pending": "AUSSTEHEND",
+    "step": "SCHRITT",
+    "steps": {
+      "ask": {
+        "title": "Du fragst in einfachen Worten",
+        "body": "Kein SDK, keine ABI, keine Calldata. Schreib, was du wirklich erledigt haben willst, und der Copilot versteht es als Absicht statt als Befehl."
+      },
+      "resolve": {
+        "title": "Er ermittelt die Aktion",
+        "body": "442 Aktionen über 34 Integrationen, generiert aus KeeperHubs eigener Registry und per Snapshot-Hash fixiert. Jede ist nach ihrer Wirkung eingestuft: 292 lesen, 148 bewegen Werte oder erteilen Berechtigungen."
+      },
+      "gate": {
+        "title": "Lesen läuft. Schreiben hält an.",
+        "body": "Eine Abfrage antwortet sofort — es steht nichts auf dem Spiel. Alles, was Werte bewegt, zeigt stattdessen eine Karte: jedes Feld ausgefüllt, jedes Feld bearbeitbar."
+      },
+      "confirm": {
+        "title": "Du prüfst und bestätigst",
+        "body": "Die Argumente werden eingefroren, sobald die Karte erscheint. Ausgeführt wird Byte für Byte, was du freigegeben hast, nicht das, was das Modell als Nächstes sagt."
+      },
+      "receipt": {
+        "title": "Du bekommst einen Beleg",
+        "body": "Erfolg ist ein verifizierter On-Chain-Beleg, nie bloß eine Tool-Bestätigung — dauerhaft gespeichert, sodass das Löschen der Unterhaltung nie den Nachweis löscht."
+      }
+    }
+  },
+  "install": {
+    "heading": {
+      "eyebrow": "VERBINDEN",
+      "title": "Ein Schlüssel für <em>dein</em> KeeperHub.",
+      "subtitle": "Ein kh_-Schlüssel mit dem Scope mcp:write verbindet jeden MCP-Client, den du schon nutzt. Der Copilot selbst meldet sich über KeeperHub an und braucht daher nur seine eigenen Einstellungen."
+    },
+    "createKey": "Schlüssel erstellen · alle 442 Aktionen",
+    "shellTab": "Shell"
+  },
+  "finalCta": {
+    "invitation": "EINLADUNG",
+    "nonCustodial": "NON-CUSTODIAL",
+    "title": "Lesen läuft. Schreiben <em>hält an und fragt</em>.",
+    "body": "Frag irgendwas, und die Antwort kommt sofort. Bitte ihn, Werte zu bewegen, und er hält an, füllt jedes Feld aus und wartet auf deinen Klick.",
+    "openApp": "App öffnen",
+    "signed": "SIGNIERT",
+    "snapshot": "REGISTRY-SNAPSHOT <highlight>442 AKTIONEN</highlight>"
+  },
+  "footer": {
+    "tagline": "lesen läuft, schreiben hält an und fragt",
+    "live": "LIVE",
+    "networks": "NETZWERKE {count}",
+    "effectSplit": "292 LESEN / 148 SCHREIBEN",
+    "nav": {
+      "features": "Funktionen",
+      "how": "Ablauf",
+      "install": "Installieren",
+      "app": "App",
+      "docs": "Doku"
+    }
+  }
+}

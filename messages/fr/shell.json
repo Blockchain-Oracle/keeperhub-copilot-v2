@@ -1,0 +1,267 @@
+{
+  "nav": {
+    "primary": "Navigation principale",
+    "beta": "bêta",
+    "items": {
+      "chat": {
+        "name": "Discussion",
+        "description": "Demandez n’importe quoi on-chain."
+      },
+      "history": {
+        "name": "Historique",
+        "description": "Revoyez vos conversations passées, reçus compris."
+      },
+      "activity": {
+        "name": "Activité",
+        "description": "Tout ce que le portefeuille de l’organisation a exécuté."
+      },
+      "automations": {
+        "name": "Automatisations",
+        "description": "Les workflows que KeeperHub exécute pour vous."
+      },
+      "actions": {
+        "name": "Actions",
+        "description": "Toutes les actions que KeeperHub peut exécuter, en lecture ou en écriture."
+      },
+      "gettingStarted": {
+        "name": "Premiers pas",
+        "description": "Connectez KeeperHub et posez votre première question."
+      },
+      "mcp": {
+        "name": "Configuration MCP",
+        "description": "Utilisez KeeperHub depuis Claude, Cursor ou n’importe quel client MCP."
+      },
+      "howItWorks": {
+        "name": "Fonctionnement",
+        "description": "Ce qui s’exécute librement et ce qui attend votre clic."
+      }
+    },
+    "groups": {
+      "build": {
+        "name": "Créer",
+        "description": "Automatisez ce que KeeperHub exécute."
+      },
+      "learn": {
+        "name": "Apprendre",
+        "description": "Guides pour le copilote et KeeperHub."
+      }
+    },
+    "sections": {
+      "automate": {
+        "name": "Automatiser",
+        "description": "Workflows et actions"
+      },
+      "guides": {
+        "name": "Guides",
+        "description": "Commencez ici"
+      }
+    }
+  },
+  "mobileNav": {
+    "label": "Navigation principale mobile",
+    "openAll": "Ouvrir toute la navigation",
+    "more": "Plus",
+    "eyebrow": "Naviguer",
+    "title": "Tout KeeperHub Copilot",
+    "description": "Automatisez, parcourez ou apprenez. Chaque destination a une seule place.",
+    "allDestinations": "Toutes les destinations de KeeperHub Copilot"
+  },
+  "connect": {
+    "connect": "Connecter KeeperHub",
+    "connecting": "Connexion…",
+    "unreachable": "KeeperHub injoignable",
+    "noOrgWallet": "Pas de portefeuille"
+  },
+  "accountMenu": {
+    "open": "Ouvrir le menu du compte",
+    "noWalletTitle": "Cette organisation n’a pas encore de portefeuille",
+    "walletLabel": "Portefeuille de l’organisation {address}",
+    "noWalletLabel": "Aucun portefeuille d’organisation",
+    "noWallet": "Aucun portefeuille",
+    "menu": "Compte",
+    "orgWallet": "Portefeuille de l’organisation",
+    "spentToday": "Dépensé aujourd’hui",
+    "spentTitle": "Valeur déplacée aujourd’hui sur les réseaux EVM, par rapport à la limite quotidienne appliquée par KeeperHub.",
+    "spentTitleDefault": "Valeur déplacée aujourd’hui sur les réseaux EVM, par rapport à la limite quotidienne appliquée par KeeperHub (valeur par défaut de KeeperHub).",
+    "limitUnavailable": "KeeperHub n’a pas pu indiquer la limite quotidienne pour le moment.",
+    "copyAddress": "Copier l’adresse",
+    "viewOnExplorer": "Voir dans l’explorateur",
+    "disconnect": "Se déconnecter"
+  },
+  "moneyPill": {
+    "unavailable": "Le solde sur ce réseau est indisponible pour le moment",
+    "noWallet": "Cette organisation n’a pas encore de portefeuille",
+    "addFunds": "Ajouter des fonds",
+    "balance": "Solde du portefeuille de l’organisation : {amount} {symbol}. Ajouter des fonds",
+    "balanceUnavailable": "Solde du portefeuille de l’organisation indisponible. Ajouter des fonds"
+  },
+  "networkPill": {
+    "label": "Réseau : {name}",
+    "mainnets": "Mainnets",
+    "testnets": "Testnets",
+    "loading": "Chargement des réseaux…",
+    "unavailable": "La liste des réseaux de KeeperHub est indisponible pour le moment."
+  },
+  "language": {
+    "title": "Choisir une langue",
+    "description": "L’app, la discussion et la voix utilisent cette langue.",
+    "switched": "Réponses désormais en {language}",
+    "switchedDescription": "La discussion répond dans cette langue dès votre prochain message, et la voix dès sa prochaine session."
+  },
+  "appStrip": {
+    "label": "À propos de KeeperHub Copilot",
+    "lines": {
+      "readsRun": "Les lectures s’exécutent librement. Chaque écriture attend votre clic",
+      "orgWalletSigns": "Le portefeuille de votre organisation KeeperHub signe. Aucun portefeuille de navigateur"
+    },
+    "howItWorks": "Fonctionnement",
+    "dismiss": "Masquer"
+  },
+  "marquee": {
+    "networks": "RÉSEAUX",
+    "unavailable": "INDISPONIBLE",
+    "loading": "CHARGEMENT"
+  },
+  "capabilityPending": {
+    "waiting": "Pas encore connecté · en attente de {dependency}"
+  },
+  "writeRecovery": {
+    "landed": "Une action précédente a abouti",
+    "landedReceipt": "{name}. Son reçu se trouve dans Activité.",
+    "landedRecorded": "{name}. Elle est enregistrée dans Activité.",
+    "failed": "Une action précédente n’a pas abouti",
+    "failedDescription": "{name}. KeeperHub l’a enregistrée comme échouée. Aucune nouvelle tentative n’a été faite.",
+    "expired": "Une action précédente n’a pas pu être vérifiée",
+    "expiredDescription": "{name} a démarré il y a plus d’un jour et n’a jamais été confirmée. Consultez Activité avant de réessayer.",
+    "pending": "{count, plural, one {Une action précédente est encore en cours de vérification} other {# actions précédentes sont encore en cours de vérification}}",
+    "pendingDescription": "KeeperHub ne l’a pas encore confirmée. Rien n’est relancé automatiquement."
+  },
+  "signIn": {
+    "eyebrow": "KeeperHub · Connexion",
+    "description": "Copilot se connecte via votre compte KeeperHub. Le portefeuille de votre organisation signe, et uniquement ce que vous approuvez.",
+    "continueWithKeeperHub": "Continuer avec KeeperHub",
+    "continueHint": "continuer",
+    "footer": "Le portefeuille de l’organisation signe · aucun portefeuille de navigateur",
+    "errors": {
+      "denied": "Vous avez annulé sur KeeperHub, rien n’a donc été connecté.",
+      "failed": "KeeperHub n’a pas terminé votre connexion. Réessayez."
+    },
+    "status": {
+      "online": "KeeperHub en ligne",
+      "unreachable": "KeeperHub injoignable",
+      "checking": "vérification de KeeperHub"
+    }
+  },
+  "signInGate": {
+    "eyebrow": "KeeperHub · Carte d’identité",
+    "title": "Insérez vos <em>identifiants</em>.",
+    "body": "Copilot lit l’état de la chaîne et agit via <highlight>votre</highlight> compte KeeperHub. Connectez-vous une fois ; le portefeuille de votre organisation signe ce que vous approuvez.",
+    "retry": "KeeperHub injoignable · réessayer",
+    "writesWait": "Chaque écriture attend toujours votre clic.",
+    "counts": "{actions, plural, one {# action} other {# actions}} · {integrations, plural, one {# intégration} other {# intégrations}}",
+    "networks": "{count, plural, one {# réseau} other {# réseaux}}",
+    "networksUnknown": "— réseaux"
+  },
+  "tutorial": {
+    "steps": {
+      "welcome": {
+        "title": "Bienvenue dans KeeperHub Copilot",
+        "description": "Une discussion pour KeeperHub. Demandez simplement des prix, des soldes, des transferts ou des automatisations. Copilot choisit l’action KeeperHub qui convient et affiche le résultat sous forme de carte."
+      },
+      "readsRun": {
+        "title": "Les lectures s’exécutent, les écritures attendent",
+        "description": "Tout ce qui se contente de consulter, comme un prix ou un solde, s’exécute immédiatement. Tout ce qui déplace des fonds s’arrête sous forme de carte, avec chaque champ rempli. Modifiez-la, simulez-la, puis approuvez ou refusez. Rien ne bouge avant votre clic."
+      },
+      "orgWallet": {
+        "title": "Le portefeuille de votre organisation signe",
+        "description": "Vous vous connectez avec votre compte KeeperHub, pas avec un portefeuille de navigateur. Le portefeuille que KeeperHub gère pour votre organisation signe ce que vous approuvez, dans la limite quotidienne appliquée par KeeperHub."
+      },
+      "money": {
+        "title": "Où se trouvent vos fonds",
+        "description": "La pastille dans l’en-tête correspond au portefeuille de votre organisation sur le réseau choisi. Appuyez sur + pour afficher son adresse et un QR code pour l’approvisionner. Le solde de chaque réseau lui est propre et ne s’additionne jamais à celui d’un autre."
+      },
+      "connect": {
+        "title": "Connectez-vous pour commencer",
+        "description": "La connexion ouvre KeeperHub, puis vous ramène directement ici."
+      }
+    },
+    "skip": "Passer",
+    "next": "Suivant",
+    "done": "Commencer",
+    "lastStep": "Dernière étape",
+    "connectTitle": "Connectez KeeperHub pour commencer",
+    "connectNote": "Une seule connexion. Chaque lecture et chaque écriture approuvée passent par votre organisation KeeperHub.",
+    "progress": "Étape {step} sur {total}"
+  },
+  "addFunds": {
+    "eyebrow": "Ajouter des fonds · {network, select, testnet {testnet} other {mainnet}}",
+    "title": "Approvisionner le portefeuille de l’organisation",
+    "description": "Envoyez des {symbol} sur {network} au portefeuille KeeperHub de votre organisation. Il paie le gas de ce que vous approuvez. N’envoyez que sur ce réseau.",
+    "connectFirst": "Connectez d’abord KeeperHub.",
+    "noWallet": "Cette organisation n’a pas encore de portefeuille. KeeperHub en crée un pour chaque organisation ; vérifiez vos paramètres KeeperHub.",
+    "orgWallet": "Portefeuille de l’organisation",
+    "copyAddress": "Copier l’adresse du portefeuille de l’organisation",
+    "copied": "copié ✓",
+    "scanToSend": "scanner pour envoyer",
+    "nativeOn": "{symbol} sur {network}",
+    "checking": "Vérification du solde…",
+    "unavailable": "Solde indisponible",
+    "startInChat": "Commencer dans la discussion",
+    "checkAgain": "Revérifier le solde",
+    "rereads": "Les soldes sont relus quand vous revenez sur cet onglet.",
+    "viewOnExplorer": "Voir dans l’explorateur"
+  },
+  "receiptWelcome": {
+    "eyebrow": "Premier reçu",
+    "title": "Votre première action a abouti",
+    "body": "KeeperHub l’a exécutée et la chaîne l’a confirmée. Son reçu se trouve dans Activité, comme tous ceux qui suivront.",
+    "keepGoing": "Continuer"
+  },
+  "palette": {
+    "trigger": "Rechercher",
+    "title": "Rechercher dans KeeperHub Copilot",
+    "search": "Rechercher des pages, réseaux et actions",
+    "placeholder": "Rechercher des pages, réseaux et actions…",
+    "results": "Résultats",
+    "moreActions": "{count} de plus · parcourir toutes les actions",
+    "moreNetworks": "{count} de plus · continuez à taper pour affiner",
+    "loadingActions": "Chargement des actions…",
+    "actionsFailed": "Les actions n’ont pas pu être chargées. Fermez et rouvrez cette fenêtre.",
+    "noResults": "Aucun résultat pour « {query} »",
+    "noResultsHint": "Essayez « aave », « sepolia » ou « activité ».",
+    "move": "naviguer",
+    "open": "ouvrir",
+    "close": "fermer",
+    "resultCount": "{count, plural, one {# résultat} other {# résultats}}",
+    "signs": "à signer",
+    "selected": "Sélectionné",
+    "here": "ici",
+    "switched": "Passage à {network}",
+    "switchedDescription": "Les nouvelles questions et cartes utilisent ce réseau.",
+    "sections": {
+      "page": "Pages",
+      "network": "Réseaux",
+      "language": "Langues",
+      "action": "Actions"
+    },
+    "testnet": "Testnet",
+    "mainnet": "Mainnet",
+    "chain": "chaîne {id}",
+    "languageSubtitle": "Langue · {code}",
+    "languageKeywords": "langue langues language languages"
+  },
+  "toast": {
+    "close": "Fermer la notification"
+  },
+  "identicon": {
+    "label": "identicon de {address}",
+    "noAccount": "identicon sans compte"
+  },
+  "integrationMark": {
+    "form": "Vos informations",
+    "search": "Catalogue d’actions"
+  },
+  "chainMark": {
+    "fallback": "Chaîne {id}"
+  }
+}

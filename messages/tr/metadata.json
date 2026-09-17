@@ -1,0 +1,12 @@
+{
+  "title": "KeeperHub Copilot",
+  "titleTemplate": "%s · KeeperHub Copilot",
+  "description": "Zincir üstü bir eylemi sade bir dille iste. İstediğini oku, değer taşıyan her şeyi sen onayla ve bir cümleyi kalıcı bir KeeperHub otomasyonuna dönüştür.",
+  "chat": "Sohbet",
+  "history": "Geçmiş",
+  "activity": "Etkinlik",
+  "automations": "Otomasyonlar",
+  "automation": "Otomasyon",
+  "receiptNotShared": "Makbuz paylaşılmıyor",
+  "receiptDescription": "KeeperHub’ın zincir üstünde gerçekleştirdiği, KeeperHub Copilot’tan paylaşılan bir eylem."
+}

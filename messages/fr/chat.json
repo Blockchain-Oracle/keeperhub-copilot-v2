@@ -1,0 +1,148 @@
+{
+  "newConversation": "Nouvelle conversation",
+  "loadNotice": "Cette conversation n’a pas pu être entièrement chargée. Ses messages sont conservés mais ne peuvent pas être affichés.",
+  "toolStates": {
+    "preparing": "préparation",
+    "running": "en cours",
+    "waitingForApproval": "en attente d’approbation",
+    "sendingAnswer": "envoi de votre réponse",
+    "done": "terminé",
+    "failed": "échec",
+    "declined": "refusé",
+    "waitingForYou": "en attente de votre action",
+    "unknown": "inconnu"
+  },
+  "chat": {
+    "hints": {
+      "connect": "Connectez KeeperHub pour commencer.",
+      "answerUnsent": "Appuyez sur Réessayer sur la carte ci-dessus pour envoyer votre réponse.",
+      "form": "Remplissez ou fermez le formulaire ci-dessus pour continuer.",
+      "approval": "Autorisez ou annulez l’action ci-dessus pour continuer."
+    },
+    "banner": {
+      "createFailed": "La conversation n’a pas pu être créée. Réessayez.",
+      "sessionEnded": "Votre session KeeperHub a expiré.",
+      "answerUnsent": "Votre réponse n’est pas parvenue à KeeperHub. Utilisez Réessayer sur la carte.",
+      "turnFailed": "L’assistant a rencontré une erreur. Réessayez.",
+      "connect": "Connecter KeeperHub",
+      "retry": "Réessayer"
+    },
+    "archived": {
+      "notice": "Cette conversation a été archivée. Elle est désormais en lecture seule.",
+      "newChat": "Nouvelle discussion"
+    },
+    "ceremony": {
+      "noConversation": "Aucune conversation sur laquelle lancer la simulation.",
+      "dryRunUnprepared": "La simulation n’a pas pu être préparée.",
+      "checkFailed": "La vérification de KeeperHub n’a pas pu s’exécuter.",
+      "checkUnreachable": "La vérification de KeeperHub n’a pas pu s’exécuter. Vérifiez votre connexion et réessayez.",
+      "enableFailed": "KeeperHub n’a pas modifié l’automatisation.",
+      "enableUnreachable": "KeeperHub n’a pas répondu. Vérifiez votre connexion et réessayez."
+    }
+  },
+  "composer": {
+    "form": "Zone de saisie du message",
+    "label": "Demander à KeeperHub",
+    "placeholder": "Demandez à KeeperHub…",
+    "send": "Envoyer le message",
+    "talk": "Parler à KeeperHub",
+    "talkUnavailable": "La voix est disponible dès que plus rien n’est en attente",
+    "menu": "Réseau et actions",
+    "searchActions": "Rechercher des actions",
+    "browseActions": "Parcourir les {count} actions"
+  },
+  "messageList": {
+    "thinking": "Réflexion",
+    "said": "à l’oral"
+  },
+  "toolTimeline": {
+    "used": "{count, plural, one {# outil utilisé} other {# outils utilisés}}",
+    "using": "Utilisation de {count, plural, one {# outil} other {# outils}}",
+    "input": "Entrée",
+    "output": "Sortie",
+    "elapsedSeconds": "{seconds} s",
+    "elapsedMinutes": "{minutes} min {seconds} s"
+  },
+  "sessionDropdown": {
+    "conversations": "Conversations",
+    "newChat": "Nouvelle discussion",
+    "loadFailed": "La liste n’a pas pu être chargée. Fermez et réessayez.",
+    "empty": "Aucune discussion passée pour l’instant.",
+    "rename": "Renommer la conversation {title}",
+    "delete": "Supprimer la conversation {title}",
+    "newTitle": "Nouveau titre de la conversation {title}",
+    "titleTooLong": "Les titres sont limités à {max} caractères.",
+    "renameFailed": "Le nouveau nom n’a pas pu être enregistré. Réessayez.",
+    "renamed": "Conversation renommée.",
+    "deleteFailed": "La conversation n’a pas pu être supprimée. Réessayez.",
+    "deleted": "Conversation supprimée."
+  },
+  "home": {
+    "status": {
+      "online": "KeeperHub en ligne · {count, plural, one {# réseau} other {# réseaux}}",
+      "unreachable": "KeeperHub injoignable",
+      "checking": "vérification de KeeperHub"
+    },
+    "greeting": "Que peut faire KeeperHub pour vous ?",
+    "intro": "Demandez un prix, un solde ou un transfert. Les lectures répondent immédiatement ; <b>tout ce qui déplace des fonds attend votre clic.</b> Ou partez d’une carte ci-dessous.",
+    "orPickACard": "Ou choisissez une carte",
+    "quoted": "« {text} »"
+  },
+  "motifs": {
+    "noOrgWallet": "pas encore de portefeuille d’organisation",
+    "approve": "Approuver",
+    "pooledDeposits": "dépôts mutualisés",
+    "actions": "{count, plural, one {# action} other {# actions}}",
+    "yourConversations": "vos conversations",
+    "conversations": "{count, plural, one {# conversation} other {# conversations}}"
+  },
+  "categories": {
+    "chainlink": {
+      "title": "Prix",
+      "description": "Lisez un flux de prix en direct, directement depuis Chainlink.",
+      "mobileDesc": "Flux de prix Chainlink."
+    },
+    "lido": {
+      "title": "Staking liquide",
+      "description": "Ce que vaut l’ETH staké, lu depuis Lido.",
+      "mobileDesc": "Taux de staking Lido."
+    },
+    "rocketPool": {
+      "title": "Rocket Pool",
+      "description": "Le taux de change du rETH et la quantité en circulation.",
+      "mobileDesc": "Le taux du rETH."
+    },
+    "sky": {
+      "title": "Coffre d’épargne",
+      "description": "Le montant déposé dans le coffre d’épargne Sky.",
+      "mobileDesc": "Dépôts du coffre Sky."
+    },
+    "orgWallet": {
+      "title": "Portefeuille de l’organisation",
+      "description": "Ce que détient le portefeuille de votre organisation sur {network}.",
+      "mobileDesc": "Soldes sur ce réseau.",
+      "prompt": "Que détient le portefeuille de mon organisation sur {network} ?",
+      "familyLabel": "Compte"
+    },
+    "sendToSelf": {
+      "title": "Envoi à vous-même",
+      "description": "Un transfert de valeur nulle vers votre propre portefeuille. Il attend votre clic.",
+      "mobileDesc": "Attend votre clic.",
+      "prompt": "Envoyez {amount} du portefeuille de mon organisation vers lui-même sur {network}.",
+      "familyLabel": "Compte · écriture"
+    },
+    "discover": {
+      "title": "Découvrir les actions",
+      "description": "Demandez ce que KeeperHub peut faire avec un protocole.",
+      "mobileDesc": "Ce que propose un protocole.",
+      "prompt": "Que pouvez-vous faire avec Aave V3 ?",
+      "familyLabel": "Catalogue"
+    },
+    "history": {
+      "title": "Historique",
+      "description": "Rouvrez les conversations passées et leurs reçus.",
+      "mobileDesc": "Conversations passées.",
+      "familyLabel": "Historique"
+    }
+  }
+}

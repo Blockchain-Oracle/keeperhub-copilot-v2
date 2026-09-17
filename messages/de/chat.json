@@ -1,0 +1,148 @@
+{
+  "newConversation": "Neue Unterhaltung",
+  "loadNotice": "Diese Unterhaltung konnte nicht vollständig geladen werden. Ihre Nachrichten bleiben gespeichert, können aber nicht angezeigt werden.",
+  "toolStates": {
+    "preparing": "wird vorbereitet",
+    "running": "läuft",
+    "waitingForApproval": "wartet auf Freigabe",
+    "sendingAnswer": "sendet deine Antwort",
+    "done": "fertig",
+    "failed": "fehlgeschlagen",
+    "declined": "abgelehnt",
+    "waitingForYou": "wartet auf dich",
+    "unknown": "unbekannt"
+  },
+  "chat": {
+    "hints": {
+      "connect": "Verbinde KeeperHub, um zu starten.",
+      "answerUnsent": "Tippe auf der Karte oben auf „Erneut versuchen“, um deine Antwort zu senden.",
+      "form": "Füll das Formular oben aus oder schließ es, um fortzufahren.",
+      "approval": "Autorisiere die Aktion oben oder brich sie ab, um fortzufahren."
+    },
+    "banner": {
+      "createFailed": "Die Unterhaltung konnte nicht erstellt werden. Versuche es erneut.",
+      "sessionEnded": "Deine KeeperHub-Sitzung ist abgelaufen.",
+      "answerUnsent": "Deine Antwort hat KeeperHub nicht erreicht. Nutze „Erneut versuchen“ auf der Karte.",
+      "turnFailed": "Beim Assistenten ist ein Fehler aufgetreten. Versuche es erneut.",
+      "connect": "KeeperHub verbinden",
+      "retry": "Erneut versuchen"
+    },
+    "archived": {
+      "notice": "Diese Unterhaltung wurde archiviert. Sie ist jetzt schreibgeschützt.",
+      "newChat": "Neuer Chat"
+    },
+    "ceremony": {
+      "noConversation": "Keine Unterhaltung für einen Testlauf vorhanden.",
+      "dryRunUnprepared": "Der Testlauf konnte nicht vorbereitet werden.",
+      "checkFailed": "Die Prüfung von KeeperHub konnte nicht laufen.",
+      "checkUnreachable": "Die Prüfung von KeeperHub konnte nicht laufen. Prüfe deine Verbindung und versuche es erneut.",
+      "enableFailed": "KeeperHub hat die Automatisierung nicht geändert.",
+      "enableUnreachable": "KeeperHub hat nicht geantwortet. Prüfe deine Verbindung und versuche es erneut."
+    }
+  },
+  "composer": {
+    "form": "Nachrichteneingabe",
+    "label": "KeeperHub fragen",
+    "placeholder": "KeeperHub fragen…",
+    "send": "Nachricht senden",
+    "talk": "Mit KeeperHub sprechen",
+    "talkUnavailable": "Sprache ist verfügbar, sobald nichts mehr wartet",
+    "menu": "Netzwerk und Aktionen",
+    "searchActions": "Aktionen suchen",
+    "browseActions": "Alle {count} Aktionen durchsuchen"
+  },
+  "messageList": {
+    "thinking": "Denkt nach",
+    "said": "sagte"
+  },
+  "toolTimeline": {
+    "used": "{count, plural, one {# Tool} other {# Tools}} genutzt",
+    "using": "Nutzt {count, plural, one {# Tool} other {# Tools}}",
+    "input": "Eingabe",
+    "output": "Ausgabe",
+    "elapsedSeconds": "{seconds} s",
+    "elapsedMinutes": "{minutes} min {seconds} s"
+  },
+  "sessionDropdown": {
+    "conversations": "Unterhaltungen",
+    "newChat": "Neuer Chat",
+    "loadFailed": "Die Liste konnte nicht geladen werden. Schließ sie und versuche es erneut.",
+    "empty": "Noch keine früheren Chats.",
+    "rename": "Unterhaltung {title} umbenennen",
+    "delete": "Unterhaltung {title} löschen",
+    "newTitle": "Neuer Titel für Unterhaltung {title}",
+    "titleTooLong": "Titel dürfen höchstens {max} Zeichen lang sein.",
+    "renameFailed": "Die Umbenennung konnte nicht gespeichert werden. Versuche es erneut.",
+    "renamed": "Unterhaltung umbenannt.",
+    "deleteFailed": "Die Unterhaltung konnte nicht gelöscht werden. Versuche es erneut.",
+    "deleted": "Unterhaltung gelöscht."
+  },
+  "home": {
+    "status": {
+      "online": "KeeperHub online · {count, plural, one {# Netzwerk} other {# Netzwerke}}",
+      "unreachable": "KeeperHub nicht erreichbar",
+      "checking": "prüfe KeeperHub"
+    },
+    "greeting": "Was soll KeeperHub für dich tun?",
+    "intro": "Frag nach einem Preis, einem Guthaben oder einem Transfer. Abfragen antworten sofort; <b>alles, was Werte bewegt, wartet auf deinen Klick.</b> Oder starte mit einer Karte unten.",
+    "orPickACard": "Oder wähl eine Karte",
+    "quoted": "„{text}“"
+  },
+  "motifs": {
+    "noOrgWallet": "noch keine Organisations-Wallet",
+    "approve": "Freigeben",
+    "pooledDeposits": "gepoolte Einlagen",
+    "actions": "{count, plural, one {# Aktion} other {# Aktionen}}",
+    "yourConversations": "deine Unterhaltungen",
+    "conversations": "{count, plural, one {# Unterhaltung} other {# Unterhaltungen}}"
+  },
+  "categories": {
+    "chainlink": {
+      "title": "Preise",
+      "description": "Lies einen Live-Preisfeed direkt von Chainlink.",
+      "mobileDesc": "Chainlink-Preisfeeds."
+    },
+    "lido": {
+      "title": "Liquid Staking",
+      "description": "Was gestaktes ETH wert ist, gelesen von Lido.",
+      "mobileDesc": "Lido-Staking-Kurse."
+    },
+    "rocketPool": {
+      "title": "Rocket Pool",
+      "description": "Der rETH-Wechselkurs und wie viel davon im Umlauf ist.",
+      "mobileDesc": "Der rETH-Kurs."
+    },
+    "sky": {
+      "title": "Spar-Vault",
+      "description": "Wie viel im Sky-Spar-Vault liegt.",
+      "mobileDesc": "Einlagen im Sky-Vault."
+    },
+    "orgWallet": {
+      "title": "Deine Organisations-Wallet",
+      "description": "Was die Wallet deiner Organisation auf {network} hält.",
+      "mobileDesc": "Guthaben in diesem Netzwerk.",
+      "prompt": "Was liegt in meiner Organisations-Wallet auf {network}?",
+      "familyLabel": "Konto"
+    },
+    "sendToSelf": {
+      "title": "An dich selbst senden",
+      "description": "Ein Transfer ohne Wert zurück an deine eigene Wallet. Er wartet auf deinen Klick.",
+      "mobileDesc": "Wartet auf deinen Klick.",
+      "prompt": "Sende {amount} von meiner Organisations-Wallet an sich selbst auf {network}.",
+      "familyLabel": "Konto · Schreiben"
+    },
+    "discover": {
+      "title": "Aktionen entdecken",
+      "description": "Frag, was KeeperHub mit einem Protokoll kann.",
+      "mobileDesc": "Was ein Protokoll bietet.",
+      "prompt": "Was kannst du mit Aave V3 machen?",
+      "familyLabel": "Katalog"
+    },
+    "history": {
+      "title": "Verlauf",
+      "description": "Frühere Unterhaltungen und ihre Belege wieder öffnen.",
+      "mobileDesc": "Frühere Unterhaltungen.",
+      "familyLabel": "Verlauf"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "label": {
+    "connecting": "연결 중…",
+    "listening": "듣는 중",
+    "muted": "음소거됨",
+    "speaking": "말하는 중",
+    "waitingCard": "카드 확인 대기 중",
+    "waitingForm": "정보 입력 대기 중",
+    "error": "음성을 시작할 수 없습니다",
+    "idle": "음성"
+  },
+  "hint": {
+    "connecting": "브라우저가 요청하면 마이크 사용을 허용하세요.",
+    "listening": "KeeperHub에 말해 보세요. 카드는 채팅에 표시됩니다.",
+    "muted": "마이크가 꺼져 있습니다. 말하려면 음소거를 해제하세요.",
+    "speaking": "KeeperHub가 답하는 중입니다.",
+    "waitingCard": "계속하려면 위의 카드를 승인하거나 취소하세요.",
+    "waitingForm": "계속하려면 위의 양식을 작성하세요."
+  },
+  "micProblem": {
+    "blocked": "마이크 접근이 차단되었습니다. 음성을 사용하려면 브라우저에서 이 사이트의 마이크 사용을 허용하세요.",
+    "notFound": "마이크를 찾을 수 없습니다. 음성을 사용하려면 마이크를 연결하세요.",
+    "inUse": "다른 앱이 마이크를 사용 중입니다. 해당 앱을 닫고 다시 시도하세요.",
+    "other": "마이크를 열 수 없습니다. 다시 시도하세요."
+  },
+  "engine": {
+    "startFailed": "음성을 시작할 수 없습니다. 다시 시도하세요.",
+    "startOffline": "음성을 시작할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
+    "connectFailed": "음성을 연결할 수 없습니다. 잠시 후 다시 시도하세요.",
+    "formGone": "이 양식은 더 이상 입력을 기다리지 않습니다.",
+    "detailsFailed": "정보를 보내지 못했습니다. 다시 시도하세요.",
+    "detailsOffline": "정보를 보내지 못했습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
+    "ended": {
+      "title": "음성 종료됨",
+      "description": "음성 세션은 10분 동안 유지됩니다. 다시 시작하려면 마이크를 누르세요."
+    },
+    "dropped": {
+      "title": "음성 연결 끊김",
+      "description": "다시 시작하려면 마이크를 누르세요."
+    }
+  },
+  "bar": {
+    "group": "음성 대화",
+    "close": "음성 닫기",
+    "mutedWhileAnswering": "화면에서 답하는 동안 음소거됨",
+    "mute": "음소거",
+    "unmute": "음소거 해제",
+    "end": "종료"
+  },
+  "hero": {
+    "examples": "“ETH 가격이 얼마인가요?” 또는 “Base Sepolia에서 나에게 0 ETH를 보내 주세요”라고 말해 보세요."
+  },
+  "formSheet": {
+    "detailsNeeded": "정보 필요",
+    "fallbackTitle": "몇 가지 정보"
+  }
+}

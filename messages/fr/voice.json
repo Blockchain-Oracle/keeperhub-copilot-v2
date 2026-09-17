@@ -1,0 +1,57 @@
+{
+  "label": {
+    "connecting": "Connexion…",
+    "listening": "À l’écoute",
+    "muted": "Micro coupé",
+    "speaking": "Répond",
+    "waitingCard": "En attente de votre carte",
+    "waitingForm": "En attente de vos informations",
+    "error": "La voix n’a pas pu démarrer",
+    "idle": "Voix"
+  },
+  "hint": {
+    "connecting": "Autorisez le micro si votre navigateur le demande.",
+    "listening": "Parlez à KeeperHub. Les cartes s’affichent dans la discussion.",
+    "muted": "Votre micro est coupé. Réactivez-le pour parler.",
+    "speaking": "KeeperHub répond.",
+    "waitingCard": "Autorisez ou annulez la carte ci-dessus pour continuer.",
+    "waitingForm": "Remplissez le formulaire ci-dessus pour continuer."
+  },
+  "micProblem": {
+    "blocked": "L’accès au micro est bloqué. Autorisez-le pour ce site dans votre navigateur pour utiliser la voix.",
+    "notFound": "Aucun micro détecté. Branchez-en un pour utiliser la voix.",
+    "inUse": "Votre micro est utilisé par une autre application. Fermez-la et réessayez.",
+    "other": "Impossible d’ouvrir le micro. Réessayez."
+  },
+  "engine": {
+    "startFailed": "La voix n’a pas pu démarrer. Réessayez.",
+    "startOffline": "La voix n’a pas pu démarrer. Vérifiez votre connexion et réessayez.",
+    "connectFailed": "La voix n’a pas pu se connecter. Réessayez dans un instant.",
+    "formGone": "Ce formulaire n’est plus en attente.",
+    "detailsFailed": "Vos informations n’ont pas pu être envoyées. Réessayez.",
+    "detailsOffline": "Vos informations n’ont pas pu être envoyées. Vérifiez votre connexion et réessayez.",
+    "ended": {
+      "title": "Session vocale terminée",
+      "description": "Une session vocale dure dix minutes. Appuyez sur le micro pour recommencer."
+    },
+    "dropped": {
+      "title": "Voix déconnectée",
+      "description": "Appuyez sur le micro pour recommencer."
+    }
+  },
+  "bar": {
+    "group": "Conversation vocale",
+    "close": "Fermer la voix",
+    "mutedWhileAnswering": "Micro coupé pendant que vous répondez à l’écran",
+    "mute": "Couper le micro",
+    "unmute": "Réactiver le micro",
+    "end": "Terminer"
+  },
+  "hero": {
+    "examples": "Essayez « Quel est le cours de l’ETH ? » ou « Envoyez 0 ETH à mon propre portefeuille sur Base Sepolia »."
+  },
+  "formSheet": {
+    "detailsNeeded": "Informations requises",
+    "fallbackTitle": "Quelques informations"
+  }
+}

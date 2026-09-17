@@ -1,0 +1,395 @@
+{
+  "receipt": {
+    "issued": "VERİLDİ"
+  },
+  "labels": {
+    "amount": "Tutar",
+    "recipient": "Alıcı",
+    "network": "Ağ",
+    "token": "Token",
+    "spender": "Harcayıcı",
+    "allowance": "Harcama izni",
+    "allowanceBaseUnits": "Harcama izni (temel birim)",
+    "arguments": "Argümanlar",
+    "valueSent": "Gönderilen değer",
+    "chainId": "Zincir ID",
+    "contractAddress": "Sözleşme adresi",
+    "functionName": "Fonksiyon adı",
+    "functionArgs": "Fonksiyon argümanları",
+    "value": "Değer",
+    "gasLimitMultiplier": "Gas limiti çarpanı",
+    "priorityFeeGwei": "Öncelik ücreti (gwei)",
+    "abi": "ABI",
+    "integrationId": "Entegrasyon ID"
+  },
+  "checks": {
+    "amountDot": "Ondalık için nokta kullanarak bir tutar gir, örn. 0.5.",
+    "chooseNetwork": "Bir ağ seç.",
+    "addressForNetwork": "Bu ağ için geçerli bir adres gir.",
+    "chooseListedOption": "Listelenen seçeneklerden birini seç."
+  },
+  "fix": {
+    "number": "Bir sayı gir.",
+    "yesNo": "Evet ya da hayır seç.",
+    "address": "0x ile başlayan ve 40 onaltılık karakterden oluşan bir adres gir.",
+    "uint": "Ondalık noktası ya da işaret olmadan bir tam sayı gir.",
+    "int": "Bir tam sayı gir. Başta eksi işareti olabilir.",
+    "bytes": "Çift sayıda basamaktan oluşan bir 0x onaltılık değer gir.",
+    "datetime": "Bir tarih ve saat gir.",
+    "other": "Bu değeri kontrol edip tekrar dene."
+  },
+  "effectClass": {
+    "valueMovingWrite": "değer taşıyan yazma",
+    "authorizationGrant": "yetki verme",
+    "configManagementWrite": "yapılandırma yönetimi yazması",
+    "offChainSend": "zincir dışı gönderim",
+    "listingPayment": "listeleme ödemesi",
+    "read": "okuma"
+  },
+  "write": {
+    "noPreview": "Bu eylem için önizleme mümkün değil. Aşağıda gösterilen talimatın aynısını onaylarsın.",
+    "unavailable": "Solana’da sözleşme çağrıları bu sürümde kullanılamıyor. Bunun yerine bir protokol eylemi üzerinden Solana okuması iste.",
+    "chip": {
+      "simulated": "Simüle edildi",
+      "noPreview": "Önizleme yok",
+      "needsCredential": "Kimlik bilgisi gerekli",
+      "proposed": "Önerildi"
+    },
+    "facts": {
+      "gasEstimate": "Gas tahmini",
+      "gasUnits": "{units} birim",
+      "returns": "Döndürür"
+    },
+    "meta": {
+      "executed": "GERÇEKLEŞTİ",
+      "cancelled": "İPTAL EDİLDİ",
+      "notSent": "GÖNDERİLMEDİ",
+      "cancelling": "İPTAL EDİLİYOR",
+      "noReceipt": "MAKBUZ YOK",
+      "sending": "GÖNDERİLİYOR",
+      "neverAuthorized": "HİÇ ONAYLANMADI",
+      "notAvailable": "KULLANILAMIYOR",
+      "needsCredential": "KİMLİK BİLGİSİ GEREKLİ",
+      "authorizing": "ONAYLANIYOR",
+      "edited": "DÜZENLENDİ",
+      "awaiting": "ONAY BEKLİYOR"
+    },
+    "status": {
+      "executed": "Gerçekleşti",
+      "cancelled": "İptal edildi",
+      "notSent": "Gönderilmedi",
+      "cancelling": "İptal ediliyor…",
+      "noReceipt": "Onaylandı, makbuz saklanmadı",
+      "sending": "KeeperHub üzerinden gönderiliyor…",
+      "neverAuthorized": "Hiç onaylanmadı",
+      "notAvailable": "Bu sürümde kullanılamıyor",
+      "needsCredential": "Önce kimlik bilgisi gerekli",
+      "authorizing": "Onaylanıyor…",
+      "edited": "Düzenlendi, onayını bekliyor",
+      "awaiting": "Onayını bekliyor"
+    },
+    "authorize": {
+      "authorizing": "Onaylanıyor…",
+      "notAvailable": "Kullanılamıyor",
+      "needsCredential": "Kimlik bilgisi gerekli",
+      "dryRunning": "Deneme yapılıyor…",
+      "dryRunFailed": "Deneme başarısız",
+      "acknowledge": "Uyarıyı kabul et",
+      "authorize": "Onayla"
+    },
+    "verb": {
+      "contractWrite": "Sözleşme yazması",
+      "write": "Yazma"
+    },
+    "title": {
+      "approve": "Harcayıcıya izin ver",
+      "call": "Çağır: {name}",
+      "send": "{amount} {unit} gönder"
+    },
+    "kicker": {
+      "valueMoving": "Değer taşıyan yazma",
+      "authorizationGrant": "Yetki verme"
+    },
+    "dryRunUnprepared": "Deneme çalıştırması hazırlanamadı.",
+    "declined": "Bu öneriyi reddettin. Hiçbir şey gönderilmedi.",
+    "applyDryRun": "Bu değerlerle dene",
+    "applyValues": "Bu değerleri kullan",
+    "acknowledge": "Yine de gönder. Başarısız olmasının beklendiğini ve yine de gas ücreti ödeyebileceğimi anlıyorum.",
+    "notReached": "Yanıtın KeeperHub’a ulaşmadı. Bağlantını kontrol edip tekrar dene.",
+    "receiptMissing": "Bu onaylandı ama makbuzu bu sohbete hiç ulaşmadı. Nasıl sonuçlandığını Etkinlik gösterir.",
+    "archived": "Sohbet arşivlenmeden önce bunu kimse onaylamadı. Hiçbir şey gönderilmedi.",
+    "edit": "Düzenle",
+    "discard": "Vazgeç",
+    "transfer": {
+      "from": "kimden",
+      "to": "kime",
+      "orgWallet": "kuruluş cüzdanı",
+      "amount": "tutar"
+    },
+    "dryRun": {
+      "label": "Deneme çalıştırması",
+      "cannot": "KeeperHub bu eylem için deneme çalıştırması yapamaz. Yukarıda gösterilenin aynısını onaylarsın.",
+      "running": "deneme yapılıyor",
+      "wouldNotSucceed": "Bu başarılı olmaz.",
+      "wouldRevert": "İşlem revert olur.",
+      "wouldSucceed": "başarılı olur"
+    },
+    "tx": {
+      "label": "Tx",
+      "explorer": "Gezgin",
+      "verified": "Doğrulandı",
+      "yes": "evet",
+      "no": "hayır"
+    }
+  },
+  "moneyMover": {
+    "unknownNetwork": "Bilinmeyen ağ",
+    "chain": "Zincir {id}",
+    "send": "Gönder",
+    "approve": "İzin ver",
+    "summary": "{address} adresine {amount} gönderildi.",
+    "unlimitedWarning": "Bu, sınırsız bir harcama izni verir. Harcayıcı bu token cinsinden istediği miktarı taşıyabilir.",
+    "unlimited": "Sınırsız",
+    "veryLarge": "Çok büyük",
+    "enterAmount": "Bir tutar gir.",
+    "noComma": "Ondalık için nokta kullan (0.5), binlik ayırıcı kullanma.",
+    "maxDecimals": "En fazla {decimals} ondalık basamaklı bir tutar gir."
+  },
+  "writeForm": {
+    "tokenPlaceholder": "Boş bırakırsan ağın kendi para birimi gönderilir"
+  },
+  "editCheck": {
+    "unreadable": "Bu öneri okunamadı.",
+    "automationFixed": "Bunun hangi otomasyonu değiştirdiği burada değiştirilemez. Baştan önermesi için yeniden iste.",
+    "notEditable": "Bu eylem düzenlenemez.",
+    "tokenAddress": "Geçerli bir token adresi gir ya da yerel para birimini göndermek için boş bırak.",
+    "callFixed": "Çağrının bu kısmı burada değiştirilemez. Baştan önermesi için yeniden iste.",
+    "argumentsList": "Argümanları bir JSON listesi olarak gir.",
+    "spender": "Geçerli bir harcayıcı adresi gir.",
+    "allowance": "Temel birim cinsinden bir tam sayı gir.",
+    "actionFixed": "Eylem burada değiştirilemez. Baştan önermesi için yeniden iste.",
+    "actionGone": "Bu eylem artık kullanılamıyor.",
+    "hiddenSetting": "Bu gizli ayar değiştirilemez.",
+    "startFixed": "Başlatma türü burada değiştirilemez. Baştan önermesi için yeniden iste.",
+    "stepsFixed": "Hangi adımların hangi sırayla çalışacağı burada değiştirilemez. Baştan önermesi için yeniden iste."
+  },
+  "toolMeta": {
+    "integration": {
+      "search": "Eylem kataloğu",
+      "form": "Bilgilerin"
+    },
+    "title": {
+      "lookupFor": "“{query}” için eylemler arandı",
+      "lookup": "Eylemler arandı",
+      "protocolAction": "Protokol eylemi",
+      "calledFunction": "{name} çağrıldı",
+      "contractCall": "Sözleşme çağrısı",
+      "transfer": "Transfer",
+      "walletIntegration": "Bir cüzdan entegrasyonu okundu",
+      "listAutomations": "Otomasyonlar listelendi",
+      "getAutomation": "Bir otomasyon okundu",
+      "createNamed": "“{name}” otomasyonu önerildi",
+      "create": "Bir otomasyon önerildi",
+      "turnOff": "Bir otomasyonun kapatılması önerildi",
+      "turnOn": "Bir otomasyonun açılması önerildi",
+      "updateNamed": "“{name}” için değişiklikler önerildi",
+      "update": "Bir otomasyonda değişiklikler önerildi",
+      "run": "Bir otomasyonun çalıştırılması önerildi",
+      "holdings": "Kuruluş cüzdanının varlıkları okundu",
+      "askNamed": "Senden bilgi istendi: {title}",
+      "ask": "Senden bilgi istendi",
+      "delete": "Bir otomasyonun silinmesi önerildi"
+    },
+    "detail": {
+      "action": "eylem",
+      "name": "ad",
+      "starts": "başlangıç",
+      "step": "adım {position}",
+      "error": "hata",
+      "notCompleted": "tamamlanmadı",
+      "result": "sonuç",
+      "state": "durum"
+    }
+  },
+  "format": {
+    "addressEnding": "sonu {last} ile biten adres",
+    "hashEnding": "sonu {last} ile biten hash"
+  },
+  "renderer": {
+    "formUnanswerable": "Bu form yanıtlanamadı.",
+    "toolCallIncomplete": "Bu araç çağrısı tamamlanamadı.",
+    "needsCredential": "Bu eylemin çalışabilmesi için bağlı bir kimlik bilgisi gerekiyor.",
+    "actionIncomplete": "Bu eylem tamamlanamadı."
+  },
+  "announce": {
+    "working": "Çalışıyor.",
+    "capabilities": "Eşleşen eylemler listelendi.",
+    "read": "{label}, okundu.",
+    "needsCredential": "{label}, kimlik bilgisi gerekiyor.",
+    "automations": "Otomasyonlar listelendi.",
+    "automation": "Otomasyon açıklandı.",
+    "holdings": "Kuruluş cüzdanı varlıkları listelendi.",
+    "formOpen": "Bilgi gerekli. Formu doldur.",
+    "formSent": "Bilgiler gönderildi.",
+    "proposed": "{label}, onayını bekliyor.",
+    "executing": "{label}, gönderiliyor.",
+    "declined": "{label}, reddedildi. Hiçbir şey çalışmadı.",
+    "automationDone": "Otomasyon, tamamlandı.",
+    "executed": "{label}, gerçekleşti.",
+    "automationLabel": "Otomasyon",
+    "resultLabel": "Sonuç"
+  },
+  "error": {
+    "boundary": {
+      "notAvailable": "KULLANILAMIYOR",
+      "paused": "DURAKLATILDI",
+      "needsAccess": "ERİŞİM GEREKLİ",
+      "reconnect": "YENİDEN BAĞLAN",
+      "checkInputs": "GİRDİLERİ DENETLE"
+    },
+    "void": "GEÇERSİZ",
+    "field": "alan",
+    "connect": "KeeperHub’a bağlan",
+    "reauthorize": "KeeperHub’ı yeniden yetkilendir",
+    "rateLimited": "Keşif çalışmaya devam ediyor. Okumayı birazdan tekrar dene.",
+    "title": {
+      "action": "Eylem tamamlanmadı",
+      "contractCall": "Sözleşme çağrısı tamamlanmadı",
+      "transfer": "Transfer tamamlanmadı",
+      "walletRead": "Cüzdan okuması tamamlanmadı",
+      "search": "Arama tamamlanmadı",
+      "other": "Tamamlanmadı"
+    }
+  },
+  "read": {
+    "meta": {
+      "replaced": "YENİLENDİ",
+      "edited": "DÜZENLENDİ",
+      "read": "OKUNDU"
+    },
+    "title": {
+      "contractRead": "Sözleşme okuması",
+      "walletIntegration": "Cüzdan entegrasyonu",
+      "read": "Okuma"
+    },
+    "alternatives": "Alternatifler",
+    "request": "İstek",
+    "runAgain": "Yeniden çalıştır",
+    "working": "Çalışıyor.",
+    "blocked": "Bunun çalışabilmesi için bazı parametrelerin ayarlanması gerekiyor.",
+    "result": "Sonuç",
+    "contract": "sözleşme",
+    "replaced": "Aşağıdaki daha yeni bir kartla değiştirildi.",
+    "edited": "Düzenlendi."
+  },
+  "price": {
+    "round": "TUR {round}",
+    "updated": "güncellendi",
+    "gathering": "sinyal toplanıyor",
+    "historyUnavailable": "geçmiş kullanılamıyor",
+    "lastUpdates": "son {count} güncelleme",
+    "expand": "genişlet"
+  },
+  "balance": {
+    "orgWallet": "KURULUŞ CÜZDANI",
+    "meta": "BAKİYE",
+    "scanToSend": "göndermek için tara"
+  },
+  "holdings": {
+    "unreadableMeta": "OKUNAMADI",
+    "unreadable": "varlıklar okunamadı",
+    "orgWallet": "KURULUŞ CÜZDANI",
+    "nothing": "hiçbir ağda varlık yok",
+    "caveat": "Bakiyeler KeeperHub’dan alınır. Okuyamadığı bir token 0 olarak görünür.",
+    "networkUnavailable": "KeeperHub bu ağı şu an okuyamadı."
+  },
+  "capability": {
+    "matches": "{count, plural, one {{count} EŞLEŞME} other {{count} EŞLEŞME}}",
+    "none": "eşleşen eylem yok",
+    "signs": "imzalar",
+    "more": "+ {count} tane daha"
+  },
+  "needsCredential": {
+    "meta": "KİMLİK BİLGİSİ GEREKLİ",
+    "title": "Kimlik bilgisi gerekli",
+    "setup": "KeeperHub’da {integration} kimlik bilgisini ayarla, sonra yeniden sor."
+  },
+  "skeleton": {
+    "working": "çalışıyor",
+    "fetching": "GETİRİLİYOR"
+  },
+  "stub": {
+    "unrenderable": "çizilemeyen kart",
+    "meta": "HAM",
+    "couldNotDraw": "Bu kart çizilemedi. Ham ayrıntılar aşağıda.",
+    "rawDetails": "Ham ayrıntılar"
+  },
+  "parts": {
+    "items": "{count, plural, one {{count} öğe} other {{count} öğe}}",
+    "noData": "veri döndürülmedi",
+    "value": "Değer"
+  },
+  "fields": {
+    "required": "(zorunlu)",
+    "yes": "Evet",
+    "no": "Hayır",
+    "fallbackNote": "Bu alan mevcut değerini korur. Diğerlerini düzenleyip yeniden çalıştır.",
+    "none": "Yok.",
+    "help": "Yardım: {label}",
+    "chooseNetwork": "Bir ağ seç"
+  },
+  "form": {
+    "unreadableMeta": "OKUNAMADI",
+    "unreadable": "bu form okunamadı",
+    "title": "Bilgi gerekli",
+    "meta": {
+      "notSent": "GÖNDERİLMEDİ",
+      "closed": "KAPATILDI",
+      "answered": "YANITLANDI",
+      "fillingAbove": "YUKARIDA DOLDURULUYOR",
+      "detailsNeeded": "BİLGİ GEREKLİ",
+      "neverAnswered": "HİÇ YANITLANMADI"
+    },
+    "status": {
+      "notSent": "Yanıtın KeeperHub’a ulaşmadı",
+      "closed": "Yanıtlanmadan kapatıldı",
+      "answered": "Asistana gönderildi",
+      "fillingAbove": "Bunu ses çubuğunun üstünde doldur",
+      "waiting": "Bilgilerin bekleniyor",
+      "neverAnswered": "Hiç yanıtlanmadı"
+    },
+    "useOrgWallet": "Kuruluş cüzdanımı kullan",
+    "checkHighlighted": "Vurgulanan bilgileri kontrol et.",
+    "sending": "Gönderiliyor…",
+    "tokenPlaceholder": "Sembol ya da token adresi",
+    "issues": {
+      "unreadable": "Yanıt okunamadı.",
+      "notAsked": "Bu bilgi istenmemişti.",
+      "asText": "Bunu metin olarak gir.",
+      "needed": "{label} gerekli.",
+      "tooLong": "Bu çok uzun.",
+      "chooseToken": "Listede bulunan bir token seç.",
+      "token": "Bir token sembolü ya da adresi gir."
+    }
+  },
+  "share": {
+    "unreachable": "Paylaşım bağlantısına ulaşılamadı.",
+    "offline": "İnternet bağlantını kontrol edip tekrar dene.",
+    "failed": "Paylaşılamadı",
+    "copiedTitle": "Bağlantı kopyalandı",
+    "copiedBody": "Bağlantıya sahip olan herkes bu makbuzu görür, sohbetini asla görmez.",
+    "readyTitle": "Bağlantı hazır",
+    "sheetTitle": "Bir KeeperHub makbuzu",
+    "offTitle": "Bağlantı kapatıldı",
+    "offBody": "Artık açan herkes paylaşılmadığını görür.",
+    "ariaLabel": "Makbuzu paylaş",
+    "share": "Paylaş",
+    "checking": "Kontrol ediliyor…",
+    "copyLink": "Bağlantıyı kopyala",
+    "createAndCopy": "Bağlantı oluştur ve kopyala",
+    "shareSheet": "Paylaş…",
+    "openLink": "Bağlantıyı aç",
+    "stop": "Paylaşmayı durdur",
+    "explainer": "Bağlantıya sahip olan herkes eylemi, ağı, tutarı, alıcıyı ve işlemi görür. Sohbetini asla görmez."
+  }
+}

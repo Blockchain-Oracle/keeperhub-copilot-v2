@@ -1,0 +1,267 @@
+{
+  "nav": {
+    "primary": "Navigasi utama",
+    "beta": "beta",
+    "items": {
+      "chat": {
+        "name": "Obrolan",
+        "description": "Minta apa saja secara on-chain."
+      },
+      "history": {
+        "name": "Riwayat",
+        "description": "Buka lagi percakapan sebelumnya, lengkap dengan tanda terimanya."
+      },
+      "activity": {
+        "name": "Aktivitas",
+        "description": "Semua yang telah dijalankan dompet organisasi."
+      },
+      "automations": {
+        "name": "Otomatisasi",
+        "description": "Alur kerja yang dijalankan KeeperHub untuk Anda."
+      },
+      "actions": {
+        "name": "Aksi",
+        "description": "Setiap aksi yang dapat dijalankan KeeperHub, baca atau tulis."
+      },
+      "gettingStarted": {
+        "name": "Memulai",
+        "description": "Hubungkan KeeperHub dan ajukan pertanyaan pertama Anda."
+      },
+      "mcp": {
+        "name": "Penyiapan MCP",
+        "description": "Gunakan KeeperHub dari Claude, Cursor, atau klien MCP apa pun."
+      },
+      "howItWorks": {
+        "name": "Cara kerja",
+        "description": "Apa yang berjalan bebas dan apa yang menunggu klik Anda."
+      }
+    },
+    "groups": {
+      "build": {
+        "name": "Bangun",
+        "description": "Otomatiskan apa yang dijalankan KeeperHub."
+      },
+      "learn": {
+        "name": "Pelajari",
+        "description": "Panduan untuk copilot dan KeeperHub."
+      }
+    },
+    "sections": {
+      "automate": {
+        "name": "Otomatiskan",
+        "description": "Alur kerja dan aksi"
+      },
+      "guides": {
+        "name": "Panduan",
+        "description": "Mulai di sini"
+      }
+    }
+  },
+  "mobileNav": {
+    "label": "Navigasi utama seluler",
+    "openAll": "Buka semua navigasi",
+    "more": "Lainnya",
+    "eyebrow": "Navigasi",
+    "title": "Semua yang ada di KeeperHub Copilot",
+    "description": "Otomatiskan, jelajahi, atau pelajari. Setiap tujuan punya satu tempat.",
+    "allDestinations": "Semua tujuan KeeperHub Copilot"
+  },
+  "connect": {
+    "connect": "Hubungkan KeeperHub",
+    "connecting": "Menghubungkan…",
+    "unreachable": "KeeperHub tidak terjangkau",
+    "noOrgWallet": "Tidak ada dompet organisasi"
+  },
+  "accountMenu": {
+    "open": "Buka menu akun",
+    "noWalletTitle": "Organisasi ini belum memiliki dompet",
+    "walletLabel": "Dompet organisasi {address}",
+    "noWalletLabel": "Tidak ada dompet organisasi",
+    "noWallet": "Tanpa dompet",
+    "menu": "Akun",
+    "orgWallet": "Dompet organisasi",
+    "spentToday": "Terpakai hari ini",
+    "spentTitle": "Nilai yang dipindahkan hari ini di seluruh jaringan EVM, dibandingkan dengan batas harian yang diterapkan KeeperHub.",
+    "spentTitleDefault": "Nilai yang dipindahkan hari ini di seluruh jaringan EVM, dibandingkan dengan batas harian yang diterapkan KeeperHub (bawaan KeeperHub).",
+    "limitUnavailable": "KeeperHub tidak dapat melaporkan batas harian saat ini.",
+    "copyAddress": "Salin alamat",
+    "viewOnExplorer": "Lihat di explorer",
+    "disconnect": "Putuskan"
+  },
+  "moneyPill": {
+    "unavailable": "Saldo di jaringan ini sedang tidak tersedia",
+    "noWallet": "Organisasi ini belum memiliki dompet",
+    "addFunds": "Tambah dana",
+    "balance": "Saldo dompet organisasi {amount} {symbol}. Tambah dana",
+    "balanceUnavailable": "Saldo dompet organisasi tidak tersedia. Tambah dana"
+  },
+  "networkPill": {
+    "label": "Jaringan: {name}",
+    "mainnets": "Mainnet",
+    "testnets": "Testnet",
+    "loading": "Memuat jaringan…",
+    "unavailable": "Daftar jaringan KeeperHub sedang tidak tersedia."
+  },
+  "language": {
+    "title": "Pilih bahasa",
+    "description": "Aplikasi, obrolan, dan suara menggunakan bahasa ini.",
+    "switched": "Balasan kini dalam {language}",
+    "switchedDescription": "Obrolan menjawab dalam bahasa ini mulai pesan Anda berikutnya, dan suara mulai sesi berikutnya."
+  },
+  "appStrip": {
+    "label": "Tentang KeeperHub Copilot",
+    "lines": {
+      "readsRun": "Aksi baca berjalan bebas. Setiap aksi tulis menunggu klik Anda",
+      "orgWalletSigns": "Dompet organisasi KeeperHub Anda yang menandatangani. Tanpa dompet browser"
+    },
+    "howItWorks": "Cara kerja",
+    "dismiss": "Tutup"
+  },
+  "marquee": {
+    "networks": "JARINGAN",
+    "unavailable": "TIDAK TERSEDIA",
+    "loading": "MEMUAT"
+  },
+  "capabilityPending": {
+    "waiting": "Belum terhubung · menunggu {dependency}"
+  },
+  "writeRecovery": {
+    "landed": "Aksi sebelumnya berhasil",
+    "landedReceipt": "{name}. Tanda terimanya ada di Aktivitas.",
+    "landedRecorded": "{name}. Sudah tercatat di Aktivitas.",
+    "failed": "Aksi sebelumnya tidak berhasil",
+    "failedDescription": "{name}. KeeperHub mencatatnya sebagai gagal. Tidak ada yang dicoba ulang.",
+    "expired": "Aksi sebelumnya tidak dapat diverifikasi",
+    "expiredDescription": "{name} dimulai lebih dari sehari lalu dan tidak pernah terkonfirmasi. Periksa Aktivitas sebelum mencobanya lagi.",
+    "pending": "{count, plural, other {# aksi sebelumnya masih diperiksa}}",
+    "pendingDescription": "KeeperHub belum mengonfirmasinya. Tidak ada yang dicoba ulang dengan sendirinya."
+  },
+  "signIn": {
+    "eyebrow": "KeeperHub · Hubungkan",
+    "description": "Copilot masuk melalui akun KeeperHub Anda. Dompet organisasi Anda yang menandatangani, dan hanya yang Anda setujui.",
+    "continueWithKeeperHub": "Lanjutkan dengan KeeperHub",
+    "continueHint": "lanjutkan",
+    "footer": "Dompet organisasi menandatangani · tanpa dompet browser",
+    "errors": {
+      "denied": "Anda membatalkan di KeeperHub, jadi tidak ada yang terhubung.",
+      "failed": "KeeperHub tidak menyelesaikan proses masuk Anda. Coba lagi."
+    },
+    "status": {
+      "online": "KeeperHub online",
+      "unreachable": "KeeperHub tidak terjangkau",
+      "checking": "memeriksa KeeperHub"
+    }
+  },
+  "signInGate": {
+    "eyebrow": "KeeperHub · Kartu identitas",
+    "title": "Masukkan <em>kredensial</em> Anda.",
+    "body": "Copilot membaca status chain dan bertindak melalui akun KeeperHub <highlight>Anda</highlight>. Masuk sekali; dompet organisasi Anda menandatangani yang Anda setujui.",
+    "retry": "KeeperHub tidak terjangkau · coba lagi",
+    "writesWait": "Setiap aksi tulis tetap menunggu klik Anda.",
+    "counts": "{actions, plural, other {# aksi}} · {integrations, plural, other {# integrasi}}",
+    "networks": "{count, plural, other {# jaringan}}",
+    "networksUnknown": "— jaringan"
+  },
+  "tutorial": {
+    "steps": {
+      "welcome": {
+        "title": "Selamat datang di KeeperHub Copilot",
+        "description": "Obrolan untuk KeeperHub. Minta dengan kata-kata biasa soal harga, saldo, transfer, atau otomatisasi. Copilot memilih aksi KeeperHub yang tepat dan menampilkan hasilnya sebagai kartu."
+      },
+      "readsRun": {
+        "title": "Aksi baca jalan, aksi tulis menunggu",
+        "description": "Apa pun yang hanya melihat, seperti harga atau saldo, langsung berjalan. Apa pun yang memindahkan dana berhenti sebagai kartu dengan setiap kolom terisi. Edit, uji coba, lalu setujui atau tolak. Tidak ada yang berpindah sampai Anda mengeklik."
+      },
+      "orgWallet": {
+        "title": "Dompet organisasi Anda yang menandatangani",
+        "description": "Anda masuk dengan akun KeeperHub, bukan dompet browser. Dompet yang dikelola KeeperHub untuk organisasi Anda menandatangani yang Anda setujui, dalam batas harian yang diterapkan KeeperHub."
+      },
+      "money": {
+        "title": "Di mana dana Anda berada",
+        "description": "Tombol saldo di bagian atas menunjukkan dompet organisasi Anda di jaringan yang Anda pilih. Ketuk + untuk melihat alamatnya dan kode QR untuk mengisi dananya. Saldo setiap jaringan berdiri sendiri dan tidak pernah dijumlahkan dengan jaringan lain."
+      },
+      "connect": {
+        "title": "Hubungkan untuk memulai",
+        "description": "Proses masuk membuka KeeperHub, lalu membawa Anda langsung kembali ke sini."
+      }
+    },
+    "skip": "Lewati",
+    "next": "Berikutnya",
+    "done": "Mulai",
+    "lastStep": "Langkah terakhir",
+    "connectTitle": "Hubungkan KeeperHub untuk memulai",
+    "connectNote": "Sekali masuk. Setiap aksi baca dan setiap aksi tulis yang disetujui berjalan melalui organisasi KeeperHub Anda.",
+    "progress": "Langkah {step} dari {total}"
+  },
+  "addFunds": {
+    "eyebrow": "Tambah dana · {network, select, testnet {testnet} other {mainnet}}",
+    "title": "Isi dana dompet organisasi",
+    "description": "Kirim {symbol} di {network} ke dompet organisasi KeeperHub Anda. Dompet ini membayar gas untuk yang Anda setujui. Kirim hanya di jaringan ini.",
+    "connectFirst": "Hubungkan KeeperHub terlebih dahulu.",
+    "noWallet": "Organisasi ini belum memiliki dompet. KeeperHub membuatkan satu dompet untuk setiap organisasi; periksa pengaturan KeeperHub Anda.",
+    "orgWallet": "Dompet organisasi",
+    "copyAddress": "Salin alamat dompet organisasi",
+    "copied": "tersalin ✓",
+    "scanToSend": "pindai untuk mengirim",
+    "nativeOn": "{symbol} di {network}",
+    "checking": "Memeriksa saldo…",
+    "unavailable": "Saldo tidak tersedia",
+    "startInChat": "Mulai di obrolan",
+    "checkAgain": "Periksa saldo lagi",
+    "rereads": "Saldo dibaca ulang saat Anda kembali ke tab ini.",
+    "viewOnExplorer": "Lihat di explorer"
+  },
+  "receiptWelcome": {
+    "eyebrow": "Tanda terima pertama",
+    "title": "Aksi pertama Anda berhasil",
+    "body": "KeeperHub menjalankannya dan chain mengonfirmasinya. Tanda terimanya ada di Aktivitas, begitu juga setiap tanda terima berikutnya.",
+    "keepGoing": "Lanjutkan"
+  },
+  "palette": {
+    "trigger": "Cari",
+    "title": "Cari di KeeperHub Copilot",
+    "search": "Cari halaman, jaringan, dan aksi",
+    "placeholder": "Cari halaman, jaringan, dan aksi…",
+    "results": "Hasil",
+    "moreActions": "{count} lagi · jelajahi semua aksi",
+    "moreNetworks": "{count} lagi · terus ketik untuk mempersempit",
+    "loadingActions": "Memuat aksi…",
+    "actionsFailed": "Aksi tidak dapat dimuat. Tutup dan buka lagi.",
+    "noResults": "Tidak ada hasil untuk “{query}”",
+    "noResultsHint": "Coba “aave”, “sepolia”, atau “aktivitas”.",
+    "move": "pindah",
+    "open": "buka",
+    "close": "tutup",
+    "resultCount": "{count, plural, other {# hasil}}",
+    "signs": "tanda tangan",
+    "selected": "Dipilih",
+    "here": "di sini",
+    "switched": "Beralih ke {network}",
+    "switchedDescription": "Pertanyaan dan kartu baru menggunakan jaringan ini.",
+    "sections": {
+      "page": "Halaman",
+      "network": "Jaringan",
+      "language": "Bahasa",
+      "action": "Aksi"
+    },
+    "testnet": "Testnet",
+    "mainnet": "Mainnet",
+    "chain": "chain {id}",
+    "languageSubtitle": "Bahasa · {code}",
+    "languageKeywords": "bahasa language languages"
+  },
+  "toast": {
+    "close": "Tutup notifikasi"
+  },
+  "identicon": {
+    "label": "identicon untuk {address}",
+    "noAccount": "identicon tanpa akun"
+  },
+  "integrationMark": {
+    "form": "Detail Anda",
+    "search": "Katalog aksi"
+  },
+  "chainMark": {
+    "fallback": "Chain {id}"
+  }
+}

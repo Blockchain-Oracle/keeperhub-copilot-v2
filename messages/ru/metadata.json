@@ -1,0 +1,12 @@
+{
+  "title": "KeeperHub Copilot",
+  "titleTemplate": "%s · KeeperHub Copilot",
+  "description": "Просите об ончейн-действии простыми словами. Читайте что угодно, подтверждайте всё, что перемещает средства, и превращайте одну фразу в постоянную автоматизацию KeeperHub.",
+  "chat": "Чат",
+  "history": "История",
+  "activity": "Активность",
+  "automations": "Автоматизации",
+  "automation": "Автоматизация",
+  "receiptNotShared": "Квитанция не опубликована",
+  "receiptDescription": "Действие, которое KeeperHub выполнил в блокчейне, опубликованное из KeeperHub Copilot."
+}

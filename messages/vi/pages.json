@@ -1,0 +1,117 @@
+{
+  "history": {
+    "title": "Lịch sử",
+    "subtitle": {
+      "empty": "Các cuộc trò chuyện của bạn, và những gì mỗi cuộc đã thực hiện.",
+      "counts": "{conversations, plural, other {# cuộc trò chuyện}} · {executed, plural, other {# thao tác đã thực hiện}}"
+    },
+    "error": {
+      "title": "Không tải được lịch sử",
+      "body": "Các cuộc trò chuyện của bạn vẫn được lưu. Chỉ là chúng tôi chưa lấy được.",
+      "retry": "Thử lại"
+    },
+    "empty": {
+      "title": "Chưa có cuộc trò chuyện nào",
+      "body": "Mỗi cuộc trò chuyện được lưu tại đây cùng những gì nó đã thực hiện. Hãy bắt đầu trò chuyện để tạo cuộc đầu tiên.",
+      "openChat": "Mở trò chuyện"
+    },
+    "card": {
+      "executed": "{count} đã thực hiện",
+      "readsOnly": "chỉ đọc",
+      "open": "Mở",
+      "seal": "Thao tác đã thực hiện"
+    }
+  },
+  "activity": {
+    "title": "Hoạt động",
+    "subtitle": "Những gì đã chạy qua copilot cho tổ chức này, mới nhất trước. Thời gian theo UTC.",
+    "filter": {
+      "label": "Hiển thị",
+      "actions": "Thao tác",
+      "reads": "Đọc",
+      "all": "Tất cả"
+    },
+    "error": {
+      "title": "Hiện không tải được hoạt động",
+      "body": "Bản ghi vẫn còn đó. Chỉ là chúng tôi chưa lấy được.",
+      "retry": "Thử lại"
+    },
+    "empty": {
+      "actions": {
+        "title": "Chưa gửi gì",
+        "body": "Các thao tác bạn cho phép trong trò chuyện sẽ hiện ở đây cùng biên nhận."
+      },
+      "reads": {
+        "title": "Chưa có thao tác đọc nào",
+        "body": "Giá, số dư và mọi tra cứu khác của trợ lý sẽ hiện ở đây."
+      },
+      "all": {
+        "title": "Chưa có gì ở đây",
+        "body": "Mọi thứ copilot chạy cho tổ chức này sẽ hiện ở đây, mới nhất trước."
+      },
+      "openChat": "Mở trò chuyện"
+    },
+    "columns": {
+      "what": "Nội dung",
+      "network": "Mạng",
+      "outcome": "Kết quả",
+      "transaction": "Giao dịch",
+      "when": "Thời gian",
+      "from": "Nguồn"
+    },
+    "loadMore": "Tải thêm",
+    "loadMoreFailed": "Không tải thêm được. Hãy thử lại.",
+    "view": "Xem",
+    "fromChat": "Trò chuyện",
+    "fromAutomation": "Tự động hóa",
+    "verb": {
+      "send": "Gửi",
+      "contractCall": "Gọi hợp đồng",
+      "walletIntegration": "Tích hợp ví",
+      "automationRun": "Lượt chạy tự động hóa",
+      "automationCreated": "Tự động hóa mới",
+      "automationChanged": "Đã đổi tự động hóa",
+      "automationOn": "Đã bật tự động hóa",
+      "automationOff": "Đã tắt tự động hóa",
+      "automationDeleted": "Đã xóa tự động hóa"
+    },
+    "outcome": {
+      "executed": "Đã thực hiện",
+      "running": "Đang chạy",
+      "saved": "Đã lưu",
+      "saving": "Đang lưu",
+      "on": "Bật",
+      "turningOn": "Đang bật",
+      "off": "Tắt",
+      "turningOff": "Đang tắt",
+      "deleted": "Đã xóa",
+      "deleting": "Đang xóa",
+      "failed": "Thất bại",
+      "paidFailed": "Đã trả phí, thất bại",
+      "cancelled": "Đã hủy",
+      "expired": "Hết hạn",
+      "sending": "Đang gửi",
+      "read": "Đã đọc"
+    }
+  },
+  "sharedReceipt": {
+    "kicker": "Biên nhận được chia sẻ",
+    "stamp": "ĐÃ THỰC HIỆN",
+    "executed": "Đã thực hiện",
+    "verified": "Đã được KeeperHub xác minh on-chain",
+    "sent": "Đã gửi qua KeeperHub",
+    "tokens": "token",
+    "rows": {
+      "network": "Mạng",
+      "token": "Token",
+      "block": "Khối",
+      "executed": "Thực hiện lúc"
+    },
+    "footnote": "Được chia sẻ từ KeeperHub Copilot. Chỉ hiển thị dữ kiện on-chain công khai.",
+    "tryCopilot": "Dùng thử KeeperHub Copilot",
+    "notFound": {
+      "title": "Biên nhận này không được chia sẻ",
+      "body": "Liên kết đã bị tắt, hoặc chưa từng tồn tại."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "unauthorized": "続行するには KeeperHub に接続してください。",
+  "session": "KeeperHub のセッションが終了しました。続行するには KeeperHub に接続してください。",
+  "server_error": "こちら側で問題が発生しました。しばらくしてからもう一度お試しください。",
+  "not_found": "この項目はもう利用できません。",
+  "bad_request": "リクエストを読み取れませんでした。",
+  "upstream_error": "KeeperHub から想定どおりの応答がありませんでした。しばらくしてからもう一度お試しください。",
+  "transport": "KeeperHub に接続できませんでした。接続を確認して、もう一度お試しください。",
+  "rate_limited": "KeeperHub が混み合っています。しばらくしてからもう一度お試しください。",
+  "insufficient_scope": "KeeperHub へのより広いアクセス権が必要です。再接続して許可してください。",
+  "archived": "この会話はアーカイブされました。新しいチャットを始めてください。",
+  "waiting": "先に上のカードまたはフォームに回答してください。",
+  "not_shareable": "共有できるのは、トランザクションを伴って実行されたアクションだけです。",
+  "validation_failed": "一部の入力内容が条件に合いません。確認して、もう一度お試しください。",
+  "write_not_available": "このアクションはまだここから送信できません。",
+  "quarantined": "このアクションは実行できません。Copilot がその動作を特定できないためです。",
+  "automation_only": "KeeperHub はこれをオートメーション内のステップとしてのみ実行します。",
+  "tool_error": "完了できませんでした。",
+  "deactivated": "このオートメーションは KeeperHub でオフになっています。",
+  "on_demand": "このオートメーションは、開始されたときにのみ実行されます。",
+  "invalid_chain": "そのネットワークはサポートされていません。"
+}

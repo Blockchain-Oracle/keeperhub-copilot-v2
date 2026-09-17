@@ -1,0 +1,57 @@
+{
+  "label": {
+    "connecting": "Verbinde…",
+    "listening": "Hört zu",
+    "muted": "Stumm",
+    "speaking": "Spricht",
+    "waitingCard": "Wartet auf deine Karte",
+    "waitingForm": "Wartet auf deine Angaben",
+    "error": "Sprache konnte nicht starten",
+    "idle": "Sprache"
+  },
+  "hint": {
+    "connecting": "Erlaube das Mikrofon, falls dein Browser fragt.",
+    "listening": "Sprich mit KeeperHub. Karten erscheinen im Chat.",
+    "muted": "Dein Mikro ist aus. Schalte es ein, um zu sprechen.",
+    "speaking": "KeeperHub antwortet.",
+    "waitingCard": "Autorisiere die Karte oben oder brich sie ab, um weiterzumachen.",
+    "waitingForm": "Füll das Formular oben aus, um weiterzumachen."
+  },
+  "micProblem": {
+    "blocked": "Der Mikrofonzugriff ist blockiert. Erlaube ihn in deinem Browser für diese Website, um Sprache zu nutzen.",
+    "notFound": "Kein Mikrofon gefunden. Schließ eins an, um Sprache zu nutzen.",
+    "inUse": "Dein Mikrofon wird von einer anderen App verwendet. Schließ sie und versuche es erneut.",
+    "other": "Das Mikrofon konnte nicht geöffnet werden. Versuche es erneut."
+  },
+  "engine": {
+    "startFailed": "Sprache konnte nicht starten. Versuche es erneut.",
+    "startOffline": "Sprache konnte nicht starten. Prüfe deine Verbindung und versuche es erneut.",
+    "connectFailed": "Sprache konnte keine Verbindung herstellen. Versuche es gleich noch einmal.",
+    "formGone": "Dieses Formular wartet nicht mehr.",
+    "detailsFailed": "Deine Angaben konnten nicht gesendet werden. Versuche es erneut.",
+    "detailsOffline": "Deine Angaben konnten nicht gesendet werden. Prüfe deine Verbindung und versuche es erneut.",
+    "ended": {
+      "title": "Sprachsitzung beendet",
+      "description": "Eine Sprachsitzung dauert zehn Minuten. Tippe auf das Mikrofon, um neu zu starten."
+    },
+    "dropped": {
+      "title": "Sprachverbindung getrennt",
+      "description": "Tippe auf das Mikrofon, um neu zu starten."
+    }
+  },
+  "bar": {
+    "group": "Sprachunterhaltung",
+    "close": "Sprache schließen",
+    "mutedWhileAnswering": "Stumm, während du auf dem Bildschirm antwortest",
+    "mute": "Mikro aus",
+    "unmute": "Mikro an",
+    "end": "Beenden"
+  },
+  "hero": {
+    "examples": "Probier „Wie hoch ist der ETH-Preis?“ oder „Sende 0 ETH an mich selbst auf Base Sepolia“."
+  },
+  "formSheet": {
+    "detailsNeeded": "Angaben nötig",
+    "fallbackTitle": "Ein paar Angaben"
+  }
+}

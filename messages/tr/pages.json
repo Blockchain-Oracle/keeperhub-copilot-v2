@@ -1,0 +1,117 @@
+{
+  "history": {
+    "title": "Geçmiş",
+    "subtitle": {
+      "empty": "Sohbetlerin ve her birinin gerçekleştirdikleri.",
+      "counts": "{conversations, plural, one {# sohbet} other {# sohbet}} · {executed, plural, one {# gerçekleşen eylem} other {# gerçekleşen eylem}}"
+    },
+    "error": {
+      "title": "Geçmişin yüklenemedi",
+      "body": "Sohbetlerin hâlâ kayıtlı. Yalnızca şu an getiremedik.",
+      "retry": "Yeniden dene"
+    },
+    "empty": {
+      "title": "Henüz sohbet yok",
+      "body": "Her sohbet, gerçekleştirdikleriyle birlikte burada saklanır. İlkini oluşturmak için bir sohbet başlat.",
+      "openChat": "Sohbeti aç"
+    },
+    "card": {
+      "executed": "{count} gerçekleşti",
+      "readsOnly": "yalnızca okuma",
+      "open": "Aç",
+      "seal": "Gerçekleşen eylemler"
+    }
+  },
+  "activity": {
+    "title": "Etkinlik",
+    "subtitle": "Bu kuruluş için Copilot üzerinden çalışanlar, en yenisi önce. Saatler UTC.",
+    "filter": {
+      "label": "Göster",
+      "actions": "Eylemler",
+      "reads": "Okumalar",
+      "all": "Tümü"
+    },
+    "error": {
+      "title": "Etkinlik şu an yüklenemedi",
+      "body": "Kayıt hâlâ orada. Yalnızca şu an getiremedik.",
+      "retry": "Yeniden dene"
+    },
+    "empty": {
+      "actions": {
+        "title": "Henüz bir şey gönderilmedi",
+        "body": "Sohbette onayladığın eylemler makbuzlarıyla birlikte burada görünür."
+      },
+      "reads": {
+        "title": "Henüz okuma yok",
+        "body": "Fiyatlar, bakiyeler ve asistanın yaptığı diğer tüm sorgular burada görünür."
+      },
+      "all": {
+        "title": "Burada henüz bir şey yok",
+        "body": "Copilot’un bu kuruluş için çalıştırdığı her şey burada görünür, en yenisi önce."
+      },
+      "openChat": "Sohbeti aç"
+    },
+    "columns": {
+      "what": "Ne",
+      "network": "Ağ",
+      "outcome": "Sonuç",
+      "transaction": "İşlem",
+      "when": "Ne zaman",
+      "from": "Kaynak"
+    },
+    "loadMore": "Daha fazla yükle",
+    "loadMoreFailed": "Daha fazlası yüklenemedi. Tekrar dene.",
+    "view": "Görüntüle",
+    "fromChat": "Sohbet",
+    "fromAutomation": "Otomasyon",
+    "verb": {
+      "send": "Gönderim",
+      "contractCall": "Sözleşme çağrısı",
+      "walletIntegration": "Cüzdan entegrasyonu",
+      "automationRun": "Otomasyon çalıştırması",
+      "automationCreated": "Yeni otomasyon",
+      "automationChanged": "Otomasyon değişti",
+      "automationOn": "Otomasyon açıldı",
+      "automationOff": "Otomasyon kapatıldı",
+      "automationDeleted": "Otomasyon silindi"
+    },
+    "outcome": {
+      "executed": "Gerçekleşti",
+      "running": "Çalışıyor",
+      "saved": "Kaydedildi",
+      "saving": "Kaydediliyor",
+      "on": "Açık",
+      "turningOn": "Açılıyor",
+      "off": "Kapalı",
+      "turningOff": "Kapatılıyor",
+      "deleted": "Silindi",
+      "deleting": "Siliniyor",
+      "failed": "Başarısız",
+      "paidFailed": "Ödendi, başarısız",
+      "cancelled": "İptal edildi",
+      "expired": "Süresi doldu",
+      "sending": "Gönderiliyor",
+      "read": "Okundu"
+    }
+  },
+  "sharedReceipt": {
+    "kicker": "Paylaşılan makbuz",
+    "stamp": "GERÇEKLEŞTİ",
+    "executed": "Gerçekleşti",
+    "verified": "KeeperHub zincir üstünde doğruladı",
+    "sent": "KeeperHub üzerinden gönderildi",
+    "tokens": "token",
+    "rows": {
+      "network": "Ağ",
+      "token": "Token",
+      "block": "Blok",
+      "executed": "Gerçekleşme"
+    },
+    "footnote": "KeeperHub Copilot’tan paylaşıldı. Yalnızca herkese açık zincir üstü bilgiler gösterilir.",
+    "tryCopilot": "KeeperHub Copilot’u dene",
+    "notFound": {
+      "title": "Bu makbuz paylaşılmıyor",
+      "body": "Bağlantı kapatıldı ya da hiç var olmadı."
+    }
+  }
+}

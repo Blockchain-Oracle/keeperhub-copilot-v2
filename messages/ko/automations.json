@@ -1,0 +1,369 @@
+{
+  "actions": {
+    "authorize": "승인",
+    "authorizing": "승인하는 중…",
+    "edit": "수정",
+    "turnOn": "켜기",
+    "turnOff": "끄기",
+    "turningOn": "켜는 중…",
+    "runNow": "지금 실행",
+    "running": "실행 중…",
+    "checkAgain": "다시 확인",
+    "openAutomation": "자동화 열기 →"
+  },
+  "acknowledge": {
+    "goAhead": "그래도 진행합니다. 경고를 읽었습니다.",
+    "turnOn": "그래도 켭니다. 경고를 읽었습니다.",
+    "run": "그래도 실행합니다. 경고를 읽었습니다."
+  },
+  "failures": {
+    "noAnswer": "KeeperHub가 응답하지 않았습니다.",
+    "noAnswerConnection": "KeeperHub가 응답하지 않았습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
+    "checkFailed": "KeeperHub 검사를 실행하지 못했습니다.",
+    "notTurnedOn": "KeeperHub가 자동화를 켜지 않았습니다.",
+    "notChanged": "KeeperHub가 자동화를 변경하지 않았습니다.",
+    "dryRunFailed": "KeeperHub가 이 자동화를 모의 실행하지 못했습니다.",
+    "runNotStarted": "실행을 시작하지 못했습니다.",
+    "runNotStartedConnection": "실행을 시작하지 못했습니다. 인터넷 연결을 확인하고 다시 시도하세요."
+  },
+  "view": {
+    "trigger": {
+      "manual": "필요할 때, 누군가 ‘지금 실행’을 누르면",
+      "webhook": "웹훅 URL이 호출되면",
+      "schedule": "일정에 따라",
+      "block": "{count, plural, other {{every}블록마다}}",
+      "event": "{event} 이벤트가 발생하면",
+      "tempoPayment": "Tempo 결제가 도착하면"
+    },
+    "rows": {
+      "cron": "Cron",
+      "timezone": "시간대",
+      "contract": "컨트랙트",
+      "recipient": "받는 곳",
+      "token": "토큰",
+      "memo": "메모",
+      "condition": "계속 조건"
+    },
+    "stepFallback": "단계",
+    "actionLabel": {
+      "checking": "확인 중…",
+      "checkFailed": "검사 실패",
+      "blocked": "진행할 수 없음",
+      "acknowledge": "경고 확인"
+    },
+    "frame": {
+      "saving": {
+        "meta": "저장 중",
+        "status": "KeeperHub에 저장하는 중…"
+      },
+      "savingChanges": {
+        "meta": "저장 중",
+        "status": "변경 사항을 KeeperHub에 저장하는 중…"
+      },
+      "starting": {
+        "meta": "시작 중",
+        "status": "KeeperHub에서 실행을 시작하는 중…"
+      },
+      "deleting": {
+        "meta": "삭제 중",
+        "status": "KeeperHub에서 삭제하는 중…"
+      },
+      "cancelled": {
+        "meta": "취소됨",
+        "status": "취소되었습니다"
+      },
+      "notSent": {
+        "meta": "전송 안 됨",
+        "status": "전송되지 않았습니다"
+      },
+      "cancelling": {
+        "meta": "취소 중",
+        "status": "취소하는 중…"
+      },
+      "noAnswer": {
+        "meta": "응답 없음",
+        "status": "승인되었지만 저장된 응답이 없습니다"
+      },
+      "turningOn": {
+        "meta": "켜는 중",
+        "status": "KeeperHub에서 켜는 중…"
+      },
+      "turningOff": {
+        "meta": "끄는 중",
+        "status": "KeeperHub에서 끄는 중…"
+      },
+      "neverAuthorized": {
+        "meta": "승인되지 않음",
+        "status": "승인되지 않았습니다"
+      },
+      "authorizing": {
+        "meta": "승인 중",
+        "status": "승인하는 중…"
+      },
+      "edited": {
+        "meta": "수정됨",
+        "status": "수정되었습니다. 승인을 기다리고 있습니다"
+      },
+      "awaiting": {
+        "meta": "승인 대기 중",
+        "status": "승인을 기다리고 있습니다"
+      },
+      "live": {
+        "meta": "가동 중",
+        "status": "저장하고 켰습니다"
+      },
+      "savedOff": {
+        "meta": "저장됨 · 꺼짐",
+        "status": "저장되었고 꺼져 있습니다"
+      },
+      "saved": {
+        "meta": "저장됨",
+        "status": "변경 사항을 저장했습니다"
+      },
+      "deleted": {
+        "meta": "삭제됨",
+        "status": "KeeperHub에서 삭제되었습니다"
+      },
+      "executed": {
+        "meta": "실행됨",
+        "status": "실행되었습니다"
+      },
+      "failed": {
+        "meta": "실패",
+        "status": "실행에 실패했습니다"
+      },
+      "stillRunning": {
+        "meta": "계속 실행 중",
+        "status": "아직 실행 중입니다"
+      },
+      "running": {
+        "meta": "실행 중",
+        "status": "KeeperHub에서 실행하는 중…"
+      },
+      "started": {
+        "meta": "시작됨",
+        "status": "시작되었습니다"
+      },
+      "turnedOn": {
+        "meta": "켜짐",
+        "status": "켜졌습니다"
+      },
+      "turnedOff": {
+        "meta": "꺼짐",
+        "status": "꺼졌습니다"
+      }
+    },
+    "stamp": {
+      "live": "가동 중",
+      "saved": "저장됨",
+      "deleted": "삭제됨",
+      "executed": "실행됨",
+      "void": "무효",
+      "on": "켜짐",
+      "off": "꺼짐"
+    },
+    "kicker": {
+      "create": "새 자동화",
+      "update": "자동화 변경",
+      "run": "자동화 실행",
+      "delete": "자동화 삭제",
+      "turnOn": "자동화 켜기",
+      "turnOff": "자동화 끄기"
+    },
+    "title": {
+      "create": "새 자동화",
+      "update": "자동화 변경",
+      "run": "{name} 실행",
+      "runAny": "자동화 실행",
+      "delete": "{name} 삭제",
+      "deleteAny": "자동화 삭제",
+      "turnOn": "{name} 켜기",
+      "turnOnAny": "자동화 켜기",
+      "turnOff": "{name} 끄기",
+      "turnOffAny": "자동화 끄기"
+    },
+    "form": {
+      "name": "이름",
+      "cron": "일정(cron)",
+      "timezone": "시간대",
+      "network": "네트워크",
+      "every": "N블록마다",
+      "contract": "컨트랙트",
+      "event": "이벤트 이름",
+      "abi": "컨트랙트 ABI",
+      "abiPlaceholder": "검증된 컨트랙트라면 비워 두세요",
+      "recipient": "입금 주소",
+      "token": "토큰",
+      "memo": "메모",
+      "stepField": "{number}단계 · {label}"
+    }
+  },
+  "card": {
+    "declinedRun": "이 실행을 거절했습니다. 아무것도 실행되지 않았습니다.",
+    "declinedProposal": "이 제안을 거절했습니다. KeeperHub에서 아무것도 변경되지 않았습니다.",
+    "checkValues": "값을 확인하세요",
+    "starts": "시작 조건",
+    "steps": "단계",
+    "automation": "자동화",
+    "change": "변경",
+    "notSent": "답변이 KeeperHub에 전달되지 않았습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
+    "noAnswer": "승인되었지만 KeeperHub의 응답이 이 채팅에 도착하지 않았습니다. 결과는 자동화 페이지에서 확인할 수 있습니다.",
+    "archived": "채팅이 보관되기 전에 아무도 승인하지 않았습니다. 아무것도 변경되지 않았습니다.",
+    "updatedOn": "켜져 있으므로 다음 시작부터 새 버전이 실행됩니다.",
+    "updatedKept": "켜짐 또는 꺼짐 상태는 그대로 유지됩니다.",
+    "deleted": "실행 기록과 함께 삭제되었습니다. 이제 자동화 페이지에 표시되지 않습니다."
+  },
+  "savedFollowUp": {
+    "onDemand": "페이지에서 누군가 ‘지금 실행’을 누르면 실행됩니다.",
+    "archived": "꺼진 상태로 저장되었습니다. 이후에 켜졌는지는 해당 페이지에서 확인할 수 있습니다.",
+    "live": "켜졌습니다. 이제부터 KeeperHub가 자동으로 시작합니다.",
+    "off": "꺼져 있습니다. KeeperHub 검사 결과를 읽은 뒤 켜면 자동으로 시작됩니다."
+  },
+  "runFollowUp": {
+    "started": "시작되었습니다. 실행 결과는 자동화 페이지에서 확인할 수 있습니다.",
+    "running": "KeeperHub에서 실행 중입니다. 완료되면 이 카드가 업데이트됩니다.",
+    "executed": "실행되었습니다.",
+    "transaction": "트랜잭션",
+    "failed": "KeeperHub에서 실행에 실패했습니다. 어느 단계에서 멈췄는지는 해당 페이지에서 확인할 수 있습니다.",
+    "stale": "5분이 지나도 아직 실행 중입니다. 결과는 해당 페이지와 활동에 표시됩니다."
+  },
+  "previewBlock": {
+    "checking": "KeeperHub로 확인 중",
+    "label": "KeeperHub 검사",
+    "blocked": "차단됨",
+    "warned": "경고를 확인하세요",
+    "ready": "준비됨",
+    "changes": "변경 사항"
+  },
+  "subjectBlock": {
+    "steps": "단계",
+    "noSteps": "아직 단계 없음"
+  },
+  "triggerBlock": {
+    "network": "네트워크"
+  },
+  "stepDetail": {
+    "movesValue": "자산 이동"
+  },
+  "stepList": {
+    "off": "꺼짐"
+  },
+  "listCard": {
+    "meta": "{count, plural, other {자동화 #개}}",
+    "empty": "아직 자동화 없음",
+    "steps": "{count, plural, other {#단계}}"
+  },
+  "detailCard": {
+    "unreadableMeta": "읽을 수 없음",
+    "unreadable": "이 자동화를 읽을 수 없습니다",
+    "statusMeta": {
+      "live": "가동 중",
+      "manual": "수동 실행",
+      "off": "꺼짐",
+      "deactivated": "비활성화됨"
+    },
+    "steps": "단계",
+    "noSteps": "아직 단계 없음",
+    "recentRuns": "최근 실행",
+    "runsUnavailable": "지금은 KeeperHub 실행 기록을 불러올 수 없습니다.",
+    "noRuns": "아직 실행 기록이 없습니다."
+  },
+  "statusBadge": {
+    "live": "가동 중",
+    "manual": "수동 실행",
+    "off": "꺼짐",
+    "deactivated": "비활성화됨"
+  },
+  "triggerLabel": {
+    "manual": "수동 실행",
+    "transfer": "전송 시 실행",
+    "other": "{type} 트리거"
+  },
+  "duration": {
+    "milliseconds": "{ms}ms",
+    "seconds": "{seconds}초",
+    "minutes": "{minutes}분 {seconds}초"
+  },
+  "runStatus": {
+    "executed": "실행됨",
+    "failed": "실패",
+    "cancelled": "취소됨",
+    "skipped": "건너뜀",
+    "running": "실행 중"
+  },
+  "board": {
+    "title": "자동화",
+    "subtitle": "KeeperHub가 이 조직을 위해 실행하는 워크플로입니다. 하나를 열어 단계와 실행 기록을 보거나 바로 실행하세요.",
+    "filterLabel": "보기",
+    "filters": {
+      "all": "전체",
+      "live": "가동 중",
+      "manual": "수동 실행",
+      "off": "꺼짐"
+    },
+    "sortLabel": "정렬",
+    "sorts": {
+      "updated": "최근 업데이트순",
+      "name": "이름순"
+    },
+    "loadFailed": "지금은 자동화를 불러올 수 없습니다",
+    "retry": "다시 시도",
+    "emptyTitle": "아직 자동화가 없습니다",
+    "emptyBody": "채팅에서 만들어 달라고 하거나 KeeperHub에서 직접 만드세요. 어느 쪽이든 단계와 실행 기록과 함께 여기에 표시됩니다.",
+    "createPrompt": "자동화를 만드는 걸 도와주세요.",
+    "createInChat": "채팅에서 만들기 →",
+    "openKeeperHub": "KeeperHub 열기 ↗",
+    "noneInView": "이 보기에 해당하는 자동화가 없습니다.",
+    "columns": {
+      "automation": "자동화",
+      "status": "상태",
+      "steps": "단계",
+      "networks": "네트워크",
+      "updated": "업데이트"
+    },
+    "open": "열기 →"
+  },
+  "detail": {
+    "back": "← 자동화",
+    "missingTitle": "이 자동화를 사용할 수 없습니다",
+    "missingBody": "삭제되었거나 다른 조직의 자동화일 수 있습니다.",
+    "loadFailed": "지금은 이 자동화를 불러올 수 없습니다. {message}",
+    "created": "생성 <time></time>",
+    "deactivated": "이 자동화는 KeeperHub에서 비활성화되어 있습니다.",
+    "stats": {
+      "trigger": "트리거",
+      "steps": "단계",
+      "networks": "네트워크",
+      "lastRun": "마지막 실행",
+      "updated": "업데이트"
+    },
+    "steps": "단계",
+    "noSteps": "이 자동화에는 아직 단계가 없습니다.",
+    "recentRuns": "최근 실행",
+    "justStarted": "방금 시작한 실행",
+    "stillRunning": "아직 실행 중입니다. 결과는 여기와 활동에 표시됩니다.",
+    "runsUnavailable": "지금은 KeeperHub 실행 기록을 불러올 수 없습니다.",
+    "noRuns": "아직 실행 기록이 없습니다.",
+    "runSource": "실행",
+    "viewTx": "보기",
+    "moreTx": "+{count}개 더"
+  },
+  "runDialog": {
+    "runningDryRun": "모의 실행 중…",
+    "acknowledge": "경고 확인",
+    "trigger": "트리거",
+    "steps": "단계",
+    "networks": "네트워크",
+    "explainer": "모든 단계가 지금 실행됩니다. 자산을 옮기는 단계도 다시 멈추지 않고 실행됩니다.",
+    "dryRunLoading": "모의 실행 중",
+    "dryRun": "모의 실행",
+    "dryRunReason": "{reason} 위에 표시된 내용 그대로 승인하게 됩니다.",
+    "noWarnings": "경고 없음",
+    "checked": "{count, plural, other {단계 #개를 확인했습니다}}.",
+    "checkedSkipped": "{count, plural, other {단계 #개를 확인했고}}, {skipped}개는 확인하지 못했습니다."
+  },
+  "switchDialog": {
+    "onExplainer": "켜면 KeeperHub가 자동으로 시작하며, 단계는 다시 멈추지 않고 실행됩니다.",
+    "offExplainer": "끄면 KeeperHub가 더 이상 자동으로 시작하지 않습니다. ‘지금 실행’은 계속 사용할 수 있습니다."
+  }
+}

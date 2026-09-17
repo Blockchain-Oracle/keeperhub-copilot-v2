@@ -1,0 +1,117 @@
+{
+  "history": {
+    "title": "历史记录",
+    "subtitle": {
+      "empty": "你的对话，以及每个对话执行过的操作。",
+      "counts": "{conversations, plural, other {# 个对话}} · {executed, plural, other {# 个已执行操作}}"
+    },
+    "error": {
+      "title": "无法加载历史记录",
+      "body": "你的对话仍然保存着，只是暂时无法获取。",
+      "retry": "重试"
+    },
+    "empty": {
+      "title": "还没有对话",
+      "body": "每个对话都会连同它执行过的操作保存在这里。开始聊天，创建你的第一个对话。",
+      "openChat": "打开聊天"
+    },
+    "card": {
+      "executed": "已执行 {count} 个",
+      "readsOnly": "仅读取",
+      "open": "打开",
+      "seal": "已执行的操作"
+    }
+  },
+  "activity": {
+    "title": "动态",
+    "subtitle": "这个组织通过 Copilot 运行过的内容，最新的在前。时间为 UTC。",
+    "filter": {
+      "label": "显示",
+      "actions": "操作",
+      "reads": "读取",
+      "all": "全部"
+    },
+    "error": {
+      "title": "暂时无法加载动态",
+      "body": "记录仍然在，只是暂时无法获取。",
+      "retry": "重试"
+    },
+    "empty": {
+      "actions": {
+        "title": "还没有发送任何操作",
+        "body": "你在聊天中授权的操作会连同回执显示在这里。"
+      },
+      "reads": {
+        "title": "还没有读取记录",
+        "body": "价格、余额以及助手进行的其他所有查询都会显示在这里。"
+      },
+      "all": {
+        "title": "这里还什么都没有",
+        "body": "Copilot 为这个组织运行的所有内容都会显示在这里，最新的在前。"
+      },
+      "openChat": "打开聊天"
+    },
+    "columns": {
+      "what": "内容",
+      "network": "网络",
+      "outcome": "结果",
+      "transaction": "交易",
+      "when": "时间",
+      "from": "来源"
+    },
+    "loadMore": "加载更多",
+    "loadMoreFailed": "无法加载更多。请重试。",
+    "view": "查看",
+    "fromChat": "聊天",
+    "fromAutomation": "自动化",
+    "verb": {
+      "send": "发送",
+      "contractCall": "合约调用",
+      "walletIntegration": "钱包集成",
+      "automationRun": "自动化运行",
+      "automationCreated": "新建自动化",
+      "automationChanged": "自动化已更改",
+      "automationOn": "自动化已开启",
+      "automationOff": "自动化已关闭",
+      "automationDeleted": "自动化已删除"
+    },
+    "outcome": {
+      "executed": "已执行",
+      "running": "运行中",
+      "saved": "已保存",
+      "saving": "保存中",
+      "on": "已开启",
+      "turningOn": "开启中",
+      "off": "已关闭",
+      "turningOff": "关闭中",
+      "deleted": "已删除",
+      "deleting": "删除中",
+      "failed": "失败",
+      "paidFailed": "已付费，失败",
+      "cancelled": "已取消",
+      "expired": "已过期",
+      "sending": "发送中",
+      "read": "读取"
+    }
+  },
+  "sharedReceipt": {
+    "kicker": "分享的回执",
+    "stamp": "已执行",
+    "executed": "已执行",
+    "verified": "已由 KeeperHub 在链上验证",
+    "sent": "通过 KeeperHub 发送",
+    "tokens": "代币",
+    "rows": {
+      "network": "网络",
+      "token": "代币",
+      "block": "区块",
+      "executed": "执行时间"
+    },
+    "footnote": "分享自 KeeperHub Copilot。仅显示公开的链上信息。",
+    "tryCopilot": "试用 KeeperHub Copilot",
+    "notFound": {
+      "title": "此回执未被分享",
+      "body": "链接已被关闭，或者从未存在。"
+    }
+  }
+}

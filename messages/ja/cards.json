@@ -1,0 +1,395 @@
+{
+  "receipt": {
+    "issued": "発行済み"
+  },
+  "labels": {
+    "amount": "金額",
+    "recipient": "受取人",
+    "network": "ネットワーク",
+    "token": "トークン",
+    "spender": "スペンダー",
+    "allowance": "使用上限額",
+    "allowanceBaseUnits": "使用上限額（基本単位）",
+    "arguments": "引数",
+    "valueSent": "送付額",
+    "chainId": "チェーン ID",
+    "contractAddress": "コントラクトアドレス",
+    "functionName": "関数名",
+    "functionArgs": "関数の引数",
+    "value": "値",
+    "gasLimitMultiplier": "ガスリミット倍率",
+    "priorityFeeGwei": "優先手数料（gwei）",
+    "abi": "ABI",
+    "integrationId": "インテグレーション ID"
+  },
+  "checks": {
+    "amountDot": "小数点にはドットを使って金額を入力してください（例: 0.5）。",
+    "chooseNetwork": "ネットワークを選択してください。",
+    "addressForNetwork": "このネットワークで有効なアドレスを入力してください。",
+    "chooseListedOption": "一覧の選択肢から選んでください。"
+  },
+  "fix": {
+    "number": "数値を入力してください。",
+    "yesNo": "「はい」か「いいえ」を選んでください。",
+    "address": "0x で始まる 40 文字の 16 進数のアドレスを入力してください。",
+    "uint": "小数点や符号のない整数を入力してください。",
+    "int": "整数を入力してください。先頭にマイナス記号を付けられます。",
+    "bytes": "桁数が偶数の 0x 形式の 16 進数値を入力してください。",
+    "datetime": "日時を入力してください。",
+    "other": "この値を確認して、もう一度お試しください。"
+  },
+  "effectClass": {
+    "valueMovingWrite": "価値を動かす書き込み",
+    "authorizationGrant": "権限の付与",
+    "configManagementWrite": "設定管理の書き込み",
+    "offChainSend": "オフチェーン送信",
+    "listingPayment": "掲載の支払い",
+    "read": "読み取り"
+  },
+  "write": {
+    "noPreview": "このアクションはプレビューできません。下に表示されている指示内容をそのまま確認して承認してください。",
+    "unavailable": "Solana でのコントラクト呼び出しは、このリリースでは利用できません。Solana の読み取りは、プロトコルのアクションを通じて依頼してください。",
+    "chip": {
+      "simulated": "シミュレーション済み",
+      "noPreview": "プレビューなし",
+      "needsCredential": "認証情報が必要",
+      "proposed": "提案"
+    },
+    "facts": {
+      "gasEstimate": "ガス見積もり",
+      "gasUnits": "{units} ユニット",
+      "returns": "戻り値"
+    },
+    "meta": {
+      "executed": "実行済み",
+      "cancelled": "キャンセル済み",
+      "notSent": "未送信",
+      "cancelling": "キャンセル中",
+      "noReceipt": "受領書なし",
+      "sending": "送信中",
+      "neverAuthorized": "未承認",
+      "notAvailable": "利用不可",
+      "needsCredential": "認証情報が必要",
+      "authorizing": "承認中",
+      "edited": "編集済み",
+      "awaiting": "承認待ち"
+    },
+    "status": {
+      "executed": "実行済み",
+      "cancelled": "キャンセル済み",
+      "notSent": "未送信",
+      "cancelling": "キャンセル中…",
+      "noReceipt": "承認済み、受領書は保存されていません",
+      "sending": "KeeperHub 経由で送信中…",
+      "neverAuthorized": "承認されませんでした",
+      "notAvailable": "このリリースでは利用できません",
+      "needsCredential": "先に認証情報が必要です",
+      "authorizing": "承認中…",
+      "edited": "編集済み、承認を待っています",
+      "awaiting": "あなたの承認を待っています"
+    },
+    "authorize": {
+      "authorizing": "承認中…",
+      "notAvailable": "利用不可",
+      "needsCredential": "認証情報が必要",
+      "dryRunning": "試行中…",
+      "dryRunFailed": "試行に失敗しました",
+      "acknowledge": "警告を確認",
+      "authorize": "承認"
+    },
+    "verb": {
+      "contractWrite": "コントラクトへの書き込み",
+      "write": "書き込み"
+    },
+    "title": {
+      "approve": "スペンダーを承認",
+      "call": "{name} を呼び出す",
+      "send": "{amount} {unit} を送金"
+    },
+    "kicker": {
+      "valueMoving": "価値を動かす書き込み",
+      "authorizationGrant": "権限の付与"
+    },
+    "dryRunUnprepared": "試行を準備できませんでした。",
+    "declined": "この提案を拒否しました。何も送信されていません。",
+    "applyDryRun": "この値で試行",
+    "applyValues": "この値を使う",
+    "acknowledge": "それでも送信します。失敗が見込まれ、それでもガス代がかかる可能性があることを理解しています。",
+    "notReached": "回答が KeeperHub に届きませんでした。接続を確認して、もう一度お試しください。",
+    "receiptMissing": "これは承認されましたが、受領書がこのチャットに届きませんでした。結果はアクティビティで確認できます。",
+    "archived": "チャットがアーカイブされる前に、誰も承認しませんでした。何も送信されていません。",
+    "edit": "編集",
+    "discard": "破棄",
+    "transfer": {
+      "from": "送信元",
+      "to": "送信先",
+      "orgWallet": "組織ウォレット",
+      "amount": "金額"
+    },
+    "dryRun": {
+      "label": "試行",
+      "cannot": "KeeperHub はこのアクションを試行できません。上に表示されている内容をそのまま承認することになります。",
+      "running": "試行中",
+      "wouldNotSucceed": "このままでは成功しません。",
+      "wouldRevert": "トランザクションはリバートされます。",
+      "wouldSucceed": "成功する見込み"
+    },
+    "tx": {
+      "label": "Tx",
+      "explorer": "エクスプローラー",
+      "verified": "検証済み",
+      "yes": "はい",
+      "no": "いいえ"
+    }
+  },
+  "moneyMover": {
+    "unknownNetwork": "不明なネットワーク",
+    "chain": "チェーン {id}",
+    "send": "送金",
+    "approve": "承認",
+    "summary": "{address} に {amount} を送金しました。",
+    "unlimitedWarning": "これは無制限の使用上限を承認します。スペンダーはこのトークンをいくらでも移動できるようになります。",
+    "unlimited": "無制限",
+    "veryLarge": "非常に大きい",
+    "enterAmount": "金額を入力してください。",
+    "noComma": "小数点にはドットを使い（0.5）、桁区切りの記号は入れないでください。",
+    "maxDecimals": "小数点以下 {decimals} 桁以内で金額を入力してください。"
+  },
+  "writeForm": {
+    "tokenPlaceholder": "空欄にするとネットワークのネイティブ通貨を送金"
+  },
+  "editCheck": {
+    "unreadable": "この提案を読み取れませんでした。",
+    "automationFixed": "どのオートメーションを変更するかは、ここでは変更できません。改めて依頼して、新しく提案してもらってください。",
+    "notEditable": "このアクションは編集できません。",
+    "tokenAddress": "有効なトークンアドレスを入力するか、ネイティブ通貨を送る場合は空欄のままにしてください。",
+    "callFixed": "呼び出しのこの部分は、ここでは変更できません。改めて依頼して、新しく提案してもらってください。",
+    "argumentsList": "引数を JSON のリストとして入力してください。",
+    "spender": "有効なスペンダーアドレスを入力してください。",
+    "allowance": "基本単位の整数で入力してください。",
+    "actionFixed": "アクションはここでは変更できません。改めて依頼して、新しく提案してもらってください。",
+    "actionGone": "このアクションはもう利用できません。",
+    "hiddenSetting": "この非表示の設定は変更できません。",
+    "startFixed": "開始の種類は、ここでは変更できません。改めて依頼して、新しく提案してもらってください。",
+    "stepsFixed": "実行するステップとその順序は、ここでは変更できません。改めて依頼して、新しく提案してもらってください。"
+  },
+  "toolMeta": {
+    "integration": {
+      "search": "アクションカタログ",
+      "form": "入力内容"
+    },
+    "title": {
+      "lookupFor": "「{query}」のアクションを検索しました",
+      "lookup": "アクションを検索しました",
+      "protocolAction": "プロトコルのアクション",
+      "calledFunction": "{name} を呼び出しました",
+      "contractCall": "コントラクト呼び出し",
+      "transfer": "送金",
+      "walletIntegration": "ウォレットのインテグレーションを読み取りました",
+      "listAutomations": "オートメーションを一覧表示しました",
+      "getAutomation": "オートメーションを読み取りました",
+      "createNamed": "オートメーション「{name}」を提案しました",
+      "create": "オートメーションを提案しました",
+      "turnOff": "オートメーションをオフにすることを提案しました",
+      "turnOn": "オートメーションをオンにすることを提案しました",
+      "updateNamed": "「{name}」の変更を提案しました",
+      "update": "オートメーションの変更を提案しました",
+      "run": "オートメーションの実行を提案しました",
+      "holdings": "組織ウォレットの保有資産を読み取りました",
+      "askNamed": "入力をお願いしました: {title}",
+      "ask": "入力をお願いしました",
+      "delete": "オートメーションの削除を提案しました"
+    },
+    "detail": {
+      "action": "アクション",
+      "name": "名前",
+      "starts": "開始",
+      "step": "ステップ {position}",
+      "error": "エラー",
+      "notCompleted": "未完了",
+      "result": "結果",
+      "state": "状態"
+    }
+  },
+  "format": {
+    "addressEnding": "末尾が {last} のアドレス",
+    "hashEnding": "末尾が {last} のハッシュ"
+  },
+  "renderer": {
+    "formUnanswerable": "このフォームには回答できませんでした。",
+    "toolCallIncomplete": "このツール呼び出しは完了できませんでした。",
+    "needsCredential": "このアクションを実行するには、認証情報を紐付ける必要があります。",
+    "actionIncomplete": "このアクションは完了できませんでした。"
+  },
+  "announce": {
+    "working": "処理中です。",
+    "capabilities": "一致するアクションを一覧表示しました。",
+    "read": "{label}、読み取りました。",
+    "needsCredential": "{label}、認証情報が必要です。",
+    "automations": "オートメーションを一覧表示しました。",
+    "automation": "オートメーションの内容を表示しました。",
+    "holdings": "組織ウォレットの保有資産を一覧表示しました。",
+    "formOpen": "入力が必要です。フォームに入力してください。",
+    "formSent": "入力内容を送信しました。",
+    "proposed": "{label}、承認を待っています。",
+    "executing": "{label}、送信中です。",
+    "declined": "{label}、拒否されました。何も実行されていません。",
+    "automationDone": "オートメーション、完了しました。",
+    "executed": "{label}、実行しました。",
+    "automationLabel": "オートメーション",
+    "resultLabel": "結果"
+  },
+  "error": {
+    "boundary": {
+      "notAvailable": "利用不可",
+      "paused": "一時停止",
+      "needsAccess": "アクセス権が必要",
+      "reconnect": "再接続",
+      "checkInputs": "入力を確認"
+    },
+    "void": "無効",
+    "field": "項目",
+    "connect": "KeeperHub に接続",
+    "reauthorize": "KeeperHub を再承認",
+    "rateLimited": "アクションの検索は引き続き使えます。しばらくしてから、もう一度読み取りをお試しください。",
+    "title": {
+      "action": "アクションは完了しませんでした",
+      "contractCall": "コントラクト呼び出しは完了しませんでした",
+      "transfer": "送金は完了しませんでした",
+      "walletRead": "ウォレットの読み取りは完了しませんでした",
+      "search": "検索は完了しませんでした",
+      "other": "完了しませんでした"
+    }
+  },
+  "read": {
+    "meta": {
+      "replaced": "置き換え済み",
+      "edited": "編集済み",
+      "read": "読み取り"
+    },
+    "title": {
+      "contractRead": "コントラクトの読み取り",
+      "walletIntegration": "ウォレットのインテグレーション",
+      "read": "読み取り"
+    },
+    "alternatives": "代替案",
+    "request": "リクエスト",
+    "runAgain": "再実行",
+    "working": "処理中です。",
+    "blocked": "実行する前に、いくつかのパラメーターを調整する必要があります。",
+    "result": "結果",
+    "contract": "コントラクト",
+    "replaced": "下の新しいカードに置き換えられました。",
+    "edited": "編集済み。"
+  },
+  "price": {
+    "round": "ラウンド {round}",
+    "updated": "更新",
+    "gathering": "シグナルを収集中",
+    "historyUnavailable": "履歴を取得できません",
+    "lastUpdates": "直近 {count} 回の更新",
+    "expand": "展開"
+  },
+  "balance": {
+    "orgWallet": "組織ウォレット",
+    "meta": "残高",
+    "scanToSend": "スキャンして送金"
+  },
+  "holdings": {
+    "unreadableMeta": "読み取り不可",
+    "unreadable": "保有資産を読み取れませんでした",
+    "orgWallet": "組織ウォレット",
+    "nothing": "どのネットワークにも保有資産はありません",
+    "caveat": "残高は KeeperHub から取得しています。読み取れなかったトークンは 0 と表示されます。",
+    "networkUnavailable": "KeeperHub は現在このネットワークを読み取れませんでした。"
+  },
+  "capability": {
+    "matches": "{count, plural, other {{count} 件一致}}",
+    "none": "一致するアクションはありません",
+    "signs": "要署名",
+    "more": "+ 他 {count} 件"
+  },
+  "needsCredential": {
+    "meta": "認証情報が必要",
+    "title": "認証情報が必要です",
+    "setup": "KeeperHub で {integration} の認証情報を設定してから、もう一度依頼してください。"
+  },
+  "skeleton": {
+    "working": "処理中",
+    "fetching": "取得中"
+  },
+  "stub": {
+    "unrenderable": "表示できないカード",
+    "meta": "生データ",
+    "couldNotDraw": "このカードを表示できませんでした。元の詳細を下に示します。",
+    "rawDetails": "元の詳細"
+  },
+  "parts": {
+    "items": "{count, plural, other {{count} 件}}",
+    "noData": "データが返されませんでした",
+    "value": "値"
+  },
+  "fields": {
+    "required": "（必須）",
+    "yes": "はい",
+    "no": "いいえ",
+    "fallbackNote": "この項目は現在の値のままです。ほかの項目を編集して、もう一度実行してください。",
+    "none": "なし。",
+    "help": "ヘルプ: {label}",
+    "chooseNetwork": "ネットワークを選択"
+  },
+  "form": {
+    "unreadableMeta": "読み取り不可",
+    "unreadable": "このフォームを読み取れませんでした",
+    "title": "入力が必要です",
+    "meta": {
+      "notSent": "未送信",
+      "closed": "終了",
+      "answered": "回答済み",
+      "fillingAbove": "上で入力中",
+      "detailsNeeded": "入力が必要",
+      "neverAnswered": "未回答"
+    },
+    "status": {
+      "notSent": "回答が KeeperHub に届きませんでした",
+      "closed": "回答せずに閉じられました",
+      "answered": "アシスタントに送信しました",
+      "fillingAbove": "音声バーの上で入力してください",
+      "waiting": "入力を待っています",
+      "neverAnswered": "回答されませんでした"
+    },
+    "useOrgWallet": "組織ウォレットを使う",
+    "checkHighlighted": "強調表示された項目を確認してください。",
+    "sending": "送信中…",
+    "tokenPlaceholder": "シンボルまたはトークンアドレス",
+    "issues": {
+      "unreadable": "回答を読み取れませんでした。",
+      "notAsked": "この項目は求められていません。",
+      "asText": "テキストで入力してください。",
+      "needed": "{label} は必須です。",
+      "tooLong": "長すぎます。",
+      "chooseToken": "一覧のトークンから選んでください。",
+      "token": "トークンのシンボルまたはアドレスを入力してください。"
+    }
+  },
+  "share": {
+    "unreachable": "共有リンクに接続できませんでした。",
+    "offline": "接続を確認して、もう一度お試しください。",
+    "failed": "共有できませんでした",
+    "copiedTitle": "リンクをコピーしました",
+    "copiedBody": "リンクを知っている人はこの受領書を見られますが、チャットは見られません。",
+    "readyTitle": "リンクの準備ができました",
+    "sheetTitle": "KeeperHub の受領書",
+    "offTitle": "リンクを無効にしました",
+    "offBody": "今後リンクを開いた人には、共有されていないことが表示されます。",
+    "ariaLabel": "受領書を共有",
+    "share": "共有",
+    "checking": "確認中…",
+    "copyLink": "リンクをコピー",
+    "createAndCopy": "リンクを作成してコピー",
+    "shareSheet": "共有…",
+    "openLink": "リンクを開く",
+    "stop": "共有を停止",
+    "explainer": "リンクを知っている人は、アクション、ネットワーク、金額、受取人、トランザクションを見られます。チャットが見られることはありません。"
+  }
+}

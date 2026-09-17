@@ -1,0 +1,267 @@
+{
+  "nav": {
+    "primary": "主导航",
+    "beta": "测试版",
+    "items": {
+      "chat": {
+        "name": "聊天",
+        "description": "任何链上需求，尽管问。"
+      },
+      "history": {
+        "name": "历史记录",
+        "description": "回顾过往对话，连同回执一并查看。"
+      },
+      "activity": {
+        "name": "动态",
+        "description": "组织钱包运行过的一切。"
+      },
+      "automations": {
+        "name": "自动化",
+        "description": "KeeperHub 为你运行的工作流。"
+      },
+      "actions": {
+        "name": "操作",
+        "description": "KeeperHub 能运行的所有操作，包括读取和写入。"
+      },
+      "gettingStarted": {
+        "name": "快速上手",
+        "description": "连接 KeeperHub，提出你的第一个问题。"
+      },
+      "mcp": {
+        "name": "MCP 设置",
+        "description": "在 Claude、Cursor 或任何 MCP 客户端中使用 KeeperHub。"
+      },
+      "howItWorks": {
+        "name": "工作原理",
+        "description": "哪些操作直接运行，哪些等你点击。"
+      }
+    },
+    "groups": {
+      "build": {
+        "name": "构建",
+        "description": "把 KeeperHub 运行的内容自动化。"
+      },
+      "learn": {
+        "name": "学习",
+        "description": "Copilot 与 KeeperHub 使用指南。"
+      }
+    },
+    "sections": {
+      "automate": {
+        "name": "自动化",
+        "description": "工作流与操作"
+      },
+      "guides": {
+        "name": "指南",
+        "description": "从这里开始"
+      }
+    }
+  },
+  "mobileNav": {
+    "label": "移动端主导航",
+    "openAll": "打开全部导航",
+    "more": "更多",
+    "eyebrow": "导航",
+    "title": "KeeperHub Copilot 的全部内容",
+    "description": "自动化、浏览或学习。每个页面都有唯一的入口。",
+    "allDestinations": "KeeperHub Copilot 的所有页面"
+  },
+  "connect": {
+    "connect": "连接 KeeperHub",
+    "connecting": "连接中…",
+    "unreachable": "无法连接 KeeperHub",
+    "noOrgWallet": "无组织钱包"
+  },
+  "accountMenu": {
+    "open": "打开账户菜单",
+    "noWalletTitle": "该组织还没有钱包",
+    "walletLabel": "组织钱包 {address}",
+    "noWalletLabel": "无组织钱包",
+    "noWallet": "无钱包",
+    "menu": "账户",
+    "orgWallet": "组织钱包",
+    "spentToday": "今日支出",
+    "spentTitle": "今日在各 EVM 网络上转移的价值，对照 KeeperHub 执行的每日限额。",
+    "spentTitleDefault": "今日在各 EVM 网络上转移的价值，对照 KeeperHub 执行的每日限额（KeeperHub 默认值）。",
+    "limitUnavailable": "KeeperHub 暂时无法报告每日限额。",
+    "copyAddress": "复制地址",
+    "viewOnExplorer": "在区块浏览器中查看",
+    "disconnect": "断开连接"
+  },
+  "moneyPill": {
+    "unavailable": "暂时无法获取此网络上的余额",
+    "noWallet": "该组织还没有钱包",
+    "addFunds": "充值",
+    "balance": "组织钱包余额 {amount} {symbol}。充值",
+    "balanceUnavailable": "组织钱包余额不可用。充值"
+  },
+  "networkPill": {
+    "label": "网络：{name}",
+    "mainnets": "主网",
+    "testnets": "测试网",
+    "loading": "正在加载网络…",
+    "unavailable": "暂时无法获取 KeeperHub 的网络列表。"
+  },
+  "language": {
+    "title": "选择语言",
+    "description": "应用、聊天和语音都会使用此语言。",
+    "switched": "回复语言已切换为 {language}",
+    "switchedDescription": "聊天从你的下一条消息起使用该语言回答，语音从下一次会话起使用。"
+  },
+  "appStrip": {
+    "label": "关于 KeeperHub Copilot",
+    "lines": {
+      "readsRun": "读取直接运行。每次写入都等你点击",
+      "orgWalletSigns": "由你的 KeeperHub 组织钱包签名。无需浏览器钱包"
+    },
+    "howItWorks": "工作原理",
+    "dismiss": "关闭"
+  },
+  "marquee": {
+    "networks": "网络",
+    "unavailable": "不可用",
+    "loading": "加载中"
+  },
+  "capabilityPending": {
+    "waiting": "尚未连接 · 等待 {dependency}"
+  },
+  "writeRecovery": {
+    "landed": "之前的一项操作已上链",
+    "landedReceipt": "{name}。回执已在动态中。",
+    "landedRecorded": "{name}。已记录在动态中。",
+    "failed": "之前的一项操作未能完成",
+    "failedDescription": "{name}。KeeperHub 已将其记录为失败。未进行任何重试。",
+    "expired": "之前的一项操作无法验证",
+    "expiredDescription": "{name} 在一天多以前开始，一直未得到确认。再次尝试前，请先查看动态。",
+    "pending": "{count, plural, other {# 项之前的操作仍在核查中}}",
+    "pendingDescription": "KeeperHub 尚未确认。不会自动重试。"
+  },
+  "signIn": {
+    "eyebrow": "KeeperHub · 连接",
+    "description": "Copilot 通过你的 KeeperHub 账户登录。由你组织的钱包签名，并且只签署你批准的内容。",
+    "continueWithKeeperHub": "使用 KeeperHub 继续",
+    "continueHint": "继续",
+    "footer": "组织钱包签名 · 无需浏览器钱包",
+    "errors": {
+      "denied": "你在 KeeperHub 上取消了，因此没有建立任何连接。",
+      "failed": "KeeperHub 未能完成登录。请重试。"
+    },
+    "status": {
+      "online": "KeeperHub 在线",
+      "unreachable": "无法连接 KeeperHub",
+      "checking": "正在检查 KeeperHub"
+    }
+  },
+  "signInGate": {
+    "eyebrow": "KeeperHub · 身份卡",
+    "title": "插入你的<em>凭证</em>。",
+    "body": "Copilot 通过<highlight>你的</highlight> KeeperHub 账户读取链上状态并执行操作。只需登录一次；由你组织的钱包签署你批准的内容。",
+    "retry": "无法连接 KeeperHub · 重试",
+    "writesWait": "每次写入仍需等你点击。",
+    "counts": "{actions, plural, other {# 个操作}} · {integrations, plural, other {# 个集成}}",
+    "networks": "{count, plural, other {# 个网络}}",
+    "networksUnknown": "— 个网络"
+  },
+  "tutorial": {
+    "steps": {
+      "welcome": {
+        "title": "欢迎使用 KeeperHub Copilot",
+        "description": "为 KeeperHub 打造的聊天界面。用日常语言询问价格、余额、转账或自动化。Copilot 会挑选能完成任务的 KeeperHub 操作，并以卡片形式展示结果。"
+      },
+      "readsRun": {
+        "title": "读取直接运行，写入等待确认",
+        "description": "只查看数据的操作，比如价格或余额，会立即运行。任何转移资产的操作都会停下，生成一张填好所有字段的卡片。你可以编辑、模拟运行，然后批准或拒绝。在你点击之前，不会有任何资产转移。"
+      },
+      "orgWallet": {
+        "title": "由你的组织钱包签名",
+        "description": "你使用 KeeperHub 账户登录，而不是浏览器钱包。KeeperHub 为你的组织保管的钱包会在 KeeperHub 执行的每日限额内，签署你批准的内容。"
+      },
+      "money": {
+        "title": "你的资金在哪里",
+        "description": "顶栏中的胶囊显示的是你所选网络上的组织钱包。点按 + 可查看其地址和用于充值的二维码。每个网络的余额相互独立，绝不会合并计算。"
+      },
+      "connect": {
+        "title": "连接以开始",
+        "description": "登录时会打开 KeeperHub，然后直接带你回到这里。"
+      }
+    },
+    "skip": "跳过",
+    "next": "下一步",
+    "done": "开始使用",
+    "lastStep": "最后一步",
+    "connectTitle": "连接 KeeperHub 以开始",
+    "connectNote": "只需登录一次。每次读取和每次经你批准的写入，都通过你的 KeeperHub 组织运行。",
+    "progress": "第 {step} 步，共 {total} 步"
+  },
+  "addFunds": {
+    "eyebrow": "充值 · {network, select, testnet {testnet} other {mainnet}}",
+    "title": "为组织钱包充值",
+    "description": "在 {network} 上向你的 KeeperHub 组织钱包发送 {symbol}。它用于支付你所批准操作的 gas 费。请仅在此网络上发送。",
+    "connectFirst": "请先连接 KeeperHub。",
+    "noWallet": "该组织还没有钱包。KeeperHub 会为每个组织创建一个钱包；请检查你的 KeeperHub 设置。",
+    "orgWallet": "组织钱包",
+    "copyAddress": "复制组织钱包地址",
+    "copied": "已复制 ✓",
+    "scanToSend": "扫码发送",
+    "nativeOn": "{network} 上的 {symbol}",
+    "checking": "正在查询余额…",
+    "unavailable": "余额不可用",
+    "startInChat": "在聊天中开始",
+    "checkAgain": "再次查询余额",
+    "rereads": "回到此标签页时会重新读取余额。",
+    "viewOnExplorer": "在区块浏览器中查看"
+  },
+  "receiptWelcome": {
+    "eyebrow": "第一张回执",
+    "title": "你的第一项操作已上链",
+    "body": "KeeperHub 已运行该操作，链上也已确认。它的回执在动态中，之后的每一张回执也都会出现在那里。",
+    "keepGoing": "继续"
+  },
+  "palette": {
+    "trigger": "搜索",
+    "title": "搜索 KeeperHub Copilot",
+    "search": "搜索页面、网络和操作",
+    "placeholder": "搜索页面、网络和操作…",
+    "results": "结果",
+    "moreActions": "还有 {count} 个 · 浏览全部操作",
+    "moreNetworks": "还有 {count} 个 · 继续输入以缩小范围",
+    "loadingActions": "正在加载操作…",
+    "actionsFailed": "操作无法加载。请关闭后重新打开。",
+    "noResults": "没有与“{query}”相关的结果",
+    "noResultsHint": "试试“aave”、“sepolia”或“动态”。",
+    "move": "移动",
+    "open": "打开",
+    "close": "关闭",
+    "resultCount": "{count, plural, other {# 个结果}}",
+    "signs": "需签名",
+    "selected": "已选择",
+    "here": "当前",
+    "switched": "已切换到 {network}",
+    "switchedDescription": "新的提问和卡片将使用此网络。",
+    "sections": {
+      "page": "页面",
+      "network": "网络",
+      "language": "语言",
+      "action": "操作"
+    },
+    "testnet": "测试网",
+    "mainnet": "主网",
+    "chain": "链 {id}",
+    "languageSubtitle": "语言 · {code}",
+    "languageKeywords": "语言 language languages"
+  },
+  "toast": {
+    "close": "关闭通知"
+  },
+  "identicon": {
+    "label": "{address} 的身份图标",
+    "noAccount": "无账户的身份图标"
+  },
+  "integrationMark": {
+    "form": "你的信息",
+    "search": "操作目录"
+  },
+  "chainMark": {
+    "fallback": "链 {id}"
+  }
+}

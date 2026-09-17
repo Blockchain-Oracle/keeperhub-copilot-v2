@@ -1,0 +1,12 @@
+{
+  "title": "KeeperHub Copilot",
+  "titleTemplate": "%s · KeeperHub Copilot",
+  "description": "Demandez une action on-chain en langage courant. Consultez tout, approuvez tout ce qui déplace des fonds, et transformez une phrase en automatisation KeeperHub permanente.",
+  "chat": "Discussion",
+  "history": "Historique",
+  "activity": "Activité",
+  "automations": "Automatisations",
+  "automation": "Automatisation",
+  "receiptNotShared": "Reçu non partagé",
+  "receiptDescription": "Une action exécutée on-chain par KeeperHub, partagée depuis KeeperHub Copilot."
+}

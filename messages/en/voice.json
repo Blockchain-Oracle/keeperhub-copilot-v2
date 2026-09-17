@@ -1,0 +1,57 @@
+{
+  "label": {
+    "connecting": "Connecting…",
+    "listening": "Listening",
+    "muted": "Muted",
+    "speaking": "Speaking",
+    "waitingCard": "Waiting for your card",
+    "waitingForm": "Waiting for your details",
+    "error": "Voice couldn't start",
+    "idle": "Voice"
+  },
+  "hint": {
+    "connecting": "Allow the microphone if your browser asks.",
+    "listening": "Talk to KeeperHub. Cards show up in the chat.",
+    "muted": "Your mic is off. Unmute to talk.",
+    "speaking": "KeeperHub is answering.",
+    "waitingCard": "Authorize or cancel the card above to carry on.",
+    "waitingForm": "Fill in the form above to carry on."
+  },
+  "micProblem": {
+    "blocked": "Microphone access is blocked. Allow it for this site in your browser to use voice.",
+    "notFound": "No microphone was found. Connect one to use voice.",
+    "inUse": "Your microphone is in use by another app. Close it and try again.",
+    "other": "The microphone could not be opened. Try again."
+  },
+  "engine": {
+    "startFailed": "Voice couldn't start. Try again.",
+    "startOffline": "Voice couldn't start. Check your connection and try again.",
+    "connectFailed": "Voice couldn't connect. Try again in a moment.",
+    "formGone": "This form is no longer waiting.",
+    "detailsFailed": "Your details could not be sent. Try again.",
+    "detailsOffline": "Your details could not be sent. Check your connection and try again.",
+    "ended": {
+      "title": "Voice ended",
+      "description": "A voice session lasts ten minutes. Press the mic to start again."
+    },
+    "dropped": {
+      "title": "Voice disconnected",
+      "description": "Press the mic to start again."
+    }
+  },
+  "bar": {
+    "group": "Voice conversation",
+    "close": "Close voice",
+    "mutedWhileAnswering": "Muted while you answer on screen",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "end": "End"
+  },
+  "hero": {
+    "examples": "Try “What's the ETH price?” or “Send 0 ETH to myself on Base Sepolia”."
+  },
+  "formSheet": {
+    "detailsNeeded": "Details needed",
+    "fallbackTitle": "A few details"
+  }
+}

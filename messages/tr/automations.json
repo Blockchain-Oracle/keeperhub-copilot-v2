@@ -1,0 +1,369 @@
+{
+  "actions": {
+    "authorize": "Onayla",
+    "authorizing": "Onaylanıyor…",
+    "edit": "Düzenle",
+    "turnOn": "Aç",
+    "turnOff": "Kapat",
+    "turningOn": "Açılıyor…",
+    "runNow": "Şimdi çalıştır",
+    "running": "Çalışıyor…",
+    "checkAgain": "Yeniden kontrol et",
+    "openAutomation": "Otomasyonu aç →"
+  },
+  "acknowledge": {
+    "goAhead": "Yine de devam et. Uyarıları okudum.",
+    "turnOn": "Yine de aç. Uyarıları okudum.",
+    "run": "Yine de çalıştır. Uyarıları okudum."
+  },
+  "failures": {
+    "noAnswer": "KeeperHub yanıt vermedi.",
+    "noAnswerConnection": "KeeperHub yanıt vermedi. Bağlantını kontrol edip tekrar dene.",
+    "checkFailed": "KeeperHub’ın kontrolü çalıştırılamadı.",
+    "notTurnedOn": "KeeperHub bunu açmadı.",
+    "notChanged": "KeeperHub otomasyonu değiştirmedi.",
+    "dryRunFailed": "KeeperHub bu otomasyon için deneme çalıştırması yapamadı.",
+    "runNotStarted": "Çalıştırma başlatılamadı.",
+    "runNotStartedConnection": "Çalıştırma başlatılamadı. Bağlantını kontrol edip tekrar dene."
+  },
+  "view": {
+    "trigger": {
+      "manual": "İsteğe bağlı, biri Şimdi çalıştır’a bastığında",
+      "webhook": "Webhook URL’si çağrıldığında",
+      "schedule": "Bir zamanlamaya göre",
+      "block": "{count, plural, one {Her {every} blokta bir} other {Her {every} blokta bir}}",
+      "event": "{event} olayı yayınlandığında",
+      "tempoPayment": "Bir Tempo ödemesi geldiğinde"
+    },
+    "rows": {
+      "cron": "Cron",
+      "timezone": "Saat dilimi",
+      "contract": "Sözleşme",
+      "recipient": "Alıcı",
+      "token": "Token",
+      "memo": "Not",
+      "condition": "Devam koşulu"
+    },
+    "stepFallback": "Adım",
+    "actionLabel": {
+      "checking": "Kontrol ediliyor…",
+      "checkFailed": "Kontrol başarısız",
+      "blocked": "Devam edilemiyor",
+      "acknowledge": "Uyarıları kabul et"
+    },
+    "frame": {
+      "saving": {
+        "meta": "KAYDEDİLİYOR",
+        "status": "KeeperHub’a kaydediliyor…"
+      },
+      "savingChanges": {
+        "meta": "KAYDEDİLİYOR",
+        "status": "Değişiklikler KeeperHub’a kaydediliyor…"
+      },
+      "starting": {
+        "meta": "BAŞLATILIYOR",
+        "status": "Çalıştırma KeeperHub’da başlatılıyor…"
+      },
+      "deleting": {
+        "meta": "SİLİNİYOR",
+        "status": "KeeperHub’dan siliniyor…"
+      },
+      "cancelled": {
+        "meta": "İPTAL EDİLDİ",
+        "status": "İptal edildi"
+      },
+      "notSent": {
+        "meta": "GÖNDERİLMEDİ",
+        "status": "Gönderilmedi"
+      },
+      "cancelling": {
+        "meta": "İPTAL EDİLİYOR",
+        "status": "İptal ediliyor…"
+      },
+      "noAnswer": {
+        "meta": "YANIT YOK",
+        "status": "Onaylandı, yanıt saklanmadı"
+      },
+      "turningOn": {
+        "meta": "AÇILIYOR",
+        "status": "KeeperHub’da açılıyor…"
+      },
+      "turningOff": {
+        "meta": "KAPATILIYOR",
+        "status": "KeeperHub’da kapatılıyor…"
+      },
+      "neverAuthorized": {
+        "meta": "HİÇ ONAYLANMADI",
+        "status": "Hiç onaylanmadı"
+      },
+      "authorizing": {
+        "meta": "ONAYLANIYOR",
+        "status": "Onaylanıyor…"
+      },
+      "edited": {
+        "meta": "DÜZENLENDİ",
+        "status": "Düzenlendi, onayını bekliyor"
+      },
+      "awaiting": {
+        "meta": "ONAY BEKLİYOR",
+        "status": "Onayını bekliyor"
+      },
+      "live": {
+        "meta": "CANLI",
+        "status": "Kaydedildi ve açıldı"
+      },
+      "savedOff": {
+        "meta": "KAYDEDİLDİ · KAPALI",
+        "status": "Kaydedildi, kapalı"
+      },
+      "saved": {
+        "meta": "KAYDEDİLDİ",
+        "status": "Değişiklikler kaydedildi"
+      },
+      "deleted": {
+        "meta": "SİLİNDİ",
+        "status": "KeeperHub’dan silindi"
+      },
+      "executed": {
+        "meta": "GERÇEKLEŞTİ",
+        "status": "Gerçekleşti"
+      },
+      "failed": {
+        "meta": "BAŞARISIZ",
+        "status": "Çalıştırma başarısız oldu"
+      },
+      "stillRunning": {
+        "meta": "HÂLÂ ÇALIŞIYOR",
+        "status": "Hâlâ çalışıyor"
+      },
+      "running": {
+        "meta": "ÇALIŞIYOR",
+        "status": "KeeperHub’da çalışıyor…"
+      },
+      "started": {
+        "meta": "BAŞLADI",
+        "status": "Başladı"
+      },
+      "turnedOn": {
+        "meta": "AÇILDI",
+        "status": "Açıldı"
+      },
+      "turnedOff": {
+        "meta": "KAPATILDI",
+        "status": "Kapatıldı"
+      }
+    },
+    "stamp": {
+      "live": "CANLI",
+      "saved": "KAYDEDİLDİ",
+      "deleted": "SİLİNDİ",
+      "executed": "GERÇEKLEŞTİ",
+      "void": "GEÇERSİZ",
+      "on": "AÇIK",
+      "off": "KAPALI"
+    },
+    "kicker": {
+      "create": "Yeni otomasyon",
+      "update": "Otomasyonu değiştir",
+      "run": "Otomasyon çalıştırması",
+      "delete": "Otomasyonu sil",
+      "turnOn": "Otomasyonu aç",
+      "turnOff": "Otomasyonu kapat"
+    },
+    "title": {
+      "create": "Yeni otomasyon",
+      "update": "Bir otomasyonu değiştir",
+      "run": "Çalıştır: {name}",
+      "runAny": "Bir otomasyonu çalıştır",
+      "delete": "Sil: {name}",
+      "deleteAny": "Bir otomasyonu sil",
+      "turnOn": "Aç: {name}",
+      "turnOnAny": "Bir otomasyonu aç",
+      "turnOff": "Kapat: {name}",
+      "turnOffAny": "Bir otomasyonu kapat"
+    },
+    "form": {
+      "name": "Ad",
+      "cron": "Zamanlama (cron)",
+      "timezone": "Saat dilimi",
+      "network": "Ağ",
+      "every": "Her N blokta bir",
+      "contract": "Sözleşme",
+      "event": "Olay adı",
+      "abi": "Sözleşme ABI’si",
+      "abiPlaceholder": "Doğrulanmış bir sözleşme için boş bırak",
+      "recipient": "Yatırma adresi",
+      "token": "Token",
+      "memo": "Not",
+      "stepField": "Adım {number} · {label}"
+    }
+  },
+  "card": {
+    "declinedRun": "Bu çalıştırmayı reddettin. Hiçbir şey çalışmadı.",
+    "declinedProposal": "Bu öneriyi reddettin. KeeperHub’da hiçbir şey değişmedi.",
+    "checkValues": "Bu değerleri kontrol et",
+    "starts": "Başlangıç",
+    "steps": "Adımlar",
+    "automation": "Otomasyon",
+    "change": "Değişiklik",
+    "notSent": "Yanıtın KeeperHub’a ulaşmadı. Bağlantını kontrol edip tekrar dene.",
+    "noAnswer": "Bu onaylandı ama KeeperHub’ın yanıtı bu sohbete hiç ulaşmadı. Nasıl sonuçlandığını Otomasyonlar sayfası gösterir.",
+    "archived": "Sohbet arşivlenmeden önce bunu kimse onaylamadı. Hiçbir şey değişmedi.",
+    "updatedOn": "Açık olduğu için yeni sürüm bir sonraki başlangıcından itibaren çalışır.",
+    "updatedKept": "Açık ya da kapalı durumunu korur.",
+    "deleted": "Çalıştırma geçmişiyle birlikte silindi. Artık Otomasyonlar sayfasında görünmüyor."
+  },
+  "savedFollowUp": {
+    "onDemand": "Biri sayfasında Şimdi çalıştır’a bastığında çalışır.",
+    "archived": "Kapalı olarak kaydedildi. O zamandan beri açılıp açılmadığını sayfası gösterir.",
+    "live": "Açık. KeeperHub bundan sonra onu kendiliğinden başlatır.",
+    "off": "Kapalı. KeeperHub’ın kontrolünü okuduktan sonra aç; kendiliğinden başlar."
+  },
+  "runFollowUp": {
+    "started": "Başladı. Çalıştırmanın nasıl sonuçlandığını otomasyonun sayfası gösterir.",
+    "running": "KeeperHub’da çalışıyor. Bu kart bittiğinde güncellenir.",
+    "executed": "Gerçekleşti.",
+    "transaction": "İşlem",
+    "failed": "Çalıştırma KeeperHub’da başarısız oldu. Hangi adımın durdurduğunu sayfası gösterir.",
+    "stale": "Beş dakikadır hâlâ çalışıyor. Sonucu sayfasında ve Etkinlik’te görünecek."
+  },
+  "previewBlock": {
+    "checking": "KeeperHub ile kontrol ediliyor",
+    "label": "KeeperHub kontrolü",
+    "blocked": "engellendi",
+    "warned": "uyarıları oku",
+    "ready": "hazır",
+    "changes": "Neler değişiyor"
+  },
+  "subjectBlock": {
+    "steps": "Adımlar",
+    "noSteps": "henüz adım yok"
+  },
+  "triggerBlock": {
+    "network": "Ağ"
+  },
+  "stepDetail": {
+    "movesValue": "değer taşır"
+  },
+  "stepList": {
+    "off": "kapalı"
+  },
+  "listCard": {
+    "meta": "{count, plural, one {# OTOMASYON} other {# OTOMASYON}}",
+    "empty": "henüz otomasyon yok",
+    "steps": "{count, plural, one {# adım} other {# adım}}"
+  },
+  "detailCard": {
+    "unreadableMeta": "OKUNAMADI",
+    "unreadable": "bu otomasyon okunamadı",
+    "statusMeta": {
+      "live": "CANLI",
+      "manual": "İSTEĞE BAĞLI",
+      "off": "KAPALI",
+      "deactivated": "DEVRE DIŞI"
+    },
+    "steps": "Adımlar",
+    "noSteps": "henüz adım yok",
+    "recentRuns": "Son çalıştırmalar",
+    "runsUnavailable": "KeeperHub’ın çalıştırma geçmişi şu an alınamıyor.",
+    "noRuns": "Henüz çalıştırma yok."
+  },
+  "statusBadge": {
+    "live": "CANLI",
+    "manual": "isteğe bağlı",
+    "off": "kapalı",
+    "deactivated": "devre dışı"
+  },
+  "triggerLabel": {
+    "manual": "İsteğe bağlı çalışır",
+    "transfer": "Bir transferde çalışır",
+    "other": "{type} tetikleyicisi"
+  },
+  "duration": {
+    "milliseconds": "{ms} ms",
+    "seconds": "{seconds} sn",
+    "minutes": "{minutes} dk {seconds} sn"
+  },
+  "runStatus": {
+    "executed": "Gerçekleşti",
+    "failed": "Başarısız",
+    "cancelled": "İptal edildi",
+    "skipped": "Atlandı",
+    "running": "Çalışıyor"
+  },
+  "board": {
+    "title": "Otomasyonlar",
+    "subtitle": "KeeperHub’ın bu kuruluş için çalıştırdığı iş akışları. Adımlarını ve çalıştırmalarını görmek için birini aç ya da hemen çalıştır.",
+    "filterLabel": "Göster",
+    "filters": {
+      "all": "Tümü",
+      "live": "Canlı",
+      "manual": "İsteğe bağlı",
+      "off": "Kapalı"
+    },
+    "sortLabel": "Sırala",
+    "sorts": {
+      "updated": "Son güncellenen",
+      "name": "Ad"
+    },
+    "loadFailed": "Otomasyonlar şu an yüklenemedi",
+    "retry": "Yeniden dene",
+    "emptyTitle": "Henüz otomasyon yok",
+    "emptyBody": "Sohbetten bir tane oluşturmasını iste ya da KeeperHub’da oluştur. Her iki durumda da adımları ve çalıştırmalarıyla burada görünür.",
+    "createPrompt": "Bir otomasyon oluşturmama yardım et.",
+    "createInChat": "Sohbette oluştur →",
+    "openKeeperHub": "KeeperHub’ı aç ↗",
+    "noneInView": "Bu görünümde otomasyon yok.",
+    "columns": {
+      "automation": "Otomasyon",
+      "status": "Durum",
+      "steps": "Adımlar",
+      "networks": "Ağlar",
+      "updated": "Güncellendi"
+    },
+    "open": "Aç →"
+  },
+  "detail": {
+    "back": "← Otomasyonlar",
+    "missingTitle": "Bu otomasyon kullanılamıyor",
+    "missingBody": "Silinmiş ya da başka bir kuruluşa ait olabilir.",
+    "loadFailed": "Bu otomasyon şu an yüklenemedi. {message}",
+    "created": "<time></time> oluşturuldu",
+    "deactivated": "Bu otomasyon KeeperHub’da devre dışı.",
+    "stats": {
+      "trigger": "Tetikleyici",
+      "steps": "Adımlar",
+      "networks": "Ağlar",
+      "lastRun": "Son çalıştırma",
+      "updated": "Güncellendi"
+    },
+    "steps": "Adımlar",
+    "noSteps": "Bu otomasyonun henüz adımı yok.",
+    "recentRuns": "Son çalıştırmalar",
+    "justStarted": "Az önce başlattığın çalıştırma",
+    "stillRunning": "Hâlâ çalışıyor. Sonucu burada ve Etkinlik’te görünecek.",
+    "runsUnavailable": "KeeperHub’ın çalıştırma geçmişi şu an alınamıyor.",
+    "noRuns": "Henüz çalıştırma yok.",
+    "runSource": "çalıştırma",
+    "viewTx": "Görüntüle",
+    "moreTx": "+{count} tane daha"
+  },
+  "runDialog": {
+    "runningDryRun": "Deneme yapılıyor…",
+    "acknowledge": "Uyarıyı kabul et",
+    "trigger": "Tetikleyici",
+    "steps": "Adımlar",
+    "networks": "Ağlar",
+    "explainer": "Tüm adımlar şimdi çalışır. Değer taşıyan adımlar yeniden durmadan gerçekleşir.",
+    "dryRunLoading": "deneme yapılıyor",
+    "dryRun": "Deneme çalıştırması",
+    "dryRunReason": "{reason} Yukarıda gösterilenin aynısını onaylarsın.",
+    "noWarnings": "uyarı yok",
+    "checked": "{count, plural, one {# adım kontrol edildi} other {# adım kontrol edildi}}.",
+    "checkedSkipped": "{count, plural, one {# adım kontrol edildi} other {# adım kontrol edildi}}, {skipped} tanesi kontrol edilemedi."
+  },
+  "switchDialog": {
+    "onExplainer": "Açıldığında KeeperHub onu kendiliğinden başlatır ve adımları yeniden durmadan çalışır.",
+    "offExplainer": "Kapatıldığında KeeperHub onu kendiliğinden başlatmayı bırakır. Şimdi çalıştır yine de çalışır."
+  }
+}

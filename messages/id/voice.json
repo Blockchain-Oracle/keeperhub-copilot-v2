@@ -1,0 +1,57 @@
+{
+  "label": {
+    "connecting": "Menghubungkan…",
+    "listening": "Mendengarkan",
+    "muted": "Dibisukan",
+    "speaking": "Berbicara",
+    "waitingCard": "Menunggu kartu Anda",
+    "waitingForm": "Menunggu detail Anda",
+    "error": "Suara tidak dapat dimulai",
+    "idle": "Suara"
+  },
+  "hint": {
+    "connecting": "Izinkan mikrofon jika browser Anda memintanya.",
+    "listening": "Bicaralah dengan KeeperHub. Kartu muncul di obrolan.",
+    "muted": "Mikrofon Anda mati. Bunyikan untuk berbicara.",
+    "speaking": "KeeperHub sedang menjawab.",
+    "waitingCard": "Otorisasi atau batalkan kartu di atas untuk melanjutkan.",
+    "waitingForm": "Isi formulir di atas untuk melanjutkan."
+  },
+  "micProblem": {
+    "blocked": "Akses mikrofon diblokir. Izinkan untuk situs ini di browser Anda agar dapat menggunakan suara.",
+    "notFound": "Mikrofon tidak ditemukan. Hubungkan mikrofon untuk menggunakan suara.",
+    "inUse": "Mikrofon Anda sedang digunakan aplikasi lain. Tutup aplikasi itu dan coba lagi.",
+    "other": "Mikrofon tidak dapat dibuka. Coba lagi."
+  },
+  "engine": {
+    "startFailed": "Suara tidak dapat dimulai. Coba lagi.",
+    "startOffline": "Suara tidak dapat dimulai. Periksa koneksi Anda dan coba lagi.",
+    "connectFailed": "Suara tidak dapat terhubung. Coba lagi sebentar lagi.",
+    "formGone": "Formulir ini sudah tidak menunggu.",
+    "detailsFailed": "Detail Anda tidak dapat dikirim. Coba lagi.",
+    "detailsOffline": "Detail Anda tidak dapat dikirim. Periksa koneksi Anda dan coba lagi.",
+    "ended": {
+      "title": "Suara berakhir",
+      "description": "Sesi suara berlangsung sepuluh menit. Tekan mikrofon untuk memulai lagi."
+    },
+    "dropped": {
+      "title": "Suara terputus",
+      "description": "Tekan mikrofon untuk memulai lagi."
+    }
+  },
+  "bar": {
+    "group": "Percakapan suara",
+    "close": "Tutup suara",
+    "mutedWhileAnswering": "Dibisukan selama Anda menjawab di layar",
+    "mute": "Bisukan",
+    "unmute": "Bunyikan",
+    "end": "Akhiri"
+  },
+  "hero": {
+    "examples": "Coba “Berapa harga ETH?” atau “Kirim 0 ETH ke diri saya sendiri di Base Sepolia”."
+  },
+  "formSheet": {
+    "detailsNeeded": "Detail diperlukan",
+    "fallbackTitle": "Beberapa detail"
+  }
+}

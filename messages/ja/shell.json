@@ -1,0 +1,267 @@
+{
+  "nav": {
+    "primary": "メインナビゲーション",
+    "beta": "ベータ",
+    "items": {
+      "chat": {
+        "name": "チャット",
+        "description": "オンチェーンのことを何でも依頼できます。"
+      },
+      "history": {
+        "name": "履歴",
+        "description": "過去の会話を、受領書も含めて振り返れます。"
+      },
+      "activity": {
+        "name": "アクティビティ",
+        "description": "組織ウォレットが実行したすべての記録です。"
+      },
+      "automations": {
+        "name": "オートメーション",
+        "description": "KeeperHub があなたの代わりに実行するワークフローです。"
+      },
+      "actions": {
+        "name": "アクション",
+        "description": "KeeperHub が実行できるすべての読み取りと書き込みです。"
+      },
+      "gettingStarted": {
+        "name": "はじめに",
+        "description": "KeeperHub に接続して、最初の質問をしてみましょう。"
+      },
+      "mcp": {
+        "name": "MCP の設定",
+        "description": "Claude、Cursor などの MCP クライアントから KeeperHub を使えます。"
+      },
+      "howItWorks": {
+        "name": "仕組み",
+        "description": "自由に実行されるものと、あなたのクリックを待つもの。"
+      }
+    },
+    "groups": {
+      "build": {
+        "name": "構築",
+        "description": "KeeperHub が実行する処理を自動化します。"
+      },
+      "learn": {
+        "name": "学ぶ",
+        "description": "Copilot と KeeperHub のガイドです。"
+      }
+    },
+    "sections": {
+      "automate": {
+        "name": "自動化",
+        "description": "ワークフローとアクション"
+      },
+      "guides": {
+        "name": "ガイド",
+        "description": "まずはここから"
+      }
+    }
+  },
+  "mobileNav": {
+    "label": "モバイル用メインナビゲーション",
+    "openAll": "すべてのナビゲーションを開く",
+    "more": "その他",
+    "eyebrow": "移動",
+    "title": "KeeperHub Copilot のすべて",
+    "description": "自動化、閲覧、学習。どの画面にも決まった置き場所があります。",
+    "allDestinations": "KeeperHub Copilot のすべての移動先"
+  },
+  "connect": {
+    "connect": "KeeperHub に接続",
+    "connecting": "接続中…",
+    "unreachable": "KeeperHub に接続できません",
+    "noOrgWallet": "組織ウォレットなし"
+  },
+  "accountMenu": {
+    "open": "アカウントメニューを開く",
+    "noWalletTitle": "この組織にはまだウォレットがありません",
+    "walletLabel": "組織ウォレット {address}",
+    "noWalletLabel": "組織ウォレットなし",
+    "noWallet": "ウォレットなし",
+    "menu": "アカウント",
+    "orgWallet": "組織ウォレット",
+    "spentToday": "本日の使用額",
+    "spentTitle": "EVM ネットワーク全体で本日移動した価値と、KeeperHub が適用する 1 日の上限です。",
+    "spentTitleDefault": "EVM ネットワーク全体で本日移動した価値と、KeeperHub が適用する 1 日の上限（KeeperHub の既定値）です。",
+    "limitUnavailable": "KeeperHub から 1 日の上限を今は取得できませんでした。",
+    "copyAddress": "アドレスをコピー",
+    "viewOnExplorer": "エクスプローラーで表示",
+    "disconnect": "接続を解除"
+  },
+  "moneyPill": {
+    "unavailable": "このネットワークの残高は現在取得できません",
+    "noWallet": "この組織にはまだウォレットがありません",
+    "addFunds": "入金",
+    "balance": "組織ウォレットの残高 {amount} {symbol}。入金",
+    "balanceUnavailable": "組織ウォレットの残高を取得できません。入金"
+  },
+  "networkPill": {
+    "label": "ネットワーク: {name}",
+    "mainnets": "メインネット",
+    "testnets": "テストネット",
+    "loading": "ネットワークを読み込み中…",
+    "unavailable": "KeeperHub のネットワーク一覧は現在利用できません。"
+  },
+  "language": {
+    "title": "言語を選択",
+    "description": "アプリ、チャット、音声でこの言語を使います。",
+    "switched": "{language}で返信します",
+    "switchedDescription": "チャットは次のメッセージから、音声は次のセッションからこの言語で応答します。"
+  },
+  "appStrip": {
+    "label": "KeeperHub Copilot について",
+    "lines": {
+      "readsRun": "読み取りは自由に実行。書き込みはすべてあなたのクリックを待ちます",
+      "orgWalletSigns": "署名するのは KeeperHub の組織ウォレット。ブラウザウォレットは不要です"
+    },
+    "howItWorks": "仕組み",
+    "dismiss": "閉じる"
+  },
+  "marquee": {
+    "networks": "ネットワーク",
+    "unavailable": "利用不可",
+    "loading": "読み込み中"
+  },
+  "capabilityPending": {
+    "waiting": "未接続 · {dependency} を待っています"
+  },
+  "writeRecovery": {
+    "landed": "以前のアクションが完了しました",
+    "landedReceipt": "{name}。受領書はアクティビティにあります。",
+    "landedRecorded": "{name}。アクティビティに記録されています。",
+    "failed": "以前のアクションは完了しませんでした",
+    "failedDescription": "{name}。KeeperHub は失敗として記録しました。再試行はしていません。",
+    "expired": "以前のアクションを検証できませんでした",
+    "expiredDescription": "{name} は 1 日以上前に開始され、確定しませんでした。もう一度試す前にアクティビティを確認してください。",
+    "pending": "{count, plural, other {以前のアクション # 件をまだ確認しています}}",
+    "pendingDescription": "KeeperHub はまだ確定を確認していません。自動で再試行されることはありません。"
+  },
+  "signIn": {
+    "eyebrow": "KeeperHub · 接続",
+    "description": "Copilot は KeeperHub アカウントでサインインします。署名するのは組織のウォレットで、署名するのはあなたが承認したものだけです。",
+    "continueWithKeeperHub": "KeeperHub で続行",
+    "continueHint": "続行",
+    "footer": "組織ウォレットが署名 · ブラウザウォレット不要",
+    "errors": {
+      "denied": "KeeperHub でキャンセルされたため、何も接続されていません。",
+      "failed": "KeeperHub のサインインが完了しませんでした。もう一度お試しください。"
+    },
+    "status": {
+      "online": "KeeperHub オンライン",
+      "unreachable": "KeeperHub に接続できません",
+      "checking": "KeeperHub を確認中"
+    }
+  },
+  "signInGate": {
+    "eyebrow": "KeeperHub · ID カード",
+    "title": "<em>認証情報</em>を挿入してください。",
+    "body": "Copilot は<highlight>あなたの</highlight> KeeperHub アカウントを通じて、チェーンの状態を読み取り、操作を行います。サインインは 1 回だけ。承認した内容には組織のウォレットが署名します。",
+    "retry": "KeeperHub に接続できません · 再試行",
+    "writesWait": "書き込みはすべて、引き続きあなたのクリックを待ちます。",
+    "counts": "{actions, plural, other {# アクション}} · {integrations, plural, other {# インテグレーション}}",
+    "networks": "{count, plural, other {# ネットワーク}}",
+    "networksUnknown": "— ネットワーク"
+  },
+  "tutorial": {
+    "steps": {
+      "welcome": {
+        "title": "KeeperHub Copilot へようこそ",
+        "description": "KeeperHub のためのチャットです。価格、残高、送金、オートメーションを、ふだんの言葉で依頼してください。Copilot がそれを実行する KeeperHub のアクションを選び、結果をカードで表示します。"
+      },
+      "readsRun": {
+        "title": "読み取りは実行、書き込みは待機",
+        "description": "価格や残高のように見るだけのものは、すぐに実行されます。価値を動かすものは、すべての項目が入力されたカードの状態で止まります。編集して試行し、承認するか拒否してください。クリックするまで何も動きません。"
+      },
+      "orgWallet": {
+        "title": "署名するのは組織ウォレット",
+        "description": "サインインには、ブラウザウォレットではなく KeeperHub アカウントを使います。承認した内容には、KeeperHub が組織のために管理するウォレットが、KeeperHub の定める 1 日の上限の範囲内で署名します。"
+      },
+      "money": {
+        "title": "資金の置き場所",
+        "description": "ヘッダーのピルは、選択したネットワーク上の組織ウォレットです。+ をタップすると、入金用のアドレスと QR コードが表示されます。残高はネットワークごとに独立しており、合算されることはありません。"
+      },
+      "connect": {
+        "title": "接続して始める",
+        "description": "サインインすると KeeperHub が開き、完了後はそのままここに戻ります。"
+      }
+    },
+    "skip": "スキップ",
+    "next": "次へ",
+    "done": "始める",
+    "lastStep": "最後のステップ",
+    "connectTitle": "KeeperHub に接続して始める",
+    "connectNote": "サインインは 1 回だけ。すべての読み取りと承認済みの書き込みは、あなたの KeeperHub 組織を通じて実行されます。",
+    "progress": "ステップ {step} / {total}"
+  },
+  "addFunds": {
+    "eyebrow": "入金 · {network, select, testnet {testnet} other {mainnet}}",
+    "title": "組織ウォレットに入金",
+    "description": "{network} の {symbol} を KeeperHub の組織ウォレットに送金してください。承認した操作のガス代に使われます。必ずこのネットワークで送金してください。",
+    "connectFirst": "まず KeeperHub に接続してください。",
+    "noWallet": "この組織にはまだウォレットがありません。KeeperHub は組織ごとにウォレットを作成します。KeeperHub の設定を確認してください。",
+    "orgWallet": "組織ウォレット",
+    "copyAddress": "組織ウォレットのアドレスをコピー",
+    "copied": "コピーしました ✓",
+    "scanToSend": "スキャンして送金",
+    "nativeOn": "{network} の {symbol}",
+    "checking": "残高を確認中…",
+    "unavailable": "残高を取得できません",
+    "startInChat": "チャットで始める",
+    "checkAgain": "残高を再確認",
+    "rereads": "このタブに戻ると残高を読み込み直します。",
+    "viewOnExplorer": "エクスプローラーで表示"
+  },
+  "receiptWelcome": {
+    "eyebrow": "最初の受領書",
+    "title": "最初のアクションが完了しました",
+    "body": "KeeperHub が実行し、チェーン上で確定しました。受領書はアクティビティにあり、今後の受領書もすべてそこに届きます。",
+    "keepGoing": "続ける"
+  },
+  "palette": {
+    "trigger": "検索",
+    "title": "KeeperHub Copilot を検索",
+    "search": "ページ、ネットワーク、アクションを検索",
+    "placeholder": "ページ、ネットワーク、アクションを検索…",
+    "results": "結果",
+    "moreActions": "他 {count} 件 · すべてのアクションを見る",
+    "moreNetworks": "他 {count} 件 · 入力を続けて絞り込み",
+    "loadingActions": "アクションを読み込み中…",
+    "actionsFailed": "アクションを読み込めませんでした。閉じてから開き直してください。",
+    "noResults": "「{query}」に一致する結果はありません",
+    "noResultsHint": "「aave」「sepolia」「アクティビティ」などをお試しください。",
+    "move": "移動",
+    "open": "開く",
+    "close": "閉じる",
+    "resultCount": "{count, plural, other {# 件の結果}}",
+    "signs": "要署名",
+    "selected": "選択中",
+    "here": "現在地",
+    "switched": "{network} に切り替えました",
+    "switchedDescription": "新しい質問とカードでは、このネットワークを使います。",
+    "sections": {
+      "page": "ページ",
+      "network": "ネットワーク",
+      "language": "言語",
+      "action": "アクション"
+    },
+    "testnet": "テストネット",
+    "mainnet": "メインネット",
+    "chain": "チェーン {id}",
+    "languageSubtitle": "言語 · {code}",
+    "languageKeywords": "言語 げんご language languages"
+  },
+  "toast": {
+    "close": "通知を閉じる"
+  },
+  "identicon": {
+    "label": "{address} のアイデンティコン",
+    "noAccount": "アカウントなしのアイデンティコン"
+  },
+  "integrationMark": {
+    "form": "入力内容",
+    "search": "アクションカタログ"
+  },
+  "chainMark": {
+    "fallback": "チェーン {id}"
+  }
+}

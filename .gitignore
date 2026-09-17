@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.env
+.env.*
+!.env.example
+references/*/
+!references/README.md
+.DS_Store
+*.log
+.playwright-mcp/
+.claude/settings.local.json
+*.tsbuildinfo
+.vercel
+
+# August planning artefacts — parked, never pushed
+legacy/

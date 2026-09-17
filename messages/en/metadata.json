@@ -1,0 +1,12 @@
+{
+  "title": "KeeperHub Copilot",
+  "titleTemplate": "%s · KeeperHub Copilot",
+  "description": "Ask for an on-chain action in plain language. Read anything, approve anything that moves value, and turn a sentence into a standing KeeperHub automation.",
+  "chat": "Chat",
+  "history": "History",
+  "activity": "Activity",
+  "automations": "Automations",
+  "automation": "Automation",
+  "receiptNotShared": "Receipt not shared",
+  "receiptDescription": "An action KeeperHub executed on-chain, shared from KeeperHub Copilot."
+}

@@ -1,0 +1,148 @@
+{
+  "newConversation": "新しい会話",
+  "loadNotice": "この会話を完全には読み込めませんでした。メッセージは保存されていますが、表示できません。",
+  "toolStates": {
+    "preparing": "準備中",
+    "running": "実行中",
+    "waitingForApproval": "承認待ち",
+    "sendingAnswer": "回答を送信中",
+    "done": "完了",
+    "failed": "失敗",
+    "declined": "拒否済み",
+    "waitingForYou": "あなたの操作待ち",
+    "unknown": "不明"
+  },
+  "chat": {
+    "hints": {
+      "connect": "KeeperHub に接続して始めてください。",
+      "answerUnsent": "回答を送信するには、上のカードで「再試行」を押してください。",
+      "form": "続行するには、上のフォームに入力するか、フォームを閉じてください。",
+      "approval": "続行するには、上のアクションを承認またはキャンセルしてください。"
+    },
+    "banner": {
+      "createFailed": "会話を作成できませんでした。もう一度お試しください。",
+      "sessionEnded": "KeeperHub のセッションが終了しました。",
+      "answerUnsent": "回答が KeeperHub に届きませんでした。カードの「再試行」を使ってください。",
+      "turnFailed": "アシスタントでエラーが発生しました。もう一度お試しください。",
+      "connect": "KeeperHub に接続",
+      "retry": "再試行"
+    },
+    "archived": {
+      "notice": "この会話はアーカイブされました。現在は閲覧のみ可能です。",
+      "newChat": "新しいチャット"
+    },
+    "ceremony": {
+      "noConversation": "試行の対象となる会話がありません。",
+      "dryRunUnprepared": "試行を準備できませんでした。",
+      "checkFailed": "KeeperHub のチェックを実行できませんでした。",
+      "checkUnreachable": "KeeperHub のチェックを実行できませんでした。接続を確認して、もう一度お試しください。",
+      "enableFailed": "KeeperHub はオートメーションを変更しませんでした。",
+      "enableUnreachable": "KeeperHub から応答がありませんでした。接続を確認して、もう一度お試しください。"
+    }
+  },
+  "composer": {
+    "form": "メッセージ入力欄",
+    "label": "KeeperHub に質問",
+    "placeholder": "KeeperHub に質問…",
+    "send": "メッセージを送信",
+    "talk": "KeeperHub と話す",
+    "talkUnavailable": "待機中の項目がなくなると音声を使えます",
+    "menu": "ネットワークとアクション",
+    "searchActions": "アクションを検索",
+    "browseActions": "全 {count} 件のアクションを見る"
+  },
+  "messageList": {
+    "thinking": "考え中",
+    "said": "音声"
+  },
+  "toolTimeline": {
+    "used": "{count, plural, other {# 個のツールを使用}}",
+    "using": "{count, plural, other {# 個のツールを使用中}}",
+    "input": "入力",
+    "output": "出力",
+    "elapsedSeconds": "{seconds} 秒",
+    "elapsedMinutes": "{minutes} 分 {seconds} 秒"
+  },
+  "sessionDropdown": {
+    "conversations": "会話",
+    "newChat": "新しいチャット",
+    "loadFailed": "一覧を読み込めませんでした。閉じてからもう一度お試しください。",
+    "empty": "過去のチャットはまだありません。",
+    "rename": "会話「{title}」の名前を変更",
+    "delete": "会話「{title}」を削除",
+    "newTitle": "会話「{title}」の新しいタイトル",
+    "titleTooLong": "タイトルは {max} 文字以内にしてください。",
+    "renameFailed": "名前の変更を保存できませんでした。もう一度お試しください。",
+    "renamed": "会話の名前を変更しました。",
+    "deleteFailed": "会話を削除できませんでした。もう一度お試しください。",
+    "deleted": "会話を削除しました。"
+  },
+  "home": {
+    "status": {
+      "online": "KeeperHub オンライン · {count, plural, other {# ネットワーク}}",
+      "unreachable": "KeeperHub に接続できません",
+      "checking": "KeeperHub を確認中"
+    },
+    "greeting": "KeeperHub に何を頼みますか？",
+    "intro": "価格、残高、送金などを依頼してください。読み取りにはすぐに答えます。<b>価値を動かす操作は、あなたのクリックを待ちます。</b>下のカードから始めることもできます。",
+    "orPickACard": "またはカードを選ぶ",
+    "quoted": "「{text}」"
+  },
+  "motifs": {
+    "noOrgWallet": "組織ウォレットはまだありません",
+    "approve": "承認",
+    "pooledDeposits": "プールされた預け入れ",
+    "actions": "{count, plural, other {# アクション}}",
+    "yourConversations": "あなたの会話",
+    "conversations": "{count, plural, other {# 件の会話}}"
+  },
+  "categories": {
+    "chainlink": {
+      "title": "価格",
+      "description": "Chainlink からライブの価格フィードを直接読み取ります。",
+      "mobileDesc": "Chainlink の価格フィード。"
+    },
+    "lido": {
+      "title": "リキッドステーキング",
+      "description": "ステーキングした ETH の価値を Lido から読み取ります。",
+      "mobileDesc": "Lido のステーキングレート。"
+    },
+    "rocketPool": {
+      "title": "Rocket Pool",
+      "description": "rETH の交換レートと流通量を確認します。",
+      "mobileDesc": "rETH のレート。"
+    },
+    "sky": {
+      "title": "貯蓄ボールト",
+      "description": "Sky の貯蓄ボールトに預けられている金額を確認します。",
+      "mobileDesc": "Sky ボールトの預け入れ額。"
+    },
+    "orgWallet": {
+      "title": "組織ウォレット",
+      "description": "{network} 上で組織のウォレットが保有している資産です。",
+      "mobileDesc": "このネットワークの残高。",
+      "prompt": "{network} で組織ウォレットが保有している資産を教えてください。",
+      "familyLabel": "アカウント"
+    },
+    "sendToSelf": {
+      "title": "自分に送金",
+      "description": "自分のウォレットに戻す、金額ゼロの送金です。あなたのクリックを待ちます。",
+      "mobileDesc": "クリックを待ちます。",
+      "prompt": "{network} で、組織ウォレットから同じウォレットに {amount} を送ってください。",
+      "familyLabel": "アカウント · 書き込み"
+    },
+    "discover": {
+      "title": "アクションを探す",
+      "description": "KeeperHub があるプロトコルで何をできるか質問します。",
+      "mobileDesc": "プロトコルでできること。",
+      "prompt": "Aave V3 で何ができますか？",
+      "familyLabel": "カタログ"
+    },
+    "history": {
+      "title": "履歴",
+      "description": "過去の会話とその受領書をもう一度開きます。",
+      "mobileDesc": "過去の会話。",
+      "familyLabel": "履歴"
+    }
+  }
+}

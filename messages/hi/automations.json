@@ -1,0 +1,369 @@
+{
+  "actions": {
+    "authorize": "अधिकृत करें",
+    "authorizing": "अधिकृत किया जा रहा है…",
+    "edit": "संपादित करें",
+    "turnOn": "चालू करें",
+    "turnOff": "बंद करें",
+    "turningOn": "चालू हो रहा है…",
+    "runNow": "अभी चलाएँ",
+    "running": "चल रहा है…",
+    "checkAgain": "फिर से जाँचें",
+    "openAutomation": "ऑटोमेशन खोलें →"
+  },
+  "acknowledge": {
+    "goAhead": "फिर भी आगे बढ़ें। मैंने चेतावनियाँ पढ़ ली हैं।",
+    "turnOn": "फिर भी चालू करें। मैंने चेतावनियाँ पढ़ ली हैं।",
+    "run": "फिर भी चलाएँ। मैंने चेतावनियाँ पढ़ ली हैं।"
+  },
+  "failures": {
+    "noAnswer": "KeeperHub ने जवाब नहीं दिया।",
+    "noAnswerConnection": "KeeperHub ने जवाब नहीं दिया। अपना कनेक्शन जाँचें और फिर से कोशिश करें।",
+    "checkFailed": "KeeperHub की जाँच नहीं चल सकी।",
+    "notTurnedOn": "KeeperHub ने इसे चालू नहीं किया।",
+    "notChanged": "KeeperHub ने ऑटोमेशन नहीं बदला।",
+    "dryRunFailed": "KeeperHub इस ऑटोमेशन का परीक्षण रन नहीं कर सका।",
+    "runNotStarted": "रन शुरू नहीं हो सका।",
+    "runNotStartedConnection": "रन शुरू नहीं हो सका। अपना कनेक्शन जाँचें और फिर से कोशिश करें।"
+  },
+  "view": {
+    "trigger": {
+      "manual": "ज़रूरत पर, जब कोई “अभी चलाएँ” दबाए",
+      "webhook": "जब इसका वेबहुक URL कॉल किया जाए",
+      "schedule": "शेड्यूल पर",
+      "block": "{count, plural, one {हर {every} ब्लॉक पर} other {हर {every} ब्लॉक पर}}",
+      "event": "जब {event} एमिट हो",
+      "tempoPayment": "जब Tempo भुगतान आए"
+    },
+    "rows": {
+      "cron": "Cron",
+      "timezone": "समय क्षेत्र",
+      "contract": "कॉन्ट्रैक्ट",
+      "recipient": "प्राप्तकर्ता",
+      "token": "टोकन",
+      "memo": "मेमो",
+      "condition": "आगे बढ़ने की शर्त"
+    },
+    "stepFallback": "चरण",
+    "actionLabel": {
+      "checking": "जाँचा जा रहा है…",
+      "checkFailed": "जाँच विफल",
+      "blocked": "आगे नहीं बढ़ सकते",
+      "acknowledge": "चेतावनियाँ स्वीकार करें"
+    },
+    "frame": {
+      "saving": {
+        "meta": "सहेजा जा रहा है",
+        "status": "KeeperHub में सहेजा जा रहा है…"
+      },
+      "savingChanges": {
+        "meta": "सहेजा जा रहा है",
+        "status": "बदलाव KeeperHub में सहेजे जा रहे हैं…"
+      },
+      "starting": {
+        "meta": "शुरू हो रहा है",
+        "status": "KeeperHub में रन शुरू किया जा रहा है…"
+      },
+      "deleting": {
+        "meta": "हटाया जा रहा है",
+        "status": "KeeperHub से हटाया जा रहा है…"
+      },
+      "cancelled": {
+        "meta": "रद्द",
+        "status": "रद्द किया गया"
+      },
+      "notSent": {
+        "meta": "नहीं भेजा गया",
+        "status": "नहीं भेजा गया"
+      },
+      "cancelling": {
+        "meta": "रद्द हो रहा है",
+        "status": "रद्द किया जा रहा है…"
+      },
+      "noAnswer": {
+        "meta": "कोई जवाब नहीं",
+        "status": "अधिकृत, कोई जवाब सहेजा नहीं गया"
+      },
+      "turningOn": {
+        "meta": "चालू हो रहा है",
+        "status": "KeeperHub में चालू किया जा रहा है…"
+      },
+      "turningOff": {
+        "meta": "बंद हो रहा है",
+        "status": "KeeperHub में बंद किया जा रहा है…"
+      },
+      "neverAuthorized": {
+        "meta": "कभी अधिकृत नहीं",
+        "status": "कभी अधिकृत नहीं किया गया"
+      },
+      "authorizing": {
+        "meta": "अधिकृत हो रहा है",
+        "status": "अधिकृत किया जा रहा है…"
+      },
+      "edited": {
+        "meta": "संपादित",
+        "status": "संपादित, आपके प्राधिकरण का इंतज़ार"
+      },
+      "awaiting": {
+        "meta": "प्राधिकरण का इंतज़ार",
+        "status": "आपके प्राधिकरण का इंतज़ार"
+      },
+      "live": {
+        "meta": "लाइव",
+        "status": "सहेजा गया और चालू किया गया"
+      },
+      "savedOff": {
+        "meta": "सहेजा गया · बंद",
+        "status": "सहेजा गया, बंद है"
+      },
+      "saved": {
+        "meta": "सहेजा गया",
+        "status": "बदलाव सहेजे गए"
+      },
+      "deleted": {
+        "meta": "हटाया गया",
+        "status": "KeeperHub से हटाया गया"
+      },
+      "executed": {
+        "meta": "निष्पादित",
+        "status": "निष्पादित"
+      },
+      "failed": {
+        "meta": "विफल",
+        "status": "रन विफल रहा"
+      },
+      "stillRunning": {
+        "meta": "अभी भी चल रहा है",
+        "status": "अभी भी चल रहा है"
+      },
+      "running": {
+        "meta": "चल रहा है",
+        "status": "KeeperHub में चल रहा है…"
+      },
+      "started": {
+        "meta": "शुरू हुआ",
+        "status": "शुरू हुआ"
+      },
+      "turnedOn": {
+        "meta": "चालू किया गया",
+        "status": "चालू किया गया"
+      },
+      "turnedOff": {
+        "meta": "बंद किया गया",
+        "status": "बंद किया गया"
+      }
+    },
+    "stamp": {
+      "live": "लाइव",
+      "saved": "सहेजा गया",
+      "deleted": "हटाया गया",
+      "executed": "निष्पादित",
+      "void": "अमान्य",
+      "on": "चालू",
+      "off": "बंद"
+    },
+    "kicker": {
+      "create": "नया ऑटोमेशन",
+      "update": "ऑटोमेशन बदलें",
+      "run": "ऑटोमेशन रन",
+      "delete": "ऑटोमेशन हटाएँ",
+      "turnOn": "ऑटोमेशन चालू करें",
+      "turnOff": "ऑटोमेशन बंद करें"
+    },
+    "title": {
+      "create": "नया ऑटोमेशन",
+      "update": "एक ऑटोमेशन बदलें",
+      "run": "{name} चलाएँ",
+      "runAny": "एक ऑटोमेशन चलाएँ",
+      "delete": "{name} हटाएँ",
+      "deleteAny": "एक ऑटोमेशन हटाएँ",
+      "turnOn": "{name} चालू करें",
+      "turnOnAny": "एक ऑटोमेशन चालू करें",
+      "turnOff": "{name} बंद करें",
+      "turnOffAny": "एक ऑटोमेशन बंद करें"
+    },
+    "form": {
+      "name": "नाम",
+      "cron": "शेड्यूल (cron)",
+      "timezone": "समय क्षेत्र",
+      "network": "नेटवर्क",
+      "every": "हर N ब्लॉक",
+      "contract": "कॉन्ट्रैक्ट",
+      "event": "इवेंट का नाम",
+      "abi": "कॉन्ट्रैक्ट ABI",
+      "abiPlaceholder": "सत्यापित कॉन्ट्रैक्ट के लिए खाली छोड़ें",
+      "recipient": "जमा पता",
+      "token": "टोकन",
+      "memo": "मेमो",
+      "stepField": "चरण {number} · {label}"
+    }
+  },
+  "card": {
+    "declinedRun": "आपने यह रन अस्वीकार कर दिया। कुछ भी नहीं चला।",
+    "declinedProposal": "आपने यह प्रस्ताव अस्वीकार कर दिया। KeeperHub में कुछ भी नहीं बदला गया।",
+    "checkValues": "ये मान जाँचें",
+    "starts": "शुरुआत",
+    "steps": "चरण",
+    "automation": "ऑटोमेशन",
+    "change": "बदलाव",
+    "notSent": "आपका जवाब KeeperHub तक नहीं पहुँचा। अपना कनेक्शन जाँचें और फिर से कोशिश करें।",
+    "noAnswer": "इसे अधिकृत किया गया था, लेकिन KeeperHub का जवाब कभी इस चैट तक नहीं पहुँचा। ऑटोमेशन पेज पर देखें कि यह कैसे समाप्त हुआ।",
+    "archived": "चैट संग्रहित होने से पहले किसी ने इसे अधिकृत नहीं किया। कुछ भी नहीं बदला गया।",
+    "updatedOn": "यह चालू है, इसलिए नया संस्करण इसकी अगली शुरुआत से चलेगा।",
+    "updatedKept": "इसकी चालू या बंद स्थिति वैसी ही रहती है।",
+    "deleted": "इसके रन इतिहास के साथ हटा दिया गया। यह अब ऑटोमेशन पेज पर नहीं दिखता।"
+  },
+  "savedFollowUp": {
+    "onDemand": "यह तब चलता है जब कोई इसके पेज पर “अभी चलाएँ” दबाता है।",
+    "archived": "बंद स्थिति में सहेजा गया। इसके पेज पर दिखता है कि तब से इसे चालू किया गया है या नहीं।",
+    "live": "चालू। अब से KeeperHub इसे अपने आप शुरू करता है।",
+    "off": "यह बंद है। KeeperHub की जाँच पढ़ने के बाद इसे चालू करें, फिर यह अपने आप शुरू होगा।"
+  },
+  "runFollowUp": {
+    "started": "शुरू हुआ। ऑटोमेशन के पेज पर दिखता है कि रन कैसे समाप्त हुआ।",
+    "running": "KeeperHub में चल रहा है। पूरा होने पर यह कार्ड अपडेट होगा।",
+    "executed": "निष्पादित।",
+    "transaction": "लेनदेन",
+    "failed": "KeeperHub में रन विफल रहा। इसके पेज पर दिखता है कि किस चरण ने इसे रोका।",
+    "stale": "पाँच मिनट बाद भी चल रहा है। इसका नतीजा इसके पेज पर और गतिविधि में दिखेगा।"
+  },
+  "previewBlock": {
+    "checking": "KeeperHub से जाँच हो रही है",
+    "label": "KeeperHub जाँच",
+    "blocked": "रोका गया",
+    "warned": "चेतावनियाँ पढ़ें",
+    "ready": "तैयार",
+    "changes": "क्या बदलता है"
+  },
+  "subjectBlock": {
+    "steps": "चरण",
+    "noSteps": "अभी कोई चरण नहीं"
+  },
+  "triggerBlock": {
+    "network": "नेटवर्क"
+  },
+  "stepDetail": {
+    "movesValue": "मूल्य भेजता है"
+  },
+  "stepList": {
+    "off": "बंद"
+  },
+  "listCard": {
+    "meta": "{count, plural, one {# ऑटोमेशन} other {# ऑटोमेशन}}",
+    "empty": "अभी कोई ऑटोमेशन नहीं",
+    "steps": "{count, plural, one {# चरण} other {# चरण}}"
+  },
+  "detailCard": {
+    "unreadableMeta": "पढ़ा नहीं जा सका",
+    "unreadable": "यह ऑटोमेशन पढ़ा नहीं जा सका",
+    "statusMeta": {
+      "live": "लाइव",
+      "manual": "ज़रूरत पर",
+      "off": "बंद",
+      "deactivated": "निष्क्रिय"
+    },
+    "steps": "चरण",
+    "noSteps": "अभी कोई चरण नहीं",
+    "recentRuns": "हाल के रन",
+    "runsUnavailable": "KeeperHub का रन इतिहास अभी उपलब्ध नहीं है।",
+    "noRuns": "अभी तक कोई रन नहीं।"
+  },
+  "statusBadge": {
+    "live": "लाइव",
+    "manual": "ज़रूरत पर",
+    "off": "बंद",
+    "deactivated": "निष्क्रिय"
+  },
+  "triggerLabel": {
+    "manual": "ज़रूरत पर चलाएँ",
+    "transfer": "ट्रांसफ़र पर चलता है",
+    "other": "{type} ट्रिगर"
+  },
+  "duration": {
+    "milliseconds": "{ms} ms",
+    "seconds": "{seconds} s",
+    "minutes": "{minutes} m {seconds} s"
+  },
+  "runStatus": {
+    "executed": "निष्पादित",
+    "failed": "विफल",
+    "cancelled": "रद्द",
+    "skipped": "छोड़ा गया",
+    "running": "चल रहा है"
+  },
+  "board": {
+    "title": "ऑटोमेशन",
+    "subtitle": "वर्कफ़्लो जो KeeperHub इस संगठन के लिए चलाता है। चरण और रन देखने के लिए किसी एक को खोलें, या उसे अभी चलाएँ।",
+    "filterLabel": "दिखाएँ",
+    "filters": {
+      "all": "सभी",
+      "live": "लाइव",
+      "manual": "ज़रूरत पर",
+      "off": "बंद"
+    },
+    "sortLabel": "क्रम",
+    "sorts": {
+      "updated": "हाल में अपडेट किए गए",
+      "name": "नाम"
+    },
+    "loadFailed": "ऑटोमेशन अभी लोड नहीं हो सके",
+    "retry": "फिर से कोशिश करें",
+    "emptyTitle": "अभी कोई ऑटोमेशन नहीं",
+    "emptyBody": "चैट से एक बनाने को कहें, या KeeperHub में बनाएँ। दोनों ही तरह से यह अपने चरणों और रन के साथ यहाँ दिखेगा।",
+    "createPrompt": "एक ऑटोमेशन बनाने में मेरी मदद कीजिए।",
+    "createInChat": "चैट में बनाएँ →",
+    "openKeeperHub": "KeeperHub खोलें ↗",
+    "noneInView": "इस व्यू में कोई ऑटोमेशन नहीं।",
+    "columns": {
+      "automation": "ऑटोमेशन",
+      "status": "स्थिति",
+      "steps": "चरण",
+      "networks": "नेटवर्क",
+      "updated": "अपडेट"
+    },
+    "open": "खोलें →"
+  },
+  "detail": {
+    "back": "← ऑटोमेशन",
+    "missingTitle": "यह ऑटोमेशन उपलब्ध नहीं है",
+    "missingBody": "हो सकता है इसे हटा दिया गया हो, या यह किसी दूसरे संगठन का हो।",
+    "loadFailed": "यह ऑटोमेशन अभी लोड नहीं हो सका। {message}",
+    "created": "<time></time> को बनाया गया",
+    "deactivated": "यह ऑटोमेशन KeeperHub में निष्क्रिय है।",
+    "stats": {
+      "trigger": "ट्रिगर",
+      "steps": "चरण",
+      "networks": "नेटवर्क",
+      "lastRun": "पिछला रन",
+      "updated": "अपडेट"
+    },
+    "steps": "चरण",
+    "noSteps": "इस ऑटोमेशन में अभी कोई चरण नहीं है।",
+    "recentRuns": "हाल के रन",
+    "justStarted": "आपका अभी शुरू किया गया रन",
+    "stillRunning": "अभी भी चल रहा है। इसका नतीजा यहाँ और गतिविधि में दिखेगा।",
+    "runsUnavailable": "KeeperHub का रन इतिहास अभी उपलब्ध नहीं है।",
+    "noRuns": "अभी तक कोई रन नहीं।",
+    "runSource": "रन",
+    "viewTx": "देखें",
+    "moreTx": "+{count} और"
+  },
+  "runDialog": {
+    "runningDryRun": "परीक्षण रन चल रहा है…",
+    "acknowledge": "चेतावनी स्वीकार करें",
+    "trigger": "ट्रिगर",
+    "steps": "चरण",
+    "networks": "नेटवर्क",
+    "explainer": "हर चरण अभी चलता है। मूल्य स्थानांतरित करने वाले चरण दोबारा रुके बिना निष्पादित होते हैं।",
+    "dryRunLoading": "परीक्षण रन चल रहा है",
+    "dryRun": "परीक्षण रन",
+    "dryRunReason": "{reason} आप ठीक वही अधिकृत करते हैं जो ऊपर दिखाया गया है।",
+    "noWarnings": "कोई चेतावनी नहीं",
+    "checked": "{count, plural, one {# चरण जाँचा गया} other {# चरण जाँचे गए}}।",
+    "checkedSkipped": "{count, plural, one {# चरण जाँचा गया} other {# चरण जाँचे गए}}, {skipped} जाँचे नहीं जा सके।"
+  },
+  "switchDialog": {
+    "onExplainer": "चालू होने के बाद KeeperHub इसे अपने आप शुरू करता है, और इसके चरण दोबारा रुके बिना चलते हैं।",
+    "offExplainer": "बंद होने के बाद KeeperHub इसे अपने आप शुरू करना बंद कर देता है। “अभी चलाएँ” तब भी काम करता है।"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "history": {
+    "title": "History",
+    "subtitle": {
+      "empty": "Your conversations, and what each one executed.",
+      "counts": "{conversations, plural, one {# conversation} other {# conversations}} · {executed, plural, one {# executed action} other {# executed actions}}"
+    },
+    "error": {
+      "title": "Couldn't load your history",
+      "body": "Your conversations are still saved. We just couldn't fetch them.",
+      "retry": "Retry"
+    },
+    "empty": {
+      "title": "No conversations yet",
+      "body": "Every conversation is saved here with what it executed. Start a chat to create your first one.",
+      "openChat": "Open chat"
+    },
+    "card": {
+      "executed": "{count} executed",
+      "readsOnly": "reads only",
+      "open": "Open",
+      "seal": "Executed actions"
+    }
+  },
+  "activity": {
+    "title": "Activity",
+    "subtitle": "What ran through the copilot for this org, newest first. Times in UTC.",
+    "filter": {
+      "label": "Show",
+      "actions": "Actions",
+      "reads": "Reads",
+      "all": "All"
+    },
+    "error": {
+      "title": "Couldn't load activity right now",
+      "body": "The record is still there. We just couldn't fetch it.",
+      "retry": "Retry"
+    },
+    "empty": {
+      "actions": {
+        "title": "Nothing sent yet",
+        "body": "Actions you authorize in chat show up here with their receipts."
+      },
+      "reads": {
+        "title": "No reads yet",
+        "body": "Prices, balances and every other lookup the assistant makes show up here."
+      },
+      "all": {
+        "title": "Nothing here yet",
+        "body": "Everything the copilot runs for this org shows up here, newest first."
+      },
+      "openChat": "Open chat"
+    },
+    "columns": {
+      "what": "What",
+      "network": "Network",
+      "outcome": "Outcome",
+      "transaction": "Transaction",
+      "when": "When",
+      "from": "From"
+    },
+    "loadMore": "Load more",
+    "loadMoreFailed": "Couldn't load more. Try again.",
+    "view": "View",
+    "fromChat": "Chat",
+    "fromAutomation": "Automation",
+    "verb": {
+      "send": "Send",
+      "contractCall": "Contract call",
+      "walletIntegration": "Wallet integration",
+      "automationRun": "Automation run",
+      "automationCreated": "New automation",
+      "automationChanged": "Automation changed",
+      "automationOn": "Automation turned on",
+      "automationOff": "Automation turned off",
+      "automationDeleted": "Automation deleted"
+    },
+    "outcome": {
+      "executed": "Executed",
+      "running": "Running",
+      "saved": "Saved",
+      "saving": "Saving",
+      "on": "On",
+      "turningOn": "Turning on",
+      "off": "Off",
+      "turningOff": "Turning off",
+      "deleted": "Deleted",
+      "deleting": "Deleting",
+      "failed": "Failed",
+      "paidFailed": "Paid, failed",
+      "cancelled": "Cancelled",
+      "expired": "Expired",
+      "sending": "Sending",
+      "read": "Read"
+    }
+  },
+  "sharedReceipt": {
+    "kicker": "Shared receipt",
+    "stamp": "EXECUTED",
+    "executed": "Executed",
+    "verified": "Verified on-chain by KeeperHub",
+    "sent": "Sent through KeeperHub",
+    "tokens": "tokens",
+    "rows": {
+      "network": "Network",
+      "token": "Token",
+      "block": "Block",
+      "executed": "Executed"
+    },
+    "footnote": "Shared from KeeperHub Copilot. Only public on-chain facts are shown.",
+    "tryCopilot": "Try KeeperHub Copilot",
+    "notFound": {
+      "title": "This receipt isn't shared",
+      "body": "The link was turned off, or it never existed."
+    }
+  }
+}

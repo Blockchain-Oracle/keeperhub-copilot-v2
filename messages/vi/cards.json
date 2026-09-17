@@ -1,0 +1,395 @@
+{
+  "receipt": {
+    "issued": "ĐÃ CẤP"
+  },
+  "labels": {
+    "amount": "Số lượng",
+    "recipient": "Người nhận",
+    "network": "Mạng",
+    "token": "Token",
+    "spender": "Bên chi tiêu",
+    "allowance": "Hạn mức",
+    "allowanceBaseUnits": "Hạn mức (đơn vị cơ sở)",
+    "arguments": "Tham số",
+    "valueSent": "Giá trị gửi",
+    "chainId": "Chain ID",
+    "contractAddress": "Địa chỉ hợp đồng",
+    "functionName": "Tên hàm",
+    "functionArgs": "Tham số hàm",
+    "value": "Giá trị",
+    "gasLimitMultiplier": "Hệ số giới hạn gas",
+    "priorityFeeGwei": "Phí ưu tiên (gwei)",
+    "abi": "ABI",
+    "integrationId": "ID tích hợp"
+  },
+  "checks": {
+    "amountDot": "Nhập số lượng dùng dấu chấm cho phần thập phân, ví dụ 0.5.",
+    "chooseNetwork": "Chọn một mạng.",
+    "addressForNetwork": "Nhập địa chỉ hợp lệ cho mạng này.",
+    "chooseListedOption": "Chọn một trong các tùy chọn có sẵn."
+  },
+  "fix": {
+    "number": "Nhập một số.",
+    "yesNo": "Chọn có hoặc không.",
+    "address": "Nhập địa chỉ bắt đầu bằng 0x và có 40 ký tự hex.",
+    "uint": "Nhập số nguyên, không có dấu thập phân hay dấu âm dương.",
+    "int": "Nhập số nguyên. Được phép có dấu trừ ở đầu.",
+    "bytes": "Nhập giá trị hex 0x có số chữ số chẵn.",
+    "datetime": "Nhập ngày và giờ.",
+    "other": "Kiểm tra giá trị này và thử lại."
+  },
+  "effectClass": {
+    "valueMovingWrite": "ghi chuyển giá trị",
+    "authorizationGrant": "cấp quyền",
+    "configManagementWrite": "ghi quản lý cấu hình",
+    "offChainSend": "gửi off-chain",
+    "listingPayment": "thanh toán niêm yết",
+    "read": "đọc"
+  },
+  "write": {
+    "noPreview": "Không thể xem trước thao tác này. Bạn xác nhận đúng chỉ thị hiển thị bên dưới.",
+    "unavailable": "Lệnh gọi hợp đồng trên Solana chưa khả dụng trong phiên bản này. Hãy yêu cầu đọc dữ liệu Solana qua một thao tác giao thức.",
+    "chip": {
+      "simulated": "Đã mô phỏng",
+      "noPreview": "Không xem trước",
+      "needsCredential": "Cần xác thực",
+      "proposed": "Đã đề xuất"
+    },
+    "facts": {
+      "gasEstimate": "Ước tính gas",
+      "gasUnits": "{units} đơn vị",
+      "returns": "Trả về"
+    },
+    "meta": {
+      "executed": "ĐÃ THỰC HIỆN",
+      "cancelled": "ĐÃ HỦY",
+      "notSent": "CHƯA GỬI",
+      "cancelling": "ĐANG HỦY",
+      "noReceipt": "KHÔNG CÓ BIÊN NHẬN",
+      "sending": "ĐANG GỬI",
+      "neverAuthorized": "CHƯA ĐƯỢC CHO PHÉP",
+      "notAvailable": "KHÔNG KHẢ DỤNG",
+      "needsCredential": "CẦN XÁC THỰC",
+      "authorizing": "ĐANG CHO PHÉP",
+      "edited": "ĐÃ SỬA",
+      "awaiting": "CHỜ CHO PHÉP"
+    },
+    "status": {
+      "executed": "Đã thực hiện",
+      "cancelled": "Đã hủy",
+      "notSent": "Chưa gửi",
+      "cancelling": "Đang hủy…",
+      "noReceipt": "Đã cho phép, không lưu biên nhận",
+      "sending": "Đang gửi qua KeeperHub…",
+      "neverAuthorized": "Chưa được cho phép",
+      "notAvailable": "Không khả dụng trong phiên bản này",
+      "needsCredential": "Cần thông tin xác thực trước",
+      "authorizing": "Đang cho phép…",
+      "edited": "Đã sửa, đang chờ bạn cho phép",
+      "awaiting": "Đang chờ bạn cho phép"
+    },
+    "authorize": {
+      "authorizing": "Đang cho phép…",
+      "notAvailable": "Không khả dụng",
+      "needsCredential": "Cần xác thực",
+      "dryRunning": "Đang chạy thử…",
+      "dryRunFailed": "Chạy thử thất bại",
+      "acknowledge": "Xác nhận đã đọc cảnh báo",
+      "authorize": "Cho phép"
+    },
+    "verb": {
+      "contractWrite": "Ghi hợp đồng",
+      "write": "Ghi"
+    },
+    "title": {
+      "approve": "Phê duyệt bên chi tiêu",
+      "call": "Gọi {name}",
+      "send": "Gửi {amount} {unit}"
+    },
+    "kicker": {
+      "valueMoving": "Ghi chuyển giá trị",
+      "authorizationGrant": "Cấp quyền"
+    },
+    "dryRunUnprepared": "Không thể chuẩn bị bản chạy thử.",
+    "declined": "Bạn đã từ chối đề xuất này. Không có gì được gửi.",
+    "applyDryRun": "Chạy thử với các giá trị này",
+    "applyValues": "Dùng các giá trị này",
+    "acknowledge": "Vẫn gửi. Tôi hiểu thao tác này dự kiến sẽ thất bại và vẫn có thể tốn gas.",
+    "notReached": "Câu trả lời của bạn chưa tới KeeperHub. Hãy kiểm tra kết nối internet và thử lại.",
+    "receiptMissing": "Thao tác này đã được cho phép, nhưng biên nhận chưa bao giờ tới cuộc trò chuyện này. Trang Hoạt động cho biết kết quả cuối cùng.",
+    "archived": "Chưa ai cho phép thao tác này trước khi cuộc trò chuyện được lưu trữ. Không có gì được gửi.",
+    "edit": "Sửa",
+    "discard": "Hủy bỏ",
+    "transfer": {
+      "from": "từ",
+      "to": "đến",
+      "orgWallet": "ví tổ chức",
+      "amount": "số lượng"
+    },
+    "dryRun": {
+      "label": "Chạy thử",
+      "cannot": "KeeperHub không thể chạy thử thao tác này. Bạn cho phép đúng những gì hiển thị ở trên.",
+      "running": "đang chạy thử",
+      "wouldNotSucceed": "Thao tác này sẽ không thành công.",
+      "wouldRevert": "Giao dịch sẽ bị revert.",
+      "wouldSucceed": "sẽ thành công"
+    },
+    "tx": {
+      "label": "Tx",
+      "explorer": "Explorer",
+      "verified": "Đã xác minh",
+      "yes": "có",
+      "no": "không"
+    }
+  },
+  "moneyMover": {
+    "unknownNetwork": "Mạng không xác định",
+    "chain": "Chuỗi {id}",
+    "send": "Gửi",
+    "approve": "Phê duyệt",
+    "summary": "Đã gửi {amount} đến {address}.",
+    "unlimitedWarning": "Thao tác này phê duyệt hạn mức không giới hạn. Bên chi tiêu có thể chuyển bất kỳ số lượng nào của token này.",
+    "unlimited": "Không giới hạn",
+    "veryLarge": "Rất lớn",
+    "enterAmount": "Nhập số lượng.",
+    "noComma": "Dùng dấu chấm cho phần thập phân (0.5) và không dùng dấu phân cách hàng nghìn.",
+    "maxDecimals": "Nhập số lượng có tối đa {decimals} chữ số thập phân."
+  },
+  "writeForm": {
+    "tokenPlaceholder": "Để trống sẽ gửi đồng tiền gốc của mạng"
+  },
+  "editCheck": {
+    "unreadable": "Không thể đọc đề xuất này.",
+    "automationFixed": "Không thể chọn tự động hóa khác tại đây. Hãy hỏi lại để có đề xuất mới.",
+    "notEditable": "Không thể sửa thao tác này.",
+    "tokenAddress": "Nhập địa chỉ token hợp lệ, hoặc để trống để gửi đồng tiền gốc.",
+    "callFixed": "Không thể thay đổi phần này của lệnh gọi tại đây. Hãy hỏi lại để có đề xuất mới.",
+    "argumentsList": "Nhập tham số dưới dạng danh sách JSON.",
+    "spender": "Nhập địa chỉ bên chi tiêu hợp lệ.",
+    "allowance": "Nhập số nguyên theo đơn vị cơ sở.",
+    "actionFixed": "Không thể thay đổi thao tác tại đây. Hãy hỏi lại để có đề xuất mới.",
+    "actionGone": "Thao tác này không còn khả dụng.",
+    "hiddenSetting": "Không thể thay đổi cài đặt ẩn này.",
+    "startFixed": "Không thể thay đổi kiểu khởi động tại đây. Hãy hỏi lại để có đề xuất mới.",
+    "stepsFixed": "Không thể thay đổi các bước được chạy và thứ tự của chúng tại đây. Hãy hỏi lại để có đề xuất mới."
+  },
+  "toolMeta": {
+    "integration": {
+      "search": "Danh mục thao tác",
+      "form": "Thông tin của bạn"
+    },
+    "title": {
+      "lookupFor": "Đã tra cứu thao tác cho “{query}”",
+      "lookup": "Đã tra cứu thao tác",
+      "protocolAction": "Thao tác giao thức",
+      "calledFunction": "Đã gọi {name}",
+      "contractCall": "Lệnh gọi hợp đồng",
+      "transfer": "Chuyển khoản",
+      "walletIntegration": "Đã đọc một tích hợp ví",
+      "listAutomations": "Đã liệt kê tự động hóa",
+      "getAutomation": "Đã đọc một tự động hóa",
+      "createNamed": "Đã đề xuất tự động hóa “{name}”",
+      "create": "Đã đề xuất một tự động hóa",
+      "turnOff": "Đã đề xuất tắt một tự động hóa",
+      "turnOn": "Đã đề xuất bật một tự động hóa",
+      "updateNamed": "Đã đề xuất thay đổi cho “{name}”",
+      "update": "Đã đề xuất thay đổi một tự động hóa",
+      "run": "Đã đề xuất chạy một tự động hóa",
+      "holdings": "Đã đọc tài sản của ví tổ chức",
+      "askNamed": "Đã hỏi bạn thông tin: {title}",
+      "ask": "Đã hỏi bạn thông tin",
+      "delete": "Đã đề xuất xóa một tự động hóa"
+    },
+    "detail": {
+      "action": "thao tác",
+      "name": "tên",
+      "starts": "khởi động",
+      "step": "bước {position}",
+      "error": "lỗi",
+      "notCompleted": "chưa hoàn tất",
+      "result": "kết quả",
+      "state": "trạng thái"
+    }
+  },
+  "format": {
+    "addressEnding": "địa chỉ kết thúc bằng {last}",
+    "hashEnding": "hash kết thúc bằng {last}"
+  },
+  "renderer": {
+    "formUnanswerable": "Không thể trả lời biểu mẫu này.",
+    "toolCallIncomplete": "Lệnh gọi công cụ này không thể hoàn tất.",
+    "needsCredential": "Thao tác này cần liên kết thông tin xác thực trước khi chạy.",
+    "actionIncomplete": "Thao tác này không thể hoàn tất."
+  },
+  "announce": {
+    "working": "Đang xử lý.",
+    "capabilities": "Đã liệt kê các thao tác phù hợp.",
+    "read": "{label}, đã đọc.",
+    "needsCredential": "{label}, cần thông tin xác thực.",
+    "automations": "Đã liệt kê tự động hóa.",
+    "automation": "Đã mô tả tự động hóa.",
+    "holdings": "Đã liệt kê tài sản ví tổ chức.",
+    "formOpen": "Cần thông tin. Hãy điền biểu mẫu.",
+    "formSent": "Đã gửi thông tin.",
+    "proposed": "{label}, đang chờ bạn phê duyệt.",
+    "executing": "{label}, đang gửi.",
+    "declined": "{label}, đã từ chối. Không có gì được chạy.",
+    "automationDone": "Tự động hóa, đã xong.",
+    "executed": "{label}, đã thực hiện.",
+    "automationLabel": "Tự động hóa",
+    "resultLabel": "Kết quả"
+  },
+  "error": {
+    "boundary": {
+      "notAvailable": "KHÔNG KHẢ DỤNG",
+      "paused": "TẠM DỪNG",
+      "needsAccess": "CẦN QUYỀN TRUY CẬP",
+      "reconnect": "KẾT NỐI LẠI",
+      "checkInputs": "KIỂM TRA ĐẦU VÀO"
+    },
+    "void": "VÔ HIỆU",
+    "field": "trường",
+    "connect": "Kết nối KeeperHub",
+    "reauthorize": "Cho phép lại KeeperHub",
+    "rateLimited": "Tính năng khám phá vẫn hoạt động. Hãy thử đọc lại sau giây lát.",
+    "title": {
+      "action": "Thao tác chưa hoàn tất",
+      "contractCall": "Lệnh gọi hợp đồng chưa hoàn tất",
+      "transfer": "Chuyển khoản chưa hoàn tất",
+      "walletRead": "Đọc ví chưa hoàn tất",
+      "search": "Tìm kiếm chưa hoàn tất",
+      "other": "Chưa hoàn tất"
+    }
+  },
+  "read": {
+    "meta": {
+      "replaced": "ĐÃ THAY THẾ",
+      "edited": "ĐÃ SỬA",
+      "read": "ĐÃ ĐỌC"
+    },
+    "title": {
+      "contractRead": "Đọc hợp đồng",
+      "walletIntegration": "Tích hợp ví",
+      "read": "Đọc"
+    },
+    "alternatives": "Lựa chọn khác",
+    "request": "Yêu cầu",
+    "runAgain": "Chạy lại",
+    "working": "Đang xử lý.",
+    "blocked": "Cần điều chỉnh một số tham số trước khi chạy.",
+    "result": "Kết quả",
+    "contract": "hợp đồng",
+    "replaced": "Đã được thay bằng thẻ mới hơn bên dưới.",
+    "edited": "Đã sửa."
+  },
+  "price": {
+    "round": "VÒNG {round}",
+    "updated": "cập nhật",
+    "gathering": "đang thu thập tín hiệu",
+    "historyUnavailable": "không có lịch sử",
+    "lastUpdates": "{count} lần cập nhật gần nhất",
+    "expand": "mở rộng"
+  },
+  "balance": {
+    "orgWallet": "VÍ TỔ CHỨC",
+    "meta": "SỐ DƯ",
+    "scanToSend": "quét để gửi"
+  },
+  "holdings": {
+    "unreadableMeta": "KHÔNG ĐỌC ĐƯỢC",
+    "unreadable": "không thể đọc tài sản",
+    "orgWallet": "VÍ TỔ CHỨC",
+    "nothing": "không có tài sản trên mạng nào",
+    "caveat": "Số dư từ KeeperHub. Token nào không đọc được sẽ hiển thị là 0.",
+    "networkUnavailable": "KeeperHub hiện chưa đọc được mạng này."
+  },
+  "capability": {
+    "matches": "{count, plural, other {{count} KẾT QUẢ}}",
+    "none": "không có thao tác phù hợp",
+    "signs": "cần ký",
+    "more": "+ {count} khác"
+  },
+  "needsCredential": {
+    "meta": "CẦN XÁC THỰC",
+    "title": "Cần thông tin xác thực",
+    "setup": "Thiết lập thông tin xác thực {integration} trong KeeperHub, rồi hỏi lại."
+  },
+  "skeleton": {
+    "working": "đang xử lý",
+    "fetching": "ĐANG TẢI"
+  },
+  "stub": {
+    "unrenderable": "thẻ không hiển thị được",
+    "meta": "THÔ",
+    "couldNotDraw": "Không thể hiển thị thẻ này. Chi tiết thô ở bên dưới.",
+    "rawDetails": "Chi tiết thô"
+  },
+  "parts": {
+    "items": "{count, plural, other {{count} mục}}",
+    "noData": "không có dữ liệu trả về",
+    "value": "Giá trị"
+  },
+  "fields": {
+    "required": "(bắt buộc)",
+    "yes": "Có",
+    "no": "Không",
+    "fallbackNote": "Trường này giữ nguyên giá trị hiện tại. Hãy sửa các trường khác và chạy lại.",
+    "none": "Không có.",
+    "help": "Trợ giúp: {label}",
+    "chooseNetwork": "Chọn mạng"
+  },
+  "form": {
+    "unreadableMeta": "KHÔNG ĐỌC ĐƯỢC",
+    "unreadable": "không thể đọc biểu mẫu này",
+    "title": "Cần thông tin",
+    "meta": {
+      "notSent": "CHƯA GỬI",
+      "closed": "ĐÃ ĐÓNG",
+      "answered": "ĐÃ TRẢ LỜI",
+      "fillingAbove": "ĐANG ĐIỀN Ở TRÊN",
+      "detailsNeeded": "CẦN THÔNG TIN",
+      "neverAnswered": "CHƯA TRẢ LỜI"
+    },
+    "status": {
+      "notSent": "Câu trả lời của bạn chưa tới KeeperHub",
+      "closed": "Đã đóng mà không trả lời",
+      "answered": "Đã gửi cho trợ lý",
+      "fillingAbove": "Điền thông tin này phía trên thanh giọng nói",
+      "waiting": "Đang chờ thông tin của bạn",
+      "neverAnswered": "Chưa bao giờ được trả lời"
+    },
+    "useOrgWallet": "Dùng ví tổ chức của tôi",
+    "checkHighlighted": "Kiểm tra các thông tin được đánh dấu.",
+    "sending": "Đang gửi…",
+    "tokenPlaceholder": "Ký hiệu hoặc địa chỉ token",
+    "issues": {
+      "unreadable": "Không thể đọc câu trả lời.",
+      "notAsked": "Thông tin này không được yêu cầu.",
+      "asText": "Nhập dưới dạng văn bản.",
+      "needed": "Cần có {label}.",
+      "tooLong": "Nội dung quá dài.",
+      "chooseToken": "Chọn một trong các token có sẵn.",
+      "token": "Nhập ký hiệu token hoặc địa chỉ của token."
+    }
+  },
+  "share": {
+    "unreachable": "Không thể truy cập liên kết chia sẻ.",
+    "offline": "Hãy kiểm tra kết nối internet và thử lại.",
+    "failed": "Chia sẻ không thành công",
+    "copiedTitle": "Đã sao chép liên kết",
+    "copiedBody": "Ai có liên kết sẽ thấy biên nhận này, không bao giờ thấy cuộc trò chuyện của bạn.",
+    "readyTitle": "Liên kết đã sẵn sàng",
+    "sheetTitle": "Biên nhận KeeperHub",
+    "offTitle": "Đã tắt liên kết",
+    "offBody": "Ai mở liên kết lúc này sẽ thấy nó không được chia sẻ.",
+    "ariaLabel": "Chia sẻ biên nhận",
+    "share": "Chia sẻ",
+    "checking": "Đang kiểm tra…",
+    "copyLink": "Sao chép liên kết",
+    "createAndCopy": "Tạo và sao chép liên kết",
+    "shareSheet": "Chia sẻ…",
+    "openLink": "Mở liên kết",
+    "stop": "Ngừng chia sẻ",
+    "explainer": "Ai có liên kết sẽ thấy thao tác, mạng, số lượng, người nhận và giao dịch. Không bao giờ thấy cuộc trò chuyện của bạn."
+  }
+}

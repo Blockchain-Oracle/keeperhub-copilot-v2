@@ -1,0 +1,117 @@
+{
+  "history": {
+    "title": "Historial",
+    "subtitle": {
+      "empty": "Tus conversaciones y lo que se ejecutó en cada una.",
+      "counts": "{conversations, plural, one {# conversación} other {# conversaciones}} · {executed, plural, one {# acción ejecutada} other {# acciones ejecutadas}}"
+    },
+    "error": {
+      "title": "No se pudo cargar tu historial",
+      "body": "Tus conversaciones siguen guardadas. Simplemente no pudimos obtenerlas.",
+      "retry": "Reintentar"
+    },
+    "empty": {
+      "title": "Todavía no hay conversaciones",
+      "body": "Cada conversación se guarda aquí con lo que ejecutó. Inicia un chat para crear la primera.",
+      "openChat": "Abrir chat"
+    },
+    "card": {
+      "executed": "Ejecutadas: {count}",
+      "readsOnly": "solo lecturas",
+      "open": "Abrir",
+      "seal": "Acciones ejecutadas"
+    }
+  },
+  "activity": {
+    "title": "Actividad",
+    "subtitle": "Lo que se ejecutó a través del copiloto para esta organización, lo más reciente primero. Horas en UTC.",
+    "filter": {
+      "label": "Mostrar",
+      "actions": "Acciones",
+      "reads": "Lecturas",
+      "all": "Todo"
+    },
+    "error": {
+      "title": "No se pudo cargar la actividad en este momento",
+      "body": "El registro sigue ahí. Simplemente no pudimos obtenerlo.",
+      "retry": "Reintentar"
+    },
+    "empty": {
+      "actions": {
+        "title": "Todavía no se envió nada",
+        "body": "Las acciones que autorices en el chat aparecen aquí con sus recibos."
+      },
+      "reads": {
+        "title": "Todavía no hay lecturas",
+        "body": "Los precios, los saldos y cualquier otra consulta que haga el asistente aparecen aquí."
+      },
+      "all": {
+        "title": "Todavía no hay nada aquí",
+        "body": "Todo lo que el copiloto ejecuta para esta organización aparece aquí, lo más reciente primero."
+      },
+      "openChat": "Abrir chat"
+    },
+    "columns": {
+      "what": "Qué",
+      "network": "Red",
+      "outcome": "Resultado",
+      "transaction": "Transacción",
+      "when": "Cuándo",
+      "from": "Origen"
+    },
+    "loadMore": "Cargar más",
+    "loadMoreFailed": "No se pudo cargar más. Vuelve a intentarlo.",
+    "view": "Ver",
+    "fromChat": "Chat",
+    "fromAutomation": "Automatización",
+    "verb": {
+      "send": "Envío",
+      "contractCall": "Llamada a contrato",
+      "walletIntegration": "Integración de billetera",
+      "automationRun": "Ejecución de automatización",
+      "automationCreated": "Nueva automatización",
+      "automationChanged": "Automatización modificada",
+      "automationOn": "Automatización activada",
+      "automationOff": "Automatización desactivada",
+      "automationDeleted": "Automatización eliminada"
+    },
+    "outcome": {
+      "executed": "Ejecutado",
+      "running": "En curso",
+      "saved": "Guardado",
+      "saving": "Guardando",
+      "on": "Activado",
+      "turningOn": "Activando",
+      "off": "Desactivado",
+      "turningOff": "Desactivando",
+      "deleted": "Eliminado",
+      "deleting": "Eliminando",
+      "failed": "Falló",
+      "paidFailed": "Pagado, falló",
+      "cancelled": "Cancelado",
+      "expired": "Vencido",
+      "sending": "Enviando",
+      "read": "Leído"
+    }
+  },
+  "sharedReceipt": {
+    "kicker": "Recibo compartido",
+    "stamp": "EJECUTADO",
+    "executed": "Ejecutado",
+    "verified": "Verificado on-chain por KeeperHub",
+    "sent": "Enviado a través de KeeperHub",
+    "tokens": "tokens",
+    "rows": {
+      "network": "Red",
+      "token": "Token",
+      "block": "Bloque",
+      "executed": "Ejecutado"
+    },
+    "footnote": "Compartido desde KeeperHub Copilot. Solo se muestran datos on-chain públicos.",
+    "tryCopilot": "Prueba KeeperHub Copilot",
+    "notFound": {
+      "title": "Este recibo no está compartido",
+      "body": "El enlace se desactivó o nunca existió."
+    }
+  }
+}

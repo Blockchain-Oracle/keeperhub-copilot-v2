@@ -1,0 +1,148 @@
+{
+  "newConversation": "Percakapan baru",
+  "loadNotice": "Percakapan ini tidak dapat dimuat sepenuhnya. Pesannya tetap tersimpan tetapi tidak dapat ditampilkan.",
+  "toolStates": {
+    "preparing": "menyiapkan",
+    "running": "berjalan",
+    "waitingForApproval": "menunggu persetujuan",
+    "sendingAnswer": "mengirim jawaban Anda",
+    "done": "selesai",
+    "failed": "gagal",
+    "declined": "ditolak",
+    "waitingForYou": "menunggu Anda",
+    "unknown": "tidak diketahui"
+  },
+  "chat": {
+    "hints": {
+      "connect": "Hubungkan KeeperHub untuk memulai.",
+      "answerUnsent": "Tekan Coba lagi pada kartu di atas untuk mengirim jawaban Anda.",
+      "form": "Isi atau tutup formulir di atas untuk melanjutkan.",
+      "approval": "Otorisasi atau batalkan aksi di atas untuk melanjutkan."
+    },
+    "banner": {
+      "createFailed": "Percakapan tidak dapat dibuat. Coba lagi.",
+      "sessionEnded": "Sesi KeeperHub Anda telah berakhir.",
+      "answerUnsent": "Jawaban Anda tidak sampai ke KeeperHub. Gunakan Coba lagi pada kartu.",
+      "turnFailed": "Asisten mengalami kesalahan. Coba lagi.",
+      "connect": "Hubungkan KeeperHub",
+      "retry": "Coba lagi"
+    },
+    "archived": {
+      "notice": "Percakapan ini telah diarsipkan. Sekarang hanya bisa dibaca.",
+      "newChat": "Obrolan baru"
+    },
+    "ceremony": {
+      "noConversation": "Tidak ada percakapan untuk menjalankan uji coba.",
+      "dryRunUnprepared": "Uji coba tidak dapat disiapkan.",
+      "checkFailed": "Pemeriksaan KeeperHub tidak dapat dijalankan.",
+      "checkUnreachable": "Pemeriksaan KeeperHub tidak dapat dijalankan. Periksa koneksi Anda dan coba lagi.",
+      "enableFailed": "KeeperHub tidak mengubah otomatisasi.",
+      "enableUnreachable": "KeeperHub tidak merespons. Periksa koneksi Anda dan coba lagi."
+    }
+  },
+  "composer": {
+    "form": "Penyusun pesan",
+    "label": "Tanya KeeperHub",
+    "placeholder": "Tanya KeeperHub…",
+    "send": "Kirim pesan",
+    "talk": "Bicara dengan KeeperHub",
+    "talkUnavailable": "Suara tersedia setelah tidak ada yang menunggu",
+    "menu": "Jaringan dan aksi",
+    "searchActions": "Cari aksi",
+    "browseActions": "Jelajahi semua {count} aksi"
+  },
+  "messageList": {
+    "thinking": "Berpikir",
+    "said": "diucapkan"
+  },
+  "toolTimeline": {
+    "used": "Memakai {count, plural, other {# alat}}",
+    "using": "Sedang memakai {count, plural, other {# alat}}",
+    "input": "Masukan",
+    "output": "Keluaran",
+    "elapsedSeconds": "{seconds}s",
+    "elapsedMinutes": "{minutes}m {seconds}s"
+  },
+  "sessionDropdown": {
+    "conversations": "Percakapan",
+    "newChat": "Obrolan baru",
+    "loadFailed": "Daftar tidak dapat dimuat. Tutup dan coba lagi.",
+    "empty": "Belum ada obrolan sebelumnya.",
+    "rename": "Ganti nama percakapan {title}",
+    "delete": "Hapus percakapan {title}",
+    "newTitle": "Judul baru untuk percakapan {title}",
+    "titleTooLong": "Judul dibatasi hingga {max} karakter.",
+    "renameFailed": "Nama baru tidak dapat disimpan. Coba lagi.",
+    "renamed": "Nama percakapan diubah.",
+    "deleteFailed": "Percakapan tidak dapat dihapus. Coba lagi.",
+    "deleted": "Percakapan dihapus."
+  },
+  "home": {
+    "status": {
+      "online": "KeeperHub online · {count, plural, other {# jaringan}}",
+      "unreachable": "KeeperHub tidak terjangkau",
+      "checking": "memeriksa KeeperHub"
+    },
+    "greeting": "Apa yang bisa KeeperHub lakukan untuk Anda?",
+    "intro": "Minta harga, saldo, atau transfer. Aksi baca langsung dijawab; <b>apa pun yang memindahkan dana menunggu klik Anda.</b> Atau mulai dari kartu di bawah.",
+    "orPickACard": "Atau pilih kartu",
+    "quoted": "“{text}”"
+  },
+  "motifs": {
+    "noOrgWallet": "belum ada dompet organisasi",
+    "approve": "Setujui",
+    "pooledDeposits": "deposit gabungan",
+    "actions": "{count, plural, other {# aksi}}",
+    "yourConversations": "percakapan Anda",
+    "conversations": "{count, plural, other {# percakapan}}"
+  },
+  "categories": {
+    "chainlink": {
+      "title": "Harga",
+      "description": "Baca feed harga langsung dari Chainlink.",
+      "mobileDesc": "Feed harga Chainlink."
+    },
+    "lido": {
+      "title": "Liquid staking",
+      "description": "Nilai ETH yang di-stake, dibaca dari Lido.",
+      "mobileDesc": "Tingkat staking Lido."
+    },
+    "rocketPool": {
+      "title": "Rocket Pool",
+      "description": "Kurs rETH dan berapa banyak yang beredar.",
+      "mobileDesc": "Kurs rETH."
+    },
+    "sky": {
+      "title": "Vault tabungan",
+      "description": "Berapa banyak dana di vault tabungan Sky.",
+      "mobileDesc": "Deposit vault Sky."
+    },
+    "orgWallet": {
+      "title": "Dompet organisasi Anda",
+      "description": "Isi dompet organisasi Anda di {network}.",
+      "mobileDesc": "Saldo di jaringan ini.",
+      "prompt": "Apa saja isi dompet organisasi saya di {network}?",
+      "familyLabel": "Akun"
+    },
+    "sendToSelf": {
+      "title": "Kirim ke diri sendiri",
+      "description": "Transfer bernilai nol kembali ke dompet Anda sendiri. Transfer ini berhenti menunggu klik Anda.",
+      "mobileDesc": "Berhenti menunggu klik Anda.",
+      "prompt": "Kirim {amount} dari dompet organisasi saya ke dompet itu sendiri di {network}.",
+      "familyLabel": "Akun · tulis"
+    },
+    "discover": {
+      "title": "Temukan aksi",
+      "description": "Tanyakan apa yang dapat dilakukan KeeperHub dengan sebuah protokol.",
+      "mobileDesc": "Yang ditawarkan protokol.",
+      "prompt": "Apa yang bisa Anda lakukan dengan Aave V3?",
+      "familyLabel": "Katalog"
+    },
+    "history": {
+      "title": "Riwayat",
+      "description": "Buka kembali percakapan sebelumnya dan tanda terimanya.",
+      "mobileDesc": "Percakapan sebelumnya.",
+      "familyLabel": "Riwayat"
+    }
+  }
+}

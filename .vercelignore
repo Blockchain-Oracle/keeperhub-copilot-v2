@@ -1,0 +1,18 @@
+# What the Vercel CLI leaves out of an upload (mirrors .gitignore, plus files the build never reads).
+# Folder names are anchored to the root: the app has its own components/docs, which must go up.
+node_modules
+.next
+.env
+.env.*
+!.env.example
+/references
+/legacy
+/docs
+/tests
+/PROMPT-HERO.MD
+*.tsbuildinfo
+*.log
+.DS_Store
+.playwright-mcp
+.claude
+.vercel

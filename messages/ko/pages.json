@@ -1,0 +1,117 @@
+{
+  "history": {
+    "title": "기록",
+    "subtitle": {
+      "empty": "내 대화와 각 대화에서 실행된 작업입니다.",
+      "counts": "{conversations, plural, other {대화 #개}} · {executed, plural, other {실행된 작업 #개}}"
+    },
+    "error": {
+      "title": "기록을 불러오지 못했습니다",
+      "body": "대화는 그대로 저장되어 있습니다. 불러오지 못했을 뿐입니다.",
+      "retry": "다시 시도"
+    },
+    "empty": {
+      "title": "아직 대화가 없습니다",
+      "body": "모든 대화는 실행한 작업과 함께 여기에 저장됩니다. 채팅을 시작해 첫 대화를 만들어 보세요.",
+      "openChat": "채팅 열기"
+    },
+    "card": {
+      "executed": "{count}개 실행됨",
+      "readsOnly": "읽기만",
+      "open": "열기",
+      "seal": "실행된 작업"
+    }
+  },
+  "activity": {
+    "title": "활동",
+    "subtitle": "이 조직에서 Copilot을 통해 실행된 내역입니다. 최신순이며, 시간은 UTC 기준입니다.",
+    "filter": {
+      "label": "보기",
+      "actions": "작업",
+      "reads": "읽기",
+      "all": "전체"
+    },
+    "error": {
+      "title": "지금은 활동을 불러올 수 없습니다",
+      "body": "기록은 그대로 있습니다. 불러오지 못했을 뿐입니다.",
+      "retry": "다시 시도"
+    },
+    "empty": {
+      "actions": {
+        "title": "아직 보낸 작업이 없습니다",
+        "body": "채팅에서 승인한 작업이 영수증과 함께 여기에 표시됩니다."
+      },
+      "reads": {
+        "title": "아직 읽기 내역이 없습니다",
+        "body": "가격, 잔액 등 어시스턴트가 조회한 모든 내역이 여기에 표시됩니다."
+      },
+      "all": {
+        "title": "아직 아무것도 없습니다",
+        "body": "Copilot이 이 조직을 위해 실행한 모든 내역이 최신순으로 여기에 표시됩니다."
+      },
+      "openChat": "채팅 열기"
+    },
+    "columns": {
+      "what": "내용",
+      "network": "네트워크",
+      "outcome": "결과",
+      "transaction": "트랜잭션",
+      "when": "시간",
+      "from": "출처"
+    },
+    "loadMore": "더 보기",
+    "loadMoreFailed": "더 불러오지 못했습니다. 다시 시도하세요.",
+    "view": "보기",
+    "fromChat": "채팅",
+    "fromAutomation": "자동화",
+    "verb": {
+      "send": "전송",
+      "contractCall": "컨트랙트 호출",
+      "walletIntegration": "지갑 통합",
+      "automationRun": "자동화 실행",
+      "automationCreated": "새 자동화",
+      "automationChanged": "자동화 변경",
+      "automationOn": "자동화 켜짐",
+      "automationOff": "자동화 꺼짐",
+      "automationDeleted": "자동화 삭제됨"
+    },
+    "outcome": {
+      "executed": "실행됨",
+      "running": "실행 중",
+      "saved": "저장됨",
+      "saving": "저장 중",
+      "on": "켜짐",
+      "turningOn": "켜는 중",
+      "off": "꺼짐",
+      "turningOff": "끄는 중",
+      "deleted": "삭제됨",
+      "deleting": "삭제 중",
+      "failed": "실패",
+      "paidFailed": "지불됨, 실패",
+      "cancelled": "취소됨",
+      "expired": "만료됨",
+      "sending": "보내는 중",
+      "read": "읽기"
+    }
+  },
+  "sharedReceipt": {
+    "kicker": "공유된 영수증",
+    "stamp": "실행됨",
+    "executed": "실행됨",
+    "verified": "KeeperHub가 온체인에서 검증함",
+    "sent": "KeeperHub를 통해 전송됨",
+    "tokens": "토큰",
+    "rows": {
+      "network": "네트워크",
+      "token": "토큰",
+      "block": "블록",
+      "executed": "실행 시각"
+    },
+    "footnote": "KeeperHub Copilot에서 공유되었습니다. 공개된 온체인 정보만 표시됩니다.",
+    "tryCopilot": "KeeperHub Copilot 사용해 보기",
+    "notFound": {
+      "title": "공유되지 않은 영수증입니다",
+      "body": "링크가 해제되었거나 처음부터 존재하지 않았습니다."
+    }
+  }
+}

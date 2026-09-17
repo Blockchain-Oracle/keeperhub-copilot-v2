@@ -1,0 +1,136 @@
+{
+  "floatingNav": {
+    "links": {
+      "features": "Recursos",
+      "how": "Como funciona",
+      "install": "Instalar",
+      "docs": "Docs"
+    },
+    "openApp": "Abrir o app",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
+  },
+  "statusTicker": {
+    "networksLive": "{count, plural, one {<number>#</number> rede ativa} other {<number>#</number> redes ativas}}",
+    "connecting": "conectando ao keeperhub"
+  },
+  "hero": {
+    "prompts": {
+      "price": "Qual é o preço do ETH na Chainlink agora?",
+      "balances": "Mostre meus saldos em todas as redes",
+      "send": "Envie 10 USDC para alice.eth na Base",
+      "supply": "Forneça 50 USDC ao Aave, mas antes me diga o APY",
+      "gas": "Me avise quando o gas cair abaixo de 20 gwei"
+    },
+    "title": "Onchain, em <em>linguagem simples</em><stop>.</stop>",
+    "subtitle": "Seu copiloto para o KeeperHub. Pergunte qualquer coisa e ele responde na hora — mas nada que movimenta valor acontece por conta própria. <highlight>Ele para, mostra a ação exata e espera.</highlight>",
+    "inputLabel": "Pergunte ao seu copiloto",
+    "placeholder": "Pergunte ao seu copiloto…",
+    "submit": "Abrir o app",
+    "enterHint": "pressione enter para abrir no app"
+  },
+  "features": {
+    "heading": {
+      "eyebrow": "O QUE ELE FAZ",
+      "title": "Leituras fluem. Escritas <em>param e perguntam</em>.",
+      "subtitle": "Faça uma pergunta e ele responde na hora. Peça para movimentar valor e ele para, preenche todos os campos e espera o seu clique."
+    },
+    "spec": "ESPEC",
+    "items": {
+      "registry": {
+        "tag": "REGISTRO · 442 AÇÕES",
+        "title": "Gerado, não escrito à mão.",
+        "description": "Swaps, transferências, empréstimos, staking, pontes, feeds de preço, carteiras, permissões, alertas — 442 ações em 34 integrações, geradas a partir do próprio registro do KeeperHub e fixadas em um hash de snapshot."
+      },
+      "effect": {
+        "tag": "EFEITO · 292 / 148",
+        "title": "A trava é derivada.",
+        "description": "Cada ação é classificada pelo efeito a partir do próprio registro — 292 fazem leitura, 148 movimentam valor ou concedem autorização. Tudo o que o classificador não consegue enquadrar fica em quarentena e se recusa a executar."
+      },
+      "confirm": {
+        "tag": "CONFIRMAR",
+        "title": "O que você aprova é o que executa.",
+        "description": "Uma escrita pausa o chat e mostra um cartão: todos os campos preenchidos, todos editáveis. Simulada antes quando a plataforma consegue pré-visualizar, sinalizada com clareza quando não consegue. O que você aprovou é o que executa, byte por byte."
+      },
+      "failLoudly": {
+        "tag": "FALHA VISÍVEL",
+        "title": "Um recibo. Não um ok.",
+        "description": "Sucesso é um recibo on-chain verificado — bloco, hash, status, lidos direto da blockchain. Uma ferramenta que retorna ok ainda não moveu nada."
+      },
+      "voice": {
+        "tag": "VOZ",
+        "title": "A voz pode perguntar. A voz não pode enviar.",
+        "description": "Fale uma pergunta, peça uma prévia — a voz faz as duas coisas. Confirmar uma escrita exige um clique deliberado no cartão."
+      },
+      "ledger": {
+        "tag": "LIVRO-RAZÃO",
+        "title": "O registro sobrevive ao chat.",
+        "description": "Cada execução é gravada como um fato durável, separado da transcrição, então apagar uma conversa nunca apaga a evidência. Os valores ficam como strings inteiras em unidades base de ponta a ponta e só são formatados na exibição."
+      }
+    }
+  },
+  "howItWorks": {
+    "heading": {
+      "eyebrow": "COMO FUNCIONA",
+      "title": "De uma frase a um recibo <em>verificado</em>.",
+      "subtitle": "Cinco etapas. Leituras fluem. Escritas param e perguntam."
+    },
+    "meta": "CERIMÔNIA · ETAPA {num}",
+    "issued": "EMITIDO",
+    "pending": "PENDENTE",
+    "step": "ETAPA",
+    "steps": {
+      "ask": {
+        "title": "Você pede em linguagem simples",
+        "body": "Sem SDK, sem ABI, sem calldata. Digite o que você realmente quer fazer, e o copiloto entende isso como uma intenção, não como um comando."
+      },
+      "resolve": {
+        "title": "Ele identifica a ação",
+        "body": "442 ações em 34 integrações, geradas a partir do próprio registro do KeeperHub, com hash de snapshot. Cada uma é classificada pelo efeito: 292 fazem leitura, 148 movimentam valor ou concedem autorização."
+      },
+      "gate": {
+        "title": "Leituras fluem. Escritas param.",
+        "body": "Uma leitura responde na hora — não há nada em jogo. Tudo o que movimenta valor mostra um cartão: todos os campos preenchidos, todos editáveis."
+      },
+      "confirm": {
+        "title": "Você confere e confirma",
+        "body": "Os argumentos ficam congelados no momento em que o cartão aparece. O que executa é, byte por byte, o que você aprovou, e não o que o modelo disser depois."
+      },
+      "receipt": {
+        "title": "Você recebe um recibo",
+        "body": "Sucesso é um recibo on-chain verificado, nunca uma confirmação da ferramenta — guardado como um registro durável, então apagar a conversa nunca apaga a evidência."
+      }
+    }
+  },
+  "install": {
+    "heading": {
+      "eyebrow": "CONECTAR",
+      "title": "Uma chave para o <em>seu</em> KeeperHub.",
+      "subtitle": "Uma chave kh_ com escopo mcp:write conecta qualquer cliente MCP que você já usa. O próprio copiloto entra com o KeeperHub, então só precisa das próprias configurações."
+    },
+    "createKey": "Criar uma chave · todas as 442 ações",
+    "shellTab": "Shell"
+  },
+  "finalCta": {
+    "invitation": "CONVITE",
+    "nonCustodial": "NÃO CUSTODIAL",
+    "title": "Leituras fluem. Escritas <em>param e perguntam</em>.",
+    "body": "Pergunte qualquer coisa e a resposta volta na hora. Peça para movimentar valor e ele para, preenche todos os campos e espera o seu clique.",
+    "openApp": "Abrir o app",
+    "signed": "ASSINADO",
+    "snapshot": "SNAPSHOT DO REGISTRO <highlight>442 AÇÕES</highlight>"
+  },
+  "footer": {
+    "tagline": "leituras fluem, escritas param e perguntam",
+    "live": "ATIVO",
+    "networks": "REDES {count}",
+    "effectSplit": "292 LEITURAS / 148 ESCRITAS",
+    "nav": {
+      "features": "Recursos",
+      "how": "Como",
+      "install": "Instalar",
+      "app": "App",
+      "docs": "Docs"
+    }
+  }
+}

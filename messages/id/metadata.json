@@ -1,0 +1,12 @@
+{
+  "title": "KeeperHub Copilot",
+  "titleTemplate": "%s · KeeperHub Copilot",
+  "description": "Minta aksi on-chain dengan bahasa sehari-hari. Baca apa saja, setujui apa pun yang memindahkan dana, dan ubah satu kalimat menjadi otomatisasi KeeperHub yang terus berjalan.",
+  "chat": "Obrolan",
+  "history": "Riwayat",
+  "activity": "Aktivitas",
+  "automations": "Otomatisasi",
+  "automation": "Otomatisasi",
+  "receiptNotShared": "Tanda terima tidak dibagikan",
+  "receiptDescription": "Aksi yang dijalankan KeeperHub secara on-chain, dibagikan dari KeeperHub Copilot."
+}

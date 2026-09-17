@@ -1,0 +1,117 @@
+{
+  "history": {
+    "title": "履歴",
+    "subtitle": {
+      "empty": "あなたの会話と、それぞれで実行された内容です。",
+      "counts": "{conversations, plural, other {# 件の会話}} · {executed, plural, other {実行済みアクション # 件}}"
+    },
+    "error": {
+      "title": "履歴を読み込めませんでした",
+      "body": "会話は保存されたままです。取得できなかっただけです。",
+      "retry": "再試行"
+    },
+    "empty": {
+      "title": "会話はまだありません",
+      "body": "すべての会話は、実行した内容とともにここに保存されます。チャットを始めて、最初の会話を作成しましょう。",
+      "openChat": "チャットを開く"
+    },
+    "card": {
+      "executed": "{count} 件実行済み",
+      "readsOnly": "読み取りのみ",
+      "open": "開く",
+      "seal": "実行済みアクション"
+    }
+  },
+  "activity": {
+    "title": "アクティビティ",
+    "subtitle": "この組織で Copilot を通じて実行されたものを、新しい順に表示します。時刻は UTC です。",
+    "filter": {
+      "label": "表示",
+      "actions": "アクション",
+      "reads": "読み取り",
+      "all": "すべて"
+    },
+    "error": {
+      "title": "現在アクティビティを読み込めません",
+      "body": "記録は残っています。取得できなかっただけです。",
+      "retry": "再試行"
+    },
+    "empty": {
+      "actions": {
+        "title": "まだ何も送信されていません",
+        "body": "チャットで承認したアクションが、受領書とともにここに表示されます。"
+      },
+      "reads": {
+        "title": "読み取りはまだありません",
+        "body": "価格や残高など、アシスタントが行うすべての照会がここに表示されます。"
+      },
+      "all": {
+        "title": "まだ何もありません",
+        "body": "Copilot がこの組織のために実行したものすべてが、新しい順にここに表示されます。"
+      },
+      "openChat": "チャットを開く"
+    },
+    "columns": {
+      "what": "内容",
+      "network": "ネットワーク",
+      "outcome": "結果",
+      "transaction": "トランザクション",
+      "when": "日時",
+      "from": "実行元"
+    },
+    "loadMore": "さらに読み込む",
+    "loadMoreFailed": "これ以上読み込めませんでした。もう一度お試しください。",
+    "view": "表示",
+    "fromChat": "チャット",
+    "fromAutomation": "オートメーション",
+    "verb": {
+      "send": "送金",
+      "contractCall": "コントラクト呼び出し",
+      "walletIntegration": "ウォレットのインテグレーション",
+      "automationRun": "オートメーションの実行",
+      "automationCreated": "新しいオートメーション",
+      "automationChanged": "オートメーションを変更",
+      "automationOn": "オートメーションをオン",
+      "automationOff": "オートメーションをオフ",
+      "automationDeleted": "オートメーションを削除"
+    },
+    "outcome": {
+      "executed": "実行済み",
+      "running": "実行中",
+      "saved": "保存済み",
+      "saving": "保存中",
+      "on": "オン",
+      "turningOn": "オンにしています",
+      "off": "オフ",
+      "turningOff": "オフにしています",
+      "deleted": "削除済み",
+      "deleting": "削除中",
+      "failed": "失敗",
+      "paidFailed": "支払い済み、失敗",
+      "cancelled": "キャンセル済み",
+      "expired": "期限切れ",
+      "sending": "送信中",
+      "read": "読み取り"
+    }
+  },
+  "sharedReceipt": {
+    "kicker": "共有された受領書",
+    "stamp": "実行済み",
+    "executed": "実行済み",
+    "verified": "KeeperHub がオンチェーンで検証済み",
+    "sent": "KeeperHub 経由で送信",
+    "tokens": "トークン",
+    "rows": {
+      "network": "ネットワーク",
+      "token": "トークン",
+      "block": "ブロック",
+      "executed": "実行日時"
+    },
+    "footnote": "KeeperHub Copilot から共有されました。公開されているオンチェーンの事実のみを表示しています。",
+    "tryCopilot": "KeeperHub Copilot を試す",
+    "notFound": {
+      "title": "この受領書は共有されていません",
+      "body": "リンクが無効にされたか、もともと存在しません。"
+    }
+  }
+}

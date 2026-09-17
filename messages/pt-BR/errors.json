@@ -1,0 +1,22 @@
+{
+  "unauthorized": "Conecte o KeeperHub para continuar.",
+  "session": "Sua sessão do KeeperHub terminou. Conecte o KeeperHub para continuar.",
+  "server_error": "Algo deu errado do nosso lado. Tente novamente em instantes.",
+  "not_found": "Isto não está mais disponível.",
+  "bad_request": "Não foi possível ler essa solicitação.",
+  "upstream_error": "O KeeperHub não respondeu como esperado. Tente novamente em instantes.",
+  "transport": "Não foi possível acessar o KeeperHub. Verifique sua conexão e tente novamente.",
+  "rate_limited": "O KeeperHub está ocupado. Tente novamente em instantes.",
+  "insufficient_scope": "Isto precisa de mais acesso ao KeeperHub. Reconecte e dê a permissão.",
+  "archived": "Esta conversa foi arquivada. Inicie um novo chat.",
+  "waiting": "Responda primeiro ao cartão ou ao formulário acima.",
+  "not_shareable": "Só uma ação executada com uma transação pode ser compartilhada.",
+  "validation_failed": "Alguns dados não estão corretos. Verifique e tente novamente.",
+  "write_not_available": "Esta ação ainda não pode ser enviada daqui.",
+  "quarantined": "Esta ação não pode ser executada: o Copilot não consegue determinar o que ela faz.",
+  "automation_only": "O KeeperHub só executa isto como uma etapa dentro de uma automação.",
+  "tool_error": "Não foi possível concluir isto.",
+  "deactivated": "Esta automação está desativada no KeeperHub.",
+  "on_demand": "Esta automação só é executada quando alguém a inicia.",
+  "invalid_chain": "Essa rede não é suportada."
+}

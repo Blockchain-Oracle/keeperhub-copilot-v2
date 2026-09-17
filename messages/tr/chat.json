@@ -1,0 +1,148 @@
+{
+  "newConversation": "Yeni sohbet",
+  "loadNotice": "Bu sohbet tam olarak yüklenemedi. Mesajları saklanıyor ama görüntülenemiyor.",
+  "toolStates": {
+    "preparing": "hazırlanıyor",
+    "running": "çalışıyor",
+    "waitingForApproval": "onay bekliyor",
+    "sendingAnswer": "yanıtın gönderiliyor",
+    "done": "bitti",
+    "failed": "başarısız",
+    "declined": "reddedildi",
+    "waitingForYou": "seni bekliyor",
+    "unknown": "bilinmiyor"
+  },
+  "chat": {
+    "hints": {
+      "connect": "Başlamak için KeeperHub’a bağlan.",
+      "answerUnsent": "Yanıtını göndermek için yukarıdaki kartta Tekrar dene’ye bas.",
+      "form": "Devam etmek için yukarıdaki formu doldur ya da kapat.",
+      "approval": "Devam etmek için yukarıdaki eylemi onayla ya da iptal et."
+    },
+    "banner": {
+      "createFailed": "Sohbet oluşturulamadı. Tekrar dene.",
+      "sessionEnded": "KeeperHub oturumun sona erdi.",
+      "answerUnsent": "Yanıtın KeeperHub’a ulaşmadı. Karttaki Tekrar dene’yi kullan.",
+      "turnFailed": "Asistan bir hatayla karşılaştı. Tekrar dene.",
+      "connect": "KeeperHub’a bağlan",
+      "retry": "Yeniden dene"
+    },
+    "archived": {
+      "notice": "Bu sohbet arşivlendi. Artık salt okunur.",
+      "newChat": "Yeni sohbet"
+    },
+    "ceremony": {
+      "noConversation": "Deneme çalıştırması yapılacak bir sohbet yok.",
+      "dryRunUnprepared": "Deneme çalıştırması hazırlanamadı.",
+      "checkFailed": "KeeperHub’ın kontrolü çalıştırılamadı.",
+      "checkUnreachable": "KeeperHub’ın kontrolü çalıştırılamadı. Bağlantını kontrol edip tekrar dene.",
+      "enableFailed": "KeeperHub otomasyonu değiştirmedi.",
+      "enableUnreachable": "KeeperHub yanıt vermedi. Bağlantını kontrol edip tekrar dene."
+    }
+  },
+  "composer": {
+    "form": "Mesaj yazma alanı",
+    "label": "KeeperHub’a sor",
+    "placeholder": "KeeperHub’a sor…",
+    "send": "Mesajı gönder",
+    "talk": "KeeperHub ile konuş",
+    "talkUnavailable": "Bekleyen bir şey kalmadığında ses kullanılabilir",
+    "menu": "Ağ ve eylemler",
+    "searchActions": "Eylemlerde ara",
+    "browseActions": "{count} eylemin tümüne göz at"
+  },
+  "messageList": {
+    "thinking": "Düşünüyor",
+    "said": "dedi"
+  },
+  "toolTimeline": {
+    "used": "{count, plural, one {# araç kullanıldı} other {# araç kullanıldı}}",
+    "using": "{count, plural, one {# araç kullanılıyor} other {# araç kullanılıyor}}",
+    "input": "Girdi",
+    "output": "Çıktı",
+    "elapsedSeconds": "{seconds} sn",
+    "elapsedMinutes": "{minutes} dk {seconds} sn"
+  },
+  "sessionDropdown": {
+    "conversations": "Sohbetler",
+    "newChat": "Yeni sohbet",
+    "loadFailed": "Liste yüklenemedi. Kapatıp tekrar dene.",
+    "empty": "Henüz geçmiş sohbet yok.",
+    "rename": "{title} sohbetini yeniden adlandır",
+    "delete": "{title} sohbetini sil",
+    "newTitle": "{title} sohbeti için yeni başlık",
+    "titleTooLong": "Başlıklar en fazla {max} karakter olabilir.",
+    "renameFailed": "Yeni ad kaydedilemedi. Tekrar dene.",
+    "renamed": "Sohbet yeniden adlandırıldı.",
+    "deleteFailed": "Sohbet silinemedi. Tekrar dene.",
+    "deleted": "Sohbet silindi."
+  },
+  "home": {
+    "status": {
+      "online": "KeeperHub çevrimiçi · {count, plural, one {# ağ} other {# ağ}}",
+      "unreachable": "KeeperHub’a ulaşılamıyor",
+      "checking": "KeeperHub kontrol ediliyor"
+    },
+    "greeting": "KeeperHub senin için ne yapsın?",
+    "intro": "Bir fiyat, bakiye ya da transfer iste. Okumalar hemen yanıtlanır; <b>değer taşıyan her şey tıklamanı bekler.</b> Ya da aşağıdaki kartlardan biriyle başla.",
+    "orPickACard": "Ya da bir kart seç",
+    "quoted": "“{text}”"
+  },
+  "motifs": {
+    "noOrgWallet": "henüz kuruluş cüzdanı yok",
+    "approve": "Onayla",
+    "pooledDeposits": "havuzdaki mevduatlar",
+    "actions": "{count, plural, one {# eylem} other {# eylem}}",
+    "yourConversations": "sohbetlerin",
+    "conversations": "{count, plural, one {# sohbet} other {# sohbet}}"
+  },
+  "categories": {
+    "chainlink": {
+      "title": "Fiyatlar",
+      "description": "Canlı bir fiyat beslemesini doğrudan Chainlink’ten oku.",
+      "mobileDesc": "Chainlink fiyat beslemeleri."
+    },
+    "lido": {
+      "title": "Likit staking",
+      "description": "Lido’dan okunan, stake edilmiş ETH değeri.",
+      "mobileDesc": "Lido staking oranları."
+    },
+    "rocketPool": {
+      "title": "Rocket Pool",
+      "description": "rETH dönüşüm oranı ve dolaşımdaki miktar.",
+      "mobileDesc": "rETH oranı."
+    },
+    "sky": {
+      "title": "Birikim kasası",
+      "description": "Sky birikim kasasında ne kadar bulunduğu.",
+      "mobileDesc": "Sky kasası mevduatları."
+    },
+    "orgWallet": {
+      "title": "Kuruluş cüzdanın",
+      "description": "Kuruluşunun cüzdanının {network} ağında tuttukları.",
+      "mobileDesc": "Bu ağdaki bakiyeler.",
+      "prompt": "{network} ağındaki kuruluş cüzdanımda ne var?",
+      "familyLabel": "Hesap"
+    },
+    "sendToSelf": {
+      "title": "Kendine gönder",
+      "description": "Kendi cüzdanına sıfır değerli bir transfer. Tıklamanı bekler.",
+      "mobileDesc": "Tıklamanı bekler.",
+      "prompt": "{network} ağında kuruluş cüzdanımdan yine kendisine {amount} gönder.",
+      "familyLabel": "Hesap · yazma"
+    },
+    "discover": {
+      "title": "Eylemleri keşfet",
+      "description": "KeeperHub’ın bir protokolle neler yapabildiğini sor.",
+      "mobileDesc": "Bir protokolün sundukları.",
+      "prompt": "Aave V3 ile neler yapabilirsin?",
+      "familyLabel": "Katalog"
+    },
+    "history": {
+      "title": "Geçmiş",
+      "description": "Geçmiş sohbetleri ve makbuzlarını yeniden aç.",
+      "mobileDesc": "Geçmiş sohbetler.",
+      "familyLabel": "Geçmiş"
+    }
+  }
+}

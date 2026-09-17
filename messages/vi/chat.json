@@ -1,0 +1,148 @@
+{
+  "newConversation": "Cuộc trò chuyện mới",
+  "loadNotice": "Không thể tải đầy đủ cuộc trò chuyện này. Các tin nhắn vẫn được giữ nhưng không thể hiển thị.",
+  "toolStates": {
+    "preparing": "đang chuẩn bị",
+    "running": "đang chạy",
+    "waitingForApproval": "đang chờ phê duyệt",
+    "sendingAnswer": "đang gửi câu trả lời của bạn",
+    "done": "xong",
+    "failed": "thất bại",
+    "declined": "đã từ chối",
+    "waitingForYou": "đang chờ bạn",
+    "unknown": "không rõ"
+  },
+  "chat": {
+    "hints": {
+      "connect": "Kết nối KeeperHub để bắt đầu.",
+      "answerUnsent": "Nhấn Thử lại trên thẻ phía trên để gửi câu trả lời của bạn.",
+      "form": "Điền hoặc đóng biểu mẫu phía trên để tiếp tục.",
+      "approval": "Cho phép hoặc hủy thao tác phía trên để tiếp tục."
+    },
+    "banner": {
+      "createFailed": "Không thể tạo cuộc trò chuyện. Hãy thử lại.",
+      "sessionEnded": "Phiên KeeperHub của bạn đã kết thúc.",
+      "answerUnsent": "Câu trả lời của bạn chưa tới KeeperHub. Hãy dùng Thử lại trên thẻ.",
+      "turnFailed": "Trợ lý gặp lỗi. Hãy thử lại.",
+      "connect": "Kết nối KeeperHub",
+      "retry": "Thử lại"
+    },
+    "archived": {
+      "notice": "Cuộc trò chuyện này đã được lưu trữ. Giờ chỉ có thể xem.",
+      "newChat": "Trò chuyện mới"
+    },
+    "ceremony": {
+      "noConversation": "Không có cuộc trò chuyện nào để chạy thử.",
+      "dryRunUnprepared": "Không thể chuẩn bị bản chạy thử.",
+      "checkFailed": "Không thể chạy bước kiểm tra của KeeperHub.",
+      "checkUnreachable": "Không thể chạy bước kiểm tra của KeeperHub. Hãy kiểm tra kết nối internet và thử lại.",
+      "enableFailed": "KeeperHub chưa thay đổi tự động hóa.",
+      "enableUnreachable": "KeeperHub không phản hồi. Hãy kiểm tra kết nối internet và thử lại."
+    }
+  },
+  "composer": {
+    "form": "Khung soạn tin nhắn",
+    "label": "Hỏi KeeperHub",
+    "placeholder": "Hỏi KeeperHub…",
+    "send": "Gửi tin nhắn",
+    "talk": "Nói chuyện với KeeperHub",
+    "talkUnavailable": "Giọng nói khả dụng khi không còn gì đang chờ",
+    "menu": "Mạng và thao tác",
+    "searchActions": "Tìm thao tác",
+    "browseActions": "Xem cả {count} thao tác"
+  },
+  "messageList": {
+    "thinking": "Đang suy nghĩ",
+    "said": "đã nói"
+  },
+  "toolTimeline": {
+    "used": "Đã dùng {count, plural, other {# công cụ}}",
+    "using": "Đang dùng {count, plural, other {# công cụ}}",
+    "input": "Đầu vào",
+    "output": "Đầu ra",
+    "elapsedSeconds": "{seconds} giây",
+    "elapsedMinutes": "{minutes} phút {seconds} giây"
+  },
+  "sessionDropdown": {
+    "conversations": "Cuộc trò chuyện",
+    "newChat": "Trò chuyện mới",
+    "loadFailed": "Không tải được danh sách. Hãy đóng và thử lại.",
+    "empty": "Chưa có cuộc trò chuyện nào.",
+    "rename": "Đổi tên cuộc trò chuyện {title}",
+    "delete": "Xóa cuộc trò chuyện {title}",
+    "newTitle": "Tên mới cho cuộc trò chuyện {title}",
+    "titleTooLong": "Tên tối đa {max} ký tự.",
+    "renameFailed": "Không lưu được tên mới. Hãy thử lại.",
+    "renamed": "Đã đổi tên cuộc trò chuyện.",
+    "deleteFailed": "Không xóa được cuộc trò chuyện. Hãy thử lại.",
+    "deleted": "Đã xóa cuộc trò chuyện."
+  },
+  "home": {
+    "status": {
+      "online": "KeeperHub trực tuyến · {count, plural, other {# mạng}}",
+      "unreachable": "Không kết nối được KeeperHub",
+      "checking": "đang kiểm tra KeeperHub"
+    },
+    "greeting": "Bạn muốn KeeperHub làm gì?",
+    "intro": "Hỏi giá, số dư hoặc chuyển tiền. Thao tác đọc trả lời ngay; <b>mọi thao tác chuyển giá trị đều chờ bạn bấm.</b> Hoặc bắt đầu từ một thẻ bên dưới.",
+    "orPickACard": "Hoặc chọn một thẻ",
+    "quoted": "“{text}”"
+  },
+  "motifs": {
+    "noOrgWallet": "chưa có ví tổ chức",
+    "approve": "Phê duyệt",
+    "pooledDeposits": "tiền gửi gộp",
+    "actions": "{count, plural, other {# thao tác}}",
+    "yourConversations": "các cuộc trò chuyện của bạn",
+    "conversations": "{count, plural, other {# cuộc trò chuyện}}"
+  },
+  "categories": {
+    "chainlink": {
+      "title": "Giá",
+      "description": "Đọc nguồn giá trực tiếp từ Chainlink.",
+      "mobileDesc": "Nguồn giá Chainlink."
+    },
+    "lido": {
+      "title": "Staking thanh khoản",
+      "description": "Giá trị của ETH đã stake, đọc từ Lido.",
+      "mobileDesc": "Tỷ lệ staking của Lido."
+    },
+    "rocketPool": {
+      "title": "Rocket Pool",
+      "description": "Tỷ giá rETH và lượng đang lưu hành.",
+      "mobileDesc": "Tỷ giá rETH."
+    },
+    "sky": {
+      "title": "Vault tiết kiệm",
+      "description": "Lượng tiền đang nằm trong vault tiết kiệm Sky.",
+      "mobileDesc": "Tiền gửi vault Sky."
+    },
+    "orgWallet": {
+      "title": "Ví tổ chức của bạn",
+      "description": "Những gì ví của tổ chức bạn đang giữ trên {network}.",
+      "mobileDesc": "Số dư trên mạng này.",
+      "prompt": "Ví tổ chức của tôi đang giữ gì trên {network}?",
+      "familyLabel": "Tài khoản"
+    },
+    "sendToSelf": {
+      "title": "Gửi cho chính bạn",
+      "description": "Một giao dịch chuyển giá trị 0 về lại ví của bạn. Nó sẽ dừng lại chờ bạn bấm.",
+      "mobileDesc": "Dừng lại chờ bạn bấm.",
+      "prompt": "Gửi {amount} từ ví tổ chức của tôi đến chính nó trên {network}.",
+      "familyLabel": "Tài khoản · ghi"
+    },
+    "discover": {
+      "title": "Khám phá thao tác",
+      "description": "Hỏi KeeperHub có thể làm gì với một giao thức.",
+      "mobileDesc": "Giao thức cung cấp gì.",
+      "prompt": "Bạn có thể làm gì với Aave V3?",
+      "familyLabel": "Danh mục"
+    },
+    "history": {
+      "title": "Lịch sử",
+      "description": "Mở lại các cuộc trò chuyện trước và biên nhận của chúng.",
+      "mobileDesc": "Cuộc trò chuyện trước.",
+      "familyLabel": "Lịch sử"
+    }
+  }
+}

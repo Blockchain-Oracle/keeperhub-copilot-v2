@@ -1,0 +1,369 @@
+{
+  "actions": {
+    "authorize": "Autorizar",
+    "authorizing": "Autorizando…",
+    "edit": "Editar",
+    "turnOn": "Activar",
+    "turnOff": "Desactivar",
+    "turningOn": "Activando…",
+    "runNow": "Ejecutar ahora",
+    "running": "Ejecutando…",
+    "checkAgain": "Volver a verificar",
+    "openAutomation": "Abrir automatización →"
+  },
+  "acknowledge": {
+    "goAhead": "Continuar de todos modos. Leí las advertencias.",
+    "turnOn": "Activarla de todos modos. Leí las advertencias.",
+    "run": "Ejecutarla de todos modos. Leí las advertencias."
+  },
+  "failures": {
+    "noAnswer": "KeeperHub no respondió.",
+    "noAnswerConnection": "KeeperHub no respondió. Revisa tu conexión y vuelve a intentarlo.",
+    "checkFailed": "No se pudo ejecutar la verificación de KeeperHub.",
+    "notTurnedOn": "KeeperHub no la activó.",
+    "notChanged": "KeeperHub no modificó la automatización.",
+    "dryRunFailed": "KeeperHub no pudo simular esta automatización.",
+    "runNotStarted": "No se pudo iniciar la ejecución.",
+    "runNotStartedConnection": "No se pudo iniciar la ejecución. Revisa tu conexión y vuelve a intentarlo."
+  },
+  "view": {
+    "trigger": {
+      "manual": "Bajo demanda, cuando alguien presiona Ejecutar ahora",
+      "webhook": "Cuando se llama a su URL de webhook",
+      "schedule": "Según una programación",
+      "block": "{count, plural, one {Cada {every} bloque} other {Cada {every} bloques}}",
+      "event": "Cuando se emite {event}",
+      "tempoPayment": "Cuando llega un pago de Tempo"
+    },
+    "rows": {
+      "cron": "Cron",
+      "timezone": "Zona horaria",
+      "contract": "Contrato",
+      "recipient": "Para",
+      "token": "Token",
+      "memo": "Memo",
+      "condition": "Continúa cuando"
+    },
+    "stepFallback": "Paso",
+    "actionLabel": {
+      "checking": "Verificando…",
+      "checkFailed": "La verificación falló",
+      "blocked": "No se puede continuar",
+      "acknowledge": "Acepta las advertencias"
+    },
+    "frame": {
+      "saving": {
+        "meta": "GUARDANDO",
+        "status": "Guardando en KeeperHub…"
+      },
+      "savingChanges": {
+        "meta": "GUARDANDO",
+        "status": "Guardando los cambios en KeeperHub…"
+      },
+      "starting": {
+        "meta": "INICIANDO",
+        "status": "Iniciando la ejecución en KeeperHub…"
+      },
+      "deleting": {
+        "meta": "ELIMINANDO",
+        "status": "Eliminando de KeeperHub…"
+      },
+      "cancelled": {
+        "meta": "CANCELADA",
+        "status": "Cancelada"
+      },
+      "notSent": {
+        "meta": "NO ENVIADA",
+        "status": "No enviada"
+      },
+      "cancelling": {
+        "meta": "CANCELANDO",
+        "status": "Cancelando…"
+      },
+      "noAnswer": {
+        "meta": "SIN RESPUESTA",
+        "status": "Autorizada, sin respuesta guardada"
+      },
+      "turningOn": {
+        "meta": "ACTIVANDO",
+        "status": "Activando en KeeperHub…"
+      },
+      "turningOff": {
+        "meta": "DESACTIVANDO",
+        "status": "Desactivando en KeeperHub…"
+      },
+      "neverAuthorized": {
+        "meta": "NUNCA AUTORIZADA",
+        "status": "Nunca autorizada"
+      },
+      "authorizing": {
+        "meta": "AUTORIZANDO",
+        "status": "Autorizando…"
+      },
+      "edited": {
+        "meta": "EDITADA",
+        "status": "Editada, pendiente de tu autorización"
+      },
+      "awaiting": {
+        "meta": "PENDIENTE DE AUTORIZACIÓN",
+        "status": "Pendiente de tu autorización"
+      },
+      "live": {
+        "meta": "ACTIVA",
+        "status": "Guardada y activada"
+      },
+      "savedOff": {
+        "meta": "GUARDADA · INACTIVA",
+        "status": "Guardada, desactivada"
+      },
+      "saved": {
+        "meta": "GUARDADA",
+        "status": "Cambios guardados"
+      },
+      "deleted": {
+        "meta": "ELIMINADA",
+        "status": "Eliminada de KeeperHub"
+      },
+      "executed": {
+        "meta": "EJECUTADA",
+        "status": "Ejecutada"
+      },
+      "failed": {
+        "meta": "FALLIDA",
+        "status": "La ejecución falló"
+      },
+      "stillRunning": {
+        "meta": "AÚN EN CURSO",
+        "status": "Todavía en curso"
+      },
+      "running": {
+        "meta": "EN CURSO",
+        "status": "Ejecutándose en KeeperHub…"
+      },
+      "started": {
+        "meta": "INICIADA",
+        "status": "Iniciada"
+      },
+      "turnedOn": {
+        "meta": "ACTIVADA",
+        "status": "Activada"
+      },
+      "turnedOff": {
+        "meta": "DESACTIVADA",
+        "status": "Desactivada"
+      }
+    },
+    "stamp": {
+      "live": "ACTIVA",
+      "saved": "GUARDADA",
+      "deleted": "ELIMINADA",
+      "executed": "EJECUTADA",
+      "void": "ANULADA",
+      "on": "ACTIVADA",
+      "off": "DESACTIVADA"
+    },
+    "kicker": {
+      "create": "Nueva automatización",
+      "update": "Modificar automatización",
+      "run": "Ejecución de automatización",
+      "delete": "Eliminar automatización",
+      "turnOn": "Activar automatización",
+      "turnOff": "Desactivar automatización"
+    },
+    "title": {
+      "create": "Nueva automatización",
+      "update": "Modificar una automatización",
+      "run": "Ejecutar {name}",
+      "runAny": "Ejecutar una automatización",
+      "delete": "Eliminar {name}",
+      "deleteAny": "Eliminar una automatización",
+      "turnOn": "Activar {name}",
+      "turnOnAny": "Activar una automatización",
+      "turnOff": "Desactivar {name}",
+      "turnOffAny": "Desactivar una automatización"
+    },
+    "form": {
+      "name": "Nombre",
+      "cron": "Programación (cron)",
+      "timezone": "Zona horaria",
+      "network": "Red",
+      "every": "Cada N bloques",
+      "contract": "Contrato",
+      "event": "Nombre del evento",
+      "abi": "ABI del contrato",
+      "abiPlaceholder": "Déjalo vacío para un contrato verificado",
+      "recipient": "Dirección de depósito",
+      "token": "Token",
+      "memo": "Memo",
+      "stepField": "Paso {number} · {label}"
+    }
+  },
+  "card": {
+    "declinedRun": "Rechazaste esta ejecución. No se ejecutó nada.",
+    "declinedProposal": "Rechazaste esta propuesta. No se cambió nada en KeeperHub.",
+    "checkValues": "Revisa estos valores",
+    "starts": "Inicia",
+    "steps": "Pasos",
+    "automation": "Automatización",
+    "change": "Cambio",
+    "notSent": "Tu respuesta no llegó a KeeperHub. Revisa tu conexión y vuelve a intentarlo.",
+    "noAnswer": "Esto se autorizó, pero la respuesta de KeeperHub nunca llegó a este chat. La página Automatizaciones muestra cómo terminó.",
+    "archived": "Nadie autorizó esto antes de que se archivara el chat. No se cambió nada.",
+    "updatedOn": "Está activada, así que la nueva versión se ejecuta desde su próximo inicio.",
+    "updatedKept": "Conserva su estado activado o desactivado.",
+    "deleted": "Se eliminó junto con su historial de ejecuciones. Ya no aparece en la página Automatizaciones."
+  },
+  "savedFollowUp": {
+    "onDemand": "Se ejecuta cuando alguien presiona Ejecutar ahora en su página.",
+    "archived": "Se guardó desactivada. Su página muestra si se activó desde entonces.",
+    "live": "Activada. KeeperHub la inicia por su cuenta a partir de ahora.",
+    "off": "Está desactivada. Actívala después de leer la verificación de KeeperHub y se iniciará por su cuenta."
+  },
+  "runFollowUp": {
+    "started": "Iniciada. La página de la automatización muestra cómo terminó la ejecución.",
+    "running": "Ejecutándose en KeeperHub. Esta tarjeta se actualiza cuando termine.",
+    "executed": "Ejecutada.",
+    "transaction": "Transacción",
+    "failed": "La ejecución falló en KeeperHub. Su página muestra qué paso la detuvo.",
+    "stale": "Sigue en curso después de cinco minutos. Su resultado aparecerá en su página y en Actividad."
+  },
+  "previewBlock": {
+    "checking": "verificando con KeeperHub",
+    "label": "Verificación de KeeperHub",
+    "blocked": "bloqueada",
+    "warned": "lee las advertencias",
+    "ready": "lista",
+    "changes": "Qué cambia"
+  },
+  "subjectBlock": {
+    "steps": "Pasos",
+    "noSteps": "aún no hay pasos"
+  },
+  "triggerBlock": {
+    "network": "Red"
+  },
+  "stepDetail": {
+    "movesValue": "mueve valor"
+  },
+  "stepList": {
+    "off": "inactivo"
+  },
+  "listCard": {
+    "meta": "{count, plural, one {# AUTOMATIZACIÓN} other {# AUTOMATIZACIONES}}",
+    "empty": "aún no hay automatizaciones",
+    "steps": "{count, plural, one {# paso} other {# pasos}}"
+  },
+  "detailCard": {
+    "unreadableMeta": "ILEGIBLE",
+    "unreadable": "no se pudo leer esta automatización",
+    "statusMeta": {
+      "live": "ACTIVA",
+      "manual": "BAJO DEMANDA",
+      "off": "INACTIVA",
+      "deactivated": "INHABILITADA"
+    },
+    "steps": "Pasos",
+    "noSteps": "aún no hay pasos",
+    "recentRuns": "Ejecuciones recientes",
+    "runsUnavailable": "El historial de ejecuciones de KeeperHub no está disponible en este momento.",
+    "noRuns": "Todavía no hay ejecuciones."
+  },
+  "statusBadge": {
+    "live": "ACTIVA",
+    "manual": "bajo demanda",
+    "off": "inactiva",
+    "deactivated": "inhabilitada"
+  },
+  "triggerLabel": {
+    "manual": "Ejecución bajo demanda",
+    "transfer": "Se ejecuta con una transferencia",
+    "other": "Disparador {type}"
+  },
+  "duration": {
+    "milliseconds": "{ms} ms",
+    "seconds": "{seconds} s",
+    "minutes": "{minutes} min {seconds} s"
+  },
+  "runStatus": {
+    "executed": "Ejecutada",
+    "failed": "Fallida",
+    "cancelled": "Cancelada",
+    "skipped": "Omitida",
+    "running": "En curso"
+  },
+  "board": {
+    "title": "Automatizaciones",
+    "subtitle": "Flujos de trabajo que KeeperHub ejecuta para esta organización. Abre uno para ver sus pasos y ejecuciones, o ejecútalo ahora.",
+    "filterLabel": "Mostrar",
+    "filters": {
+      "all": "Todas",
+      "live": "Activas",
+      "manual": "Bajo demanda",
+      "off": "Inactivas"
+    },
+    "sortLabel": "Ordenar",
+    "sorts": {
+      "updated": "Actualizadas recientemente",
+      "name": "Nombre"
+    },
+    "loadFailed": "No se pudieron cargar las automatizaciones en este momento",
+    "retry": "Reintentar",
+    "emptyTitle": "Todavía no hay automatizaciones",
+    "emptyBody": "Pídele al chat que cree una o créala en KeeperHub. De cualquier forma, aparecerá aquí con sus pasos y ejecuciones.",
+    "createPrompt": "Ayúdame a crear una automatización.",
+    "createInChat": "Crear una en el chat →",
+    "openKeeperHub": "Abrir KeeperHub ↗",
+    "noneInView": "No hay automatizaciones en esta vista.",
+    "columns": {
+      "automation": "Automatización",
+      "status": "Estado",
+      "steps": "Pasos",
+      "networks": "Redes",
+      "updated": "Actualizada"
+    },
+    "open": "Abrir →"
+  },
+  "detail": {
+    "back": "← Automatizaciones",
+    "missingTitle": "Esta automatización no está disponible",
+    "missingBody": "Puede que se haya eliminado o que pertenezca a otra organización.",
+    "loadFailed": "No se pudo cargar esta automatización en este momento. {message}",
+    "created": "creada <time></time>",
+    "deactivated": "Esta automatización está inhabilitada en KeeperHub.",
+    "stats": {
+      "trigger": "Disparador",
+      "steps": "Pasos",
+      "networks": "Redes",
+      "lastRun": "Última ejecución",
+      "updated": "Actualizada"
+    },
+    "steps": "Pasos",
+    "noSteps": "Esta automatización todavía no tiene pasos.",
+    "recentRuns": "Ejecuciones recientes",
+    "justStarted": "Ejecución que acabas de iniciar",
+    "stillRunning": "Sigue en curso. Su resultado aparecerá aquí y en Actividad.",
+    "runsUnavailable": "El historial de ejecuciones de KeeperHub no está disponible en este momento.",
+    "noRuns": "Todavía no hay ejecuciones.",
+    "runSource": "ejecución",
+    "viewTx": "Ver",
+    "moreTx": "+{count} más"
+  },
+  "runDialog": {
+    "runningDryRun": "Ejecutando simulación…",
+    "acknowledge": "Acepta la advertencia",
+    "trigger": "Disparador",
+    "steps": "Pasos",
+    "networks": "Redes",
+    "explainer": "Todos los pasos se ejecutan ahora. Los pasos que mueven valor se ejecutan sin volver a detenerse.",
+    "dryRunLoading": "ejecutando simulación",
+    "dryRun": "Simulación",
+    "dryRunReason": "{reason} Autorizas exactamente lo que se muestra arriba.",
+    "noWarnings": "sin advertencias",
+    "checked": "{count, plural, one {# paso verificado} other {# pasos verificados}}.",
+    "checkedSkipped": "{count, plural, one {# paso verificado} other {# pasos verificados}}, {skipped} sin verificar."
+  },
+  "switchDialog": {
+    "onExplainer": "Una vez activada, KeeperHub la inicia por su cuenta y sus pasos se ejecutan sin volver a detenerse.",
+    "offExplainer": "Una vez desactivada, KeeperHub deja de iniciarla por su cuenta. Ejecutar ahora sigue funcionando."
+  }
+}

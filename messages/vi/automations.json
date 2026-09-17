@@ -1,0 +1,369 @@
+{
+  "actions": {
+    "authorize": "Cho phép",
+    "authorizing": "Đang cho phép…",
+    "edit": "Sửa",
+    "turnOn": "Bật",
+    "turnOff": "Tắt",
+    "turningOn": "Đang bật…",
+    "runNow": "Chạy ngay",
+    "running": "Đang chạy…",
+    "checkAgain": "Kiểm tra lại",
+    "openAutomation": "Mở tự động hóa →"
+  },
+  "acknowledge": {
+    "goAhead": "Vẫn tiếp tục. Tôi đã đọc các cảnh báo.",
+    "turnOn": "Vẫn bật. Tôi đã đọc các cảnh báo.",
+    "run": "Vẫn chạy. Tôi đã đọc các cảnh báo."
+  },
+  "failures": {
+    "noAnswer": "KeeperHub không phản hồi.",
+    "noAnswerConnection": "KeeperHub không phản hồi. Hãy kiểm tra kết nối internet và thử lại.",
+    "checkFailed": "Không thể chạy bước kiểm tra của KeeperHub.",
+    "notTurnedOn": "KeeperHub chưa bật tự động hóa này.",
+    "notChanged": "KeeperHub chưa thay đổi tự động hóa.",
+    "dryRunFailed": "KeeperHub không thể chạy thử tự động hóa này.",
+    "runNotStarted": "Không thể bắt đầu lượt chạy.",
+    "runNotStartedConnection": "Không thể bắt đầu lượt chạy. Hãy kiểm tra kết nối internet và thử lại."
+  },
+  "view": {
+    "trigger": {
+      "manual": "Theo yêu cầu, khi có người nhấn Chạy ngay",
+      "webhook": "Khi URL webhook của nó được gọi",
+      "schedule": "Theo lịch",
+      "block": "{count, plural, other {Mỗi {every} khối}}",
+      "event": "Khi {event} được phát ra",
+      "tempoPayment": "Khi có khoản thanh toán Tempo đến"
+    },
+    "rows": {
+      "cron": "Cron",
+      "timezone": "Múi giờ",
+      "contract": "Hợp đồng",
+      "recipient": "Đến",
+      "token": "Token",
+      "memo": "Ghi chú",
+      "condition": "Tiếp tục khi"
+    },
+    "stepFallback": "Bước",
+    "actionLabel": {
+      "checking": "Đang kiểm tra…",
+      "checkFailed": "Kiểm tra thất bại",
+      "blocked": "Không thể tiếp tục",
+      "acknowledge": "Xác nhận đã đọc cảnh báo"
+    },
+    "frame": {
+      "saving": {
+        "meta": "ĐANG LƯU",
+        "status": "Đang lưu vào KeeperHub…"
+      },
+      "savingChanges": {
+        "meta": "ĐANG LƯU",
+        "status": "Đang lưu thay đổi vào KeeperHub…"
+      },
+      "starting": {
+        "meta": "ĐANG KHỞI ĐỘNG",
+        "status": "Đang bắt đầu lượt chạy trong KeeperHub…"
+      },
+      "deleting": {
+        "meta": "ĐANG XÓA",
+        "status": "Đang xóa khỏi KeeperHub…"
+      },
+      "cancelled": {
+        "meta": "ĐÃ HỦY",
+        "status": "Đã hủy"
+      },
+      "notSent": {
+        "meta": "CHƯA GỬI",
+        "status": "Chưa gửi"
+      },
+      "cancelling": {
+        "meta": "ĐANG HỦY",
+        "status": "Đang hủy…"
+      },
+      "noAnswer": {
+        "meta": "KHÔNG CÓ PHẢN HỒI",
+        "status": "Đã cho phép, không lưu phản hồi"
+      },
+      "turningOn": {
+        "meta": "ĐANG BẬT",
+        "status": "Đang bật trong KeeperHub…"
+      },
+      "turningOff": {
+        "meta": "ĐANG TẮT",
+        "status": "Đang tắt trong KeeperHub…"
+      },
+      "neverAuthorized": {
+        "meta": "CHƯA ĐƯỢC CHO PHÉP",
+        "status": "Chưa được cho phép"
+      },
+      "authorizing": {
+        "meta": "ĐANG CHO PHÉP",
+        "status": "Đang cho phép…"
+      },
+      "edited": {
+        "meta": "ĐÃ SỬA",
+        "status": "Đã sửa, đang chờ bạn cho phép"
+      },
+      "awaiting": {
+        "meta": "CHỜ CHO PHÉP",
+        "status": "Đang chờ bạn cho phép"
+      },
+      "live": {
+        "meta": "HOẠT ĐỘNG",
+        "status": "Đã lưu và bật"
+      },
+      "savedOff": {
+        "meta": "ĐÃ LƯU · TẮT",
+        "status": "Đã lưu, đang tắt"
+      },
+      "saved": {
+        "meta": "ĐÃ LƯU",
+        "status": "Đã lưu thay đổi"
+      },
+      "deleted": {
+        "meta": "ĐÃ XÓA",
+        "status": "Đã xóa khỏi KeeperHub"
+      },
+      "executed": {
+        "meta": "ĐÃ THỰC HIỆN",
+        "status": "Đã thực hiện"
+      },
+      "failed": {
+        "meta": "THẤT BẠI",
+        "status": "Lượt chạy thất bại"
+      },
+      "stillRunning": {
+        "meta": "VẪN ĐANG CHẠY",
+        "status": "Vẫn đang chạy"
+      },
+      "running": {
+        "meta": "ĐANG CHẠY",
+        "status": "Đang chạy trong KeeperHub…"
+      },
+      "started": {
+        "meta": "ĐÃ BẮT ĐẦU",
+        "status": "Đã bắt đầu"
+      },
+      "turnedOn": {
+        "meta": "ĐÃ BẬT",
+        "status": "Đã bật"
+      },
+      "turnedOff": {
+        "meta": "ĐÃ TẮT",
+        "status": "Đã tắt"
+      }
+    },
+    "stamp": {
+      "live": "HOẠT ĐỘNG",
+      "saved": "ĐÃ LƯU",
+      "deleted": "ĐÃ XÓA",
+      "executed": "ĐÃ THỰC HIỆN",
+      "void": "VÔ HIỆU",
+      "on": "BẬT",
+      "off": "TẮT"
+    },
+    "kicker": {
+      "create": "Tự động hóa mới",
+      "update": "Thay đổi tự động hóa",
+      "run": "Lượt chạy tự động hóa",
+      "delete": "Xóa tự động hóa",
+      "turnOn": "Bật tự động hóa",
+      "turnOff": "Tắt tự động hóa"
+    },
+    "title": {
+      "create": "Tự động hóa mới",
+      "update": "Thay đổi một tự động hóa",
+      "run": "Chạy {name}",
+      "runAny": "Chạy một tự động hóa",
+      "delete": "Xóa {name}",
+      "deleteAny": "Xóa một tự động hóa",
+      "turnOn": "Bật {name}",
+      "turnOnAny": "Bật một tự động hóa",
+      "turnOff": "Tắt {name}",
+      "turnOffAny": "Tắt một tự động hóa"
+    },
+    "form": {
+      "name": "Tên",
+      "cron": "Lịch (cron)",
+      "timezone": "Múi giờ",
+      "network": "Mạng",
+      "every": "Mỗi N khối",
+      "contract": "Hợp đồng",
+      "event": "Tên sự kiện",
+      "abi": "ABI hợp đồng",
+      "abiPlaceholder": "Để trống nếu là hợp đồng đã xác minh",
+      "recipient": "Địa chỉ nạp",
+      "token": "Token",
+      "memo": "Ghi chú",
+      "stepField": "Bước {number} · {label}"
+    }
+  },
+  "card": {
+    "declinedRun": "Bạn đã từ chối lượt chạy này. Không có gì được chạy.",
+    "declinedProposal": "Bạn đã từ chối đề xuất này. Không có gì thay đổi trong KeeperHub.",
+    "checkValues": "Kiểm tra các giá trị này",
+    "starts": "Khởi động",
+    "steps": "Các bước",
+    "automation": "Tự động hóa",
+    "change": "Thay đổi",
+    "notSent": "Câu trả lời của bạn chưa tới KeeperHub. Hãy kiểm tra kết nối internet và thử lại.",
+    "noAnswer": "Việc này đã được cho phép, nhưng phản hồi của KeeperHub chưa bao giờ tới cuộc trò chuyện này. Trang Tự động hóa cho biết kết quả cuối cùng.",
+    "archived": "Chưa ai cho phép việc này trước khi cuộc trò chuyện được lưu trữ. Không có gì thay đổi.",
+    "updatedOn": "Tự động hóa đang bật, nên phiên bản mới sẽ chạy từ lần khởi động tiếp theo.",
+    "updatedKept": "Nó giữ nguyên trạng thái bật hoặc tắt.",
+    "deleted": "Đã xóa cùng lịch sử chạy. Nó không còn hiện trên trang Tự động hóa."
+  },
+  "savedFollowUp": {
+    "onDemand": "Nó chạy khi có người nhấn Chạy ngay trên trang của nó.",
+    "archived": "Đã lưu ở trạng thái tắt. Trang của nó cho biết từ đó đến giờ nó đã được bật hay chưa.",
+    "live": "Đang bật. Từ giờ KeeperHub sẽ tự khởi động nó.",
+    "off": "Nó đang tắt. Hãy bật sau khi đọc kết quả kiểm tra của KeeperHub, và nó sẽ tự khởi động."
+  },
+  "runFollowUp": {
+    "started": "Đã bắt đầu. Trang của tự động hóa cho biết lượt chạy kết thúc thế nào.",
+    "running": "Đang chạy trong KeeperHub. Thẻ này sẽ cập nhật khi hoàn tất.",
+    "executed": "Đã thực hiện.",
+    "transaction": "Giao dịch",
+    "failed": "Lượt chạy thất bại trong KeeperHub. Trang của nó cho biết bước nào đã dừng lại.",
+    "stale": "Vẫn đang chạy sau năm phút. Kết quả sẽ xuất hiện trên trang của nó và trong Hoạt động."
+  },
+  "previewBlock": {
+    "checking": "đang kiểm tra với KeeperHub",
+    "label": "Kiểm tra của KeeperHub",
+    "blocked": "bị chặn",
+    "warned": "đọc các cảnh báo",
+    "ready": "sẵn sàng",
+    "changes": "Những gì thay đổi"
+  },
+  "subjectBlock": {
+    "steps": "Các bước",
+    "noSteps": "chưa có bước nào"
+  },
+  "triggerBlock": {
+    "network": "Mạng"
+  },
+  "stepDetail": {
+    "movesValue": "chuyển giá trị"
+  },
+  "stepList": {
+    "off": "tắt"
+  },
+  "listCard": {
+    "meta": "{count, plural, other {# TỰ ĐỘNG HÓA}}",
+    "empty": "chưa có tự động hóa nào",
+    "steps": "{count, plural, other {# bước}}"
+  },
+  "detailCard": {
+    "unreadableMeta": "KHÔNG ĐỌC ĐƯỢC",
+    "unreadable": "không thể đọc tự động hóa này",
+    "statusMeta": {
+      "live": "HOẠT ĐỘNG",
+      "manual": "THEO YÊU CẦU",
+      "off": "TẮT",
+      "deactivated": "ĐÃ VÔ HIỆU HÓA"
+    },
+    "steps": "Các bước",
+    "noSteps": "chưa có bước nào",
+    "recentRuns": "Lượt chạy gần đây",
+    "runsUnavailable": "Lịch sử chạy của KeeperHub hiện không khả dụng.",
+    "noRuns": "Chưa có lượt chạy nào."
+  },
+  "statusBadge": {
+    "live": "HOẠT ĐỘNG",
+    "manual": "theo yêu cầu",
+    "off": "tắt",
+    "deactivated": "đã vô hiệu hóa"
+  },
+  "triggerLabel": {
+    "manual": "Chạy theo yêu cầu",
+    "transfer": "Chạy khi có chuyển khoản",
+    "other": "Trình kích hoạt {type}"
+  },
+  "duration": {
+    "milliseconds": "{ms} ms",
+    "seconds": "{seconds} giây",
+    "minutes": "{minutes} phút {seconds} giây"
+  },
+  "runStatus": {
+    "executed": "Đã thực hiện",
+    "failed": "Thất bại",
+    "cancelled": "Đã hủy",
+    "skipped": "Đã bỏ qua",
+    "running": "Đang chạy"
+  },
+  "board": {
+    "title": "Tự động hóa",
+    "subtitle": "Các quy trình KeeperHub chạy cho tổ chức này. Mở một quy trình để xem các bước và lượt chạy, hoặc chạy ngay.",
+    "filterLabel": "Hiển thị",
+    "filters": {
+      "all": "Tất cả",
+      "live": "Hoạt động",
+      "manual": "Theo yêu cầu",
+      "off": "Tắt"
+    },
+    "sortLabel": "Sắp xếp",
+    "sorts": {
+      "updated": "Mới cập nhật",
+      "name": "Tên"
+    },
+    "loadFailed": "Hiện không tải được tự động hóa",
+    "retry": "Thử lại",
+    "emptyTitle": "Chưa có tự động hóa nào",
+    "emptyBody": "Hãy nhờ trợ lý trong trò chuyện tạo một cái, hoặc tạo trong KeeperHub. Cách nào thì nó cũng sẽ hiện ở đây cùng các bước và lượt chạy.",
+    "createPrompt": "Giúp tôi tạo một tự động hóa.",
+    "createInChat": "Tạo trong trò chuyện →",
+    "openKeeperHub": "Mở KeeperHub ↗",
+    "noneInView": "Không có tự động hóa nào trong chế độ xem này.",
+    "columns": {
+      "automation": "Tự động hóa",
+      "status": "Trạng thái",
+      "steps": "Các bước",
+      "networks": "Mạng",
+      "updated": "Cập nhật"
+    },
+    "open": "Mở →"
+  },
+  "detail": {
+    "back": "← Tự động hóa",
+    "missingTitle": "Tự động hóa này không khả dụng",
+    "missingBody": "Có thể nó đã bị xóa, hoặc thuộc về tổ chức khác.",
+    "loadFailed": "Hiện không tải được tự động hóa này. {message}",
+    "created": "đã tạo <time></time>",
+    "deactivated": "Tự động hóa này đã bị vô hiệu hóa trong KeeperHub.",
+    "stats": {
+      "trigger": "Trình kích hoạt",
+      "steps": "Các bước",
+      "networks": "Mạng",
+      "lastRun": "Lần chạy cuối",
+      "updated": "Cập nhật"
+    },
+    "steps": "Các bước",
+    "noSteps": "Tự động hóa này chưa có bước nào.",
+    "recentRuns": "Lượt chạy gần đây",
+    "justStarted": "Lượt chạy bạn vừa bắt đầu",
+    "stillRunning": "Vẫn đang chạy. Kết quả sẽ xuất hiện ở đây và trong Hoạt động.",
+    "runsUnavailable": "Lịch sử chạy của KeeperHub hiện không khả dụng.",
+    "noRuns": "Chưa có lượt chạy nào.",
+    "runSource": "lượt chạy",
+    "viewTx": "Xem",
+    "moreTx": "+{count} khác"
+  },
+  "runDialog": {
+    "runningDryRun": "Đang chạy thử…",
+    "acknowledge": "Xác nhận đã đọc cảnh báo",
+    "trigger": "Trình kích hoạt",
+    "steps": "Các bước",
+    "networks": "Mạng",
+    "explainer": "Mọi bước sẽ chạy ngay. Các bước chuyển giá trị sẽ thực thi mà không dừng lại hỏi nữa.",
+    "dryRunLoading": "đang chạy thử",
+    "dryRun": "Chạy thử",
+    "dryRunReason": "{reason} Bạn cho phép đúng những gì hiển thị ở trên.",
+    "noWarnings": "không có cảnh báo",
+    "checked": "{count, plural, other {Đã kiểm tra # bước}}.",
+    "checkedSkipped": "{count, plural, other {Đã kiểm tra # bước}}, {skipped} bước không thể kiểm tra."
+  },
+  "switchDialog": {
+    "onExplainer": "Khi đã bật, KeeperHub sẽ tự khởi động nó, và các bước chạy mà không dừng lại hỏi nữa.",
+    "offExplainer": "Khi đã tắt, KeeperHub ngừng tự khởi động nó. Chạy ngay vẫn hoạt động."
+  }
+}

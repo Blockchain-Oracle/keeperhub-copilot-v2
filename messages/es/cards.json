@@ -1,0 +1,395 @@
+{
+  "receipt": {
+    "issued": "EMITIDO"
+  },
+  "labels": {
+    "amount": "Monto",
+    "recipient": "Destinatario",
+    "network": "Red",
+    "token": "Token",
+    "spender": "Gastador",
+    "allowance": "Permiso de gasto",
+    "allowanceBaseUnits": "Permiso de gasto (unidades base)",
+    "arguments": "Argumentos",
+    "valueSent": "Valor enviado",
+    "chainId": "ID de cadena",
+    "contractAddress": "Dirección del contrato",
+    "functionName": "Nombre de la función",
+    "functionArgs": "Argumentos de la función",
+    "value": "Valor",
+    "gasLimitMultiplier": "Multiplicador del límite de gas",
+    "priorityFeeGwei": "Tarifa de prioridad (gwei)",
+    "abi": "ABI",
+    "integrationId": "ID de integración"
+  },
+  "checks": {
+    "amountDot": "Ingresa un monto con punto para los decimales, por ejemplo 0.5.",
+    "chooseNetwork": "Elige una red.",
+    "addressForNetwork": "Ingresa una dirección válida para esta red.",
+    "chooseListedOption": "Elige una de las opciones de la lista."
+  },
+  "fix": {
+    "number": "Ingresa un número.",
+    "yesNo": "Elige sí o no.",
+    "address": "Ingresa una dirección que empiece con 0x y tenga 40 caracteres hexadecimales.",
+    "uint": "Ingresa un número entero sin punto decimal ni signo.",
+    "int": "Ingresa un número entero. Se permite un signo menos al inicio.",
+    "bytes": "Ingresa un valor hexadecimal 0x con un número par de dígitos.",
+    "datetime": "Ingresa una fecha y una hora.",
+    "other": "Revisa este valor y vuelve a intentarlo."
+  },
+  "effectClass": {
+    "valueMovingWrite": "escritura que mueve valor",
+    "authorizationGrant": "concesión de autorización",
+    "configManagementWrite": "escritura de configuración",
+    "offChainSend": "envío off-chain",
+    "listingPayment": "pago de publicación",
+    "read": "lectura"
+  },
+  "write": {
+    "noPreview": "No es posible previsualizar esta acción. Confirmas la instrucción exacta que se muestra abajo.",
+    "unavailable": "Las llamadas a contratos en Solana no están disponibles en esta versión. Pide una lectura de Solana mediante una acción de protocolo.",
+    "chip": {
+      "simulated": "Simulado",
+      "noPreview": "Sin vista previa",
+      "needsCredential": "Requiere credencial",
+      "proposed": "Propuesto"
+    },
+    "facts": {
+      "gasEstimate": "Gas estimado",
+      "gasUnits": "{units} unidades",
+      "returns": "Devuelve"
+    },
+    "meta": {
+      "executed": "EJECUTADO",
+      "cancelled": "CANCELADO",
+      "notSent": "NO ENVIADO",
+      "cancelling": "CANCELANDO",
+      "noReceipt": "SIN RECIBO",
+      "sending": "ENVIANDO",
+      "neverAuthorized": "NUNCA AUTORIZADO",
+      "notAvailable": "NO DISPONIBLE",
+      "needsCredential": "REQUIERE CREDENCIAL",
+      "authorizing": "AUTORIZANDO",
+      "edited": "EDITADO",
+      "awaiting": "PENDIENTE DE AUTORIZACIÓN"
+    },
+    "status": {
+      "executed": "Ejecutado",
+      "cancelled": "Cancelado",
+      "notSent": "No enviado",
+      "cancelling": "Cancelando…",
+      "noReceipt": "Autorizado, sin recibo guardado",
+      "sending": "Enviando a través de KeeperHub…",
+      "neverAuthorized": "Nunca autorizado",
+      "notAvailable": "No disponible en esta versión",
+      "needsCredential": "Primero requiere una credencial",
+      "authorizing": "Autorizando…",
+      "edited": "Editado, pendiente de tu autorización",
+      "awaiting": "Pendiente de tu autorización"
+    },
+    "authorize": {
+      "authorizing": "Autorizando…",
+      "notAvailable": "No disponible",
+      "needsCredential": "Requiere una credencial",
+      "dryRunning": "Ejecutando simulación…",
+      "dryRunFailed": "La simulación falló",
+      "acknowledge": "Acepta la advertencia",
+      "authorize": "Autorizar"
+    },
+    "verb": {
+      "contractWrite": "Escritura en contrato",
+      "write": "Escritura"
+    },
+    "title": {
+      "approve": "Aprobar un gastador",
+      "call": "Llamar a {name}",
+      "send": "Enviar {amount} {unit}"
+    },
+    "kicker": {
+      "valueMoving": "Escritura que mueve valor",
+      "authorizationGrant": "Concesión de autorización"
+    },
+    "dryRunUnprepared": "No se pudo preparar la simulación.",
+    "declined": "Rechazaste esta propuesta. No se envió nada.",
+    "applyDryRun": "Simular estos valores",
+    "applyValues": "Usar estos valores",
+    "acknowledge": "Enviar de todos modos. Entiendo que se espera que falle y que aun así puede costar gas.",
+    "notReached": "Tu respuesta no llegó a KeeperHub. Revisa tu conexión y vuelve a intentarlo.",
+    "receiptMissing": "Esto se autorizó, pero su recibo nunca llegó a este chat. Actividad muestra cómo terminó.",
+    "archived": "Nadie autorizó esto antes de que se archivara el chat. No se envió nada.",
+    "edit": "Editar",
+    "discard": "Descartar",
+    "transfer": {
+      "from": "de",
+      "to": "a",
+      "orgWallet": "billetera de la org.",
+      "amount": "monto"
+    },
+    "dryRun": {
+      "label": "Simulación",
+      "cannot": "KeeperHub no puede simular esta acción. Autorizas exactamente lo que se muestra arriba.",
+      "running": "ejecutando simulación",
+      "wouldNotSucceed": "Esto no tendría éxito.",
+      "wouldRevert": "La transacción se revertiría.",
+      "wouldSucceed": "tendría éxito"
+    },
+    "tx": {
+      "label": "Tx",
+      "explorer": "Explorador",
+      "verified": "Verificado",
+      "yes": "sí",
+      "no": "no"
+    }
+  },
+  "moneyMover": {
+    "unknownNetwork": "Red desconocida",
+    "chain": "Cadena {id}",
+    "send": "Enviar",
+    "approve": "Aprobar",
+    "summary": "Enviaste {amount} a {address}.",
+    "unlimitedWarning": "Esto aprueba un permiso de gasto ilimitado. El gastador podría mover cualquier cantidad de este token.",
+    "unlimited": "Ilimitado",
+    "veryLarge": "Muy grande",
+    "enterAmount": "Ingresa un monto.",
+    "noComma": "Usa punto para los decimales (0.5) y no uses separadores de miles.",
+    "maxDecimals": "Ingresa un monto con {decimals} decimales como máximo."
+  },
+  "writeForm": {
+    "tokenPlaceholder": "Si lo dejas vacío, se envía la moneda propia de la red"
+  },
+  "editCheck": {
+    "unreadable": "No se pudo leer esta propuesta.",
+    "automationFixed": "Aquí no se puede cambiar qué automatización se modifica. Vuelve a pedirlo para recibir una propuesta nueva.",
+    "notEditable": "Esta acción no se puede editar.",
+    "tokenAddress": "Ingresa una dirección de token válida o déjala vacía para enviar la moneda nativa.",
+    "callFixed": "Esta parte de la llamada no se puede cambiar aquí. Vuelve a pedirlo para recibir una propuesta nueva.",
+    "argumentsList": "Ingresa los argumentos como una lista JSON.",
+    "spender": "Ingresa una dirección de gastador válida.",
+    "allowance": "Ingresa un número entero de unidades base.",
+    "actionFixed": "La acción no se puede cambiar aquí. Vuelve a pedirlo para recibir una propuesta nueva.",
+    "actionGone": "Esta acción ya no está disponible.",
+    "hiddenSetting": "Esta configuración oculta no se puede cambiar.",
+    "startFixed": "El tipo de inicio no se puede cambiar aquí. Vuelve a pedirlo para recibir una propuesta nueva.",
+    "stepsFixed": "Aquí no se puede cambiar qué pasos se ejecutan ni su orden. Vuelve a pedirlo para recibir una propuesta nueva."
+  },
+  "toolMeta": {
+    "integration": {
+      "search": "Catálogo de acciones",
+      "form": "Tus datos"
+    },
+    "title": {
+      "lookupFor": "Buscó acciones para “{query}”",
+      "lookup": "Buscó acciones",
+      "protocolAction": "Acción de protocolo",
+      "calledFunction": "Llamó a {name}",
+      "contractCall": "Llamada a contrato",
+      "transfer": "Transferencia",
+      "walletIntegration": "Leyó una integración de billetera",
+      "listAutomations": "Listó automatizaciones",
+      "getAutomation": "Leyó una automatización",
+      "createNamed": "Propuso la automatización “{name}”",
+      "create": "Propuso una automatización",
+      "turnOff": "Propuso desactivar una automatización",
+      "turnOn": "Propuso activar una automatización",
+      "updateNamed": "Propuso cambios en “{name}”",
+      "update": "Propuso cambios en una automatización",
+      "run": "Propuso ejecutar una automatización",
+      "holdings": "Leyó los activos de la billetera de la organización",
+      "askNamed": "Te pidió datos: {title}",
+      "ask": "Te pidió datos",
+      "delete": "Propuso eliminar una automatización"
+    },
+    "detail": {
+      "action": "acción",
+      "name": "nombre",
+      "starts": "inicia",
+      "step": "paso {position}",
+      "error": "error",
+      "notCompleted": "no completado",
+      "result": "resultado",
+      "state": "estado"
+    }
+  },
+  "format": {
+    "addressEnding": "dirección que termina en {last}",
+    "hashEnding": "hash que termina en {last}"
+  },
+  "renderer": {
+    "formUnanswerable": "No se pudo responder este formulario.",
+    "toolCallIncomplete": "Esta llamada a herramienta no se pudo completar.",
+    "needsCredential": "Esta acción necesita una credencial vinculada antes de poder ejecutarse.",
+    "actionIncomplete": "Esta acción no se pudo completar."
+  },
+  "announce": {
+    "working": "Procesando.",
+    "capabilities": "Acciones coincidentes listadas.",
+    "read": "{label}, leído.",
+    "needsCredential": "{label}, requiere una credencial.",
+    "automations": "Automatizaciones listadas.",
+    "automation": "Automatización descrita.",
+    "holdings": "Activos de la billetera de la organización listados.",
+    "formOpen": "Faltan datos. Completa el formulario.",
+    "formSent": "Datos enviados.",
+    "proposed": "{label}, esperando tu aprobación.",
+    "executing": "{label}, enviando.",
+    "declined": "{label}, rechazado. No se ejecutó nada.",
+    "automationDone": "Automatización, completada.",
+    "executed": "{label}, ejecutado.",
+    "automationLabel": "Automatización",
+    "resultLabel": "Resultado"
+  },
+  "error": {
+    "boundary": {
+      "notAvailable": "NO DISPONIBLE",
+      "paused": "EN PAUSA",
+      "needsAccess": "REQUIERE ACCESO",
+      "reconnect": "RECONECTAR",
+      "checkInputs": "REVISA LOS DATOS"
+    },
+    "void": "ANULADO",
+    "field": "campo",
+    "connect": "Conectar KeeperHub",
+    "reauthorize": "Volver a autorizar KeeperHub",
+    "rateLimited": "El descubrimiento sigue funcionando. Vuelve a intentar la lectura en un momento.",
+    "title": {
+      "action": "Acción no completada",
+      "contractCall": "Llamada a contrato no completada",
+      "transfer": "Transferencia no completada",
+      "walletRead": "Lectura de billetera no completada",
+      "search": "Búsqueda no completada",
+      "other": "No completado"
+    }
+  },
+  "read": {
+    "meta": {
+      "replaced": "REEMPLAZADO",
+      "edited": "EDITADO",
+      "read": "LECTURA"
+    },
+    "title": {
+      "contractRead": "Lectura de contrato",
+      "walletIntegration": "Integración de billetera",
+      "read": "Lectura"
+    },
+    "alternatives": "Alternativas",
+    "request": "Solicitud",
+    "runAgain": "Volver a ejecutar",
+    "working": "Procesando.",
+    "blocked": "Hay que ajustar algunos parámetros antes de poder ejecutar esto.",
+    "result": "Resultado",
+    "contract": "contrato",
+    "replaced": "Reemplazada por una tarjeta más reciente abajo.",
+    "edited": "Editado."
+  },
+  "price": {
+    "round": "RONDA {round}",
+    "updated": "actualizado",
+    "gathering": "recopilando señal",
+    "historyUnavailable": "historial no disponible",
+    "lastUpdates": "últimas {count} actualizaciones",
+    "expand": "expandir"
+  },
+  "balance": {
+    "orgWallet": "BILLETERA DE LA ORG.",
+    "meta": "SALDO",
+    "scanToSend": "escanea para enviar"
+  },
+  "holdings": {
+    "unreadableMeta": "ILEGIBLE",
+    "unreadable": "no se pudieron leer los activos",
+    "orgWallet": "BILLETERA DE LA ORG.",
+    "nothing": "no hay activos en ninguna red",
+    "caveat": "Saldos de KeeperHub. Un token que no pudo leer aparece como 0.",
+    "networkUnavailable": "KeeperHub no pudo leer esta red en este momento."
+  },
+  "capability": {
+    "matches": "{count, plural, one {{count} COINCIDENCIA} other {{count} COINCIDENCIAS}}",
+    "none": "no hay acciones coincidentes",
+    "signs": "firma",
+    "more": "+ {count} más"
+  },
+  "needsCredential": {
+    "meta": "REQUIERE CREDENCIAL",
+    "title": "Requiere una credencial",
+    "setup": "Configura la credencial de {integration} en KeeperHub y vuelve a pedirlo."
+  },
+  "skeleton": {
+    "working": "procesando",
+    "fetching": "OBTENIENDO"
+  },
+  "stub": {
+    "unrenderable": "tarjeta que no se puede mostrar",
+    "meta": "EN BRUTO",
+    "couldNotDraw": "No se pudo mostrar esta tarjeta. Los detalles en bruto están abajo.",
+    "rawDetails": "Detalles en bruto"
+  },
+  "parts": {
+    "items": "{count, plural, one {{count} elemento} other {{count} elementos}}",
+    "noData": "no se devolvieron datos",
+    "value": "Valor"
+  },
+  "fields": {
+    "required": "(obligatorio)",
+    "yes": "Sí",
+    "no": "No",
+    "fallbackNote": "Este campo conserva su valor actual. Edita los demás y vuelve a ejecutar.",
+    "none": "Ninguno.",
+    "help": "Ayuda: {label}",
+    "chooseNetwork": "Elige una red"
+  },
+  "form": {
+    "unreadableMeta": "ILEGIBLE",
+    "unreadable": "no se pudo leer este formulario",
+    "title": "Faltan datos",
+    "meta": {
+      "notSent": "NO ENVIADO",
+      "closed": "CERRADO",
+      "answered": "RESPONDIDO",
+      "fillingAbove": "COMPLETANDO ARRIBA",
+      "detailsNeeded": "FALTAN DATOS",
+      "neverAnswered": "SIN RESPUESTA"
+    },
+    "status": {
+      "notSent": "Tu respuesta no llegó a KeeperHub",
+      "closed": "Cerrado sin respuesta",
+      "answered": "Enviado al asistente",
+      "fillingAbove": "Complétalo arriba de la barra de voz",
+      "waiting": "Esperando tus datos",
+      "neverAnswered": "Nunca se respondió"
+    },
+    "useOrgWallet": "Usar la billetera de mi organización",
+    "checkHighlighted": "Revisa los datos resaltados.",
+    "sending": "Enviando…",
+    "tokenPlaceholder": "Símbolo o dirección del token",
+    "issues": {
+      "unreadable": "No se pudo leer la respuesta.",
+      "notAsked": "Este dato no se solicitó.",
+      "asText": "Ingresa esto como texto.",
+      "needed": "Falta {label}.",
+      "tooLong": "Es demasiado largo.",
+      "chooseToken": "Elige uno de los tokens de la lista.",
+      "token": "Ingresa un símbolo de token o su dirección."
+    }
+  },
+  "share": {
+    "unreachable": "No se pudo acceder al enlace para compartir.",
+    "offline": "Revisa tu conexión y vuelve a intentarlo.",
+    "failed": "No se pudo compartir",
+    "copiedTitle": "Enlace copiado",
+    "copiedBody": "Quien lo tenga verá este recibo, nunca tu chat.",
+    "readyTitle": "Enlace listo",
+    "sheetTitle": "Un recibo de KeeperHub",
+    "offTitle": "Enlace desactivado",
+    "offBody": "Quien lo abra ahora verá que no está compartido.",
+    "ariaLabel": "Compartir recibo",
+    "share": "Compartir",
+    "checking": "Verificando…",
+    "copyLink": "Copiar enlace",
+    "createAndCopy": "Crear y copiar enlace",
+    "shareSheet": "Compartir…",
+    "openLink": "Abrir enlace",
+    "stop": "Dejar de compartir",
+    "explainer": "Quien tenga el enlace verá la acción, la red, el monto, el destinatario y la transacción. Nunca tu chat."
+  }
+}

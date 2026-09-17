@@ -1,0 +1,117 @@
+{
+  "history": {
+    "title": "Verlauf",
+    "subtitle": {
+      "empty": "Deine Unterhaltungen und was jede davon ausgeführt hat.",
+      "counts": "{conversations, plural, one {# Unterhaltung} other {# Unterhaltungen}} · {executed, plural, one {# ausgeführte Aktion} other {# ausgeführte Aktionen}}"
+    },
+    "error": {
+      "title": "Dein Verlauf konnte nicht geladen werden",
+      "body": "Deine Unterhaltungen sind weiterhin gespeichert. Wir konnten sie nur gerade nicht abrufen.",
+      "retry": "Erneut versuchen"
+    },
+    "empty": {
+      "title": "Noch keine Unterhaltungen",
+      "body": "Jede Unterhaltung wird hier mit dem gespeichert, was sie ausgeführt hat. Starte einen Chat, um deine erste zu beginnen.",
+      "openChat": "Chat öffnen"
+    },
+    "card": {
+      "executed": "{count} ausgeführt",
+      "readsOnly": "nur Abfragen",
+      "open": "Öffnen",
+      "seal": "Ausgeführte Aktionen"
+    }
+  },
+  "activity": {
+    "title": "Aktivität",
+    "subtitle": "Was über den Copilot für diese Organisation lief, neueste zuerst. Zeiten in UTC.",
+    "filter": {
+      "label": "Anzeigen",
+      "actions": "Aktionen",
+      "reads": "Abfragen",
+      "all": "Alle"
+    },
+    "error": {
+      "title": "Aktivität konnte gerade nicht geladen werden",
+      "body": "Die Einträge sind weiterhin da. Wir konnten sie nur gerade nicht abrufen.",
+      "retry": "Erneut versuchen"
+    },
+    "empty": {
+      "actions": {
+        "title": "Noch nichts gesendet",
+        "body": "Aktionen, die du im Chat autorisierst, erscheinen hier mit ihren Belegen."
+      },
+      "reads": {
+        "title": "Noch keine Abfragen",
+        "body": "Preise, Guthaben und jede andere Abfrage des Assistenten erscheinen hier."
+      },
+      "all": {
+        "title": "Hier ist noch nichts",
+        "body": "Alles, was der Copilot für diese Organisation ausführt, erscheint hier, neueste zuerst."
+      },
+      "openChat": "Chat öffnen"
+    },
+    "columns": {
+      "what": "Was",
+      "network": "Netzwerk",
+      "outcome": "Ergebnis",
+      "transaction": "Transaktion",
+      "when": "Wann",
+      "from": "Quelle"
+    },
+    "loadMore": "Mehr laden",
+    "loadMoreFailed": "Mehr konnte nicht geladen werden. Versuche es erneut.",
+    "view": "Ansehen",
+    "fromChat": "Chat",
+    "fromAutomation": "Automatisierung",
+    "verb": {
+      "send": "Senden",
+      "contractCall": "Contract-Aufruf",
+      "walletIntegration": "Wallet-Integration",
+      "automationRun": "Automatisierungslauf",
+      "automationCreated": "Neue Automatisierung",
+      "automationChanged": "Automatisierung geändert",
+      "automationOn": "Automatisierung eingeschaltet",
+      "automationOff": "Automatisierung ausgeschaltet",
+      "automationDeleted": "Automatisierung gelöscht"
+    },
+    "outcome": {
+      "executed": "Ausgeführt",
+      "running": "Läuft",
+      "saved": "Gespeichert",
+      "saving": "Speichert",
+      "on": "An",
+      "turningOn": "Schaltet ein",
+      "off": "Aus",
+      "turningOff": "Schaltet aus",
+      "deleted": "Gelöscht",
+      "deleting": "Löscht",
+      "failed": "Fehlgeschlagen",
+      "paidFailed": "Bezahlt, fehlgeschlagen",
+      "cancelled": "Abgebrochen",
+      "expired": "Abgelaufen",
+      "sending": "Sendet",
+      "read": "Gelesen"
+    }
+  },
+  "sharedReceipt": {
+    "kicker": "Geteilter Beleg",
+    "stamp": "AUSGEFÜHRT",
+    "executed": "Ausgeführt",
+    "verified": "On-chain verifiziert von KeeperHub",
+    "sent": "Über KeeperHub gesendet",
+    "tokens": "Token",
+    "rows": {
+      "network": "Netzwerk",
+      "token": "Token",
+      "block": "Block",
+      "executed": "Ausgeführt"
+    },
+    "footnote": "Geteilt aus KeeperHub Copilot. Es werden nur öffentliche On-Chain-Daten angezeigt.",
+    "tryCopilot": "KeeperHub Copilot testen",
+    "notFound": {
+      "title": "Dieser Beleg ist nicht geteilt",
+      "body": "Der Link wurde deaktiviert oder hat nie existiert."
+    }
+  }
+}

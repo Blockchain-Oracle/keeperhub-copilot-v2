@@ -1,0 +1,267 @@
+{
+  "nav": {
+    "primary": "기본 탐색",
+    "beta": "베타",
+    "items": {
+      "chat": {
+        "name": "채팅",
+        "description": "온체인의 무엇이든 요청하세요."
+      },
+      "history": {
+        "name": "기록",
+        "description": "지난 대화를 영수증까지 모두 다시 봅니다."
+      },
+      "activity": {
+        "name": "활동",
+        "description": "조직 지갑이 실행한 모든 내역입니다."
+      },
+      "automations": {
+        "name": "자동화",
+        "description": "KeeperHub가 대신 실행하는 워크플로입니다."
+      },
+      "actions": {
+        "name": "작업",
+        "description": "KeeperHub가 실행할 수 있는 모든 읽기·쓰기 작업입니다."
+      },
+      "gettingStarted": {
+        "name": "시작하기",
+        "description": "KeeperHub를 연결하고 첫 질문을 해 보세요."
+      },
+      "mcp": {
+        "name": "MCP 설정",
+        "description": "Claude, Cursor 또는 모든 MCP 클라이언트에서 KeeperHub를 사용하세요."
+      },
+      "howItWorks": {
+        "name": "작동 방식",
+        "description": "바로 실행되는 것과 클릭을 기다리는 것."
+      }
+    },
+    "groups": {
+      "build": {
+        "name": "빌드",
+        "description": "KeeperHub가 실행할 작업을 자동화하세요."
+      },
+      "learn": {
+        "name": "알아보기",
+        "description": "Copilot과 KeeperHub 가이드입니다."
+      }
+    },
+    "sections": {
+      "automate": {
+        "name": "자동화하기",
+        "description": "워크플로와 작업"
+      },
+      "guides": {
+        "name": "가이드",
+        "description": "여기서 시작하세요"
+      }
+    }
+  },
+  "mobileNav": {
+    "label": "모바일 기본 탐색",
+    "openAll": "전체 메뉴 열기",
+    "more": "더보기",
+    "eyebrow": "탐색",
+    "title": "KeeperHub Copilot의 모든 메뉴",
+    "description": "자동화하고, 둘러보고, 배워 보세요. 각 메뉴는 한곳에만 있습니다.",
+    "allDestinations": "KeeperHub Copilot 전체 메뉴"
+  },
+  "connect": {
+    "connect": "KeeperHub 연결",
+    "connecting": "연결 중…",
+    "unreachable": "KeeperHub 연결 불가",
+    "noOrgWallet": "조직 지갑 없음"
+  },
+  "accountMenu": {
+    "open": "계정 메뉴 열기",
+    "noWalletTitle": "이 조직에는 아직 지갑이 없습니다",
+    "walletLabel": "조직 지갑 {address}",
+    "noWalletLabel": "조직 지갑 없음",
+    "noWallet": "지갑 없음",
+    "menu": "계정",
+    "orgWallet": "조직 지갑",
+    "spentToday": "오늘 사용액",
+    "spentTitle": "오늘 EVM 네트워크 전체에서 옮긴 금액으로, KeeperHub가 적용하는 일일 한도와 비교한 값입니다.",
+    "spentTitleDefault": "오늘 EVM 네트워크 전체에서 옮긴 금액으로, KeeperHub가 적용하는 일일 한도(KeeperHub 기본값)와 비교한 값입니다.",
+    "limitUnavailable": "KeeperHub가 지금은 일일 한도를 알려 주지 못했습니다.",
+    "copyAddress": "주소 복사",
+    "viewOnExplorer": "익스플로러에서 보기",
+    "disconnect": "연결 해제"
+  },
+  "moneyPill": {
+    "unavailable": "지금은 이 네트워크의 잔액을 확인할 수 없습니다",
+    "noWallet": "이 조직에는 아직 지갑이 없습니다",
+    "addFunds": "자금 추가",
+    "balance": "조직 지갑 잔액 {amount} {symbol}. 자금 추가",
+    "balanceUnavailable": "조직 지갑 잔액을 확인할 수 없습니다. 자금 추가"
+  },
+  "networkPill": {
+    "label": "네트워크: {name}",
+    "mainnets": "메인넷",
+    "testnets": "테스트넷",
+    "loading": "네트워크 불러오는 중…",
+    "unavailable": "지금은 KeeperHub 네트워크 목록을 불러올 수 없습니다."
+  },
+  "language": {
+    "title": "언어 선택",
+    "description": "앱, 채팅, 음성에서 이 언어를 사용합니다.",
+    "switched": "답변 언어: {language}",
+    "switchedDescription": "채팅은 다음 메시지부터, 음성은 다음 세션부터 이 언어로 답합니다."
+  },
+  "appStrip": {
+    "label": "KeeperHub Copilot 소개",
+    "lines": {
+      "readsRun": "읽기는 바로 실행됩니다. 모든 쓰기는 클릭을 기다립니다",
+      "orgWalletSigns": "KeeperHub 조직 지갑이 서명합니다. 브라우저 지갑은 필요 없습니다"
+    },
+    "howItWorks": "작동 방식",
+    "dismiss": "닫기"
+  },
+  "marquee": {
+    "networks": "네트워크",
+    "unavailable": "사용 불가",
+    "loading": "불러오는 중"
+  },
+  "capabilityPending": {
+    "waiting": "아직 연결되지 않음 · {dependency} 대기 중"
+  },
+  "writeRecovery": {
+    "landed": "이전 작업이 완료되었습니다",
+    "landedReceipt": "{name}. 영수증은 활동에 있습니다.",
+    "landedRecorded": "{name}. 활동에 기록되었습니다.",
+    "failed": "이전 작업이 처리되지 않았습니다",
+    "failedDescription": "{name}. KeeperHub에 실패로 기록되었습니다. 재시도하지 않았습니다.",
+    "expired": "이전 작업을 확인할 수 없습니다",
+    "expiredDescription": "{name}: 하루 넘게 전에 시작되었지만 확정되지 않았습니다. 다시 시도하기 전에 활동을 확인하세요.",
+    "pending": "{count, plural, other {이전 작업 #개를 아직 확인하고 있습니다}}",
+    "pendingDescription": "KeeperHub가 아직 확정하지 않았습니다. 자동으로 재시도하지 않습니다."
+  },
+  "signIn": {
+    "eyebrow": "KeeperHub · 연결",
+    "description": "Copilot은 KeeperHub 계정으로 로그인합니다. 서명은 조직 지갑이 하며, 승인한 작업에만 서명합니다.",
+    "continueWithKeeperHub": "KeeperHub로 계속하기",
+    "continueHint": "계속",
+    "footer": "조직 지갑이 서명 · 브라우저 지갑 불필요",
+    "errors": {
+      "denied": "KeeperHub에서 취소하여 아무것도 연결되지 않았습니다.",
+      "failed": "KeeperHub 로그인이 완료되지 않았습니다. 다시 시도하세요."
+    },
+    "status": {
+      "online": "KeeperHub 온라인",
+      "unreachable": "KeeperHub 연결 불가",
+      "checking": "KeeperHub 확인 중"
+    }
+  },
+  "signInGate": {
+    "eyebrow": "KeeperHub · 신분증",
+    "title": "<em>자격 증명</em>을 넣어 주세요.",
+    "body": "Copilot은 <highlight>내</highlight> KeeperHub 계정을 통해 체인 상태를 읽고 작업을 실행합니다. 한 번만 로그인하면, 승인한 작업에 조직 지갑이 서명합니다.",
+    "retry": "KeeperHub 연결 불가 · 다시 시도",
+    "writesWait": "모든 쓰기는 여전히 클릭을 기다립니다.",
+    "counts": "{actions, plural, other {작업 #개}} · {integrations, plural, other {통합 #개}}",
+    "networks": "{count, plural, other {네트워크 #개}}",
+    "networksUnknown": "네트워크 —"
+  },
+  "tutorial": {
+    "steps": {
+      "welcome": {
+        "title": "KeeperHub Copilot에 오신 것을 환영합니다",
+        "description": "KeeperHub를 위한 채팅입니다. 가격, 잔액, 전송, 자동화를 쉬운 말로 요청하세요. Copilot이 알맞은 KeeperHub 작업을 골라 실행하고 결과를 카드로 보여 줍니다."
+      },
+      "readsRun": {
+        "title": "읽기는 실행, 쓰기는 대기",
+        "description": "가격이나 잔액처럼 보기만 하는 작업은 바로 실행됩니다. 자산을 옮기는 작업은 모든 필드가 채워진 카드로 멈춥니다. 수정하고 모의 실행한 뒤 승인하거나 거절하세요. 클릭하기 전에는 아무것도 움직이지 않습니다."
+      },
+      "orgWallet": {
+        "title": "조직 지갑이 서명합니다",
+        "description": "브라우저 지갑이 아니라 KeeperHub 계정으로 로그인합니다. KeeperHub가 조직을 위해 관리하는 지갑이, KeeperHub가 적용하는 일일 한도 안에서 승인한 작업에 서명합니다."
+      },
+      "money": {
+        "title": "자금이 있는 곳",
+        "description": "헤더의 잔액 표시는 선택한 네트워크의 조직 지갑입니다. +를 누르면 입금용 주소와 QR 코드가 표시됩니다. 네트워크별 잔액은 각각 따로이며 서로 합산되지 않습니다."
+      },
+      "connect": {
+        "title": "연결하고 시작하기",
+        "description": "로그인하면 KeeperHub가 열리고, 완료되면 바로 이곳으로 돌아옵니다."
+      }
+    },
+    "skip": "건너뛰기",
+    "next": "다음",
+    "done": "시작하기",
+    "lastStep": "마지막 단계",
+    "connectTitle": "시작하려면 KeeperHub를 연결하세요",
+    "connectNote": "로그인은 한 번이면 됩니다. 모든 읽기와 승인된 쓰기는 KeeperHub 조직을 통해 실행됩니다.",
+    "progress": "{total}단계 중 {step}단계"
+  },
+  "addFunds": {
+    "eyebrow": "자금 추가 · {network, select, testnet {testnet} other {mainnet}}",
+    "title": "조직 지갑에 자금 추가",
+    "description": "{network}에서 KeeperHub 조직 지갑으로 {symbol} 입금하세요. 승인한 작업의 가스비로 쓰입니다. 반드시 이 네트워크로만 보내세요.",
+    "connectFirst": "먼저 KeeperHub를 연결하세요.",
+    "noWallet": "이 조직에는 아직 지갑이 없습니다. KeeperHub는 조직마다 지갑을 하나씩 만듭니다. KeeperHub 설정을 확인하세요.",
+    "orgWallet": "조직 지갑",
+    "copyAddress": "조직 지갑 주소 복사",
+    "copied": "복사됨 ✓",
+    "scanToSend": "스캔하여 보내기",
+    "nativeOn": "{network}의 {symbol}",
+    "checking": "잔액 확인 중…",
+    "unavailable": "잔액 확인 불가",
+    "startInChat": "채팅에서 시작",
+    "checkAgain": "잔액 다시 확인",
+    "rereads": "이 탭으로 돌아오면 잔액을 다시 읽습니다.",
+    "viewOnExplorer": "익스플로러에서 보기"
+  },
+  "receiptWelcome": {
+    "eyebrow": "첫 영수증",
+    "title": "첫 작업이 완료되었습니다",
+    "body": "KeeperHub가 실행했고 체인에서 확정되었습니다. 영수증은 활동에 있으며, 이후의 영수증도 모두 그곳에 쌓입니다.",
+    "keepGoing": "계속하기"
+  },
+  "palette": {
+    "trigger": "검색",
+    "title": "KeeperHub Copilot 검색",
+    "search": "페이지, 네트워크, 작업 검색",
+    "placeholder": "페이지, 네트워크, 작업 검색…",
+    "results": "결과",
+    "moreActions": "{count}개 더 · 모든 작업 보기",
+    "moreNetworks": "{count}개 더 · 계속 입력해 좁히기",
+    "loadingActions": "작업 불러오는 중…",
+    "actionsFailed": "작업을 불러오지 못했습니다. 닫았다가 다시 여세요.",
+    "noResults": "“{query}”에 대한 결과가 없습니다",
+    "noResultsHint": "“aave”, “sepolia”, “활동”을 입력해 보세요.",
+    "move": "이동",
+    "open": "열기",
+    "close": "닫기",
+    "resultCount": "{count, plural, other {결과 #개}}",
+    "signs": "서명 필요",
+    "selected": "선택됨",
+    "here": "현재",
+    "switched": "네트워크 전환: {network}",
+    "switchedDescription": "새 질문과 카드에 이 네트워크가 사용됩니다.",
+    "sections": {
+      "page": "페이지",
+      "network": "네트워크",
+      "language": "언어",
+      "action": "작업"
+    },
+    "testnet": "테스트넷",
+    "mainnet": "메인넷",
+    "chain": "체인 {id}",
+    "languageSubtitle": "언어 · {code}",
+    "languageKeywords": "언어 language languages"
+  },
+  "toast": {
+    "close": "알림 닫기"
+  },
+  "identicon": {
+    "label": "{address}의 아이덴티콘",
+    "noAccount": "계정 없음 아이덴티콘"
+  },
+  "integrationMark": {
+    "form": "내 정보",
+    "search": "작업 카탈로그"
+  },
+  "chainMark": {
+    "fallback": "체인 {id}"
+  }
+}

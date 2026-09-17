@@ -1,0 +1,148 @@
+{
+  "newConversation": "Nueva conversación",
+  "loadNotice": "Esta conversación no se pudo cargar por completo. Sus mensajes se conservan, pero no se pueden mostrar.",
+  "toolStates": {
+    "preparing": "preparando",
+    "running": "ejecutando",
+    "waitingForApproval": "esperando aprobación",
+    "sendingAnswer": "enviando tu respuesta",
+    "done": "listo",
+    "failed": "falló",
+    "declined": "rechazado",
+    "waitingForYou": "esperándote",
+    "unknown": "desconocido"
+  },
+  "chat": {
+    "hints": {
+      "connect": "Conecta KeeperHub para empezar.",
+      "answerUnsent": "Presiona Reintentar en la tarjeta de arriba para enviar tu respuesta.",
+      "form": "Completa o cierra el formulario de arriba para continuar.",
+      "approval": "Autoriza o cancela la acción de arriba para continuar."
+    },
+    "banner": {
+      "createFailed": "No se pudo crear la conversación. Vuelve a intentarlo.",
+      "sessionEnded": "Tu sesión de KeeperHub terminó.",
+      "answerUnsent": "Tu respuesta no llegó a KeeperHub. Usa Reintentar en la tarjeta.",
+      "turnFailed": "El asistente tuvo un error. Vuelve a intentarlo.",
+      "connect": "Conectar KeeperHub",
+      "retry": "Reintentar"
+    },
+    "archived": {
+      "notice": "Esta conversación se archivó. Ahora es de solo lectura.",
+      "newChat": "Nuevo chat"
+    },
+    "ceremony": {
+      "noConversation": "No hay ninguna conversación sobre la cual ejecutar la simulación.",
+      "dryRunUnprepared": "No se pudo preparar la simulación.",
+      "checkFailed": "No se pudo ejecutar la verificación de KeeperHub.",
+      "checkUnreachable": "No se pudo ejecutar la verificación de KeeperHub. Revisa tu conexión y vuelve a intentarlo.",
+      "enableFailed": "KeeperHub no modificó la automatización.",
+      "enableUnreachable": "KeeperHub no respondió. Revisa tu conexión y vuelve a intentarlo."
+    }
+  },
+  "composer": {
+    "form": "Redactor de mensajes",
+    "label": "Pregúntale a KeeperHub",
+    "placeholder": "Pregúntale a KeeperHub…",
+    "send": "Enviar mensaje",
+    "talk": "Hablar con KeeperHub",
+    "talkUnavailable": "La voz está disponible cuando no hay nada pendiente",
+    "menu": "Red y acciones",
+    "searchActions": "Buscar acciones",
+    "browseActions": "Explorar las {count} acciones"
+  },
+  "messageList": {
+    "thinking": "Pensando",
+    "said": "dijo"
+  },
+  "toolTimeline": {
+    "used": "Usó {count, plural, one {# herramienta} other {# herramientas}}",
+    "using": "Usando {count, plural, one {# herramienta} other {# herramientas}}",
+    "input": "Entrada",
+    "output": "Salida",
+    "elapsedSeconds": "{seconds} s",
+    "elapsedMinutes": "{minutes} min {seconds} s"
+  },
+  "sessionDropdown": {
+    "conversations": "Conversaciones",
+    "newChat": "Nuevo chat",
+    "loadFailed": "No se pudo cargar la lista. Cierra y vuelve a intentarlo.",
+    "empty": "Todavía no hay chats anteriores.",
+    "rename": "Renombrar la conversación {title}",
+    "delete": "Eliminar la conversación {title}",
+    "newTitle": "Nuevo título para la conversación {title}",
+    "titleTooLong": "Los títulos tienen un límite de {max} caracteres.",
+    "renameFailed": "No se pudo guardar el nuevo nombre. Vuelve a intentarlo.",
+    "renamed": "Conversación renombrada.",
+    "deleteFailed": "No se pudo eliminar la conversación. Vuelve a intentarlo.",
+    "deleted": "Conversación eliminada."
+  },
+  "home": {
+    "status": {
+      "online": "KeeperHub en línea · {count, plural, one {# red} other {# redes}}",
+      "unreachable": "KeeperHub no disponible",
+      "checking": "verificando KeeperHub"
+    },
+    "greeting": "¿Qué quieres que KeeperHub haga por ti?",
+    "intro": "Pide un precio, un saldo o una transferencia. Las lecturas responden de inmediato; <b>todo lo que mueve valor espera tu clic.</b> O empieza con una tarjeta de abajo.",
+    "orPickACard": "O elige una tarjeta",
+    "quoted": "“{text}”"
+  },
+  "motifs": {
+    "noOrgWallet": "aún sin billetera de la org.",
+    "approve": "Aprobar",
+    "pooledDeposits": "depósitos agrupados",
+    "actions": "{count, plural, one {# acción} other {# acciones}}",
+    "yourConversations": "tus conversaciones",
+    "conversations": "{count, plural, one {# conversación} other {# conversaciones}}"
+  },
+  "categories": {
+    "chainlink": {
+      "title": "Precios",
+      "description": "Lee un feed de precios en vivo directamente de Chainlink.",
+      "mobileDesc": "Feeds de precios de Chainlink."
+    },
+    "lido": {
+      "title": "Staking líquido",
+      "description": "Cuánto vale el ETH en staking, según Lido.",
+      "mobileDesc": "Tasas de staking de Lido."
+    },
+    "rocketPool": {
+      "title": "Rocket Pool",
+      "description": "El tipo de cambio de rETH y cuánto hay en circulación.",
+      "mobileDesc": "La tasa de rETH."
+    },
+    "sky": {
+      "title": "Bóveda de ahorro",
+      "description": "Cuánto hay depositado en la bóveda de ahorro de Sky.",
+      "mobileDesc": "Depósitos en la bóveda de Sky."
+    },
+    "orgWallet": {
+      "title": "La billetera de tu organización",
+      "description": "Lo que tiene la billetera de tu organización en {network}.",
+      "mobileDesc": "Saldos en esta red.",
+      "prompt": "¿Qué tiene la billetera de mi organización en {network}?",
+      "familyLabel": "Cuenta"
+    },
+    "sendToSelf": {
+      "title": "Enviarte a ti mismo",
+      "description": "Una transferencia de valor cero de vuelta a tu propia billetera. Se detiene hasta que hagas clic.",
+      "mobileDesc": "Espera tu clic.",
+      "prompt": "Envía {amount} desde la billetera de mi organización a sí misma en {network}.",
+      "familyLabel": "Cuenta · escritura"
+    },
+    "discover": {
+      "title": "Descubrir acciones",
+      "description": "Pregunta qué puede hacer KeeperHub con un protocolo.",
+      "mobileDesc": "Lo que ofrece un protocolo.",
+      "prompt": "¿Qué puedes hacer con Aave V3?",
+      "familyLabel": "Catálogo"
+    },
+    "history": {
+      "title": "Historial",
+      "description": "Vuelve a abrir conversaciones pasadas y sus recibos.",
+      "mobileDesc": "Conversaciones pasadas.",
+      "familyLabel": "Historial"
+    }
+  }
+}

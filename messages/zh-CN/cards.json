@@ -1,0 +1,395 @@
+{
+  "receipt": {
+    "issued": "已签发"
+  },
+  "labels": {
+    "amount": "金额",
+    "recipient": "接收方",
+    "network": "网络",
+    "token": "代币",
+    "spender": "授权对象",
+    "allowance": "授权额度",
+    "allowanceBaseUnits": "授权额度（最小单位）",
+    "arguments": "参数",
+    "valueSent": "发送金额",
+    "chainId": "链 ID",
+    "contractAddress": "合约地址",
+    "functionName": "函数名",
+    "functionArgs": "函数参数",
+    "value": "值",
+    "gasLimitMultiplier": "Gas 上限倍数",
+    "priorityFeeGwei": "优先费（gwei）",
+    "abi": "ABI",
+    "integrationId": "集成 ID"
+  },
+  "checks": {
+    "amountDot": "请输入金额，小数请用点号，例如 0.5。",
+    "chooseNetwork": "请选择网络。",
+    "addressForNetwork": "请输入此网络的有效地址。",
+    "chooseListedOption": "请从列出的选项中选择一个。"
+  },
+  "fix": {
+    "number": "请输入数字。",
+    "yesNo": "请选择是或否。",
+    "address": "请输入以 0x 开头、包含 40 个十六进制字符的地址。",
+    "uint": "请输入不带小数点或正负号的整数。",
+    "int": "请输入整数。开头可以带负号。",
+    "bytes": "请输入以 0x 开头、位数为偶数的十六进制值。",
+    "datetime": "请输入日期和时间。",
+    "other": "请检查此值后重试。"
+  },
+  "effectClass": {
+    "valueMovingWrite": "资产转移写入",
+    "authorizationGrant": "权限授予",
+    "configManagementWrite": "配置管理写入",
+    "offChainSend": "链下发送",
+    "listingPayment": "上架付费",
+    "read": "读取"
+  },
+  "write": {
+    "noPreview": "此操作无法预览。你确认的是下方显示的确切指令。",
+    "unavailable": "此版本暂不支持 Solana 上的合约调用。请改为通过协议操作请求 Solana 读取。",
+    "chip": {
+      "simulated": "已模拟",
+      "noPreview": "无预览",
+      "needsCredential": "需要凭证",
+      "proposed": "已提议"
+    },
+    "facts": {
+      "gasEstimate": "Gas 估算",
+      "gasUnits": "{units} 单位",
+      "returns": "返回值"
+    },
+    "meta": {
+      "executed": "已执行",
+      "cancelled": "已取消",
+      "notSent": "未发送",
+      "cancelling": "取消中",
+      "noReceipt": "无回执",
+      "sending": "发送中",
+      "neverAuthorized": "从未授权",
+      "notAvailable": "不可用",
+      "needsCredential": "需要凭证",
+      "authorizing": "授权中",
+      "edited": "已编辑",
+      "awaiting": "等待授权"
+    },
+    "status": {
+      "executed": "已执行",
+      "cancelled": "已取消",
+      "notSent": "未发送",
+      "cancelling": "取消中…",
+      "noReceipt": "已授权，未存储回执",
+      "sending": "正在通过 KeeperHub 发送…",
+      "neverAuthorized": "从未授权",
+      "notAvailable": "此版本暂不可用",
+      "needsCredential": "需要先配置凭证",
+      "authorizing": "授权中…",
+      "edited": "已编辑，等待你授权",
+      "awaiting": "等待你授权"
+    },
+    "authorize": {
+      "authorizing": "授权中…",
+      "notAvailable": "不可用",
+      "needsCredential": "需要凭证",
+      "dryRunning": "正在模拟运行…",
+      "dryRunFailed": "模拟运行失败",
+      "acknowledge": "确认已知晓警告",
+      "authorize": "授权"
+    },
+    "verb": {
+      "contractWrite": "合约写入",
+      "write": "写入"
+    },
+    "title": {
+      "approve": "批准授权对象",
+      "call": "调用 {name}",
+      "send": "发送 {amount} {unit}"
+    },
+    "kicker": {
+      "valueMoving": "资产转移写入",
+      "authorizationGrant": "权限授予"
+    },
+    "dryRunUnprepared": "无法准备模拟运行。",
+    "declined": "你拒绝了此提议。未发送任何内容。",
+    "applyDryRun": "模拟运行这些值",
+    "applyValues": "使用这些值",
+    "acknowledge": "仍然发送。我了解它预计会失败，并且仍可能消耗 gas。",
+    "notReached": "你的回答未送达 KeeperHub。请检查网络连接后重试。",
+    "receiptMissing": "此操作已授权，但其回执未能送达此聊天。可在动态中查看最终结果。",
+    "archived": "聊天归档前无人授权此操作。未发送任何内容。",
+    "edit": "编辑",
+    "discard": "放弃",
+    "transfer": {
+      "from": "从",
+      "to": "至",
+      "orgWallet": "组织钱包",
+      "amount": "金额"
+    },
+    "dryRun": {
+      "label": "模拟运行",
+      "cannot": "KeeperHub 无法模拟运行此操作。你授权的就是上方显示的确切内容。",
+      "running": "正在模拟运行",
+      "wouldNotSucceed": "此操作不会成功。",
+      "wouldRevert": "该交易会回滚。",
+      "wouldSucceed": "将会成功"
+    },
+    "tx": {
+      "label": "交易",
+      "explorer": "区块浏览器",
+      "verified": "已验证",
+      "yes": "是",
+      "no": "否"
+    }
+  },
+  "moneyMover": {
+    "unknownNetwork": "未知网络",
+    "chain": "链 {id}",
+    "send": "发送",
+    "approve": "批准",
+    "summary": "已向 {address} 发送 {amount}。",
+    "unlimitedWarning": "这将批准无限授权额度。授权对象可以转走任意数量的该代币。",
+    "unlimited": "无限",
+    "veryLarge": "极大",
+    "enterAmount": "请输入金额。",
+    "noComma": "小数请用点号（0.5），且不要使用千位分隔符。",
+    "maxDecimals": "请输入最多 {decimals} 位小数的金额。"
+  },
+  "writeForm": {
+    "tokenPlaceholder": "留空则发送该网络的原生币"
+  },
+  "editCheck": {
+    "unreadable": "无法读取此提议。",
+    "automationFixed": "无法在此更改所涉及的自动化。请重新提问，生成新的提议。",
+    "notEditable": "此操作无法编辑。",
+    "tokenAddress": "请输入有效的代币地址，或留空以发送原生币。",
+    "callFixed": "调用的这一部分无法在此更改。请重新提问，生成新的提议。",
+    "argumentsList": "请以 JSON 列表形式输入参数。",
+    "spender": "请输入有效的授权对象地址。",
+    "allowance": "请输入以最小单位计的整数。",
+    "actionFixed": "无法在此更改该操作。请重新提问，生成新的提议。",
+    "actionGone": "此操作已不可用。",
+    "hiddenSetting": "此隐藏设置无法更改。",
+    "startFixed": "无法在此更改启动方式。请重新提问，生成新的提议。",
+    "stepsFixed": "无法在此更改运行哪些步骤及其顺序。请重新提问，生成新的提议。"
+  },
+  "toolMeta": {
+    "integration": {
+      "search": "操作目录",
+      "form": "你的信息"
+    },
+    "title": {
+      "lookupFor": "查找了“{query}”相关的操作",
+      "lookup": "查找了操作",
+      "protocolAction": "协议操作",
+      "calledFunction": "调用了 {name}",
+      "contractCall": "合约调用",
+      "transfer": "转账",
+      "walletIntegration": "读取了钱包集成",
+      "listAutomations": "列出了自动化",
+      "getAutomation": "读取了一个自动化",
+      "createNamed": "提议了自动化“{name}”",
+      "create": "提议了一个自动化",
+      "turnOff": "提议关闭一个自动化",
+      "turnOn": "提议开启一个自动化",
+      "updateNamed": "提议更改“{name}”",
+      "update": "提议更改一个自动化",
+      "run": "提议运行一个自动化",
+      "holdings": "读取了组织钱包的持仓",
+      "askNamed": "向你询问信息：{title}",
+      "ask": "向你询问信息",
+      "delete": "提议删除一个自动化"
+    },
+    "detail": {
+      "action": "操作",
+      "name": "名称",
+      "starts": "启动",
+      "step": "步骤 {position}",
+      "error": "错误",
+      "notCompleted": "未完成",
+      "result": "结果",
+      "state": "状态"
+    }
+  },
+  "format": {
+    "addressEnding": "尾号为 {last} 的地址",
+    "hashEnding": "尾号为 {last} 的哈希"
+  },
+  "renderer": {
+    "formUnanswerable": "无法回答此表单。",
+    "toolCallIncomplete": "此工具调用无法完成。",
+    "needsCredential": "此操作需要先绑定凭证才能运行。",
+    "actionIncomplete": "此操作无法完成。"
+  },
+  "announce": {
+    "working": "处理中。",
+    "capabilities": "已列出匹配的操作。",
+    "read": "{label}，已读取。",
+    "needsCredential": "{label}，需要凭证。",
+    "automations": "已列出自动化。",
+    "automation": "已描述自动化。",
+    "holdings": "已列出组织钱包持仓。",
+    "formOpen": "需要填写信息。请填写表单。",
+    "formSent": "信息已发送。",
+    "proposed": "{label}，等待你批准。",
+    "executing": "{label}，发送中。",
+    "declined": "{label}，已拒绝。未运行任何内容。",
+    "automationDone": "自动化，已完成。",
+    "executed": "{label}，已执行。",
+    "automationLabel": "自动化",
+    "resultLabel": "结果"
+  },
+  "error": {
+    "boundary": {
+      "notAvailable": "不可用",
+      "paused": "已暂停",
+      "needsAccess": "需要权限",
+      "reconnect": "重新连接",
+      "checkInputs": "检查输入"
+    },
+    "void": "作废",
+    "field": "字段",
+    "connect": "连接 KeeperHub",
+    "reauthorize": "重新授权 KeeperHub",
+    "rateLimited": "发现功能仍可正常使用。请稍后再尝试读取。",
+    "title": {
+      "action": "操作未完成",
+      "contractCall": "合约调用未完成",
+      "transfer": "转账未完成",
+      "walletRead": "钱包读取未完成",
+      "search": "搜索未完成",
+      "other": "未完成"
+    }
+  },
+  "read": {
+    "meta": {
+      "replaced": "已替换",
+      "edited": "已编辑",
+      "read": "读取"
+    },
+    "title": {
+      "contractRead": "合约读取",
+      "walletIntegration": "钱包集成",
+      "read": "读取"
+    },
+    "alternatives": "备选项",
+    "request": "请求",
+    "runAgain": "再次运行",
+    "working": "处理中。",
+    "blocked": "部分参数需要调整后才能运行。",
+    "result": "结果",
+    "contract": "合约",
+    "replaced": "已被下方更新的卡片替换。",
+    "edited": "已编辑。"
+  },
+  "price": {
+    "round": "第 {round} 轮",
+    "updated": "更新于",
+    "gathering": "正在收集数据",
+    "historyUnavailable": "历史数据不可用",
+    "lastUpdates": "最近 {count} 次更新",
+    "expand": "展开"
+  },
+  "balance": {
+    "orgWallet": "组织钱包",
+    "meta": "余额",
+    "scanToSend": "扫码发送"
+  },
+  "holdings": {
+    "unreadableMeta": "无法读取",
+    "unreadable": "无法读取持仓",
+    "orgWallet": "组织钱包",
+    "nothing": "所有网络上均无持仓",
+    "caveat": "余额数据来自 KeeperHub。无法读取的代币显示为 0。",
+    "networkUnavailable": "KeeperHub 暂时无法读取此网络。"
+  },
+  "capability": {
+    "matches": "{count, plural, other {{count} 个匹配}}",
+    "none": "没有匹配的操作",
+    "signs": "需签名",
+    "more": "+ 还有 {count} 个"
+  },
+  "needsCredential": {
+    "meta": "需要凭证",
+    "title": "需要凭证",
+    "setup": "请先在 KeeperHub 中设置 {integration} 凭证，然后重新提问。"
+  },
+  "skeleton": {
+    "working": "处理中",
+    "fetching": "获取中"
+  },
+  "stub": {
+    "unrenderable": "无法渲染的卡片",
+    "meta": "原始数据",
+    "couldNotDraw": "无法绘制此卡片。原始详情如下。",
+    "rawDetails": "原始详情"
+  },
+  "parts": {
+    "items": "{count, plural, other {{count} 项}}",
+    "noData": "未返回数据",
+    "value": "值"
+  },
+  "fields": {
+    "required": "（必填）",
+    "yes": "是",
+    "no": "否",
+    "fallbackNote": "此字段保留当前值。编辑其他字段后再次运行。",
+    "none": "无。",
+    "help": "帮助：{label}",
+    "chooseNetwork": "选择网络"
+  },
+  "form": {
+    "unreadableMeta": "无法读取",
+    "unreadable": "无法读取此表单",
+    "title": "需要填写信息",
+    "meta": {
+      "notSent": "未发送",
+      "closed": "已关闭",
+      "answered": "已回答",
+      "fillingAbove": "正在上方填写",
+      "detailsNeeded": "需要信息",
+      "neverAnswered": "从未回答"
+    },
+    "status": {
+      "notSent": "你的回答未送达 KeeperHub",
+      "closed": "已关闭，未回答",
+      "answered": "已发送给助手",
+      "fillingAbove": "请在语音栏上方填写",
+      "waiting": "等待你填写信息",
+      "neverAnswered": "从未回答"
+    },
+    "useOrgWallet": "使用我的组织钱包",
+    "checkHighlighted": "请检查高亮显示的信息。",
+    "sending": "发送中…",
+    "tokenPlaceholder": "代币符号或代币地址",
+    "issues": {
+      "unreadable": "无法读取该回答。",
+      "notAsked": "未询问此项信息。",
+      "asText": "请以文本形式输入。",
+      "needed": "{label} 为必填项。",
+      "tooLong": "内容过长。",
+      "chooseToken": "请从列出的代币中选择一个。",
+      "token": "请输入代币符号或其地址。"
+    }
+  },
+  "share": {
+    "unreachable": "无法访问分享链接。",
+    "offline": "请检查网络连接后重试。",
+    "failed": "分享失败",
+    "copiedTitle": "链接已复制",
+    "copiedBody": "拿到链接的人都能看到此回执，但绝不会看到你的聊天。",
+    "readyTitle": "链接已就绪",
+    "sheetTitle": "一张 KeeperHub 回执",
+    "offTitle": "链接已关闭",
+    "offBody": "现在打开链接的人会看到它未被分享。",
+    "ariaLabel": "分享回执",
+    "share": "分享",
+    "checking": "检查中…",
+    "copyLink": "复制链接",
+    "createAndCopy": "创建并复制链接",
+    "shareSheet": "分享…",
+    "openLink": "打开链接",
+    "stop": "停止分享",
+    "explainer": "拿到链接的人都能看到操作、网络、金额、接收方和交易，但绝不会看到你的聊天。"
+  }
+}

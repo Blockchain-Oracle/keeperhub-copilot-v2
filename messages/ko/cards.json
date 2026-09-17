@@ -1,0 +1,395 @@
+{
+  "receipt": {
+    "issued": "발행됨"
+  },
+  "labels": {
+    "amount": "금액",
+    "recipient": "받는 사람",
+    "network": "네트워크",
+    "token": "토큰",
+    "spender": "지출자",
+    "allowance": "허용량",
+    "allowanceBaseUnits": "허용량(기본 단위)",
+    "arguments": "인수",
+    "valueSent": "보낸 금액",
+    "chainId": "체인 ID",
+    "contractAddress": "컨트랙트 주소",
+    "functionName": "함수 이름",
+    "functionArgs": "함수 인수",
+    "value": "값",
+    "gasLimitMultiplier": "가스 한도 배수",
+    "priorityFeeGwei": "우선순위 수수료(gwei)",
+    "abi": "ABI",
+    "integrationId": "통합 ID"
+  },
+  "checks": {
+    "amountDot": "소수점은 점(.)으로 입력하세요. 예: 0.5",
+    "chooseNetwork": "네트워크를 선택하세요.",
+    "addressForNetwork": "이 네트워크에 맞는 올바른 주소를 입력하세요.",
+    "chooseListedOption": "목록에 있는 옵션 중 하나를 선택하세요."
+  },
+  "fix": {
+    "number": "숫자를 입력하세요.",
+    "yesNo": "예 또는 아니요를 선택하세요.",
+    "address": "0x로 시작하는 16진수 40자리 주소를 입력하세요.",
+    "uint": "소수점이나 부호가 없는 정수를 입력하세요.",
+    "int": "정수를 입력하세요. 앞에 마이너스 부호를 붙일 수 있습니다.",
+    "bytes": "자릿수가 짝수인 0x 16진수 값을 입력하세요.",
+    "datetime": "날짜와 시간을 입력하세요.",
+    "other": "이 값을 확인하고 다시 시도하세요."
+  },
+  "effectClass": {
+    "valueMovingWrite": "자산 이동 쓰기",
+    "authorizationGrant": "권한 부여",
+    "configManagementWrite": "설정 관리 쓰기",
+    "offChainSend": "오프체인 전송",
+    "listingPayment": "등록 결제",
+    "read": "읽기"
+  },
+  "write": {
+    "noPreview": "이 작업은 미리 볼 수 없습니다. 아래에 표시된 명령을 그대로 확인하고 승인하게 됩니다.",
+    "unavailable": "이번 버전에서는 Solana 컨트랙트 호출을 사용할 수 없습니다. 대신 프로토콜 작업을 통해 Solana 읽기를 요청하세요.",
+    "chip": {
+      "simulated": "시뮬레이션됨",
+      "noPreview": "미리보기 없음",
+      "needsCredential": "자격 증명 필요",
+      "proposed": "제안됨"
+    },
+    "facts": {
+      "gasEstimate": "예상 가스",
+      "gasUnits": "{units} 단위",
+      "returns": "반환값"
+    },
+    "meta": {
+      "executed": "실행됨",
+      "cancelled": "취소됨",
+      "notSent": "전송 안 됨",
+      "cancelling": "취소 중",
+      "noReceipt": "영수증 없음",
+      "sending": "보내는 중",
+      "neverAuthorized": "승인되지 않음",
+      "notAvailable": "사용 불가",
+      "needsCredential": "자격 증명 필요",
+      "authorizing": "승인 중",
+      "edited": "수정됨",
+      "awaiting": "승인 대기 중"
+    },
+    "status": {
+      "executed": "실행되었습니다",
+      "cancelled": "취소되었습니다",
+      "notSent": "전송되지 않았습니다",
+      "cancelling": "취소하는 중…",
+      "noReceipt": "승인되었지만 저장된 영수증이 없습니다",
+      "sending": "KeeperHub를 통해 보내는 중…",
+      "neverAuthorized": "승인되지 않았습니다",
+      "notAvailable": "이번 버전에서는 사용할 수 없습니다",
+      "needsCredential": "먼저 자격 증명이 필요합니다",
+      "authorizing": "승인하는 중…",
+      "edited": "수정되었습니다. 승인을 기다리고 있습니다",
+      "awaiting": "승인을 기다리고 있습니다"
+    },
+    "authorize": {
+      "authorizing": "승인하는 중…",
+      "notAvailable": "사용 불가",
+      "needsCredential": "자격 증명 필요",
+      "dryRunning": "모의 실행 중…",
+      "dryRunFailed": "모의 실행 실패",
+      "acknowledge": "경고 확인",
+      "authorize": "승인"
+    },
+    "verb": {
+      "contractWrite": "컨트랙트 쓰기",
+      "write": "쓰기"
+    },
+    "title": {
+      "approve": "지출자 승인",
+      "call": "{name} 호출",
+      "send": "{amount} {unit} 보내기"
+    },
+    "kicker": {
+      "valueMoving": "자산 이동 쓰기",
+      "authorizationGrant": "권한 부여"
+    },
+    "dryRunUnprepared": "모의 실행을 준비하지 못했습니다.",
+    "declined": "이 제안을 거절했습니다. 아무것도 보내지 않았습니다.",
+    "applyDryRun": "이 값으로 모의 실행",
+    "applyValues": "이 값 사용",
+    "acknowledge": "그래도 보냅니다. 실패할 것으로 예상되며 가스비가 발생할 수 있음을 이해합니다.",
+    "notReached": "답변이 KeeperHub에 전달되지 않았습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
+    "receiptMissing": "승인되었지만 영수증이 이 채팅에 도착하지 않았습니다. 결과는 활동에서 확인할 수 있습니다.",
+    "archived": "채팅이 보관되기 전에 아무도 승인하지 않았습니다. 아무것도 보내지 않았습니다.",
+    "edit": "수정",
+    "discard": "버리기",
+    "transfer": {
+      "from": "보내는 곳",
+      "to": "받는 곳",
+      "orgWallet": "조직 지갑",
+      "amount": "금액"
+    },
+    "dryRun": {
+      "label": "모의 실행",
+      "cannot": "KeeperHub는 이 작업을 모의 실행할 수 없습니다. 위에 표시된 내용 그대로 승인하게 됩니다.",
+      "running": "모의 실행 중",
+      "wouldNotSucceed": "성공하지 못할 것으로 보입니다.",
+      "wouldRevert": "트랜잭션이 리버트될 것으로 보입니다.",
+      "wouldSucceed": "성공할 것으로 보임"
+    },
+    "tx": {
+      "label": "Tx",
+      "explorer": "익스플로러",
+      "verified": "검증됨",
+      "yes": "예",
+      "no": "아니요"
+    }
+  },
+  "moneyMover": {
+    "unknownNetwork": "알 수 없는 네트워크",
+    "chain": "체인 {id}",
+    "send": "보내기",
+    "approve": "승인",
+    "summary": "{address}에 {amount} 보냈습니다.",
+    "unlimitedWarning": "무제한 허용량을 승인합니다. 지출자가 이 토큰을 얼마든지 옮길 수 있습니다.",
+    "unlimited": "무제한",
+    "veryLarge": "매우 큼",
+    "enterAmount": "금액을 입력하세요.",
+    "noComma": "소수점은 점(0.5)으로 쓰고, 천 단위 구분 기호는 넣지 마세요.",
+    "maxDecimals": "소수점 이하 최대 {decimals}자리까지 입력하세요."
+  },
+  "writeForm": {
+    "tokenPlaceholder": "비워 두면 네트워크 기본 통화를 보냅니다"
+  },
+  "editCheck": {
+    "unreadable": "이 제안을 읽을 수 없습니다.",
+    "automationFixed": "변경할 자동화는 여기서 바꿀 수 없습니다. 다시 요청해 새로 제안받으세요.",
+    "notEditable": "이 작업은 수정할 수 없습니다.",
+    "tokenAddress": "올바른 토큰 주소를 입력하거나, 네이티브 통화를 보내려면 비워 두세요.",
+    "callFixed": "호출의 이 부분은 여기서 바꿀 수 없습니다. 다시 요청해 새로 제안받으세요.",
+    "argumentsList": "인수를 JSON 목록으로 입력하세요.",
+    "spender": "올바른 지출자 주소를 입력하세요.",
+    "allowance": "기본 단위의 정수를 입력하세요.",
+    "actionFixed": "작업은 여기서 바꿀 수 없습니다. 다시 요청해 새로 제안받으세요.",
+    "actionGone": "이 작업은 더 이상 사용할 수 없습니다.",
+    "hiddenSetting": "이 숨겨진 설정은 바꿀 수 없습니다.",
+    "startFixed": "시작 방식은 여기서 바꿀 수 없습니다. 다시 요청해 새로 제안받으세요.",
+    "stepsFixed": "실행할 단계와 순서는 여기서 바꿀 수 없습니다. 다시 요청해 새로 제안받으세요."
+  },
+  "toolMeta": {
+    "integration": {
+      "search": "작업 카탈로그",
+      "form": "내 정보"
+    },
+    "title": {
+      "lookupFor": "“{query}” 관련 작업을 조회했습니다",
+      "lookup": "작업을 조회했습니다",
+      "protocolAction": "프로토콜 작업",
+      "calledFunction": "{name} 함수를 호출했습니다",
+      "contractCall": "컨트랙트 호출",
+      "transfer": "전송",
+      "walletIntegration": "지갑 통합을 읽었습니다",
+      "listAutomations": "자동화 목록을 조회했습니다",
+      "getAutomation": "자동화를 읽었습니다",
+      "createNamed": "“{name}” 자동화를 제안했습니다",
+      "create": "자동화를 제안했습니다",
+      "turnOff": "자동화 끄기를 제안했습니다",
+      "turnOn": "자동화 켜기를 제안했습니다",
+      "updateNamed": "“{name}” 변경을 제안했습니다",
+      "update": "자동화 변경을 제안했습니다",
+      "run": "자동화 실행을 제안했습니다",
+      "holdings": "조직 지갑 보유 자산을 읽었습니다",
+      "askNamed": "정보를 요청했습니다: {title}",
+      "ask": "정보를 요청했습니다",
+      "delete": "자동화 삭제를 제안했습니다"
+    },
+    "detail": {
+      "action": "작업",
+      "name": "이름",
+      "starts": "시작",
+      "step": "{position}단계",
+      "error": "오류",
+      "notCompleted": "완료되지 않음",
+      "result": "결과",
+      "state": "상태"
+    }
+  },
+  "format": {
+    "addressEnding": "끝자리가 {last}인 주소",
+    "hashEnding": "끝자리가 {last}인 해시"
+  },
+  "renderer": {
+    "formUnanswerable": "이 양식에 답할 수 없습니다.",
+    "toolCallIncomplete": "이 도구 호출을 완료할 수 없습니다.",
+    "needsCredential": "이 작업을 실행하려면 먼저 자격 증명을 연결해야 합니다.",
+    "actionIncomplete": "이 작업을 완료할 수 없습니다."
+  },
+  "announce": {
+    "working": "작업 중입니다.",
+    "capabilities": "일치하는 작업을 표시했습니다.",
+    "read": "{label}, 읽기 완료.",
+    "needsCredential": "{label}, 자격 증명이 필요합니다.",
+    "automations": "자동화 목록을 표시했습니다.",
+    "automation": "자동화 설명을 표시했습니다.",
+    "holdings": "조직 지갑 보유 자산을 표시했습니다.",
+    "formOpen": "정보가 필요합니다. 양식을 작성하세요.",
+    "formSent": "정보를 보냈습니다.",
+    "proposed": "{label}, 승인을 기다리고 있습니다.",
+    "executing": "{label}, 보내는 중입니다.",
+    "declined": "{label}, 거절되었습니다. 아무것도 실행되지 않았습니다.",
+    "automationDone": "자동화, 완료되었습니다.",
+    "executed": "{label}, 실행되었습니다.",
+    "automationLabel": "자동화",
+    "resultLabel": "결과"
+  },
+  "error": {
+    "boundary": {
+      "notAvailable": "사용 불가",
+      "paused": "일시 중지됨",
+      "needsAccess": "권한 필요",
+      "reconnect": "다시 연결",
+      "checkInputs": "입력값 확인"
+    },
+    "void": "무효",
+    "field": "필드",
+    "connect": "KeeperHub 연결",
+    "reauthorize": "KeeperHub 다시 승인",
+    "rateLimited": "탐색은 계속 작동합니다. 잠시 후 다시 읽기를 시도하세요.",
+    "title": {
+      "action": "작업이 완료되지 않았습니다",
+      "contractCall": "컨트랙트 호출이 완료되지 않았습니다",
+      "transfer": "전송이 완료되지 않았습니다",
+      "walletRead": "지갑 읽기가 완료되지 않았습니다",
+      "search": "검색이 완료되지 않았습니다",
+      "other": "완료되지 않았습니다"
+    }
+  },
+  "read": {
+    "meta": {
+      "replaced": "대체됨",
+      "edited": "수정됨",
+      "read": "읽기"
+    },
+    "title": {
+      "contractRead": "컨트랙트 읽기",
+      "walletIntegration": "지갑 통합",
+      "read": "읽기"
+    },
+    "alternatives": "대안",
+    "request": "요청",
+    "runAgain": "다시 실행",
+    "working": "작업 중입니다.",
+    "blocked": "실행하려면 일부 매개변수를 조정해야 합니다.",
+    "result": "결과",
+    "contract": "컨트랙트",
+    "replaced": "아래의 새 카드로 대체되었습니다.",
+    "edited": "수정되었습니다."
+  },
+  "price": {
+    "round": "라운드 {round}",
+    "updated": "업데이트됨",
+    "gathering": "신호 수집 중",
+    "historyUnavailable": "기록을 불러올 수 없음",
+    "lastUpdates": "최근 {count}회 업데이트",
+    "expand": "펼치기"
+  },
+  "balance": {
+    "orgWallet": "조직 지갑",
+    "meta": "잔액",
+    "scanToSend": "스캔하여 보내기"
+  },
+  "holdings": {
+    "unreadableMeta": "읽을 수 없음",
+    "unreadable": "보유 자산을 읽을 수 없습니다",
+    "orgWallet": "조직 지갑",
+    "nothing": "어느 네트워크에도 보유 자산이 없습니다",
+    "caveat": "KeeperHub에서 가져온 잔액입니다. 읽지 못한 토큰은 0으로 표시됩니다.",
+    "networkUnavailable": "KeeperHub가 지금은 이 네트워크를 읽지 못했습니다."
+  },
+  "capability": {
+    "matches": "{count, plural, other {{count}개 일치}}",
+    "none": "일치하는 작업 없음",
+    "signs": "서명 필요",
+    "more": "+ {count}개 더"
+  },
+  "needsCredential": {
+    "meta": "자격 증명 필요",
+    "title": "자격 증명이 필요합니다",
+    "setup": "KeeperHub에서 {integration} 자격 증명을 설정한 뒤 다시 요청하세요."
+  },
+  "skeleton": {
+    "working": "작업 중",
+    "fetching": "가져오는 중"
+  },
+  "stub": {
+    "unrenderable": "표시할 수 없는 카드",
+    "meta": "원본",
+    "couldNotDraw": "이 카드를 표시할 수 없습니다. 원본 정보는 아래에 있습니다.",
+    "rawDetails": "원본 정보"
+  },
+  "parts": {
+    "items": "{count, plural, other {항목 {count}개}}",
+    "noData": "반환된 데이터 없음",
+    "value": "값"
+  },
+  "fields": {
+    "required": "(필수)",
+    "yes": "예",
+    "no": "아니요",
+    "fallbackNote": "이 필드는 현재 값을 유지합니다. 다른 필드를 수정하고 다시 실행하세요.",
+    "none": "없음.",
+    "help": "도움말: {label}",
+    "chooseNetwork": "네트워크 선택"
+  },
+  "form": {
+    "unreadableMeta": "읽을 수 없음",
+    "unreadable": "이 양식을 읽을 수 없습니다",
+    "title": "정보 필요",
+    "meta": {
+      "notSent": "전송 안 됨",
+      "closed": "닫힘",
+      "answered": "답변함",
+      "fillingAbove": "위에서 작성 중",
+      "detailsNeeded": "정보 필요",
+      "neverAnswered": "답변 안 함"
+    },
+    "status": {
+      "notSent": "답변이 KeeperHub에 전달되지 않았습니다",
+      "closed": "답변 없이 닫혔습니다",
+      "answered": "어시스턴트에게 보냈습니다",
+      "fillingAbove": "음성 바 위에서 작성하세요",
+      "waiting": "정보 입력을 기다리고 있습니다",
+      "neverAnswered": "답변하지 않았습니다"
+    },
+    "useOrgWallet": "내 조직 지갑 사용",
+    "checkHighlighted": "강조 표시된 정보를 확인하세요.",
+    "sending": "보내는 중…",
+    "tokenPlaceholder": "심볼 또는 토큰 주소",
+    "issues": {
+      "unreadable": "답변을 읽을 수 없습니다.",
+      "notAsked": "요청하지 않은 정보입니다.",
+      "asText": "텍스트로 입력하세요.",
+      "needed": "{label} 항목이 필요합니다.",
+      "tooLong": "너무 깁니다.",
+      "chooseToken": "목록에 있는 토큰 중 하나를 선택하세요.",
+      "token": "토큰 심볼이나 주소를 입력하세요."
+    }
+  },
+  "share": {
+    "unreachable": "공유 링크에 연결할 수 없습니다.",
+    "offline": "인터넷 연결을 확인하고 다시 시도하세요.",
+    "failed": "공유하지 못했습니다",
+    "copiedTitle": "링크 복사됨",
+    "copiedBody": "링크가 있는 사람은 이 영수증만 볼 수 있으며, 채팅은 볼 수 없습니다.",
+    "readyTitle": "링크 준비됨",
+    "sheetTitle": "KeeperHub 영수증",
+    "offTitle": "링크 해제됨",
+    "offBody": "이제 링크를 열면 공유되지 않은 영수증으로 표시됩니다.",
+    "ariaLabel": "영수증 공유",
+    "share": "공유",
+    "checking": "확인 중…",
+    "copyLink": "링크 복사",
+    "createAndCopy": "링크 만들고 복사",
+    "shareSheet": "공유…",
+    "openLink": "링크 열기",
+    "stop": "공유 중지",
+    "explainer": "링크가 있는 사람은 작업, 네트워크, 금액, 받는 사람, 트랜잭션을 볼 수 있습니다. 채팅은 절대 볼 수 없습니다."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "unauthorized": "Connect KeeperHub to continue.",
+  "session": "Your KeeperHub session ended. Connect KeeperHub to continue.",
+  "server_error": "Something went wrong on our side. Try again in a moment.",
+  "not_found": "This is no longer available.",
+  "bad_request": "That request could not be read.",
+  "upstream_error": "KeeperHub didn't answer as expected. Try again in a moment.",
+  "transport": "KeeperHub couldn't be reached. Check your connection and try again.",
+  "rate_limited": "KeeperHub is busy. Try again in a moment.",
+  "insufficient_scope": "This needs more access to KeeperHub. Reconnect and allow it.",
+  "archived": "This conversation was archived. Start a new chat.",
+  "waiting": "Answer the card or form above first.",
+  "not_shareable": "Only an action that executed with a transaction can be shared.",
+  "validation_failed": "Some details don't fit. Check them and try again.",
+  "write_not_available": "This action can't be sent from here yet.",
+  "quarantined": "This action can't be run: the Copilot can't establish what it does.",
+  "automation_only": "KeeperHub runs this only as a step inside an automation.",
+  "tool_error": "This couldn't be completed.",
+  "deactivated": "This automation is switched off in KeeperHub.",
+  "on_demand": "This automation runs only when it is started.",
+  "invalid_chain": "That network isn't supported."
+}

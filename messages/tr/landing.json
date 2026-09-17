@@ -1,0 +1,136 @@
+{
+  "floatingNav": {
+    "links": {
+      "features": "Özellikler",
+      "how": "Nasıl çalışır",
+      "install": "Kurulum",
+      "docs": "Belgeler"
+    },
+    "openApp": "Uygulamayı aç",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat"
+  },
+  "statusTicker": {
+    "networksLive": "{count, plural, one {<number>#</number> ağ aktif} other {<number>#</number> ağ aktif}}",
+    "connecting": "keeperhub’a bağlanılıyor"
+  },
+  "hero": {
+    "prompts": {
+      "price": "Chainlink’te şu anki ETH fiyatı ne?",
+      "balances": "Tüm zincirlerdeki bakiyelerimi göster",
+      "send": "Base’de alice.eth adresine 10 USDC gönder",
+      "supply": "Aave’ye 50 USDC yatır, ama önce APY’yi söyle",
+      "gas": "Gas 20 gwei’nin altına düşünce bana haber ver"
+    },
+    "title": "Zincir üstünde, <em>sade bir dille</em><stop>.</stop>",
+    "subtitle": "KeeperHub için Copilot’un. Ne sorarsan anında yanıtlar — ama değer taşıyan hiçbir şey kendiliğinden olmaz. <highlight>Durur, sana eylemin tam hâlini gösterir ve bekler.</highlight>",
+    "inputLabel": "Copilot’una sor",
+    "placeholder": "Copilot’una sor…",
+    "submit": "Uygulamayı aç",
+    "enterHint": "uygulamada açmak için enter’a bas"
+  },
+  "features": {
+    "heading": {
+      "eyebrow": "NE YAPAR",
+      "title": "Okumalar akar. Yazmalar <em>durup sorar</em>.",
+      "subtitle": "Bir soru sor, anında yanıtlasın. Değer taşımasını iste; durur, her alanı doldurur ve tıklamanı bekler."
+    },
+    "spec": "TEKNİK",
+    "items": {
+      "registry": {
+        "tag": "KAYIT DEFTERİ · 442 EYLEM",
+        "title": "Elle yazılmadı, üretildi.",
+        "description": "Takaslar, transferler, borç verme, staking, köprüler, fiyat beslemeleri, cüzdanlar, harcama izinleri, uyarılar — 34 entegrasyonda 442 eylem; KeeperHub’ın kendi kayıt defterinden üretildi ve bir anlık görüntü hash’ine sabitlendi."
+      },
+      "effect": {
+        "tag": "ETKİ · 292 / 148",
+        "title": "Onay kapısı türetilir.",
+        "description": "Her eylem, doğrudan kayıt defterinden etkisine göre sınıflandırılır — 292’si okuma yapar, 148’i değer taşır ya da yetki verir. Sınıflandırıcının yerleştiremediği her şey karantinaya alınır ve çalışmayı reddeder."
+      },
+      "confirm": {
+        "tag": "ONAY",
+        "title": "Ne onaylarsan o çalışır.",
+        "description": "Bir yazma eylemi sohbeti durdurur ve bir kart çıkarır: her alan dolu, her alan düzenlenebilir. Platform önizleyebiliyorsa önce simüle edilir, edemiyorsa bu açıkça belirtilir. Onayladığın şey bayt bayt aynen gerçekleşir."
+      },
+      "failLoudly": {
+        "tag": "AÇIKÇA HATA VER",
+        "title": "Makbuz, onay mesajı değil.",
+        "description": "Başarı, doğrulanmış bir zincir üstü makbuzdur — blok, hash, durum, zincirden geri okunur. ok döndüren bir araç henüz hiçbir şey taşımamıştır."
+      },
+      "voice": {
+        "tag": "SES",
+        "title": "Ses sorabilir. Ses gönderemez.",
+        "description": "Bir soru söyle, bir önizleme iste — ses ikisini de yapar. Bir yazmayı onaylamak, kartta bilinçli bir tıklama gerektirir."
+      },
+      "ledger": {
+        "tag": "DEFTER",
+        "title": "Kayıt sohbetten uzun yaşar.",
+        "description": "Her gerçekleştirme, sohbet dökümünden ayrı, kalıcı bir olgu olarak yazılır; bu yüzden bir sohbeti silmek kanıtı asla silmez. Tutarlar baştan sona tam sayı temel birim dizeleri olarak kalır ve yalnızca en son aşamada biçimlendirilir."
+      }
+    }
+  },
+  "howItWorks": {
+    "heading": {
+      "eyebrow": "NASIL ÇALIŞIR",
+      "title": "Bir cümleden <em>doğrulanmış</em> bir makbuza.",
+      "subtitle": "Beş adım. Okumalar akar. Yazmalar durup sorar."
+    },
+    "meta": "SÜREÇ · ADIM {num}",
+    "issued": "VERİLDİ",
+    "pending": "BEKLİYOR",
+    "step": "ADIM",
+    "steps": {
+      "ask": {
+        "title": "Sade bir dille sorarsın",
+        "body": "SDK yok, ABI yok, calldata yok. Gerçekten yapılmasını istediğin şeyi yaz; Copilot bunu bir komut olarak değil, bir niyet olarak okur."
+      },
+      "resolve": {
+        "title": "Eylemi belirler",
+        "body": "34 entegrasyonda 442 eylem; KeeperHub’ın kendi kayıt defterinden üretilir ve anlık görüntü hash’iyle sabitlenir. Her biri etkisine göre sınıflandırılır: 292’si okuma yapar, 148’i değer taşır ya da yetki verir."
+      },
+      "gate": {
+        "title": "Okumalar akar. Yazmalar durur.",
+        "body": "Bir okuma hemen yanıt verir — riske giren hiçbir şey yoktur. Değer taşıyan her şey ise bir kart gösterir: her alan dolu, her alan düzenlenebilir."
+      },
+      "confirm": {
+        "title": "Kontrol eder ve onaylarsın",
+        "body": "Kart göründüğü anda argümanlar sabitlenir. Gerçekleşen şey, modelin sonradan söylediği değil, bayt bayt senin onayladığındır."
+      },
+      "receipt": {
+        "title": "Bir makbuz alırsın",
+        "body": "Başarı, bir aracın onay mesajı değil, doğrulanmış bir zincir üstü makbuzdur — kalıcı bir kayıt olarak saklanır; bu yüzden sohbeti silmek kanıtı asla silmez."
+      }
+    }
+  },
+  "install": {
+    "heading": {
+      "eyebrow": "BAĞLAN",
+      "title": "<em>Kendi</em> KeeperHub’ına tek anahtar.",
+      "subtitle": "mcp:write kapsamlı bir kh_ anahtarı, zaten kullandığın her MCP istemcisini bağlar. Copilot’un kendisi KeeperHub ile oturum açar; bu yüzden yalnızca kendi ayarlarına ihtiyaç duyar."
+    },
+    "createKey": "Anahtar oluştur · 442 eylemin tümü",
+    "shellTab": "Kabuk"
+  },
+  "finalCta": {
+    "invitation": "DAVET",
+    "nonCustodial": "GÖZETİMSİZ",
+    "title": "Okumalar akar. Yazmalar <em>durup sorar</em>.",
+    "body": "Ne sorarsan sor, yanıt hemen gelir. Değer taşımasını iste; durur, her alanı doldurur ve tıklamanı bekler.",
+    "openApp": "Uygulamayı aç",
+    "signed": "İMZALANDI",
+    "snapshot": "KAYIT ANLIK GÖRÜNTÜSÜ <highlight>442 EYLEM</highlight>"
+  },
+  "footer": {
+    "tagline": "okumalar akar, yazmalar durup sorar",
+    "live": "CANLI",
+    "networks": "AĞLAR {count}",
+    "effectSplit": "292 OKUMA / 148 YAZMA",
+    "nav": {
+      "features": "Özellikler",
+      "how": "Nasıl",
+      "install": "Kurulum",
+      "app": "Uygulama",
+      "docs": "Belgeler"
+    }
+  }
+}

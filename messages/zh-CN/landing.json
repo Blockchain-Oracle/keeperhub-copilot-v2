@@ -1,0 +1,136 @@
+{
+  "floatingNav": {
+    "links": {
+      "features": "功能",
+      "how": "工作原理",
+      "install": "安装",
+      "docs": "文档"
+    },
+    "openApp": "打开应用",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "statusTicker": {
+    "networksLive": "{count, plural, other {<number>#</number> 个网络在线}}",
+    "connecting": "正在连接 keeperhub"
+  },
+  "hero": {
+    "prompts": {
+      "price": "Chainlink 上现在的 ETH 价格是多少？",
+      "balances": "显示我在所有链上的余额",
+      "send": "在 Base 上发送 10 USDC 给 alice.eth",
+      "supply": "向 Aave 存入 50 USDC，先告诉我 APY 是多少",
+      "gas": "Gas 低于 20 gwei 时提醒我"
+    },
+    "title": "用<em>自然语言</em>操作链上<stop>。</stop>",
+    "subtitle": "你的 KeeperHub Copilot。有问必答，即时响应——但任何转移资产的操作都不会擅自发生。<highlight>它会先停下，向你展示确切的操作，然后等待。</highlight>",
+    "inputLabel": "向 Copilot 提问",
+    "placeholder": "向 Copilot 提问…",
+    "submit": "打开应用",
+    "enterHint": "按 enter 在应用中打开"
+  },
+  "features": {
+    "heading": {
+      "eyebrow": "它能做什么",
+      "title": "读取直接放行，写入<em>停下询问</em>。",
+      "subtitle": "提出问题，它立即作答。让它转移资产，它会停下来，填好每个字段，等你点击确认。"
+    },
+    "spec": "规格",
+    "items": {
+      "registry": {
+        "tag": "注册表 · 442 个操作",
+        "title": "自动生成，而非手写。",
+        "description": "兑换、转账、借贷、质押、跨链桥、喂价、钱包、授权额度、提醒——34 个集成共 442 个操作，均由 KeeperHub 自身的注册表生成，并锁定到一个快照哈希。"
+      },
+      "effect": {
+        "tag": "作用 · 292 / 148",
+        "title": "确认关卡由推导而来。",
+        "description": "每个操作都依据注册表本身按作用分类——292 个只读，148 个会转移资产或授予权限。分类器无法归类的操作会被隔离，并拒绝运行。"
+      },
+      "confirm": {
+        "tag": "确认",
+        "title": "你批准什么，就运行什么。",
+        "description": "写入操作会暂停聊天并生成一张卡片：每个字段都已填好，每个字段都可编辑。平台能预览时先模拟运行，不能预览时会明确标注。你批准的内容会逐字节原样执行。"
+      },
+      "failLoudly": {
+        "tag": "显式失败",
+        "title": "是回执，而不是应答。",
+        "description": "成功意味着一张经过验证的链上回执——区块、哈希、状态，都从链上读回。工具返回 ok，并不代表已经转移了任何资产。"
+      },
+      "voice": {
+        "tag": "语音",
+        "title": "语音可以提问，不能发送。",
+        "description": "用语音提问，用语音请求预览——两者都可以。确认写入操作则需要你在卡片上亲手点击。"
+      },
+      "ledger": {
+        "tag": "账本",
+        "title": "记录比聊天更长久。",
+        "description": "每次执行都会作为持久的事实单独记录，与对话内容分开保存，因此删除对话绝不会删除证据。金额全程保持为最小单位的整数字符串，只在最终展示时才格式化。"
+      }
+    }
+  },
+  "howItWorks": {
+    "heading": {
+      "eyebrow": "工作原理",
+      "title": "从一句话到一张<em>经过验证</em>的回执。",
+      "subtitle": "五个步骤。读取直接放行，写入停下询问。"
+    },
+    "meta": "流程 · 步骤 {num}",
+    "issued": "已签发",
+    "pending": "待处理",
+    "step": "步骤",
+    "steps": {
+      "ask": {
+        "title": "你用自然语言提出请求",
+        "body": "无需 SDK，无需 ABI，无需 calldata。输入你真正想做的事，Copilot 会把它理解为意图，而不是命令。"
+      },
+      "resolve": {
+        "title": "它解析出对应的操作",
+        "body": "34 个集成共 442 个操作，均由 KeeperHub 自身的注册表生成，并做了快照哈希。每个操作都按作用分类：292 个只读，148 个会转移资产或授予权限。"
+      },
+      "gate": {
+        "title": "读取放行，写入暂停。",
+        "body": "读取操作立即作答——不涉及任何风险。任何转移资产的操作则会生成一张卡片：每个字段都已填好，每个字段都可编辑。"
+      },
+      "confirm": {
+        "title": "你检查并确认",
+        "body": "卡片生成的那一刻，参数就被冻结。执行的内容与你批准的逐字节一致，而不是模型接下来说的任何话。"
+      },
+      "receipt": {
+        "title": "你拿到回执",
+        "body": "成功意味着一张经过验证的链上回执，而不是工具的应答——它会作为持久记录保存，因此删除对话绝不会删除证据。"
+      }
+    }
+  },
+  "install": {
+    "heading": {
+      "eyebrow": "连接",
+      "title": "一把密钥，接入<em>你的</em> KeeperHub。",
+      "subtitle": "一个带 mcp:write 权限范围的 kh_ 密钥，即可连接你已在使用的任何 MCP 客户端。Copilot 本身通过 KeeperHub 登录，因此只需要它自己的设置。"
+    },
+    "createKey": "创建密钥 · 全部 442 个操作",
+    "shellTab": "Shell"
+  },
+  "finalCta": {
+    "invitation": "邀请",
+    "nonCustodial": "非托管",
+    "title": "读取直接放行，写入<em>停下询问</em>。",
+    "body": "有问必答，即时返回。让它转移资产，它会停下来，填好每个字段，等你点击。",
+    "openApp": "打开应用",
+    "signed": "已签署",
+    "snapshot": "注册表快照 <highlight>442 个操作</highlight>"
+  },
+  "footer": {
+    "tagline": "读取直接放行，写入停下询问",
+    "live": "在线",
+    "networks": "网络 {count}",
+    "effectSplit": "292 读取 / 148 写入",
+    "nav": {
+      "features": "功能",
+      "how": "原理",
+      "install": "安装",
+      "app": "应用",
+      "docs": "文档"
+    }
+  }
+}

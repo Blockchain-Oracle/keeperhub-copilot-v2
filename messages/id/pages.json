@@ -1,0 +1,117 @@
+{
+  "history": {
+    "title": "Riwayat",
+    "subtitle": {
+      "empty": "Percakapan Anda, dan apa yang dijalankan di masing-masing.",
+      "counts": "{conversations, plural, other {# percakapan}} · {executed, plural, other {# aksi dijalankan}}"
+    },
+    "error": {
+      "title": "Riwayat Anda tidak dapat dimuat",
+      "body": "Percakapan Anda tetap tersimpan. Kami hanya tidak dapat mengambilnya.",
+      "retry": "Coba lagi"
+    },
+    "empty": {
+      "title": "Belum ada percakapan",
+      "body": "Setiap percakapan disimpan di sini beserta apa yang dijalankannya. Mulai obrolan untuk membuat yang pertama.",
+      "openChat": "Buka obrolan"
+    },
+    "card": {
+      "executed": "{count} dijalankan",
+      "readsOnly": "hanya baca",
+      "open": "Buka",
+      "seal": "Aksi yang dijalankan"
+    }
+  },
+  "activity": {
+    "title": "Aktivitas",
+    "subtitle": "Yang dijalankan melalui copilot untuk organisasi ini, terbaru lebih dulu. Waktu dalam UTC.",
+    "filter": {
+      "label": "Tampilkan",
+      "actions": "Aksi",
+      "reads": "Baca",
+      "all": "Semua"
+    },
+    "error": {
+      "title": "Aktivitas tidak dapat dimuat saat ini",
+      "body": "Catatannya masih ada. Kami hanya tidak dapat mengambilnya.",
+      "retry": "Coba lagi"
+    },
+    "empty": {
+      "actions": {
+        "title": "Belum ada yang dikirim",
+        "body": "Aksi yang Anda otorisasi di obrolan muncul di sini beserta tanda terimanya."
+      },
+      "reads": {
+        "title": "Belum ada aksi baca",
+        "body": "Harga, saldo, dan setiap pencarian data lain yang dilakukan asisten muncul di sini."
+      },
+      "all": {
+        "title": "Belum ada apa-apa di sini",
+        "body": "Semua yang dijalankan copilot untuk organisasi ini muncul di sini, terbaru lebih dulu."
+      },
+      "openChat": "Buka obrolan"
+    },
+    "columns": {
+      "what": "Apa",
+      "network": "Jaringan",
+      "outcome": "Hasil",
+      "transaction": "Transaksi",
+      "when": "Kapan",
+      "from": "Dari"
+    },
+    "loadMore": "Muat lagi",
+    "loadMoreFailed": "Tidak dapat memuat lagi. Coba lagi.",
+    "view": "Lihat",
+    "fromChat": "Obrolan",
+    "fromAutomation": "Otomatisasi",
+    "verb": {
+      "send": "Kirim",
+      "contractCall": "Panggilan kontrak",
+      "walletIntegration": "Integrasi dompet",
+      "automationRun": "Eksekusi otomatisasi",
+      "automationCreated": "Otomatisasi baru",
+      "automationChanged": "Otomatisasi diubah",
+      "automationOn": "Otomatisasi diaktifkan",
+      "automationOff": "Otomatisasi dinonaktifkan",
+      "automationDeleted": "Otomatisasi dihapus"
+    },
+    "outcome": {
+      "executed": "Dijalankan",
+      "running": "Berjalan",
+      "saved": "Tersimpan",
+      "saving": "Menyimpan",
+      "on": "Aktif",
+      "turningOn": "Mengaktifkan",
+      "off": "Nonaktif",
+      "turningOff": "Menonaktifkan",
+      "deleted": "Dihapus",
+      "deleting": "Menghapus",
+      "failed": "Gagal",
+      "paidFailed": "Dibayar, gagal",
+      "cancelled": "Dibatalkan",
+      "expired": "Kedaluwarsa",
+      "sending": "Mengirim",
+      "read": "Dibaca"
+    }
+  },
+  "sharedReceipt": {
+    "kicker": "Tanda terima dibagikan",
+    "stamp": "DIJALANKAN",
+    "executed": "Dijalankan",
+    "verified": "Diverifikasi on-chain oleh KeeperHub",
+    "sent": "Dikirim melalui KeeperHub",
+    "tokens": "token",
+    "rows": {
+      "network": "Jaringan",
+      "token": "Token",
+      "block": "Blok",
+      "executed": "Dijalankan"
+    },
+    "footnote": "Dibagikan dari KeeperHub Copilot. Hanya fakta on-chain publik yang ditampilkan.",
+    "tryCopilot": "Coba KeeperHub Copilot",
+    "notFound": {
+      "title": "Tanda terima ini tidak dibagikan",
+      "body": "Tautannya telah dinonaktifkan, atau tidak pernah ada."
+    }
+  }
+}

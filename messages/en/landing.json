@@ -1,0 +1,136 @@
+{
+  "floatingNav": {
+    "links": {
+      "features": "Features",
+      "how": "How it works",
+      "install": "Install",
+      "docs": "Docs"
+    },
+    "openApp": "Open the app",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "statusTicker": {
+    "networksLive": "{count, plural, one {<number>#</number> network live} other {<number>#</number> networks live}}",
+    "connecting": "connecting to keeperhub"
+  },
+  "hero": {
+    "prompts": {
+      "price": "What's the ETH price on Chainlink right now?",
+      "balances": "Show me my balances across every chain",
+      "send": "Send 10 USDC to alice.eth on Base",
+      "supply": "Supply 50 USDC to Aave and tell me the APY first",
+      "gas": "Tell me when gas drops below 20 gwei"
+    },
+    "title": "Onchain, in <em>plain language</em><stop>.</stop>",
+    "subtitle": "Your copilot for KeeperHub. Ask anything and it answers instantly — but nothing that moves value ever just happens. <highlight>It stops, shows you the exact action, and waits.</highlight>",
+    "inputLabel": "Ask your copilot",
+    "placeholder": "Ask your copilot…",
+    "submit": "Open the app",
+    "enterHint": "press enter to open in the app"
+  },
+  "features": {
+    "heading": {
+      "eyebrow": "WHAT IT DOES",
+      "title": "Reads flow. Writes <em>stop and ask</em>.",
+      "subtitle": "Ask a question and it answers instantly. Ask it to move value and it stops, fills in every field, and waits for you to click."
+    },
+    "spec": "SPEC",
+    "items": {
+      "registry": {
+        "tag": "REGISTRY · 442 ACTIONS",
+        "title": "Generated, not hand-written.",
+        "description": "Swaps, transfers, lending, staking, bridges, price feeds, wallets, allowances, alerts — 442 actions across 34 integrations, generated from KeeperHub's own registry and pinned to a snapshot hash."
+      },
+      "effect": {
+        "tag": "EFFECT · 292 / 148",
+        "title": "The gate is derived.",
+        "description": "Every action is classified by effect from the registry itself — 292 read, 148 move value or grant authority. Anything the classifier cannot place is quarantined and refuses to run."
+      },
+      "confirm": {
+        "tag": "CONFIRM",
+        "title": "What you approve is what runs.",
+        "description": "A write stops the chat and prints a card: every field filled in, every field editable. Simulated first where the platform can preview, marked plainly where it cannot. What you approved is what executes, byte for byte."
+      },
+      "failLoudly": {
+        "tag": "FAIL LOUDLY",
+        "title": "A receipt. Not an ack.",
+        "description": "Success is a verified on-chain receipt — block, hash, status, read back from the chain. A tool that returns ok has not moved anything yet."
+      },
+      "voice": {
+        "tag": "VOICE",
+        "title": "Voice can ask. Voice cannot send.",
+        "description": "Speak a question, speak a preview — voice does both. Confirming a write takes a deliberate click on the card."
+      },
+      "ledger": {
+        "tag": "LEDGER",
+        "title": "The record outlives the chat.",
+        "description": "Every execution is written as a durable fact separate from the transcript, so deleting a conversation never deletes the evidence. Amounts stay integer base-unit strings end to end and are formatted only at the edge."
+      }
+    }
+  },
+  "howItWorks": {
+    "heading": {
+      "eyebrow": "HOW IT WORKS",
+      "title": "From a sentence to a <em>verified</em> receipt.",
+      "subtitle": "Five steps. Reads flow. Writes stop and ask."
+    },
+    "meta": "CEREMONY · STEP {num}",
+    "issued": "ISSUED",
+    "pending": "PENDING",
+    "step": "STEP",
+    "steps": {
+      "ask": {
+        "title": "You ask, in plain language",
+        "body": "No SDK, no ABI, no calldata. Type the thing you actually want done, and the copilot reads it as intent rather than as a command."
+      },
+      "resolve": {
+        "title": "It resolves the action",
+        "body": "442 actions across 34 integrations, generated from KeeperHub's own registry and snapshot-hashed. Each one is classified by effect: 292 read, 148 move value or grant authority."
+      },
+      "gate": {
+        "title": "Reads flow. Writes stop.",
+        "body": "A read answers immediately — nothing is at stake. Anything that moves value renders a card instead: every field filled in, every field editable."
+      },
+      "confirm": {
+        "title": "You check it and confirm",
+        "body": "The arguments freeze the moment the card renders. What executes is byte-for-byte what you approved, not whatever the model says next."
+      },
+      "receipt": {
+        "title": "You get a receipt",
+        "body": "Success is a verified on-chain receipt, never a tool acknowledgement — kept as a durable record, so deleting the conversation never deletes the evidence."
+      }
+    }
+  },
+  "install": {
+    "heading": {
+      "eyebrow": "CONNECT",
+      "title": "One key into <em>your</em> KeeperHub.",
+      "subtitle": "A kh_ key with mcp:write scope connects any MCP client you already run. The copilot itself signs in with KeeperHub, so it needs only its own settings."
+    },
+    "createKey": "Create a key · all 442 actions",
+    "shellTab": "Shell"
+  },
+  "finalCta": {
+    "invitation": "INVITATION",
+    "nonCustodial": "NON-CUSTODIAL",
+    "title": "Reads flow. Writes <em>stop and ask</em>.",
+    "body": "Ask anything and the answer comes back immediately. Ask it to move value and it stops, fills in every field, and waits for your click.",
+    "openApp": "Open the app",
+    "signed": "SIGNED",
+    "snapshot": "REGISTRY SNAPSHOT <highlight>442 ACTIONS</highlight>"
+  },
+  "footer": {
+    "tagline": "reads flow, writes stop and ask",
+    "live": "LIVE",
+    "networks": "NETWORKS {count}",
+    "effectSplit": "292 READS / 148 WRITES",
+    "nav": {
+      "features": "Features",
+      "how": "How",
+      "install": "Install",
+      "app": "App",
+      "docs": "Docs"
+    }
+  }
+}

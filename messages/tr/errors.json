@@ -1,0 +1,22 @@
+{
+  "unauthorized": "Devam etmek için KeeperHub’a bağlan.",
+  "session": "KeeperHub oturumun sona erdi. Devam etmek için KeeperHub’a bağlan.",
+  "server_error": "Bizim tarafımızda bir sorun oluştu. Birazdan tekrar dene.",
+  "not_found": "Bu artık mevcut değil.",
+  "bad_request": "Bu istek okunamadı.",
+  "upstream_error": "KeeperHub beklendiği gibi yanıt vermedi. Birazdan tekrar dene.",
+  "transport": "KeeperHub’a ulaşılamadı. Bağlantını kontrol edip tekrar dene.",
+  "rate_limited": "KeeperHub şu an yoğun. Birazdan tekrar dene.",
+  "insufficient_scope": "Bunun için KeeperHub’da daha fazla erişim gerekiyor. Yeniden bağlanıp izin ver.",
+  "archived": "Bu sohbet arşivlendi. Yeni bir sohbet başlat.",
+  "waiting": "Önce yukarıdaki kartı veya formu yanıtla.",
+  "not_shareable": "Yalnızca bir işlemle gerçekleşmiş bir eylem paylaşılabilir.",
+  "validation_failed": "Bazı bilgiler uygun değil. Kontrol edip tekrar dene.",
+  "write_not_available": "Bu eylem henüz buradan gönderilemiyor.",
+  "quarantined": "Bu eylem çalıştırılamaz: Copilot ne yaptığını belirleyemiyor.",
+  "automation_only": "KeeperHub bunu yalnızca bir otomasyonun içinde bir adım olarak çalıştırır.",
+  "tool_error": "Bu tamamlanamadı.",
+  "deactivated": "Bu otomasyon KeeperHub’da kapalı.",
+  "on_demand": "Bu otomasyon yalnızca başlatıldığında çalışır.",
+  "invalid_chain": "Bu ağ desteklenmiyor."
+}

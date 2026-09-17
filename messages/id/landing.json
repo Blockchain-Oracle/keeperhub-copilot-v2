@@ -1,0 +1,136 @@
+{
+  "floatingNav": {
+    "links": {
+      "features": "Fitur",
+      "how": "Cara kerja",
+      "install": "Instalasi",
+      "docs": "Dokumentasi"
+    },
+    "openApp": "Buka aplikasi",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu"
+  },
+  "statusTicker": {
+    "networksLive": "{count, plural, other {<number>#</number> jaringan aktif}}",
+    "connecting": "menghubungkan ke keeperhub"
+  },
+  "hero": {
+    "prompts": {
+      "price": "Berapa harga ETH di Chainlink sekarang?",
+      "balances": "Tampilkan saldo saya di semua chain",
+      "send": "Kirim 10 USDC ke alice.eth di Base",
+      "supply": "Setor 50 USDC ke Aave dan beri tahu APY-nya dulu",
+      "gas": "Beri tahu saya saat gas turun di bawah 20 gwei"
+    },
+    "title": "Onchain, dalam <em>bahasa sehari-hari</em><stop>.</stop>",
+    "subtitle": "Copilot Anda untuk KeeperHub. Tanyakan apa saja dan ia langsung menjawab — tetapi apa pun yang memindahkan dana tidak pernah terjadi begitu saja. <highlight>Ia berhenti, menunjukkan aksi yang persis, lalu menunggu.</highlight>",
+    "inputLabel": "Tanya copilot Anda",
+    "placeholder": "Tanya copilot Anda…",
+    "submit": "Buka aplikasi",
+    "enterHint": "tekan enter untuk membuka di aplikasi"
+  },
+  "features": {
+    "heading": {
+      "eyebrow": "KEMAMPUAN",
+      "title": "Aksi baca langsung jalan. Aksi tulis <em>berhenti dan bertanya</em>.",
+      "subtitle": "Ajukan pertanyaan dan ia langsung menjawab. Minta ia memindahkan dana dan ia berhenti, mengisi setiap kolom, lalu menunggu Anda mengeklik."
+    },
+    "spec": "SPEK",
+    "items": {
+      "registry": {
+        "tag": "REGISTRI · 442 AKSI",
+        "title": "Dihasilkan, bukan ditulis tangan.",
+        "description": "Swap, transfer, lending, staking, bridge, feed harga, dompet, allowance, peringatan — 442 aksi di 34 integrasi, dihasilkan dari registri KeeperHub sendiri dan dikunci ke hash snapshot."
+      },
+      "effect": {
+        "tag": "EFEK · 292 / 148",
+        "title": "Gerbangnya diturunkan dari registri.",
+        "description": "Setiap aksi diklasifikasikan menurut efeknya langsung dari registri — 292 membaca, 148 memindahkan dana atau memberi otoritas. Apa pun yang tidak dapat dikategorikan oleh pengklasifikasi akan dikarantina dan menolak dijalankan."
+      },
+      "confirm": {
+        "tag": "KONFIRMASI",
+        "title": "Yang Anda setujui adalah yang dijalankan.",
+        "description": "Aksi tulis menghentikan obrolan dan menampilkan kartu: setiap kolom terisi, setiap kolom dapat diedit. Disimulasikan dulu jika platform dapat menampilkan pratinjau, ditandai dengan jelas jika tidak. Yang Anda setujui adalah yang dijalankan, byte demi byte."
+      },
+      "failLoudly": {
+        "tag": "GAGAL TERBUKA",
+        "title": "Tanda terima, bukan sekadar konfirmasi.",
+        "description": "Keberhasilan adalah tanda terima on-chain yang terverifikasi — blok, hash, status, dibaca kembali dari chain. Alat yang mengembalikan ok belum memindahkan apa pun."
+      },
+      "voice": {
+        "tag": "SUARA",
+        "title": "Suara bisa bertanya. Suara tidak bisa mengirim.",
+        "description": "Ucapkan pertanyaan, ucapkan pratinjau — suara bisa keduanya. Mengonfirmasi aksi tulis membutuhkan klik yang disengaja pada kartu."
+      },
+      "ledger": {
+        "tag": "CATATAN",
+        "title": "Catatannya bertahan lebih lama dari obrolan.",
+        "description": "Setiap eksekusi ditulis sebagai fakta permanen yang terpisah dari transkrip, jadi menghapus percakapan tidak pernah menghapus buktinya. Jumlah tetap berupa string bilangan bulat dalam unit dasar dari awal hingga akhir dan baru diformat saat ditampilkan."
+      }
+    }
+  },
+  "howItWorks": {
+    "heading": {
+      "eyebrow": "CARA KERJA",
+      "title": "Dari satu kalimat menjadi tanda terima yang <em>terverifikasi</em>.",
+      "subtitle": "Lima langkah. Aksi baca langsung jalan. Aksi tulis berhenti dan bertanya."
+    },
+    "meta": "ALUR · LANGKAH {num}",
+    "issued": "DITERBITKAN",
+    "pending": "MENUNGGU",
+    "step": "LANGKAH",
+    "steps": {
+      "ask": {
+        "title": "Anda bertanya dengan bahasa sehari-hari",
+        "body": "Tanpa SDK, tanpa ABI, tanpa calldata. Ketik hal yang benar-benar ingin Anda lakukan, dan copilot membacanya sebagai niat, bukan sebagai perintah."
+      },
+      "resolve": {
+        "title": "Ia menentukan aksinya",
+        "body": "442 aksi di 34 integrasi, dihasilkan dari registri KeeperHub sendiri dan dikunci dengan hash snapshot. Masing-masing diklasifikasikan menurut efeknya: 292 membaca, 148 memindahkan dana atau memberi otoritas."
+      },
+      "gate": {
+        "title": "Aksi baca jalan. Aksi tulis berhenti.",
+        "body": "Aksi baca langsung menjawab — tidak ada yang dipertaruhkan. Apa pun yang memindahkan dana akan menampilkan kartu: setiap kolom terisi, setiap kolom dapat diedit."
+      },
+      "confirm": {
+        "title": "Anda memeriksa dan mengonfirmasi",
+        "body": "Argumennya dibekukan saat kartu muncul. Yang dijalankan sama persis, byte demi byte, dengan yang Anda setujui, bukan apa pun yang dikatakan model setelahnya."
+      },
+      "receipt": {
+        "title": "Anda mendapat tanda terima",
+        "body": "Keberhasilan adalah tanda terima on-chain yang terverifikasi, bukan sekadar konfirmasi alat — disimpan sebagai catatan permanen, jadi menghapus percakapan tidak pernah menghapus buktinya."
+      }
+    }
+  },
+  "install": {
+    "heading": {
+      "eyebrow": "HUBUNGKAN",
+      "title": "Satu kunci ke KeeperHub <em>Anda</em>.",
+      "subtitle": "Kunci kh_ dengan scope mcp:write menghubungkan klien MCP apa pun yang sudah Anda gunakan. Copilot sendiri masuk dengan KeeperHub, jadi hanya perlu pengaturannya sendiri."
+    },
+    "createKey": "Buat kunci · semua 442 aksi",
+    "shellTab": "Shell"
+  },
+  "finalCta": {
+    "invitation": "UNDANGAN",
+    "nonCustodial": "NON-KUSTODIAL",
+    "title": "Aksi baca langsung jalan. Aksi tulis <em>berhenti dan bertanya</em>.",
+    "body": "Tanyakan apa saja dan jawabannya langsung datang. Minta ia memindahkan dana dan ia berhenti, mengisi setiap kolom, lalu menunggu klik Anda.",
+    "openApp": "Buka aplikasi",
+    "signed": "DITANDATANGANI",
+    "snapshot": "SNAPSHOT REGISTRI <highlight>442 AKSI</highlight>"
+  },
+  "footer": {
+    "tagline": "aksi baca jalan, aksi tulis berhenti dan bertanya",
+    "live": "AKTIF",
+    "networks": "JARINGAN {count}",
+    "effectSplit": "292 BACA / 148 TULIS",
+    "nav": {
+      "features": "Fitur",
+      "how": "Cara kerja",
+      "install": "Instalasi",
+      "app": "Aplikasi",
+      "docs": "Dokumentasi"
+    }
+  }
+}

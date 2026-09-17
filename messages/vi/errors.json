@@ -1,0 +1,22 @@
+{
+  "unauthorized": "Kết nối KeeperHub để tiếp tục.",
+  "session": "Phiên KeeperHub của bạn đã kết thúc. Kết nối KeeperHub để tiếp tục.",
+  "server_error": "Đã xảy ra lỗi từ phía chúng tôi. Hãy thử lại sau giây lát.",
+  "not_found": "Nội dung này không còn khả dụng.",
+  "bad_request": "Không thể đọc yêu cầu đó.",
+  "upstream_error": "KeeperHub không phản hồi như mong đợi. Hãy thử lại sau giây lát.",
+  "transport": "Không thể kết nối tới KeeperHub. Hãy kiểm tra kết nối internet và thử lại.",
+  "rate_limited": "KeeperHub đang bận. Hãy thử lại sau giây lát.",
+  "insufficient_scope": "Việc này cần thêm quyền truy cập KeeperHub. Hãy kết nối lại và cấp quyền.",
+  "archived": "Cuộc trò chuyện này đã được lưu trữ. Hãy bắt đầu cuộc trò chuyện mới.",
+  "waiting": "Hãy trả lời thẻ hoặc biểu mẫu phía trên trước.",
+  "not_shareable": "Chỉ có thể chia sẻ thao tác đã thực hiện kèm một giao dịch.",
+  "validation_failed": "Một số thông tin chưa hợp lệ. Hãy kiểm tra và thử lại.",
+  "write_not_available": "Chưa thể gửi thao tác này từ đây.",
+  "quarantined": "Không thể chạy thao tác này: Copilot không xác định được nó làm gì.",
+  "automation_only": "KeeperHub chỉ chạy thao tác này như một bước trong tự động hóa.",
+  "tool_error": "Không thể hoàn tất việc này.",
+  "deactivated": "Tự động hóa này đang bị tắt trong KeeperHub.",
+  "on_demand": "Tự động hóa này chỉ chạy khi được khởi động.",
+  "invalid_chain": "Mạng đó không được hỗ trợ."
+}

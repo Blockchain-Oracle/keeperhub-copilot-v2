@@ -1,0 +1,369 @@
+{
+  "actions": {
+    "authorize": "Otorisasi",
+    "authorizing": "Mengotorisasi…",
+    "edit": "Edit",
+    "turnOn": "Aktifkan",
+    "turnOff": "Nonaktifkan",
+    "turningOn": "Mengaktifkan…",
+    "runNow": "Jalankan sekarang",
+    "running": "Menjalankan…",
+    "checkAgain": "Periksa lagi",
+    "openAutomation": "Buka otomatisasi →"
+  },
+  "acknowledge": {
+    "goAhead": "Tetap lanjutkan. Saya sudah membaca peringatannya.",
+    "turnOn": "Tetap aktifkan. Saya sudah membaca peringatannya.",
+    "run": "Tetap jalankan. Saya sudah membaca peringatannya."
+  },
+  "failures": {
+    "noAnswer": "KeeperHub tidak merespons.",
+    "noAnswerConnection": "KeeperHub tidak merespons. Periksa koneksi Anda dan coba lagi.",
+    "checkFailed": "Pemeriksaan KeeperHub tidak dapat dijalankan.",
+    "notTurnedOn": "KeeperHub tidak mengaktifkannya.",
+    "notChanged": "KeeperHub tidak mengubah otomatisasi.",
+    "dryRunFailed": "KeeperHub tidak dapat menguji coba otomatisasi ini.",
+    "runNotStarted": "Eksekusi tidak dapat dimulai.",
+    "runNotStartedConnection": "Eksekusi tidak dapat dimulai. Periksa koneksi Anda dan coba lagi."
+  },
+  "view": {
+    "trigger": {
+      "manual": "Manual, saat seseorang menekan Jalankan sekarang",
+      "webhook": "Saat URL webhook-nya dipanggil",
+      "schedule": "Sesuai jadwal",
+      "block": "{count, plural, other {Setiap {every} blok}}",
+      "event": "Saat {event} dipancarkan",
+      "tempoPayment": "Saat pembayaran Tempo masuk"
+    },
+    "rows": {
+      "cron": "Cron",
+      "timezone": "Zona waktu",
+      "contract": "Kontrak",
+      "recipient": "Ke",
+      "token": "Token",
+      "memo": "Memo",
+      "condition": "Lanjut jika"
+    },
+    "stepFallback": "Langkah",
+    "actionLabel": {
+      "checking": "Memeriksa…",
+      "checkFailed": "Pemeriksaan gagal",
+      "blocked": "Tidak dapat dilanjutkan",
+      "acknowledge": "Akui peringatan"
+    },
+    "frame": {
+      "saving": {
+        "meta": "MENYIMPAN",
+        "status": "Menyimpan ke KeeperHub…"
+      },
+      "savingChanges": {
+        "meta": "MENYIMPAN",
+        "status": "Menyimpan perubahan ke KeeperHub…"
+      },
+      "starting": {
+        "meta": "MEMULAI",
+        "status": "Memulai eksekusi di KeeperHub…"
+      },
+      "deleting": {
+        "meta": "MENGHAPUS",
+        "status": "Menghapus dari KeeperHub…"
+      },
+      "cancelled": {
+        "meta": "DIBATALKAN",
+        "status": "Dibatalkan"
+      },
+      "notSent": {
+        "meta": "TIDAK TERKIRIM",
+        "status": "Tidak terkirim"
+      },
+      "cancelling": {
+        "meta": "MEMBATALKAN",
+        "status": "Membatalkan…"
+      },
+      "noAnswer": {
+        "meta": "TANPA JAWABAN",
+        "status": "Diotorisasi, tidak ada jawaban tersimpan"
+      },
+      "turningOn": {
+        "meta": "MENGAKTIFKAN",
+        "status": "Mengaktifkan di KeeperHub…"
+      },
+      "turningOff": {
+        "meta": "MENONAKTIFKAN",
+        "status": "Menonaktifkan di KeeperHub…"
+      },
+      "neverAuthorized": {
+        "meta": "TAK DIOTORISASI",
+        "status": "Tidak pernah diotorisasi"
+      },
+      "authorizing": {
+        "meta": "MENGOTORISASI",
+        "status": "Mengotorisasi…"
+      },
+      "edited": {
+        "meta": "DIEDIT",
+        "status": "Diedit, menunggu otorisasi Anda"
+      },
+      "awaiting": {
+        "meta": "MENUNGGU OTORISASI",
+        "status": "Menunggu otorisasi Anda"
+      },
+      "live": {
+        "meta": "AKTIF",
+        "status": "Tersimpan dan diaktifkan"
+      },
+      "savedOff": {
+        "meta": "TERSIMPAN · NONAKTIF",
+        "status": "Tersimpan, dinonaktifkan"
+      },
+      "saved": {
+        "meta": "TERSIMPAN",
+        "status": "Perubahan tersimpan"
+      },
+      "deleted": {
+        "meta": "DIHAPUS",
+        "status": "Dihapus dari KeeperHub"
+      },
+      "executed": {
+        "meta": "DIJALANKAN",
+        "status": "Dijalankan"
+      },
+      "failed": {
+        "meta": "GAGAL",
+        "status": "Eksekusi gagal"
+      },
+      "stillRunning": {
+        "meta": "MASIH BERJALAN",
+        "status": "Masih berjalan"
+      },
+      "running": {
+        "meta": "BERJALAN",
+        "status": "Berjalan di KeeperHub…"
+      },
+      "started": {
+        "meta": "DIMULAI",
+        "status": "Dimulai"
+      },
+      "turnedOn": {
+        "meta": "DIAKTIFKAN",
+        "status": "Diaktifkan"
+      },
+      "turnedOff": {
+        "meta": "DINONAKTIFKAN",
+        "status": "Dinonaktifkan"
+      }
+    },
+    "stamp": {
+      "live": "AKTIF",
+      "saved": "TERSIMPAN",
+      "deleted": "DIHAPUS",
+      "executed": "DIJALANKAN",
+      "void": "BATAL",
+      "on": "AKTIF",
+      "off": "NONAKTIF"
+    },
+    "kicker": {
+      "create": "Otomatisasi baru",
+      "update": "Ubah otomatisasi",
+      "run": "Eksekusi otomatisasi",
+      "delete": "Hapus otomatisasi",
+      "turnOn": "Aktifkan otomatisasi",
+      "turnOff": "Nonaktifkan otomatisasi"
+    },
+    "title": {
+      "create": "Otomatisasi baru",
+      "update": "Ubah otomatisasi",
+      "run": "Jalankan {name}",
+      "runAny": "Jalankan otomatisasi",
+      "delete": "Hapus {name}",
+      "deleteAny": "Hapus otomatisasi",
+      "turnOn": "Aktifkan {name}",
+      "turnOnAny": "Aktifkan otomatisasi",
+      "turnOff": "Nonaktifkan {name}",
+      "turnOffAny": "Nonaktifkan otomatisasi"
+    },
+    "form": {
+      "name": "Nama",
+      "cron": "Jadwal (cron)",
+      "timezone": "Zona waktu",
+      "network": "Jaringan",
+      "every": "Setiap N blok",
+      "contract": "Kontrak",
+      "event": "Nama event",
+      "abi": "ABI kontrak",
+      "abiPlaceholder": "Kosongkan untuk kontrak terverifikasi",
+      "recipient": "Alamat deposit",
+      "token": "Token",
+      "memo": "Memo",
+      "stepField": "Langkah {number} · {label}"
+    }
+  },
+  "card": {
+    "declinedRun": "Anda menolak eksekusi ini. Tidak ada yang dijalankan.",
+    "declinedProposal": "Anda menolak usulan ini. Tidak ada yang diubah di KeeperHub.",
+    "checkValues": "Periksa nilai ini",
+    "starts": "Dimulai",
+    "steps": "Langkah",
+    "automation": "Otomatisasi",
+    "change": "Perubahan",
+    "notSent": "Jawaban Anda tidak sampai ke KeeperHub. Periksa koneksi Anda dan coba lagi.",
+    "noAnswer": "Ini sudah diotorisasi, tetapi jawaban KeeperHub tidak pernah sampai ke obrolan ini. Halaman Otomatisasi menunjukkan bagaimana akhirnya.",
+    "archived": "Tidak ada yang mengotorisasi ini sebelum obrolan diarsipkan. Tidak ada yang diubah.",
+    "updatedOn": "Otomatisasi ini aktif, jadi versi baru berjalan mulai eksekusi berikutnya.",
+    "updatedKept": "Status aktif atau nonaktifnya tetap dipertahankan.",
+    "deleted": "Dihapus beserta riwayat eksekusinya. Tidak lagi muncul di halaman Otomatisasi."
+  },
+  "savedFollowUp": {
+    "onDemand": "Otomatisasi ini berjalan saat seseorang menekan Jalankan sekarang di halamannya.",
+    "archived": "Disimpan dalam keadaan nonaktif. Halamannya menunjukkan apakah sudah diaktifkan sejak itu.",
+    "live": "Aktif. Mulai sekarang KeeperHub menjalankannya secara otomatis.",
+    "off": "Otomatisasi ini nonaktif. Aktifkan setelah membaca pemeriksaan KeeperHub, dan otomatisasi akan berjalan dengan sendirinya."
+  },
+  "runFollowUp": {
+    "started": "Dimulai. Halaman otomatisasi menunjukkan bagaimana eksekusinya berakhir.",
+    "running": "Berjalan di KeeperHub. Kartu ini diperbarui saat selesai.",
+    "executed": "Dijalankan.",
+    "transaction": "Transaksi",
+    "failed": "Eksekusi gagal di KeeperHub. Halamannya menunjukkan langkah mana yang menghentikannya.",
+    "stale": "Masih berjalan setelah lima menit. Hasilnya akan muncul di halamannya dan di Aktivitas."
+  },
+  "previewBlock": {
+    "checking": "memeriksa dengan KeeperHub",
+    "label": "Pemeriksaan KeeperHub",
+    "blocked": "diblokir",
+    "warned": "baca peringatannya",
+    "ready": "siap",
+    "changes": "Yang berubah"
+  },
+  "subjectBlock": {
+    "steps": "Langkah",
+    "noSteps": "belum ada langkah"
+  },
+  "triggerBlock": {
+    "network": "Jaringan"
+  },
+  "stepDetail": {
+    "movesValue": "memindahkan dana"
+  },
+  "stepList": {
+    "off": "nonaktif"
+  },
+  "listCard": {
+    "meta": "{count, plural, other {# OTOMATISASI}}",
+    "empty": "belum ada otomatisasi",
+    "steps": "{count, plural, other {# langkah}}"
+  },
+  "detailCard": {
+    "unreadableMeta": "TIDAK TERBACA",
+    "unreadable": "otomatisasi ini tidak dapat dibaca",
+    "statusMeta": {
+      "live": "AKTIF",
+      "manual": "MANUAL",
+      "off": "NONAKTIF",
+      "deactivated": "DINONAKTIFKAN"
+    },
+    "steps": "Langkah",
+    "noSteps": "belum ada langkah",
+    "recentRuns": "Eksekusi terbaru",
+    "runsUnavailable": "Riwayat eksekusi KeeperHub sedang tidak tersedia.",
+    "noRuns": "Belum ada eksekusi."
+  },
+  "statusBadge": {
+    "live": "AKTIF",
+    "manual": "manual",
+    "off": "nonaktif",
+    "deactivated": "dinonaktifkan"
+  },
+  "triggerLabel": {
+    "manual": "Dijalankan manual",
+    "transfer": "Berjalan saat ada transfer",
+    "other": "Pemicu {type}"
+  },
+  "duration": {
+    "milliseconds": "{ms} ms",
+    "seconds": "{seconds} s",
+    "minutes": "{minutes} m {seconds} s"
+  },
+  "runStatus": {
+    "executed": "Dijalankan",
+    "failed": "Gagal",
+    "cancelled": "Dibatalkan",
+    "skipped": "Dilewati",
+    "running": "Berjalan"
+  },
+  "board": {
+    "title": "Otomatisasi",
+    "subtitle": "Alur kerja yang dijalankan KeeperHub untuk organisasi ini. Buka salah satunya untuk melihat langkah dan eksekusinya, atau jalankan sekarang.",
+    "filterLabel": "Tampilkan",
+    "filters": {
+      "all": "Semua",
+      "live": "Aktif",
+      "manual": "Manual",
+      "off": "Nonaktif"
+    },
+    "sortLabel": "Urutkan",
+    "sorts": {
+      "updated": "Terakhir diperbarui",
+      "name": "Nama"
+    },
+    "loadFailed": "Otomatisasi tidak dapat dimuat saat ini",
+    "retry": "Coba lagi",
+    "emptyTitle": "Belum ada otomatisasi",
+    "emptyBody": "Minta obrolan untuk membuatnya, atau buat di KeeperHub. Keduanya akan muncul di sini beserta langkah dan eksekusinya.",
+    "createPrompt": "Bantu saya membuat otomatisasi.",
+    "createInChat": "Buat di obrolan →",
+    "openKeeperHub": "Buka KeeperHub ↗",
+    "noneInView": "Tidak ada otomatisasi di tampilan ini.",
+    "columns": {
+      "automation": "Otomatisasi",
+      "status": "Status",
+      "steps": "Langkah",
+      "networks": "Jaringan",
+      "updated": "Diperbarui"
+    },
+    "open": "Buka →"
+  },
+  "detail": {
+    "back": "← Otomatisasi",
+    "missingTitle": "Otomatisasi ini tidak tersedia",
+    "missingBody": "Mungkin sudah dihapus, atau milik organisasi lain.",
+    "loadFailed": "Otomatisasi ini tidak dapat dimuat saat ini. {message}",
+    "created": "dibuat <time></time>",
+    "deactivated": "Otomatisasi ini dinonaktifkan di KeeperHub.",
+    "stats": {
+      "trigger": "Pemicu",
+      "steps": "Langkah",
+      "networks": "Jaringan",
+      "lastRun": "Eksekusi terakhir",
+      "updated": "Diperbarui"
+    },
+    "steps": "Langkah",
+    "noSteps": "Otomatisasi ini belum memiliki langkah.",
+    "recentRuns": "Eksekusi terbaru",
+    "justStarted": "Eksekusi yang baru Anda mulai",
+    "stillRunning": "Masih berjalan. Hasilnya akan muncul di sini dan di Aktivitas.",
+    "runsUnavailable": "Riwayat eksekusi KeeperHub sedang tidak tersedia.",
+    "noRuns": "Belum ada eksekusi.",
+    "runSource": "eksekusi",
+    "viewTx": "Lihat",
+    "moreTx": "+{count} lagi"
+  },
+  "runDialog": {
+    "runningDryRun": "Menjalankan uji coba…",
+    "acknowledge": "Akui peringatan",
+    "trigger": "Pemicu",
+    "steps": "Langkah",
+    "networks": "Jaringan",
+    "explainer": "Setiap langkah berjalan sekarang. Langkah yang memindahkan dana dijalankan tanpa berhenti lagi.",
+    "dryRunLoading": "menjalankan uji coba",
+    "dryRun": "Uji coba",
+    "dryRunReason": "{reason} Anda mengotorisasi persis apa yang ditampilkan di atas.",
+    "noWarnings": "tidak ada peringatan",
+    "checked": "{count, plural, other {# langkah diperiksa}}.",
+    "checkedSkipped": "{count, plural, other {# langkah diperiksa}}, {skipped} tidak dapat diperiksa."
+  },
+  "switchDialog": {
+    "onExplainer": "Setelah aktif, KeeperHub menjalankannya secara otomatis, dan langkahnya berjalan tanpa berhenti lagi.",
+    "offExplainer": "Setelah nonaktif, KeeperHub berhenti menjalankannya secara otomatis. Jalankan sekarang tetap berfungsi."
+  }
+}

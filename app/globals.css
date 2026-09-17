@@ -1,0 +1,377 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* PP Neue Montreal is loaded via <link rel="stylesheet"> in app/layout.tsx
+   to satisfy the CSS-spec @import-order rule. */
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  ───── INSTRUMENT PANEL — token system ──────────────────────────────────────
+  Ported verbatim from references/portaldot-mcp/packages/web/app/globals.css
+  @ 86699dc. One deliberate difference: the receipt watermark says KEEPERHUB.
+  Dark-only canvas. Violet is action-only. Cyan is telemetry-only.
+*/
+@theme inline {
+  /* shadcn semantic roles */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Instrument Panel — new semantic tokens */
+  --color-telemetry: var(--telemetry);
+  --color-telemetry-soft: var(--telemetry-soft);
+  --color-primary-press: var(--primary-press);
+  --color-border-strong: var(--border-strong);
+
+  /* project aliases (kept so existing rebuilt components still compile) */
+  --color-bg: var(--background);
+  --color-surface: var(--card);
+  --color-surface-2: var(--surface-2);
+  --color-border-hover: var(--border-strong);
+  --color-fg: var(--foreground);
+  --color-fg-secondary: var(--fg-secondary);
+  --color-fg-muted: var(--fg-muted);
+  --color-brand: var(--primary);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-pending: var(--pending);
+
+  /* type */
+  --font-sans: var(--font-geist-sans), var(--font-locale, ui-sans-serif), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: "Neue Montreal", var(--font-geist-sans), var(--font-locale, ui-sans-serif), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-display);
+  --font-stamp: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* radius */
+  --radius-sm: calc(var(--radius) * 0.62);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.3);
+  --radius-2xl: calc(var(--radius) * 1.7);
+  --radius-card: var(--radius);
+
+  /* motion vocabulary */
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1); /* legacy alias for --ease-print */
+  --ease-print: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-snap: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-stagger: cubic-bezier(0.6, 0, 0.2, 1);
+
+  --dur-fast: 180ms;
+  --dur-base: 280ms;
+  --dur-slow: 480ms;
+  --dur-print: 620ms;
+
+  --animate-shimmer: shimmer 1.6s ease-in-out infinite;
+  --animate-rise: rise 0.22s var(--ease-print) both;
+  --animate-glow: glow 6s ease-in-out infinite;
+  --animate-print: print 0.62s var(--ease-print) both;
+  --animate-pulse-soft: pulse-soft 2.4s ease-in-out infinite;
+}
+
+:root {
+  --radius: 0.875rem; /* 14px */
+
+  /* canvas + surfaces */
+  --background: oklch(0.118 0.008 282);
+  --foreground: oklch(0.975 0.003 282);
+  --card: oklch(0.158 0.010 282);
+  --card-foreground: oklch(0.975 0.003 282);
+  --popover: oklch(0.158 0.010 282);
+  --popover-foreground: oklch(0.975 0.003 282);
+  --surface-2: oklch(0.198 0.012 282);
+
+  /* action — violet only */
+  --primary: oklch(0.66 0.22 288);
+  --primary-press: oklch(0.58 0.24 288);
+  --primary-foreground: oklch(0.16 0.02 285);
+  --ring: oklch(0.66 0.22 288 / 55%);
+
+  /* telemetry — cyan only (never a button) */
+  --telemetry: oklch(0.78 0.13 220);
+  --telemetry-soft: oklch(0.78 0.13 220 / 14%);
+
+  /* state */
+  --success: oklch(0.78 0.13 175);
+  --pending: oklch(0.79 0.14 70);
+  --destructive: oklch(0.66 0.21 25);
+
+  /* neutrals + borders */
+  --secondary: oklch(0.198 0.012 282);
+  --secondary-foreground: oklch(0.975 0.003 282);
+  --muted: oklch(0.198 0.012 282);
+  --muted-foreground: oklch(0.74 0.010 282);
+  --fg-secondary: oklch(0.74 0.010 282);
+  --fg-muted: oklch(0.52 0.012 282);
+  --accent: oklch(0.66 0.22 288 / 14%);
+  --accent-foreground: oklch(0.78 0.14 288);
+  --accent-soft: oklch(0.66 0.22 288 / 14%);
+  --border: oklch(0.265 0.014 282);
+  --border-strong: oklch(0.345 0.018 282);
+  --input: oklch(0.198 0.012 282);
+
+  /* charts — kept compatible with shadcn; map to our palette */
+  --chart-1: oklch(0.66 0.22 288);    /* violet */
+  --chart-2: oklch(0.78 0.13 220);    /* telemetry cyan */
+  --chart-3: oklch(0.78 0.13 175);    /* success */
+  --chart-4: oklch(0.79 0.14 70);     /* pending */
+  --chart-5: oklch(0.66 0.21 25);     /* destructive */
+
+  /* sidebar — match the rest */
+  --sidebar: oklch(0.158 0.010 282);
+  --sidebar-foreground: oklch(0.975 0.003 282);
+  --sidebar-primary: oklch(0.66 0.22 288);
+  --sidebar-primary-foreground: oklch(0.16 0.02 285);
+  --sidebar-accent: oklch(0.198 0.012 282);
+  --sidebar-accent-foreground: oklch(0.975 0.003 282);
+  --sidebar-border: oklch(0.265 0.014 282);
+  --sidebar-ring: oklch(0.66 0.22 288);
+}
+
+.dark {
+  --background: oklch(0.118 0.008 282);
+  --foreground: oklch(0.975 0.003 282);
+  --card: oklch(0.158 0.010 282);
+  --card-foreground: oklch(0.975 0.003 282);
+  --popover: oklch(0.158 0.010 282);
+  --popover-foreground: oklch(0.975 0.003 282);
+  --surface-2: oklch(0.198 0.012 282);
+
+  --primary: oklch(0.66 0.22 288);
+  --primary-press: oklch(0.58 0.24 288);
+  --primary-foreground: oklch(0.16 0.02 285);
+  --ring: oklch(0.66 0.22 288 / 55%);
+
+  --telemetry: oklch(0.78 0.13 220);
+  --telemetry-soft: oklch(0.78 0.13 220 / 14%);
+
+  --success: oklch(0.78 0.13 175);
+  --pending: oklch(0.79 0.14 70);
+  --destructive: oklch(0.66 0.21 25);
+
+  --secondary: oklch(0.198 0.012 282);
+  --secondary-foreground: oklch(0.975 0.003 282);
+  --muted: oklch(0.198 0.012 282);
+  --muted-foreground: oklch(0.74 0.010 282);
+  --fg-secondary: oklch(0.74 0.010 282);
+  --fg-muted: oklch(0.52 0.012 282);
+  --accent: oklch(0.66 0.22 288 / 14%);
+  --accent-foreground: oklch(0.78 0.14 288);
+  --accent-soft: oklch(0.66 0.22 288 / 14%);
+  --border: oklch(0.265 0.014 282);
+  --border-strong: oklch(0.345 0.018 282);
+  --input: oklch(0.198 0.012 282);
+
+  --chart-1: oklch(0.66 0.22 288);
+  --chart-2: oklch(0.78 0.13 220);
+  --chart-3: oklch(0.78 0.13 175);
+  --chart-4: oklch(0.79 0.14 70);
+  --chart-5: oklch(0.66 0.21 25);
+
+  --sidebar: oklch(0.158 0.010 282);
+  --sidebar-foreground: oklch(0.975 0.003 282);
+  --sidebar-primary: oklch(0.66 0.22 288);
+  --sidebar-primary-foreground: oklch(0.16 0.02 285);
+  --sidebar-accent: oklch(0.198 0.012 282);
+  --sidebar-accent-foreground: oklch(0.975 0.003 282);
+  --sidebar-border: oklch(0.265 0.014 282);
+  --sidebar-ring: oklch(0.66 0.22 288);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    position: relative;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  /* tabular figures for any element that displays a number we care about */
+  .tabular,
+  [data-mono],
+  code,
+  pre {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ───── Atmosphere ──────────────────────────────────────────────────────── */
+
+/*
+  Noise grain — inline SVG fractal noise as a data URL on body::after.
+  Zero JS, zero network, ~1KB. The single biggest "less shadcn template" lever.
+*/
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size: 160px 160px;
+}
+
+/* Conic-gradient corner glows — utility classes used on landing sections.
+   Use as: <section class="relative atmos-corners">…</section> */
+.atmos-corners::before,
+.atmos-corners::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 520px;
+  height: 520px;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.10;
+  z-index: 0;
+}
+.atmos-corners::before {
+  top: -160px;
+  left: -180px;
+  background: conic-gradient(from 218deg, var(--primary), transparent 40%);
+}
+.atmos-corners::after {
+  bottom: -200px;
+  right: -200px;
+  background: conic-gradient(from 38deg, var(--primary), transparent 40%);
+}
+.atmos-corners > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cyan telemetry glow — small, for live dots and ticker pills */
+.glow-telemetry {
+  box-shadow: 0 0 10px var(--telemetry), 0 0 22px var(--telemetry-soft);
+}
+.glow-primary {
+  box-shadow: 0 0 14px var(--primary), 0 0 36px oklch(0.66 0.22 288 / 35%);
+}
+
+/* Receipt watermark — repeating "KEEPERHUB" diagonal across surface-2.
+   Apply with class="receipt-watermark" on the card surface. */
+.receipt-watermark {
+  position: relative;
+}
+.receipt-watermark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='80'><text x='0' y='40' font-family='monospace' font-size='14' fill='%23ffffff' letter-spacing='3' transform='rotate(-18 0 40)'>KEEPERHUB · KEEPERHUB</text></svg>");
+  background-size: 240px 80px;
+  border-radius: inherit;
+}
+
+/* SVG perforation divider — apply as <div class="perforation" /> between meta and content */
+.perforation {
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    var(--border-strong) 0,
+    var(--border-strong) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  background-size: 6px 1px;
+  background-repeat: repeat-x;
+}
+
+/* ───── Keyframes ───────────────────────────────────────────────────────── */
+
+@keyframes shimmer {
+  0% { opacity: 0.45; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.45; }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes glow {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.06); }
+}
+
+/* The "receipt prints out" reveal — clip-path animates downward from the perforation */
+@keyframes print {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0% 0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+/* Respect reduced motion — disable the heavy stuff, keep entrances subtle */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  @keyframes print {
+    from { opacity: 0; clip-path: inset(0 0 0% 0); }
+    to { opacity: 1; clip-path: inset(0 0 0% 0); }
+  }
+}
+
+/*
+ * Languages (decision 41): the script font for the page's language, after
+ * Geist and Neue Montreal in every stack, so Latin text keeps its faces and
+ * Japanese, Korean, Chinese or Hindi text gets its script's system font (macOS,
+ * Windows, then Android/Linux Noto). Naming them in order also picks the right
+ * local glyph shapes for characters these scripts share.
+ */
+:root:lang(ja) {
+  --font-locale: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, "Noto Sans JP", "Noto Sans CJK JP";
+}
+:root:lang(ko) {
+  --font-locale: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Noto Sans CJK KR";
+}
+:root:lang(zh-CN) {
+  --font-locale: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans SC", "Noto Sans CJK SC";
+}
+:root:lang(hi) {
+  --font-locale: "Kohinoor Devanagari", "Devanagari Sangam MN", "Nirmala UI", Mangal, "Noto Sans Devanagari";
+}

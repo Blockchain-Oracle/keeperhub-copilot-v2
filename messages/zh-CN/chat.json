@@ -1,0 +1,148 @@
+{
+  "newConversation": "新对话",
+  "loadNotice": "此对话无法完整加载。其消息仍然保留，但无法显示。",
+  "toolStates": {
+    "preparing": "准备中",
+    "running": "运行中",
+    "waitingForApproval": "等待批准",
+    "sendingAnswer": "正在发送你的回答",
+    "done": "完成",
+    "failed": "失败",
+    "declined": "已拒绝",
+    "waitingForYou": "等待你处理",
+    "unknown": "未知"
+  },
+  "chat": {
+    "hints": {
+      "connect": "连接 KeeperHub 以开始。",
+      "answerUnsent": "请点按上方卡片上的“重试”来发送你的回答。",
+      "form": "请填写或关闭上方的表单以继续。",
+      "approval": "请授权或取消上方的操作以继续。"
+    },
+    "banner": {
+      "createFailed": "无法创建对话。请重试。",
+      "sessionEnded": "你的 KeeperHub 会话已结束。",
+      "answerUnsent": "你的回答未送达 KeeperHub。请使用卡片上的“重试”。",
+      "turnFailed": "助手遇到错误。请重试。",
+      "connect": "连接 KeeperHub",
+      "retry": "重试"
+    },
+    "archived": {
+      "notice": "此对话已归档，现在为只读。",
+      "newChat": "新聊天"
+    },
+    "ceremony": {
+      "noConversation": "没有可用于模拟运行的对话。",
+      "dryRunUnprepared": "无法准备模拟运行。",
+      "checkFailed": "KeeperHub 的检查无法运行。",
+      "checkUnreachable": "KeeperHub 的检查无法运行。请检查网络连接后重试。",
+      "enableFailed": "KeeperHub 未更改该自动化。",
+      "enableUnreachable": "KeeperHub 没有响应。请检查网络连接后重试。"
+    }
+  },
+  "composer": {
+    "form": "消息输入框",
+    "label": "询问 KeeperHub",
+    "placeholder": "询问 KeeperHub…",
+    "send": "发送消息",
+    "talk": "与 KeeperHub 对话",
+    "talkUnavailable": "没有待处理事项时即可使用语音",
+    "menu": "网络和操作",
+    "searchActions": "搜索操作",
+    "browseActions": "浏览全部 {count} 个操作"
+  },
+  "messageList": {
+    "thinking": "思考中",
+    "said": "语音"
+  },
+  "toolTimeline": {
+    "used": "已使用 {count, plural, other {# 个工具}}",
+    "using": "正在使用 {count, plural, other {# 个工具}}",
+    "input": "输入",
+    "output": "输出",
+    "elapsedSeconds": "{seconds} 秒",
+    "elapsedMinutes": "{minutes} 分 {seconds} 秒"
+  },
+  "sessionDropdown": {
+    "conversations": "对话",
+    "newChat": "新聊天",
+    "loadFailed": "无法加载列表。请关闭后重试。",
+    "empty": "还没有过往聊天。",
+    "rename": "重命名对话 {title}",
+    "delete": "删除对话 {title}",
+    "newTitle": "对话 {title} 的新标题",
+    "titleTooLong": "标题最多 {max} 个字符。",
+    "renameFailed": "无法保存新名称。请重试。",
+    "renamed": "对话已重命名。",
+    "deleteFailed": "无法删除对话。请重试。",
+    "deleted": "对话已删除。"
+  },
+  "home": {
+    "status": {
+      "online": "KeeperHub 在线 · {count, plural, other {# 个网络}}",
+      "unreachable": "无法连接 KeeperHub",
+      "checking": "正在检查 KeeperHub"
+    },
+    "greeting": "想让 KeeperHub 为你做什么？",
+    "intro": "询问价格、余额，或发起转账。读取会立即作答；<b>任何转移资产的操作都会等你点击。</b>也可以从下方的卡片开始。",
+    "orPickACard": "或选择一张卡片",
+    "quoted": "“{text}”"
+  },
+  "motifs": {
+    "noOrgWallet": "还没有组织钱包",
+    "approve": "批准",
+    "pooledDeposits": "资金池存款",
+    "actions": "{count, plural, other {# 个操作}}",
+    "yourConversations": "你的对话",
+    "conversations": "{count, plural, other {# 个对话}}"
+  },
+  "categories": {
+    "chainlink": {
+      "title": "价格",
+      "description": "直接从 Chainlink 读取实时喂价。",
+      "mobileDesc": "Chainlink 喂价。"
+    },
+    "lido": {
+      "title": "流动性质押",
+      "description": "从 Lido 读取质押 ETH 的价值。",
+      "mobileDesc": "Lido 质押汇率。"
+    },
+    "rocketPool": {
+      "title": "Rocket Pool",
+      "description": "rETH 的兑换汇率及其流通总量。",
+      "mobileDesc": "rETH 汇率。"
+    },
+    "sky": {
+      "title": "储蓄金库",
+      "description": "Sky 储蓄金库中存有多少资金。",
+      "mobileDesc": "Sky 金库存款。"
+    },
+    "orgWallet": {
+      "title": "你的组织钱包",
+      "description": "你的组织钱包在 {network} 上持有的资产。",
+      "mobileDesc": "此网络上的余额。",
+      "prompt": "我的组织钱包在 {network} 上持有哪些资产？",
+      "familyLabel": "账户"
+    },
+    "sendToSelf": {
+      "title": "发送给自己",
+      "description": "一笔零金额转账，转回你自己的钱包。它会停下等你点击。",
+      "mobileDesc": "停下等你点击。",
+      "prompt": "在 {network} 上从我的组织钱包向它自己发送 {amount}。",
+      "familyLabel": "账户 · 写入"
+    },
+    "discover": {
+      "title": "发现操作",
+      "description": "询问 KeeperHub 能用某个协议做什么。",
+      "mobileDesc": "协议提供的功能。",
+      "prompt": "你能用 Aave V3 做什么？",
+      "familyLabel": "目录"
+    },
+    "history": {
+      "title": "历史记录",
+      "description": "重新打开过往对话及其回执。",
+      "mobileDesc": "过往对话。",
+      "familyLabel": "历史记录"
+    }
+  }
+}

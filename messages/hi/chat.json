@@ -1,0 +1,148 @@
+{
+  "newConversation": "नई बातचीत",
+  "loadNotice": "यह बातचीत पूरी तरह लोड नहीं हो सकी। इसके संदेश सुरक्षित हैं, लेकिन दिखाए नहीं जा सकते।",
+  "toolStates": {
+    "preparing": "तैयारी हो रही है",
+    "running": "चल रहा है",
+    "waitingForApproval": "स्वीकृति का इंतज़ार",
+    "sendingAnswer": "आपका जवाब भेजा जा रहा है",
+    "done": "पूरा",
+    "failed": "विफल",
+    "declined": "अस्वीकृत",
+    "waitingForYou": "आपका इंतज़ार",
+    "unknown": "अज्ञात"
+  },
+  "chat": {
+    "hints": {
+      "connect": "शुरू करने के लिए KeeperHub कनेक्ट करें।",
+      "answerUnsent": "अपना जवाब भेजने के लिए ऊपर वाले कार्ड पर “फिर से कोशिश करें” दबाएँ।",
+      "form": "जारी रखने के लिए ऊपर वाला फ़ॉर्म भरें या बंद करें।",
+      "approval": "जारी रखने के लिए ऊपर वाली कार्रवाई को अधिकृत या रद्द करें।"
+    },
+    "banner": {
+      "createFailed": "बातचीत बनाई नहीं जा सकी। फिर से कोशिश करें।",
+      "sessionEnded": "आपका KeeperHub सत्र समाप्त हो गया।",
+      "answerUnsent": "आपका जवाब KeeperHub तक नहीं पहुँचा। कार्ड पर “फिर से कोशिश करें” का उपयोग करें।",
+      "turnFailed": "सहायक में कोई त्रुटि आई। फिर से कोशिश करें।",
+      "connect": "KeeperHub कनेक्ट करें",
+      "retry": "फिर से कोशिश करें"
+    },
+    "archived": {
+      "notice": "यह बातचीत संग्रहित कर दी गई है। अब यह केवल पढ़ने के लिए है।",
+      "newChat": "नई चैट"
+    },
+    "ceremony": {
+      "noConversation": "परीक्षण रन के लिए कोई बातचीत नहीं है।",
+      "dryRunUnprepared": "परीक्षण रन तैयार नहीं हो सका।",
+      "checkFailed": "KeeperHub की जाँच नहीं चल सकी।",
+      "checkUnreachable": "KeeperHub की जाँच नहीं चल सकी। अपना कनेक्शन जाँचें और फिर से कोशिश करें।",
+      "enableFailed": "KeeperHub ने ऑटोमेशन नहीं बदला।",
+      "enableUnreachable": "KeeperHub ने जवाब नहीं दिया। अपना कनेक्शन जाँचें और फिर से कोशिश करें।"
+    }
+  },
+  "composer": {
+    "form": "संदेश कंपोज़र",
+    "label": "KeeperHub से पूछें",
+    "placeholder": "KeeperHub से पूछें…",
+    "send": "संदेश भेजें",
+    "talk": "KeeperHub से बात करें",
+    "talkUnavailable": "कुछ भी लंबित न होने पर आवाज़ उपलब्ध होगी",
+    "menu": "नेटवर्क और कार्रवाइयाँ",
+    "searchActions": "कार्रवाइयाँ खोजें",
+    "browseActions": "सभी {count} कार्रवाइयाँ ब्राउज़ करें"
+  },
+  "messageList": {
+    "thinking": "सोच रहा है",
+    "said": "ने कहा"
+  },
+  "toolTimeline": {
+    "used": "{count, plural, one {# टूल इस्तेमाल किया} other {# टूल इस्तेमाल किए}}",
+    "using": "{count, plural, one {# टूल इस्तेमाल हो रहा है} other {# टूल इस्तेमाल हो रहे हैं}}",
+    "input": "इनपुट",
+    "output": "आउटपुट",
+    "elapsedSeconds": "{seconds}s",
+    "elapsedMinutes": "{minutes}m {seconds}s"
+  },
+  "sessionDropdown": {
+    "conversations": "बातचीत",
+    "newChat": "नई चैट",
+    "loadFailed": "सूची लोड नहीं हो सकी। बंद करके फिर से कोशिश करें।",
+    "empty": "अभी तक कोई पुरानी चैट नहीं।",
+    "rename": "बातचीत {title} का नाम बदलें",
+    "delete": "बातचीत {title} हटाएँ",
+    "newTitle": "बातचीत {title} के लिए नया शीर्षक",
+    "titleTooLong": "शीर्षक अधिकतम {max} अक्षरों का हो सकता है।",
+    "renameFailed": "नया नाम सहेजा नहीं जा सका। फिर से कोशिश करें।",
+    "renamed": "बातचीत का नाम बदल दिया गया।",
+    "deleteFailed": "बातचीत हटाई नहीं जा सकी। फिर से कोशिश करें।",
+    "deleted": "बातचीत हटा दी गई।"
+  },
+  "home": {
+    "status": {
+      "online": "KeeperHub ऑनलाइन · {count, plural, one {# नेटवर्क} other {# नेटवर्क}}",
+      "unreachable": "KeeperHub तक पहुँच नहीं",
+      "checking": "KeeperHub की जाँच हो रही है"
+    },
+    "greeting": "KeeperHub आपके लिए क्या करे?",
+    "intro": "कीमत, बैलेंस या ट्रांसफ़र माँगें। रीड तुरंत जवाब देते हैं; <b>मूल्य स्थानांतरित करने वाली हर चीज़ आपके क्लिक का इंतज़ार करती है।</b> या नीचे दिए किसी कार्ड से शुरू करें।",
+    "orPickACard": "या कोई कार्ड चुनें",
+    "quoted": "“{text}”"
+  },
+  "motifs": {
+    "noOrgWallet": "अभी कोई संगठन वॉलेट नहीं",
+    "approve": "स्वीकृत करें",
+    "pooledDeposits": "पूल की गई जमा राशि",
+    "actions": "{count, plural, one {# कार्रवाई} other {# कार्रवाइयाँ}}",
+    "yourConversations": "आपकी बातचीत",
+    "conversations": "{count, plural, one {# बातचीत} other {# बातचीत}}"
+  },
+  "categories": {
+    "chainlink": {
+      "title": "कीमतें",
+      "description": "Chainlink से सीधे लाइव प्राइस फ़ीड पढ़ें।",
+      "mobileDesc": "Chainlink प्राइस फ़ीड।"
+    },
+    "lido": {
+      "title": "लिक्विड स्टेकिंग",
+      "description": "स्टेक किए गए ETH का मूल्य, Lido से पढ़ा गया।",
+      "mobileDesc": "Lido स्टेकिंग दरें।"
+    },
+    "rocketPool": {
+      "title": "Rocket Pool",
+      "description": "rETH की विनिमय दर और कुल कितना मौजूद है।",
+      "mobileDesc": "rETH दर।"
+    },
+    "sky": {
+      "title": "सेविंग्स वॉल्ट",
+      "description": "Sky सेविंग्स वॉल्ट में कितना जमा है।",
+      "mobileDesc": "Sky वॉल्ट में जमा।"
+    },
+    "orgWallet": {
+      "title": "आपका संगठन वॉलेट",
+      "description": "{network} पर आपके संगठन के वॉलेट में क्या है।",
+      "mobileDesc": "इस नेटवर्क पर बैलेंस।",
+      "prompt": "{network} पर मेरे संगठन वॉलेट में क्या है?",
+      "familyLabel": "खाता"
+    },
+    "sendToSelf": {
+      "title": "खुद को भेजें",
+      "description": "आपके अपने वॉलेट में वापस शून्य-मूल्य ट्रांसफ़र। यह आपके क्लिक के लिए रुकता है।",
+      "mobileDesc": "आपके क्लिक के लिए रुकता है।",
+      "prompt": "{network} पर मेरे संगठन वॉलेट से {amount} उसी वॉलेट में भेजिए।",
+      "familyLabel": "खाता · राइट"
+    },
+    "discover": {
+      "title": "कार्रवाइयाँ खोजें",
+      "description": "पूछें कि KeeperHub किसी प्रोटोकॉल के साथ क्या कर सकता है।",
+      "mobileDesc": "प्रोटोकॉल क्या-क्या देता है।",
+      "prompt": "आप Aave V3 के साथ क्या कर सकते हैं?",
+      "familyLabel": "कैटलॉग"
+    },
+    "history": {
+      "title": "इतिहास",
+      "description": "पुरानी बातचीत और उनकी रसीदें फिर से खोलें।",
+      "mobileDesc": "पुरानी बातचीत।",
+      "familyLabel": "इतिहास"
+    }
+  }
+}

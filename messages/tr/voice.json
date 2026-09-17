@@ -1,0 +1,57 @@
+{
+  "label": {
+    "connecting": "Bağlanıyor…",
+    "listening": "Dinliyor",
+    "muted": "Sessizde",
+    "speaking": "Konuşuyor",
+    "waitingCard": "Kartın bekleniyor",
+    "waitingForm": "Bilgilerin bekleniyor",
+    "error": "Ses başlatılamadı",
+    "idle": "Ses"
+  },
+  "hint": {
+    "connecting": "Tarayıcın sorarsa mikrofona izin ver.",
+    "listening": "KeeperHub ile konuş. Kartlar sohbette görünür.",
+    "muted": "Mikrofonun kapalı. Konuşmak için sesi aç.",
+    "speaking": "KeeperHub yanıtlıyor.",
+    "waitingCard": "Devam etmek için yukarıdaki kartı onayla ya da iptal et.",
+    "waitingForm": "Devam etmek için yukarıdaki formu doldur."
+  },
+  "micProblem": {
+    "blocked": "Mikrofon erişimi engellendi. Sesi kullanmak için tarayıcında bu siteye izin ver.",
+    "notFound": "Mikrofon bulunamadı. Sesi kullanmak için bir mikrofon bağla.",
+    "inUse": "Mikrofonun başka bir uygulama tarafından kullanılıyor. O uygulamayı kapatıp tekrar dene.",
+    "other": "Mikrofon açılamadı. Tekrar dene."
+  },
+  "engine": {
+    "startFailed": "Ses başlatılamadı. Tekrar dene.",
+    "startOffline": "Ses başlatılamadı. Bağlantını kontrol edip tekrar dene.",
+    "connectFailed": "Ses bağlanamadı. Birazdan tekrar dene.",
+    "formGone": "Bu form artık beklemiyor.",
+    "detailsFailed": "Bilgilerin gönderilemedi. Tekrar dene.",
+    "detailsOffline": "Bilgilerin gönderilemedi. Bağlantını kontrol edip tekrar dene.",
+    "ended": {
+      "title": "Ses sona erdi",
+      "description": "Bir ses oturumu on dakika sürer. Yeniden başlatmak için mikrofona bas."
+    },
+    "dropped": {
+      "title": "Ses bağlantısı kesildi",
+      "description": "Yeniden başlatmak için mikrofona bas."
+    }
+  },
+  "bar": {
+    "group": "Sesli sohbet",
+    "close": "Sesi kapat",
+    "mutedWhileAnswering": "Ekranda yanıtlarken sessizde",
+    "mute": "Sessize al",
+    "unmute": "Sesi aç",
+    "end": "Bitir"
+  },
+  "hero": {
+    "examples": "“ETH fiyatı ne?” ya da “Base Sepolia’da kendime 0 ETH gönder” demeyi dene."
+  },
+  "formSheet": {
+    "detailsNeeded": "Bilgi gerekli",
+    "fallbackTitle": "Birkaç bilgi"
+  }
+}

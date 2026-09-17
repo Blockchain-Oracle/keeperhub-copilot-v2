@@ -1,0 +1,395 @@
+{
+  "receipt": {
+    "issued": "DITERBITKAN"
+  },
+  "labels": {
+    "amount": "Jumlah",
+    "recipient": "Penerima",
+    "network": "Jaringan",
+    "token": "Token",
+    "spender": "Penerima izin",
+    "allowance": "Batas izin",
+    "allowanceBaseUnits": "Batas izin (unit dasar)",
+    "arguments": "Argumen",
+    "valueSent": "Nilai dikirim",
+    "chainId": "Chain id",
+    "contractAddress": "Alamat kontrak",
+    "functionName": "Nama fungsi",
+    "functionArgs": "Argumen fungsi",
+    "value": "Nilai",
+    "gasLimitMultiplier": "Pengali batas gas",
+    "priorityFeeGwei": "Biaya prioritas gwei",
+    "abi": "ABI",
+    "integrationId": "Id integrasi"
+  },
+  "checks": {
+    "amountDot": "Masukkan jumlah dengan titik untuk desimal, mis. 0.5.",
+    "chooseNetwork": "Pilih jaringan.",
+    "addressForNetwork": "Masukkan alamat yang valid untuk jaringan ini.",
+    "chooseListedOption": "Pilih salah satu opsi yang tersedia."
+  },
+  "fix": {
+    "number": "Masukkan angka.",
+    "yesNo": "Pilih ya atau tidak.",
+    "address": "Masukkan alamat yang diawali 0x dan berisi 40 karakter heksadesimal.",
+    "uint": "Masukkan bilangan bulat tanpa titik desimal atau tanda.",
+    "int": "Masukkan bilangan bulat. Tanda minus di depan diperbolehkan.",
+    "bytes": "Masukkan nilai heksadesimal 0x dengan jumlah digit genap.",
+    "datetime": "Masukkan tanggal dan waktu.",
+    "other": "Periksa nilai ini dan coba lagi."
+  },
+  "effectClass": {
+    "valueMovingWrite": "aksi tulis pemindah dana",
+    "authorizationGrant": "pemberian otorisasi",
+    "configManagementWrite": "aksi tulis pengelolaan konfigurasi",
+    "offChainSend": "pengiriman off-chain",
+    "listingPayment": "pembayaran listing",
+    "read": "baca"
+  },
+  "write": {
+    "noPreview": "Pratinjau tidak tersedia untuk aksi ini. Anda mengonfirmasi instruksi persis yang ditampilkan di bawah.",
+    "unavailable": "Panggilan kontrak di Solana tidak tersedia dalam rilis ini. Minta aksi baca Solana melalui aksi protokol sebagai gantinya.",
+    "chip": {
+      "simulated": "Disimulasikan",
+      "noPreview": "Tanpa pratinjau",
+      "needsCredential": "Perlu kredensial",
+      "proposed": "Diusulkan"
+    },
+    "facts": {
+      "gasEstimate": "Estimasi gas",
+      "gasUnits": "{units} unit",
+      "returns": "Nilai kembali"
+    },
+    "meta": {
+      "executed": "DIJALANKAN",
+      "cancelled": "DIBATALKAN",
+      "notSent": "TIDAK TERKIRIM",
+      "cancelling": "MEMBATALKAN",
+      "noReceipt": "TANPA TANDA TERIMA",
+      "sending": "MENGIRIM",
+      "neverAuthorized": "TAK DIOTORISASI",
+      "notAvailable": "TIDAK TERSEDIA",
+      "needsCredential": "PERLU KREDENSIAL",
+      "authorizing": "MENGOTORISASI",
+      "edited": "DIEDIT",
+      "awaiting": "MENUNGGU OTORISASI"
+    },
+    "status": {
+      "executed": "Dijalankan",
+      "cancelled": "Dibatalkan",
+      "notSent": "Tidak terkirim",
+      "cancelling": "Membatalkan…",
+      "noReceipt": "Diotorisasi, tidak ada tanda terima tersimpan",
+      "sending": "Mengirim melalui KeeperHub…",
+      "neverAuthorized": "Tidak pernah diotorisasi",
+      "notAvailable": "Tidak tersedia dalam rilis ini",
+      "needsCredential": "Perlu kredensial terlebih dahulu",
+      "authorizing": "Mengotorisasi…",
+      "edited": "Diedit, menunggu otorisasi Anda",
+      "awaiting": "Menunggu otorisasi Anda"
+    },
+    "authorize": {
+      "authorizing": "Mengotorisasi…",
+      "notAvailable": "Tidak tersedia",
+      "needsCredential": "Perlu kredensial",
+      "dryRunning": "Menjalankan uji coba…",
+      "dryRunFailed": "Uji coba gagal",
+      "acknowledge": "Akui peringatan",
+      "authorize": "Otorisasi"
+    },
+    "verb": {
+      "contractWrite": "Tulis kontrak",
+      "write": "Tulis"
+    },
+    "title": {
+      "approve": "Setujui penerima izin",
+      "call": "Panggil {name}",
+      "send": "Kirim {amount} {unit}"
+    },
+    "kicker": {
+      "valueMoving": "Aksi tulis pemindah dana",
+      "authorizationGrant": "Pemberian otorisasi"
+    },
+    "dryRunUnprepared": "Uji coba tidak dapat disiapkan.",
+    "declined": "Anda menolak usulan ini. Tidak ada yang dikirim.",
+    "applyDryRun": "Uji coba nilai ini",
+    "applyValues": "Gunakan nilai ini",
+    "acknowledge": "Tetap kirim. Saya paham ini diperkirakan gagal dan mungkin tetap memakan biaya gas.",
+    "notReached": "Jawaban Anda tidak sampai ke KeeperHub. Periksa koneksi Anda dan coba lagi.",
+    "receiptMissing": "Ini sudah diotorisasi, tetapi tanda terimanya tidak pernah sampai ke obrolan ini. Aktivitas menunjukkan bagaimana akhirnya.",
+    "archived": "Tidak ada yang mengotorisasi ini sebelum obrolan diarsipkan. Tidak ada yang dikirim.",
+    "edit": "Edit",
+    "discard": "Buang",
+    "transfer": {
+      "from": "dari",
+      "to": "ke",
+      "orgWallet": "dompet organisasi",
+      "amount": "jumlah"
+    },
+    "dryRun": {
+      "label": "Uji coba",
+      "cannot": "KeeperHub tidak dapat menguji coba aksi ini. Anda mengotorisasi persis apa yang ditampilkan di atas.",
+      "running": "menjalankan uji coba",
+      "wouldNotSucceed": "Ini tidak akan berhasil.",
+      "wouldRevert": "Transaksi akan gagal (revert).",
+      "wouldSucceed": "akan berhasil"
+    },
+    "tx": {
+      "label": "Tx",
+      "explorer": "Explorer",
+      "verified": "Terverifikasi",
+      "yes": "ya",
+      "no": "tidak"
+    }
+  },
+  "moneyMover": {
+    "unknownNetwork": "Jaringan tidak dikenal",
+    "chain": "Chain {id}",
+    "send": "Kirim",
+    "approve": "Setujui",
+    "summary": "{amount} dikirim ke {address}.",
+    "unlimitedWarning": "Ini memberi izin tanpa batas. Penerima izin dapat memindahkan berapa pun jumlah token ini.",
+    "unlimited": "Tanpa batas",
+    "veryLarge": "Sangat besar",
+    "enterAmount": "Masukkan jumlah.",
+    "noComma": "Gunakan titik untuk desimal (0.5) dan tanpa pemisah ribuan.",
+    "maxDecimals": "Masukkan jumlah dengan paling banyak {decimals} angka desimal."
+  },
+  "writeForm": {
+    "tokenPlaceholder": "Kosongkan untuk mengirim mata uang asli jaringan"
+  },
+  "editCheck": {
+    "unreadable": "Usulan ini tidak dapat dibaca.",
+    "automationFixed": "Otomatisasi yang diubah tidak dapat diganti di sini. Minta lagi untuk mengusulkannya dari awal.",
+    "notEditable": "Aksi ini tidak dapat diedit.",
+    "tokenAddress": "Masukkan alamat token yang valid, atau kosongkan untuk mengirim mata uang asli.",
+    "callFixed": "Bagian panggilan ini tidak dapat diubah di sini. Minta lagi untuk mengusulkannya dari awal.",
+    "argumentsList": "Masukkan argumen sebagai daftar JSON.",
+    "spender": "Masukkan alamat penerima izin yang valid.",
+    "allowance": "Masukkan bilangan bulat dalam unit dasar.",
+    "actionFixed": "Aksinya tidak dapat diubah di sini. Minta lagi untuk mengusulkannya dari awal.",
+    "actionGone": "Aksi ini sudah tidak tersedia.",
+    "hiddenSetting": "Pengaturan tersembunyi ini tidak dapat diubah.",
+    "startFixed": "Jenis pemicu tidak dapat diubah di sini. Minta lagi untuk mengusulkannya dari awal.",
+    "stepsFixed": "Langkah yang dijalankan, dan urutannya, tidak dapat diubah di sini. Minta lagi untuk mengusulkannya dari awal."
+  },
+  "toolMeta": {
+    "integration": {
+      "search": "Katalog aksi",
+      "form": "Detail Anda"
+    },
+    "title": {
+      "lookupFor": "Mencari aksi untuk “{query}”",
+      "lookup": "Mencari aksi",
+      "protocolAction": "Aksi protokol",
+      "calledFunction": "Memanggil {name}",
+      "contractCall": "Panggilan kontrak",
+      "transfer": "Transfer",
+      "walletIntegration": "Membaca integrasi dompet",
+      "listAutomations": "Menampilkan daftar otomatisasi",
+      "getAutomation": "Membaca otomatisasi",
+      "createNamed": "Mengusulkan otomatisasi “{name}”",
+      "create": "Mengusulkan otomatisasi",
+      "turnOff": "Mengusulkan menonaktifkan otomatisasi",
+      "turnOn": "Mengusulkan mengaktifkan otomatisasi",
+      "updateNamed": "Mengusulkan perubahan pada “{name}”",
+      "update": "Mengusulkan perubahan pada otomatisasi",
+      "run": "Mengusulkan menjalankan otomatisasi",
+      "holdings": "Membaca aset dompet organisasi",
+      "askNamed": "Meminta detail dari Anda: {title}",
+      "ask": "Meminta detail dari Anda",
+      "delete": "Mengusulkan menghapus otomatisasi"
+    },
+    "detail": {
+      "action": "aksi",
+      "name": "nama",
+      "starts": "dimulai",
+      "step": "langkah {position}",
+      "error": "kesalahan",
+      "notCompleted": "tidak selesai",
+      "result": "hasil",
+      "state": "status"
+    }
+  },
+  "format": {
+    "addressEnding": "alamat berakhiran {last}",
+    "hashEnding": "hash berakhiran {last}"
+  },
+  "renderer": {
+    "formUnanswerable": "Formulir ini tidak dapat dijawab.",
+    "toolCallIncomplete": "Panggilan alat ini tidak dapat diselesaikan.",
+    "needsCredential": "Aksi ini memerlukan kredensial terikat sebelum dapat dijalankan.",
+    "actionIncomplete": "Aksi ini tidak dapat diselesaikan."
+  },
+  "announce": {
+    "working": "Memproses.",
+    "capabilities": "Aksi yang cocok ditampilkan.",
+    "read": "{label}, dibaca.",
+    "needsCredential": "{label}, perlu kredensial.",
+    "automations": "Daftar otomatisasi ditampilkan.",
+    "automation": "Otomatisasi dijelaskan.",
+    "holdings": "Aset dompet organisasi ditampilkan.",
+    "formOpen": "Detail diperlukan. Isi formulirnya.",
+    "formSent": "Detail terkirim.",
+    "proposed": "{label}, menunggu persetujuan Anda.",
+    "executing": "{label}, mengirim.",
+    "declined": "{label}, ditolak. Tidak ada yang dijalankan.",
+    "automationDone": "Otomatisasi, selesai.",
+    "executed": "{label}, dijalankan.",
+    "automationLabel": "Otomatisasi",
+    "resultLabel": "Hasil"
+  },
+  "error": {
+    "boundary": {
+      "notAvailable": "TIDAK TERSEDIA",
+      "paused": "DIJEDA",
+      "needsAccess": "PERLU AKSES",
+      "reconnect": "HUBUNGKAN ULANG",
+      "checkInputs": "PERIKSA INPUT"
+    },
+    "void": "BATAL",
+    "field": "kolom",
+    "connect": "Hubungkan KeeperHub",
+    "reauthorize": "Otorisasi ulang KeeperHub",
+    "rateLimited": "Pencarian aksi tetap berfungsi. Coba aksi baca ini lagi sebentar lagi.",
+    "title": {
+      "action": "Aksi tidak selesai",
+      "contractCall": "Panggilan kontrak tidak selesai",
+      "transfer": "Transfer tidak selesai",
+      "walletRead": "Pembacaan dompet tidak selesai",
+      "search": "Pencarian tidak selesai",
+      "other": "Tidak selesai"
+    }
+  },
+  "read": {
+    "meta": {
+      "replaced": "DIGANTI",
+      "edited": "DIEDIT",
+      "read": "DIBACA"
+    },
+    "title": {
+      "contractRead": "Baca kontrak",
+      "walletIntegration": "Integrasi dompet",
+      "read": "Baca"
+    },
+    "alternatives": "Alternatif",
+    "request": "Permintaan",
+    "runAgain": "Jalankan lagi",
+    "working": "Memproses.",
+    "blocked": "Beberapa parameter perlu disesuaikan sebelum ini dapat dijalankan.",
+    "result": "Hasil",
+    "contract": "kontrak",
+    "replaced": "Digantikan oleh kartu yang lebih baru di bawah.",
+    "edited": "Diedit."
+  },
+  "price": {
+    "round": "RONDE {round}",
+    "updated": "diperbarui",
+    "gathering": "mengumpulkan sinyal",
+    "historyUnavailable": "riwayat tidak tersedia",
+    "lastUpdates": "{count} pembaruan terakhir",
+    "expand": "perluas"
+  },
+  "balance": {
+    "orgWallet": "DOMPET ORGANISASI",
+    "meta": "SALDO",
+    "scanToSend": "pindai untuk mengirim"
+  },
+  "holdings": {
+    "unreadableMeta": "TIDAK TERBACA",
+    "unreadable": "aset tidak dapat dibaca",
+    "orgWallet": "DOMPET ORGANISASI",
+    "nothing": "tidak ada aset di jaringan mana pun",
+    "caveat": "Saldo dari KeeperHub. Token yang tidak dapat dibacanya ditampilkan sebagai 0.",
+    "networkUnavailable": "KeeperHub tidak dapat membaca jaringan ini saat ini."
+  },
+  "capability": {
+    "matches": "{count, plural, other {{count} COCOK}}",
+    "none": "tidak ada aksi yang cocok",
+    "signs": "tanda tangan",
+    "more": "+ {count} lagi"
+  },
+  "needsCredential": {
+    "meta": "PERLU KREDENSIAL",
+    "title": "Perlu kredensial",
+    "setup": "Siapkan kredensial {integration} di KeeperHub, lalu tanyakan lagi."
+  },
+  "skeleton": {
+    "working": "memproses",
+    "fetching": "MENGAMBIL"
+  },
+  "stub": {
+    "unrenderable": "kartu tidak dapat ditampilkan",
+    "meta": "MENTAH",
+    "couldNotDraw": "Kartu ini tidak dapat ditampilkan. Detail mentahnya ada di bawah.",
+    "rawDetails": "Detail mentah"
+  },
+  "parts": {
+    "items": "{count, plural, other {{count} item}}",
+    "noData": "tidak ada data yang dikembalikan",
+    "value": "Nilai"
+  },
+  "fields": {
+    "required": "(wajib)",
+    "yes": "Ya",
+    "no": "Tidak",
+    "fallbackNote": "Kolom ini mempertahankan nilainya saat ini. Edit kolom lain dan jalankan lagi.",
+    "none": "Tidak ada.",
+    "help": "Bantuan: {label}",
+    "chooseNetwork": "Pilih jaringan"
+  },
+  "form": {
+    "unreadableMeta": "TIDAK TERBACA",
+    "unreadable": "formulir ini tidak dapat dibaca",
+    "title": "Detail diperlukan",
+    "meta": {
+      "notSent": "TIDAK TERKIRIM",
+      "closed": "DITUTUP",
+      "answered": "DIJAWAB",
+      "fillingAbove": "DIISI DI ATAS",
+      "detailsNeeded": "DETAIL DIPERLUKAN",
+      "neverAnswered": "TAK PERNAH DIJAWAB"
+    },
+    "status": {
+      "notSent": "Jawaban Anda tidak sampai ke KeeperHub",
+      "closed": "Ditutup tanpa jawaban",
+      "answered": "Terkirim ke asisten",
+      "fillingAbove": "Isi ini di atas bilah suara",
+      "waiting": "Menunggu detail Anda",
+      "neverAnswered": "Tidak pernah dijawab"
+    },
+    "useOrgWallet": "Gunakan dompet organisasi saya",
+    "checkHighlighted": "Periksa detail yang disorot.",
+    "sending": "Mengirim…",
+    "tokenPlaceholder": "Simbol atau alamat token",
+    "issues": {
+      "unreadable": "Jawaban tidak dapat dibaca.",
+      "notAsked": "Detail ini tidak diminta.",
+      "asText": "Masukkan ini sebagai teks.",
+      "needed": "{label} diperlukan.",
+      "tooLong": "Ini terlalu panjang.",
+      "chooseToken": "Pilih salah satu token yang tersedia.",
+      "token": "Masukkan simbol token atau alamatnya."
+    }
+  },
+  "share": {
+    "unreachable": "Tautan berbagi tidak dapat dijangkau.",
+    "offline": "Periksa koneksi Anda dan coba lagi.",
+    "failed": "Berbagi tidak berhasil",
+    "copiedTitle": "Tautan tersalin",
+    "copiedBody": "Siapa pun yang memilikinya melihat tanda terima ini, tidak pernah obrolan Anda.",
+    "readyTitle": "Tautan siap",
+    "sheetTitle": "Tanda terima KeeperHub",
+    "offTitle": "Tautan dinonaktifkan",
+    "offBody": "Siapa pun yang membukanya sekarang akan melihat bahwa tanda terima ini tidak dibagikan.",
+    "ariaLabel": "Bagikan tanda terima",
+    "share": "Bagikan",
+    "checking": "Memeriksa…",
+    "copyLink": "Salin tautan",
+    "createAndCopy": "Buat dan salin tautan",
+    "shareSheet": "Bagikan…",
+    "openLink": "Buka tautan",
+    "stop": "Berhenti berbagi",
+    "explainer": "Siapa pun yang memiliki tautan ini melihat aksi, jaringan, jumlah, penerima, dan transaksinya. Tidak pernah obrolan Anda."
+  }
+}

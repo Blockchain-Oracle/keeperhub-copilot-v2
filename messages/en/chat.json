@@ -1,0 +1,148 @@
+{
+  "newConversation": "New conversation",
+  "loadNotice": "This conversation could not be fully loaded. Its messages are kept but cannot be displayed.",
+  "toolStates": {
+    "preparing": "preparing",
+    "running": "running",
+    "waitingForApproval": "waiting for approval",
+    "sendingAnswer": "sending your answer",
+    "done": "done",
+    "failed": "failed",
+    "declined": "declined",
+    "waitingForYou": "waiting for you",
+    "unknown": "unknown"
+  },
+  "chat": {
+    "hints": {
+      "connect": "Connect KeeperHub to start.",
+      "answerUnsent": "Press Try again on the card above to send your answer.",
+      "form": "Fill in or close the form above to continue.",
+      "approval": "Authorize or cancel the action above to continue."
+    },
+    "banner": {
+      "createFailed": "The conversation could not be created. Try again.",
+      "sessionEnded": "Your KeeperHub session ended.",
+      "answerUnsent": "Your answer did not reach KeeperHub. Use Try again on the card.",
+      "turnFailed": "The assistant hit an error. Try again.",
+      "connect": "Connect KeeperHub",
+      "retry": "Retry"
+    },
+    "archived": {
+      "notice": "This conversation was archived. It's now read-only.",
+      "newChat": "New chat"
+    },
+    "ceremony": {
+      "noConversation": "No conversation to dry-run against.",
+      "dryRunUnprepared": "The dry run could not be prepared.",
+      "checkFailed": "KeeperHub's check could not run.",
+      "checkUnreachable": "KeeperHub's check could not run. Check your connection and try again.",
+      "enableFailed": "KeeperHub didn't change the automation.",
+      "enableUnreachable": "KeeperHub didn't answer. Check your connection and try again."
+    }
+  },
+  "composer": {
+    "form": "Message composer",
+    "label": "Ask KeeperHub",
+    "placeholder": "Ask KeeperHub…",
+    "send": "Send message",
+    "talk": "Talk to KeeperHub",
+    "talkUnavailable": "Voice is available once nothing is waiting",
+    "menu": "Network and actions",
+    "searchActions": "Search actions",
+    "browseActions": "Browse all {count} actions"
+  },
+  "messageList": {
+    "thinking": "Thinking",
+    "said": "said"
+  },
+  "toolTimeline": {
+    "used": "Used {count, plural, one {# tool} other {# tools}}",
+    "using": "Using {count, plural, one {# tool} other {# tools}}",
+    "input": "Input",
+    "output": "Output",
+    "elapsedSeconds": "{seconds}s",
+    "elapsedMinutes": "{minutes}m {seconds}s"
+  },
+  "sessionDropdown": {
+    "conversations": "Conversations",
+    "newChat": "New chat",
+    "loadFailed": "The list could not be loaded. Close and try again.",
+    "empty": "No past chats yet.",
+    "rename": "Rename conversation {title}",
+    "delete": "Delete conversation {title}",
+    "newTitle": "New title for conversation {title}",
+    "titleTooLong": "Titles are limited to {max} characters.",
+    "renameFailed": "The rename could not be saved. Try again.",
+    "renamed": "Conversation renamed.",
+    "deleteFailed": "The conversation could not be deleted. Try again.",
+    "deleted": "Conversation deleted."
+  },
+  "home": {
+    "status": {
+      "online": "KeeperHub online · {count, plural, one {# network} other {# networks}}",
+      "unreachable": "KeeperHub unreachable",
+      "checking": "checking KeeperHub"
+    },
+    "greeting": "What should KeeperHub do for you?",
+    "intro": "Ask for a price, a balance or a transfer. Reads answer straight away; <b>anything that moves value waits for your click.</b> Or start from a card below.",
+    "orPickACard": "Or pick a card",
+    "quoted": "“{text}”"
+  },
+  "motifs": {
+    "noOrgWallet": "no org wallet yet",
+    "approve": "Approve",
+    "pooledDeposits": "pooled deposits",
+    "actions": "{count, plural, one {# action} other {# actions}}",
+    "yourConversations": "your conversations",
+    "conversations": "{count, plural, one {# conversation} other {# conversations}}"
+  },
+  "categories": {
+    "chainlink": {
+      "title": "Prices",
+      "description": "Read a live price feed straight from Chainlink.",
+      "mobileDesc": "Chainlink price feeds."
+    },
+    "lido": {
+      "title": "Liquid staking",
+      "description": "What staked ETH is worth, read from Lido.",
+      "mobileDesc": "Lido staking rates."
+    },
+    "rocketPool": {
+      "title": "Rocket Pool",
+      "description": "The rETH exchange rate and how much is out there.",
+      "mobileDesc": "The rETH rate."
+    },
+    "sky": {
+      "title": "Savings vault",
+      "description": "How much sits in the Sky savings vault.",
+      "mobileDesc": "Sky vault deposits."
+    },
+    "orgWallet": {
+      "title": "Your org wallet",
+      "description": "What your organisation's wallet holds on {network}.",
+      "mobileDesc": "Balances on this network.",
+      "prompt": "What does my org wallet hold on {network}?",
+      "familyLabel": "Account"
+    },
+    "sendToSelf": {
+      "title": "Send to yourself",
+      "description": "A zero-value transfer back to your own wallet. It stops for your click.",
+      "mobileDesc": "Stops for your click.",
+      "prompt": "Send {amount} from my org wallet to itself on {network}.",
+      "familyLabel": "Account · write"
+    },
+    "discover": {
+      "title": "Discover actions",
+      "description": "Ask what KeeperHub can do with a protocol.",
+      "mobileDesc": "What a protocol offers.",
+      "prompt": "What can you do with Aave V3?",
+      "familyLabel": "Catalog"
+    },
+    "history": {
+      "title": "History",
+      "description": "Reopen past conversations and their receipts.",
+      "mobileDesc": "Past conversations.",
+      "familyLabel": "History"
+    }
+  }
+}

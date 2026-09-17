@@ -1,0 +1,369 @@
+{
+  "actions": {
+    "authorize": "Authorize",
+    "authorizing": "Authorizing…",
+    "edit": "Edit",
+    "turnOn": "Turn on",
+    "turnOff": "Turn off",
+    "turningOn": "Turning on…",
+    "runNow": "Run now",
+    "running": "Running…",
+    "checkAgain": "Check again",
+    "openAutomation": "Open automation →"
+  },
+  "acknowledge": {
+    "goAhead": "Go ahead anyway. I have read the warnings.",
+    "turnOn": "Turn it on anyway. I have read the warnings.",
+    "run": "Run it anyway. I have read the warnings."
+  },
+  "failures": {
+    "noAnswer": "KeeperHub didn't answer.",
+    "noAnswerConnection": "KeeperHub didn't answer. Check your connection and try again.",
+    "checkFailed": "KeeperHub's check could not run.",
+    "notTurnedOn": "KeeperHub did not turn it on.",
+    "notChanged": "KeeperHub didn't change the automation.",
+    "dryRunFailed": "KeeperHub could not dry-run this automation.",
+    "runNotStarted": "The run could not be started.",
+    "runNotStartedConnection": "The run could not be started. Check your connection and try again."
+  },
+  "view": {
+    "trigger": {
+      "manual": "On demand, when someone presses Run now",
+      "webhook": "When its webhook URL is called",
+      "schedule": "On a schedule",
+      "block": "{count, plural, one {Every {every} block} other {Every {every} blocks}}",
+      "event": "When {event} is emitted",
+      "tempoPayment": "When a Tempo payment arrives"
+    },
+    "rows": {
+      "cron": "Cron",
+      "timezone": "Timezone",
+      "contract": "Contract",
+      "recipient": "To",
+      "token": "Token",
+      "memo": "Memo",
+      "condition": "Continues when"
+    },
+    "stepFallback": "Step",
+    "actionLabel": {
+      "checking": "Checking…",
+      "checkFailed": "Check failed",
+      "blocked": "Can't go ahead",
+      "acknowledge": "Acknowledge the warnings"
+    },
+    "frame": {
+      "saving": {
+        "meta": "SAVING",
+        "status": "Saving to KeeperHub…"
+      },
+      "savingChanges": {
+        "meta": "SAVING",
+        "status": "Saving the changes to KeeperHub…"
+      },
+      "starting": {
+        "meta": "STARTING",
+        "status": "Starting the run in KeeperHub…"
+      },
+      "deleting": {
+        "meta": "DELETING",
+        "status": "Deleting from KeeperHub…"
+      },
+      "cancelled": {
+        "meta": "CANCELLED",
+        "status": "Cancelled"
+      },
+      "notSent": {
+        "meta": "NOT SENT",
+        "status": "Not sent"
+      },
+      "cancelling": {
+        "meta": "CANCELLING",
+        "status": "Cancelling…"
+      },
+      "noAnswer": {
+        "meta": "NO ANSWER",
+        "status": "Authorized, no answer stored"
+      },
+      "turningOn": {
+        "meta": "TURNING ON",
+        "status": "Turning on in KeeperHub…"
+      },
+      "turningOff": {
+        "meta": "TURNING OFF",
+        "status": "Turning off in KeeperHub…"
+      },
+      "neverAuthorized": {
+        "meta": "NEVER AUTHORIZED",
+        "status": "Never authorized"
+      },
+      "authorizing": {
+        "meta": "AUTHORIZING",
+        "status": "Authorizing…"
+      },
+      "edited": {
+        "meta": "EDITED",
+        "status": "Edited, awaiting your authorization"
+      },
+      "awaiting": {
+        "meta": "AWAITING AUTHORIZATION",
+        "status": "Awaiting your authorization"
+      },
+      "live": {
+        "meta": "LIVE",
+        "status": "Saved and turned on"
+      },
+      "savedOff": {
+        "meta": "SAVED · OFF",
+        "status": "Saved, switched off"
+      },
+      "saved": {
+        "meta": "SAVED",
+        "status": "Changes saved"
+      },
+      "deleted": {
+        "meta": "DELETED",
+        "status": "Deleted from KeeperHub"
+      },
+      "executed": {
+        "meta": "EXECUTED",
+        "status": "Executed"
+      },
+      "failed": {
+        "meta": "FAILED",
+        "status": "The run failed"
+      },
+      "stillRunning": {
+        "meta": "STILL RUNNING",
+        "status": "Still running"
+      },
+      "running": {
+        "meta": "RUNNING",
+        "status": "Running in KeeperHub…"
+      },
+      "started": {
+        "meta": "STARTED",
+        "status": "Started"
+      },
+      "turnedOn": {
+        "meta": "TURNED ON",
+        "status": "Turned on"
+      },
+      "turnedOff": {
+        "meta": "TURNED OFF",
+        "status": "Turned off"
+      }
+    },
+    "stamp": {
+      "live": "LIVE",
+      "saved": "SAVED",
+      "deleted": "DELETED",
+      "executed": "EXECUTED",
+      "void": "VOID",
+      "on": "ON",
+      "off": "OFF"
+    },
+    "kicker": {
+      "create": "New automation",
+      "update": "Change automation",
+      "run": "Automation run",
+      "delete": "Delete automation",
+      "turnOn": "Turn on automation",
+      "turnOff": "Turn off automation"
+    },
+    "title": {
+      "create": "New automation",
+      "update": "Change an automation",
+      "run": "Run {name}",
+      "runAny": "Run an automation",
+      "delete": "Delete {name}",
+      "deleteAny": "Delete an automation",
+      "turnOn": "Turn on {name}",
+      "turnOnAny": "Turn on an automation",
+      "turnOff": "Turn off {name}",
+      "turnOffAny": "Turn off an automation"
+    },
+    "form": {
+      "name": "Name",
+      "cron": "Schedule (cron)",
+      "timezone": "Timezone",
+      "network": "Network",
+      "every": "Every N blocks",
+      "contract": "Contract",
+      "event": "Event name",
+      "abi": "Contract ABI",
+      "abiPlaceholder": "Leave empty for a verified contract",
+      "recipient": "Deposit address",
+      "token": "Token",
+      "memo": "Memo",
+      "stepField": "Step {number} · {label}"
+    }
+  },
+  "card": {
+    "declinedRun": "You declined this run. Nothing ran.",
+    "declinedProposal": "You declined this proposal. Nothing was changed in KeeperHub.",
+    "checkValues": "Check these values",
+    "starts": "Starts",
+    "steps": "Steps",
+    "automation": "Automation",
+    "change": "Change",
+    "notSent": "Your answer did not reach KeeperHub. Check your connection and try again.",
+    "noAnswer": "This was authorized, but KeeperHub's answer never reached this chat. The Automations page shows how it ended.",
+    "archived": "Nobody authorized this before the chat was archived. Nothing was changed.",
+    "updatedOn": "It's on, so the new version runs from its next start.",
+    "updatedKept": "It keeps its on or off state.",
+    "deleted": "Deleted with its run history. It no longer shows on the Automations page."
+  },
+  "savedFollowUp": {
+    "onDemand": "It runs when someone presses Run now on its page.",
+    "archived": "Saved switched off. Its page shows whether it has been turned on since.",
+    "live": "On. KeeperHub starts it on its own from now.",
+    "off": "It is switched off. Turn it on after reading KeeperHub's check, and it will start on its own."
+  },
+  "runFollowUp": {
+    "started": "Started. The automation's page shows how the run ended.",
+    "running": "Running in KeeperHub. This card updates when it finishes.",
+    "executed": "Executed.",
+    "transaction": "Transaction",
+    "failed": "The run failed in KeeperHub. Its page shows which step stopped it.",
+    "stale": "Still running after five minutes. Its result will appear on its page and in Activity."
+  },
+  "previewBlock": {
+    "checking": "checking with KeeperHub",
+    "label": "KeeperHub check",
+    "blocked": "blocked",
+    "warned": "read the warnings",
+    "ready": "ready",
+    "changes": "What changes"
+  },
+  "subjectBlock": {
+    "steps": "Steps",
+    "noSteps": "no steps yet"
+  },
+  "triggerBlock": {
+    "network": "Network"
+  },
+  "stepDetail": {
+    "movesValue": "moves value"
+  },
+  "stepList": {
+    "off": "off"
+  },
+  "listCard": {
+    "meta": "{count, plural, one {# AUTOMATION} other {# AUTOMATIONS}}",
+    "empty": "no automations yet",
+    "steps": "{count, plural, one {# step} other {# steps}}"
+  },
+  "detailCard": {
+    "unreadableMeta": "UNREADABLE",
+    "unreadable": "this automation could not be read",
+    "statusMeta": {
+      "live": "LIVE",
+      "manual": "ON DEMAND",
+      "off": "OFF",
+      "deactivated": "DEACTIVATED"
+    },
+    "steps": "Steps",
+    "noSteps": "no steps yet",
+    "recentRuns": "Recent runs",
+    "runsUnavailable": "KeeperHub's run history is unavailable right now.",
+    "noRuns": "No runs yet."
+  },
+  "statusBadge": {
+    "live": "LIVE",
+    "manual": "on demand",
+    "off": "off",
+    "deactivated": "deactivated"
+  },
+  "triggerLabel": {
+    "manual": "Run on demand",
+    "transfer": "Runs on a transfer",
+    "other": "{type} trigger"
+  },
+  "duration": {
+    "milliseconds": "{ms} ms",
+    "seconds": "{seconds} s",
+    "minutes": "{minutes} m {seconds} s"
+  },
+  "runStatus": {
+    "executed": "Executed",
+    "failed": "Failed",
+    "cancelled": "Cancelled",
+    "skipped": "Skipped",
+    "running": "Running"
+  },
+  "board": {
+    "title": "Automations",
+    "subtitle": "Workflows KeeperHub runs for this org. Open one to see its steps and runs, or run it now.",
+    "filterLabel": "Show",
+    "filters": {
+      "all": "All",
+      "live": "Live",
+      "manual": "On demand",
+      "off": "Off"
+    },
+    "sortLabel": "Sort",
+    "sorts": {
+      "updated": "Recently updated",
+      "name": "Name"
+    },
+    "loadFailed": "Couldn't load automations right now",
+    "retry": "Retry",
+    "emptyTitle": "No automations yet",
+    "emptyBody": "Ask the chat to build one, or build it in KeeperHub. Either way it shows up here with its steps and runs.",
+    "createPrompt": "Help me create an automation.",
+    "createInChat": "Create one in chat →",
+    "openKeeperHub": "Open KeeperHub ↗",
+    "noneInView": "No automations in this view.",
+    "columns": {
+      "automation": "Automation",
+      "status": "Status",
+      "steps": "Steps",
+      "networks": "Networks",
+      "updated": "Updated"
+    },
+    "open": "Open →"
+  },
+  "detail": {
+    "back": "← Automations",
+    "missingTitle": "This automation isn't available",
+    "missingBody": "It may have been deleted, or it belongs to another organisation.",
+    "loadFailed": "Couldn't load this automation right now. {message}",
+    "created": "created <time></time>",
+    "deactivated": "This automation is deactivated in KeeperHub.",
+    "stats": {
+      "trigger": "Trigger",
+      "steps": "Steps",
+      "networks": "Networks",
+      "lastRun": "Last run",
+      "updated": "Updated"
+    },
+    "steps": "Steps",
+    "noSteps": "This automation has no steps yet.",
+    "recentRuns": "Recent runs",
+    "justStarted": "Run you just started",
+    "stillRunning": "Still running. Its result will appear here and in Activity.",
+    "runsUnavailable": "KeeperHub's run history is unavailable right now.",
+    "noRuns": "No runs yet.",
+    "runSource": "run",
+    "viewTx": "View",
+    "moreTx": "+{count} more"
+  },
+  "runDialog": {
+    "runningDryRun": "Running dry run…",
+    "acknowledge": "Acknowledge the warning",
+    "trigger": "Trigger",
+    "steps": "Steps",
+    "networks": "Networks",
+    "explainer": "Every step runs now. Steps that move value execute without stopping again.",
+    "dryRunLoading": "running dry run",
+    "dryRun": "Dry run",
+    "dryRunReason": "{reason} You authorize exactly what is shown above.",
+    "noWarnings": "no warnings",
+    "checked": "{count, plural, one {# step checked} other {# steps checked}}.",
+    "checkedSkipped": "{count, plural, one {# step checked} other {# steps checked}}, {skipped} could not be checked."
+  },
+  "switchDialog": {
+    "onExplainer": "Once on, KeeperHub starts it on its own, and its steps run without stopping again.",
+    "offExplainer": "Once off, KeeperHub stops starting it on its own. Run now still works."
+  }
+}
