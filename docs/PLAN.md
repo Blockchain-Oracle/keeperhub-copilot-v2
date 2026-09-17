@@ -410,6 +410,56 @@ Done 2026-09-15 (decision 43). Public address: **https://keeperhub-copilot-v2.ve
 - [x] **12.5 Fix: write cards never reached KeeperHub** (found by Abu on the hosted app, 2026-09-15). Authorize, Cancel and Try again answered "Your answer did not reach KeeperHub" because the route got the decision with no conversation id and refused it with 400. The AI SDK posts a card's decision by itself and sends only the options given with it; the card callbacks gave none (form answers did). Now `cardDecision` in `components/chat/chat-transport.ts` carries the id, and the transport moved to that file. New `tests/chat/chat-transport.test.ts` drives the real SDK `Chat` and checks the posted body (3 of its 4 fail on the old code). Typecheck, lint, build, `pnpm test` 957 in 83 files; redeployed, and the shipped chat code carries the id. **Not verified:** a real card authorized end to end, since that needs Abu signed in; an Aave borrow also needs collateral supplied first, and its amount is in the token's smallest unit.
 - [~] **Stop.** *(2026-09-17: Abu signed in on the hosted app and ran writes — the hosted sign-in round trip and hosted execution are proven. The rest of this walk is still open.)* Abu: open https://keeperhub-copilot-v2.vercel.app, sign in with KeeperHub (first proof of the hosted callback), ask a price, send 0 ETH to yourself on Base Sepolia through the card, try voice; desktop + phone. Decide whether v1's address `keeperhub-copilot.vercel.app` should point at v2 later.
 
+## 13 · The hosted walk's findings (2026-09-17)
+Abu ran a real Aave session on https://keeperhub-copilot-v2.vercel.app (borrow → supply collateral →
+WETH deposit → approve). Writes reach KeeperHub and land on chain. What it exposed, in his order of
+priority — the look-and-sound revamp waits until these are done.
+
+- [x] **13.1 A failed action was stamped EXECUTED.** `aave-v3/borrow` reverted for want of collateral;
+  KeeperHub answered `{ executionId, status: "failed", error }` and the ledger row was written
+  `state: "receipt"` with `tx_hash: null`, so the card stamped EXECUTED and Activity said Executed.
+  Cause: `lib/execution/index.ts` tested only `data.success === false`, a key KeeperHub's protocol-write
+  answer does not carry (it returns 202 `{ executionId, status }` and settles out of band —
+  fork `app/api/execute/[...slug]/route.ts:322-338`). Fixed: a status KeeperHub calls failed is a failure
+  terminal, and anything in flight goes through the same receipt poll contract calls and transfers use,
+  so a settled protocol write now also carries its transaction hash and explorer link. Four tests in
+  `tests/execution/route.test.ts`. Deployed.
+- [x] **13.2 A blank optional broke the write.** `priority_fee_gwei: ""` was forwarded and KeeperHub
+  refused it ("must be a non-empty decimal string in gwei"), while the card hides empty rows — so the
+  deposit failed twice with nothing on screen to explain it. Blank and whitespace optionals (value,
+  gas limit multiplier, priority fee) are now dropped. Deployed.
+- [ ] **13.3 A failed dry run dumps raw JSON and offers no retry.** `components/cards/write-card-parts.tsx:222-233`
+  prints KeeperHub's whole error string verbatim (an ethers `CALL_EXCEPTION` dump), and the card's
+  buttons are Authorize (disabled, labelled "Dry run failed"), Edit and Cancel — the dry run cannot
+  re-fire without an edit (`write-card-view.tsx:147`). Fix: a Try again that re-runs the dry run (the
+  pattern at `write-card-view.tsx:377`), and pull the reason out of `API call failed: <code> <status> - {…}`
+  in `lib/mcp/wire.ts:143` with the full text behind "Show details", as `error-card.tsx:56-60` already does.
+- [ ] **13.4 A raw contract call's Edit view is unreadable.** Every function except `approve` gets one
+  JSON blob field (`components/cards/write-form.ts:58-65`, `argsField`), so Abu saw
+  `["0x7b79…","10000000000000000","0xd5f7…",0]`, plus an orphaned "enter an amount with a dot" note
+  (`lib/registry/edited-write.ts:111-113` raising a `value` issue the form has no field for). The ABI is
+  already on the proposal and `FieldSpec` already carries `solidityType` / labels / tips — the
+  `execute_protocol_action` branch right below uses exactly that. Fix: build per-argument fields from
+  the ABI and re-serialize them into `function_args` on save.
+- [ ] **13.5 The launcher offers actions the selected network cannot run.** "How much is deposited in the
+  Sky savings vault?" 400s on Sepolia because Sky is mainnet/Base/Arbitrum only. The starters are a fixed
+  list (`lib/registry/surface-suggestions.ts:91-95`) and are never filtered by the header's network: on the
+  **default Base Sepolia six of the eight starters cannot run** (Rocket Pool and Sky are the offenders;
+  Chainlink and Lido are fine). Each op's `network` field already carries `allowedChainIds` locally, and
+  `lib/automations/proposal.ts:181-189` already checks exactly that, so filtering needs no KeeperHub call
+  (~6 lines). **Abu's call, because it changes what the launcher shows:** hide a starter the network
+  cannot run, or keep it and have it switch the network when picked.
+- [ ] **13.6 The assistant proposed a borrow it could have known would fail.** It only read
+  `getUserAccountData` (collateral, borrowing capacity) *after* the failure. Abu: "not the end of the
+  world", but worth one instruction — before proposing an Aave borrow, read the account data and say
+  plainly what is missing. Prompt work in `app/api/chat/route.ts` instructions, no new tool.
+
+## 14 · The revamp (parked until 13 is done — Abu, 2026-09-17)
+- [ ] **Colours and look.** Abu wants to rework the paint. Needs a conversation first; decision 5 (Portaldot
+  verbatim) is what it would supersede.
+- [ ] **Sounds.** Clicks and cues: a form popping up, Authorize, Cancel, a transaction landing. Aesthetic,
+  his idea, to be designed with the look.
+
 ## End-to-end walk (after slice 9)
 Landing type → sign-in modal → OAuth → arrive with draft auto-sent → read shows "Used N tools" +
 card → "send 0 ETH to myself on Base Sepolia" → write card → edit → dry-run → approve → EXECUTED +
