@@ -192,13 +192,19 @@ export function DryRun({
   unavailable,
   preview,
   acknowledgement,
+  onRetry,
 }: {
   simulatable: boolean;
   unavailable: boolean;
   preview: PreviewState;
   acknowledgement?: ReactNode;
+  /** Run the dry run again. A failed one used to be a dead end: the card kept
+   *  Authorize disabled and nothing re-ran it short of editing the instruction
+   *  (Abu, hosted, 2026-09-17). */
+  onRetry?: () => void;
 }) {
   const t = useTranslations("cards");
+  const tCommon = useTranslations("common");
   const translate = useTranslate();
   const errorMessage = useErrorMessage();
   if (unavailable) return <p className="mt-3 text-[12.5px] text-fg-secondary">{writeUnavailableStatement(translate)}</p>;
@@ -228,6 +234,11 @@ export function DryRun({
             ? errorMessage(preview.code, preview.message)
             : preview.message}
         </p>
+        {onRetry !== undefined && (
+          <button type="button" onClick={onRetry} className={cn(GHOST_BUTTON, "mt-2")}>
+            {tCommon("tryAgain")}
+          </button>
+        )}
       </Inset>
     );
   }

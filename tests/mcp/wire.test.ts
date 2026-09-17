@@ -6,6 +6,7 @@ import {
   MCP_PROTOCOL_VERSION,
   parseJsonRpcBody,
   rateLimitMessage,
+  readApiFailure,
   unwrapToolResult,
 } from "@/lib/mcp/wire";
 
@@ -161,5 +162,55 @@ describe("rateLimitMessage", () => {
     expect(withSeconds).not.toMatch(/[!—]/);
     expect(withSeconds).toContain("5 seconds");
     expect(rateLimitMessage()).toMatch(/\.$/);
+  });
+});
+
+/*
+ * KeeperHub throws its failures as `API call failed: <status> <statusText> -
+ * <body>`. Before this the whole string was the message and the body never
+ * reached the app, so a dry run's own verdict was invisible and an ethers dump
+ * filled the card (Abu, hosted, 2026-09-17).
+ */
+describe("readApiFailure (KeeperHub's glued-on error body)", () => {
+  it("reads the field complaint out of a 400 and keeps the body", () => {
+    const failure = readApiFailure(
+      'API call failed: 400 Bad Request - {"error":"Invalid field type","field":"priorityFeeGwei","details":"priorityFeeGwei must be a non-empty decimal string in gwei"}',
+    );
+    expect(failure?.message).toBe(
+      "Invalid field type: priorityFeeGwei must be a non-empty decimal string in gwei",
+    );
+    expect(failure?.payload).toMatchObject({ field: "priorityFeeGwei" });
+  });
+
+  it("prefers a dry run's revert reason and drops the ethers call dump", () => {
+    const failure = readApiFailure(
+      'API call failed: 400 Bad Request - {"success":false,"status":"simulated","wouldRevert":true,"revertReason":"Simulation reverted: missing revert data (action=\\"call\\", data=null, code=CALL_EXCEPTION)"}',
+    );
+    expect(failure?.message).toBe("Simulation reverted: missing revert data");
+    expect(failure?.payload).toMatchObject({ wouldRevert: true });
+  });
+
+  it("keeps a body that is not JSON, and ignores text that is not an API failure", () => {
+    expect(readApiFailure("API call failed: 502 Bad Gateway - upstream said no")?.message).toBe(
+      "upstream said no",
+    );
+    expect(readApiFailure("something else entirely")).toBeUndefined();
+  });
+
+  it("an error envelope carrying one gives the app the body, not the sentence", () => {
+    const result = unwrapToolResult({
+      isError: true,
+      content: [
+        {
+          type: "text",
+          text: 'API call failed: 400 Bad Request - {"wouldRevert":true,"revertReason":"insufficient collateral"}',
+        },
+      ],
+    });
+    expect(result.ok).toBe(false);
+    if (!result.ok) {
+      expect(result.error.message).toBe("insufficient collateral");
+      expect(result.error.decoded).toEqual({ wouldRevert: true, revertReason: "insufficient collateral" });
+    }
   });
 });

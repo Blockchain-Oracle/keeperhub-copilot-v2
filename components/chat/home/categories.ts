@@ -1,5 +1,6 @@
+import { getChain } from "@/lib/chains";
 import { englishTranslate, type Translate, type TranslateValues } from "@/lib/i18n/translate";
-import type { StarterCategory } from "@/lib/registry/surface-suggestions";
+import type { StarterCategory, StarterChip } from "@/lib/registry/surface-suggestions";
 
 /*
  * The launcher's cards — the shape of DeepBookie components/chat/chatHome/categories.ts.
@@ -47,10 +48,34 @@ export interface LauncherContext {
   networkName: string;
   /** Native token symbol of the selected network; empty when unknown. */
   symbol: string;
+  /** The network selected in the header, so a starter it cannot run says which one can. */
+  chainId?: string;
+}
+
+/*
+ * A starter whose action is not deployed on the selected network names one it is
+ * deployed on, so a click reads that network instead of failing. The prompt is
+ * the person's own words to the assistant and stays English like the rest of
+ * them; the network name is the chain's own (decision 42).
+ */
+export function starterPrompt(chip: StarterChip, chainId: string | undefined): string {
+  if (chip.chains === undefined || chainId === undefined || chip.chains.includes(chainId)) {
+    return chip.prompt;
+  }
+  const named = chip.chains.find((id) => getChain(id).name !== `Chain ${id}`) ?? chip.chains[0];
+  if (named === undefined) return chip.prompt;
+  const on = ` on ${getChain(named).name}`;
+  return chip.prompt.endsWith("?") ? `${chip.prompt.slice(0, -1)}${on}?` : `${chip.prompt}${on}`;
+}
+
+/** The first chip the selected network can run, else the first one. */
+function pickChip(chips: readonly StarterChip[], chainId: string | undefined): StarterChip | undefined {
+  if (chainId === undefined) return chips[0];
+  return chips.find((chip) => chip.chains === undefined || chip.chains.includes(chainId)) ?? chips[0];
 }
 
 export function launcherCategories(
-  { suggestions, networkName, symbol }: LauncherContext,
+  { suggestions, networkName, symbol, chainId }: LauncherContext,
   t: Translate = englishTranslate,
 ): Category[] {
   const words = (copy: string, values?: TranslateValues) => ({
@@ -62,7 +87,7 @@ export function launcherCategories(
   const fromRegistry = new Map<string, Category>();
   for (const suggestion of suggestions) {
     const presentation = INTEGRATION_CARDS[suggestion.integration];
-    const chip = suggestion.chips[0];
+    const chip = pickChip(suggestion.chips, chainId);
     if (!presentation || !chip) continue;
     fromRegistry.set(suggestion.integration, {
       id: suggestion.integration,
@@ -70,7 +95,7 @@ export function launcherCategories(
       dot: presentation.dot,
       motif: presentation.motif,
       familyLabel: suggestion.label,
-      prompt: chip.prompt,
+      prompt: starterPrompt(chip, chainId),
     });
   }
 

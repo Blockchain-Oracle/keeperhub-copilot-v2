@@ -127,10 +127,14 @@ describe("starterSuggestions() — pure derive + validate", () => {
     for (const category of categories) {
       expect(Object.keys(category).sort()).toEqual(["chips", "integration", "label"]);
       for (const chip of category.chips) {
-        // The client payload carries the prompt only — the opId (the model's
-        // re-discovery anchor) never crosses the boundary.
-        expect(Object.keys(chip)).toEqual(["prompt"]);
+        // The client payload carries the prompt and the networks the action runs
+        // on — the opId (the model's re-discovery anchor) never crosses the
+        // boundary.
+        expect(Object.keys(chip).sort()).toEqual(
+          chip.chains === undefined ? ["prompt"] : ["chains", "prompt"],
+        );
         expect(chip).not.toHaveProperty("opId");
+        for (const id of chip.chains ?? []) expect(id).toMatch(/^\d+$/);
       }
     }
   });

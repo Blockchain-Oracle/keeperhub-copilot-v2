@@ -134,6 +134,11 @@ export function unwrapToolResult(result: unknown): McpResult {
   }
 
   if (envelope.isError === true) {
+    // KeeperHub's own client throws its failures as one long string with a JSON
+    // body glued on; unglue it so the rest of the app reads the body, not the
+    // sentence (readApiFailure).
+    const apiFailure =
+      typeof payload === "string" ? readApiFailure(payload) : undefined;
     return {
       ok: false,
       error: {
@@ -142,10 +147,11 @@ export function unwrapToolResult(result: unknown): McpResult {
           : "tool_error",
         message:
           extractPayloadMessage(payload) ??
+          apiFailure?.message ??
           (typeof firstText === "string" && firstText !== ""
             ? firstText
             : "The tool reported an error."),
-        decoded: payload ?? firstText,
+        decoded: apiFailure?.payload ?? payload ?? firstText,
       },
     };
   }
@@ -167,6 +173,63 @@ function isInsufficientScopePayload(payload: unknown): boolean {
     typeof payload === "object" &&
     (payload as Record<string, unknown>).error === "insufficient_scope"
   );
+}
+
+/*
+ * KeeperHub throws `API call failed: <status> <statusText> - <body>` (fork
+ * lib/mcp/tools.ts:125), so a failure reaches us as one string with its JSON
+ * body glued on the end. Unglue it: the body is what the app actually needs —
+ * a dry run's own `wouldRevert` / `revertReason` live in there, and without it
+ * a predicted revert could not be told from a broken preview — and the sentence
+ * a person should read is buried in it. Before this, an ethers CALL_EXCEPTION
+ * dump filled a whole card with no reason visible (Abu, hosted, 2026-09-17).
+ */
+const API_FAILURE = /^API call failed:\s*\d{3}[^-]*-\s*([\s\S]+)$/;
+
+export function readApiFailure(
+  text: string,
+): { message: string; payload?: unknown } | undefined {
+  const match = API_FAILURE.exec(text.trim());
+  if (match === null) {
+    return undefined;
+  }
+  const body = match[1].trim();
+  const parsed = safeJsonParse(body);
+  if (parsed === null || typeof parsed !== "object") {
+    return { message: shortenReason(body) };
+  }
+  const record = parsed as Record<string, unknown>;
+  const reason = firstString(
+    record.revertReason,
+    record.error,
+    record.message,
+    record.details,
+  );
+  if (reason === undefined) {
+    return { message: shortenReason(body), payload: parsed };
+  }
+  const details = firstString(record.details);
+  return {
+    message: shortenReason(
+      details !== undefined && details !== reason ? `${reason}: ${details}` : reason,
+    ),
+    payload: parsed,
+  };
+}
+
+/** The reason without ethers' call dump, on one line, short enough to read. */
+function shortenReason(text: string): string {
+  const flat = text.split(" (action=")[0].replace(/\s+/g, " ").trim();
+  return flat.length > 200 ? `${flat.slice(0, 199)}…` : flat;
+}
+
+function firstString(...values: unknown[]): string | undefined {
+  for (const value of values) {
+    if (typeof value === "string" && value.trim() !== "") {
+      return value.trim();
+    }
+  }
+  return undefined;
 }
 
 function extractPayloadMessage(payload: unknown): string | undefined {

@@ -94,6 +94,10 @@ function checkTransfer(edited: Record<string, unknown>, t: Translate): EditCheck
   return issues.length > 0 ? fail(issues) : { ok: true };
 }
 
+function trimmedText(value: unknown): string {
+  return typeof value === "string" ? value.trim() : String(value ?? "");
+}
+
 function checkContractCall(original: Record<string, unknown>, edited: Record<string, unknown>, t: Translate): EditCheck {
   const issues = schemaIssues(INPUT_SCHEMAS.execute_contract_call, edited);
   if (issues.length > 0) return fail(issues);
@@ -108,7 +112,9 @@ function checkContractCall(original: Record<string, unknown>, edited: Record<str
     parsed = parseArray(args as string);
     if (parsed === undefined) issues.push({ path: "function_args", message: t("cards.editCheck.argumentsList") });
   }
-  if (edited.value !== undefined && !DECIMAL.test(edited.value as string)) {
+  // A blank value is an absent one (execution drops it on the way to the wire),
+  // so it must not raise an amount complaint on a card that has no amount field.
+  if (edited.value !== undefined && trimmedText(edited.value) !== "" && !DECIMAL.test(edited.value as string)) {
     issues.push({ path: "value", message: t("cards.checks.amountDot") });
   }
   if (edited.function_name === "approve" && parsed !== undefined) {

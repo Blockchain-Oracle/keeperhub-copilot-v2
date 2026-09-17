@@ -402,8 +402,12 @@ export function Chat({
   };
 
   const categories = useMemo(
-    () => launcherCategories({ suggestions: starterSuggestions, networkName: network.name, symbol: network.symbol }, translate),
-    [starterSuggestions, network.name, network.symbol, translate],
+    () =>
+      launcherCategories(
+        { suggestions: starterSuggestions, networkName: network.name, symbol: network.symbol, chainId: network.chainId },
+        translate,
+      ),
+    [starterSuggestions, network.name, network.symbol, network.chainId, translate],
   );
   const walletAddress = identity.status === "signed-in" ? identity.walletAddress : null;
 

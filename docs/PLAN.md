@@ -428,31 +428,45 @@ priority — the look-and-sound revamp waits until these are done.
   refused it ("must be a non-empty decimal string in gwei"), while the card hides empty rows — so the
   deposit failed twice with nothing on screen to explain it. Blank and whitespace optionals (value,
   gas limit multiplier, priority fee) are now dropped. Deployed.
-- [ ] **13.3 A failed dry run dumps raw JSON and offers no retry.** `components/cards/write-card-parts.tsx:222-233`
-  prints KeeperHub's whole error string verbatim (an ethers `CALL_EXCEPTION` dump), and the card's
-  buttons are Authorize (disabled, labelled "Dry run failed"), Edit and Cancel — the dry run cannot
-  re-fire without an edit (`write-card-view.tsx:147`). Fix: a Try again that re-runs the dry run (the
-  pattern at `write-card-view.tsx:377`), and pull the reason out of `API call failed: <code> <status> - {…}`
-  in `lib/mcp/wire.ts:143` with the full text behind "Show details", as `error-card.tsx:56-60` already does.
-- [ ] **13.4 A raw contract call's Edit view is unreadable.** Every function except `approve` gets one
-  JSON blob field (`components/cards/write-form.ts:58-65`, `argsField`), so Abu saw
-  `["0x7b79…","10000000000000000","0xd5f7…",0]`, plus an orphaned "enter an amount with a dot" note
-  (`lib/registry/edited-write.ts:111-113` raising a `value` issue the form has no field for). The ABI is
-  already on the proposal and `FieldSpec` already carries `solidityType` / labels / tips — the
-  `execute_protocol_action` branch right below uses exactly that. Fix: build per-argument fields from
-  the ABI and re-serialize them into `function_args` on save.
-- [ ] **13.5 The launcher offers actions the selected network cannot run.** "How much is deposited in the
-  Sky savings vault?" 400s on Sepolia because Sky is mainnet/Base/Arbitrum only. The starters are a fixed
-  list (`lib/registry/surface-suggestions.ts:91-95`) and are never filtered by the header's network: on the
-  **default Base Sepolia six of the eight starters cannot run** (Rocket Pool and Sky are the offenders;
-  Chainlink and Lido are fine). Each op's `network` field already carries `allowedChainIds` locally, and
-  `lib/automations/proposal.ts:181-189` already checks exactly that, so filtering needs no KeeperHub call
-  (~6 lines). **Abu's call, because it changes what the launcher shows:** hide a starter the network
-  cannot run, or keep it and have it switch the network when picked.
-- [ ] **13.6 The assistant proposed a borrow it could have known would fail.** It only read
-  `getUserAccountData` (collateral, borrowing capacity) *after* the failure. Abu: "not the end of the
-  world", but worth one instruction — before proposing an Aave borrow, read the account data and say
-  plainly what is missing. Prompt work in `app/api/chat/route.ts` instructions, no new tool.
+- [x] **13.3 A failed dry run dumps raw JSON and offers no retry.** Two parts, both fixed.
+  KeeperHub throws its failures as `API call failed: <status> <statusText> - <body>` (fork
+  `lib/mcp/tools.ts:125`), so the whole string was the message and the JSON body never reached the app.
+  `readApiFailure` in `lib/mcp/wire.ts` ungluess it: the body becomes the decoded payload and the
+  sentence a person reads is pulled out of it (the ethers call dump dropped). **The card can now tell a
+  predicted revert from a broken preview** — a dry run KeeperHub refused with `wouldRevert` renders as
+  "This would not succeed. <reason>" with the acknowledgement, so the walk continues instead of dying.
+  A genuinely broken dry run now offers Try again (`onRetry` on `DryRun`, `attempt` in the card),
+  which re-runs it without editing the instruction. Tests in `tests/mcp/wire.test.ts` and
+  `tests/cards/write-card.test.ts`.
+- [x] **13.4 A raw contract call's Edit view is unreadable.** The proposal already carries the ABI, so
+  `components/cards/write-form.ts` now builds one labelled, typed field per argument —
+  "asset (address)", "amount (uint256)", "onBehalfOf (address)", "referralCode (uint16)" — and puts an
+  edit back into `function_args` keeping each argument's JSON type (a uint16 that arrived as `0` goes
+  back as `0`, not `"0"`). Argument names and Solidity types are the contract's own words and stay
+  English in every language, like KeeperHub's action names (decision 42). A payable call with no
+  arguments edits only the value sent; an unreadable ABI keeps the old JSON box. The orphaned "enter an
+  amount with a dot" note is gone: a blank `value` is treated as absent, matching 13.2. Tests in
+  `tests/cards/write-form.test.ts`.
+- [x] **13.5 The launcher offers actions the selected network cannot run.** Fixed the way that keeps all
+  eight cards: a starter chip now carries the networks its action is deployed on (`allowedChainIds` from
+  its own network field), and when the selected network is not one of them the prompt names one that is
+  — "How much is deposited in the Sky savings vault **on Ethereum**?". These are reads, so running them
+  where they exist is free and nothing moves. A chip the network can run is preferred over one it
+  cannot; a starter with no declared networks is left alone. Tests in
+  `tests/chat/launcher-categories.test.ts`. **Abu can still overrule this:** the alternatives were
+  hiding the card, or switching the header network on click. Hiding leaves two cards on Base Sepolia.
+- [x] **13.6 The assistant proposed a borrow it could have known would fail.** One rule added to the chat
+  instructions (`app/api/chat/route.ts`): a write that depends on a position the chain already holds —
+  borrowing against collateral, repaying, withdrawing, spending a token that needs an allowance — is
+  checked before it is proposed, and if it cannot succeed the assistant says so in a sentence with the
+  missing number instead of proposing a card that is certain to fail. Prompt only, no new tool.
+  **Unproven until Abu tries it:** instructions guide the model, they do not force it.
+
+**Slice 13 report (2026-09-17).** Typecheck, lint and build clean. `pnpm test`: 975 passing in 83 files
+(+18 since the morning: 4 execution, 4 wire, 2 write-card, 4 write-form, 4 launcher). Deployed to
+https://keeperhub-copilot-v2.vercel.app and pushed to the repo. **Not verified in a browser:** nothing
+here was clicked signed in — the dry-run Try again, the per-argument edit fields and the network-named
+starters are all waiting on Abu's walk.
 
 ## 14 · The revamp (parked until 13 is done — Abu, 2026-09-17)
 - [ ] **Colours and look.** Abu wants to rework the paint. Needs a conversation first; decision 5 (Portaldot

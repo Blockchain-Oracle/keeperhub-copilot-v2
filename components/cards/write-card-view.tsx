@@ -2,7 +2,7 @@
 
 import { Loader2, ShieldCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 import { useAccount } from "@/components/shell/account-context";
 import { announceReceipt } from "@/components/shell/funding/receipt-announce";
@@ -129,8 +129,14 @@ export function WriteCard({
   const awaiting = phase === "proposed" && live;
   const form = writeFormFor(toolName, applied, translate);
 
-  // The dry run, once per applied instruction. A late answer for an older one is dropped.
+  // The dry run, once per applied instruction — and again when Try again asks
+  // for it (`attempt`). A late answer for an older one is dropped.
   const simulate = phase === "proposed" ? ceremony?.simulate : undefined;
+  const [attempt, setAttempt] = useState(0);
+  const retryDryRun = useCallback(() => {
+    setPreview({ status: "loading" });
+    setAttempt((current) => current + 1);
+  }, []);
   useEffect(() => {
     if (simulate === undefined) return;
     let active = true;
@@ -144,7 +150,7 @@ export function WriteCard({
     return () => {
       active = false;
     };
-  }, [simulate, toolName, argsKey, toolCallId, t]);
+  }, [simulate, toolName, argsKey, toolCallId, attempt, t]);
 
   // A receipt that lands while this card watches: announce it (the first per org gets the welcome) and re-read the balance.
   const watchedOpen = useRef(phase !== "receipt");
@@ -341,6 +347,7 @@ export function WriteCard({
           simulatable={simulatable}
           unavailable={unavailable}
           preview={preview}
+          onRetry={simulate !== undefined ? retryDryRun : undefined}
           acknowledgement={
             resolved.needsRevertAck ? (
               <label htmlFor={ackId} className="mt-2 flex items-start gap-2 text-[12.5px] text-foreground">

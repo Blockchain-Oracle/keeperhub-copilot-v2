@@ -31,9 +31,10 @@ import {
   resolveOperation,
 } from "./index.ts";
 
-/** One clickable prompt. The client payload carries the prompt text ONLY — the
- *  model re-discovers the action, so the opId stays server-side. */
-export type StarterChip = { prompt: string };
+/** One clickable prompt. The client payload carries the prompt text and the
+ *  networks the action runs on — the model re-discovers the action, so the opId
+ *  stays server-side. `chains` absent means every EVM network. */
+export type StarterChip = { prompt: string; chains?: string[] };
 
 /** A registry-integration group of chips. `label` is the registry-sourced
  *  integration label (never a hardcoded category string). Serializable — it
@@ -175,7 +176,12 @@ export function starterSuggestions(
       };
       byIntegration.set(entry.integration, category);
     }
-    category.chips.push({ prompt });
+    // The networks this op is deployed on, as its own network field declares
+    // them. Without it a starter offered what the selected network cannot run:
+    // "How much is deposited in the Sky savings vault?" 400s anywhere but
+    // mainnet, Base and Arbitrum (Abu, hosted, 2026-09-17).
+    const chains = entry.fields.find((field) => field.key === "network")?.allowedChainIds;
+    category.chips.push({ prompt, ...(chains !== undefined && chains.length > 0 ? { chains: [...chains] } : {}) });
   }
 
   return [...byIntegration.values()];

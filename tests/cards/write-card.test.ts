@@ -172,3 +172,42 @@ describe("verbTitle / verbMeta", () => {
     );
   });
 });
+
+/*
+ * A dry run KeeperHub refused used to reach the card as one raw string, so the
+ * card could not tell a predicted revert from a broken preview and printed the
+ * whole dump with Authorize dead and nothing to re-run it (Abu, hosted,
+ * 2026-09-17). With the body unglued it is the revert the card already draws.
+ */
+describe("a dry run KeeperHub refused", () => {
+  it("becomes the predicted revert, with the reason the card shows", () => {
+    const state = toPreviewState({
+      ok: false,
+      error: {
+        code: "tool_error",
+        message: "Simulation reverted: insufficient collateral",
+        decoded: { success: false, wouldRevert: true, revertReason: "Simulation reverted: insufficient collateral" },
+      },
+    });
+    expect(state.status).toBe("simulated");
+    if (state.status === "simulated") {
+      expect(state.wouldRevert).toBe(true);
+      expect(state.revertReason).toBe("Simulation reverted: insufficient collateral");
+    }
+    // A predicted revert may be authorized once acknowledged; a broken preview may not.
+    expect(confirmAllowed(state)).toBe(true);
+  });
+
+  it("stays a plain error when nothing decodes a reason, so Authorize stays shut", () => {
+    const state = toPreviewState({
+      ok: false,
+      error: { code: "tool_error", message: "Invalid field type: priorityFeeGwei must be a non-empty decimal string in gwei" },
+    });
+    expect(state.status).toBe("error");
+    if (state.status === "error") {
+      expect(state.message).toContain("priorityFeeGwei");
+      expect(state.message.length).toBeLessThan(120);
+    }
+    expect(confirmAllowed(state)).toBe(false);
+  });
+});

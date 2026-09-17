@@ -169,3 +169,88 @@ describe("canonical JSON", () => {
     expect(canonicalJSON({ b: 1, a: { d: [2, { f: 1, e: 0 }], c: null } })).toBe('{"a":{"c":null,"d":[2,{"e":0,"f":1}]},"b":1}');
   });
 });
+
+/*
+ * The raw contract call's edit view (Abu, hosted, 2026-09-17): every function
+ * but approve showed one JSON box — ["0x7b79…","10000000000000000","0xd5f7…",0]
+ * — and an amount hint belonging to a field that was not there. The proposal
+ * carries the ABI, so each argument gets its own labelled, typed field.
+ */
+describe("a contract call's edit form is built from the ABI it carries", () => {
+  const SUPPLY_ABI = JSON.stringify([
+    {
+      type: "function",
+      name: "supply",
+      stateMutability: "nonpayable",
+      inputs: [
+        { name: "asset", type: "address" },
+        { name: "amount", type: "uint256" },
+        { name: "onBehalfOf", type: "address" },
+        { name: "referralCode", type: "uint16" },
+      ],
+      outputs: [],
+    },
+  ]);
+  const supplyCall = {
+    contract_address: "0x6Ae43d3271ff6888e7Fc43Fd7321a503ff738951",
+    chain_id: "11155111",
+    function_name: "supply",
+    function_args: '["0x7b79995e5f793a07bc00c21412e50ecae098e7f9","10000000000000000","0xd5f7523266fd08418ea2a2c401c894fb80dbef74",0]',
+    stateMutability: "nonpayable",
+    abi: SUPPLY_ABI,
+  };
+
+  it("gives every argument its own field, named and typed as the contract names it", () => {
+    const form = writeFormFor("execute_contract_call", supplyCall);
+    expect(form?.fields.map((field) => field.label)).toEqual([
+      "asset (address)",
+      "amount (uint256)",
+      "onBehalfOf (address)",
+      "referralCode (uint16)",
+    ]);
+    expect(form?.fields.map((field) => field.type)).toEqual([
+      "protocol-address",
+      "protocol-uint",
+      "protocol-address",
+      "protocol-uint",
+    ]);
+    expect(form?.seed.arg1).toBe("10000000000000000");
+    expect(form?.seed.arg3).toBe("0");
+    // The raw JSON box is gone.
+    expect(form?.fields.some((field) => field.key === "function_args")).toBe(false);
+  });
+
+  it("puts an edit back into the argument list, keeping each argument's JSON type", () => {
+    const form = writeFormFor("execute_contract_call", supplyCall);
+    if (form === null) throw new Error("expected a form");
+    const edited = buildEditedWrite("execute_contract_call", supplyCall, form, {
+      ...form.seed,
+      arg1: "25000000000000000",
+    });
+    expect(edited.function_args).toBe(
+      '["0x7b79995e5f793a07bc00c21412e50ecae098e7f9","25000000000000000","0xd5f7523266fd08418ea2a2c401c894fb80dbef74",0]',
+    );
+    // What identifies the call is untouched.
+    expect(edited.function_name).toBe("supply");
+    expect(edited.contract_address).toBe(supplyCall.contract_address);
+  });
+
+  it("a payable call with no arguments edits only the value sent", () => {
+    const form = writeFormFor("execute_contract_call", {
+      contract_address: "0x7b79995e5f793a07bc00c21412e50ecae098e7f9",
+      chain_id: "11155111",
+      function_name: "deposit",
+      function_args: "[]",
+      stateMutability: "payable",
+      value: "0.01",
+      abi: JSON.stringify([{ type: "function", name: "deposit", stateMutability: "payable", inputs: [], outputs: [] }]),
+    });
+    expect(form?.fields.map((field) => field.key)).toEqual(["value"]);
+    expect(form?.seed.value).toBe("0.01");
+  });
+
+  it("falls back to the JSON list when the ABI cannot be read", () => {
+    const form = writeFormFor("execute_contract_call", { ...supplyCall, abi: undefined });
+    expect(form?.fields.map((field) => field.key)).toEqual(["function_args"]);
+  });
+});
