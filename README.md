@@ -108,6 +108,47 @@ Every surface, what it is used for, and where to read the code.
 | **OAuth sign-in** | KeeperHub is the identity provider; the org's Turnkey wallet signs. No key is held here. | [`lib/session/`](lib/session/) · [`app/api/auth`](app/api/auth) |
 | **Org wallet + holdings** | The assistant knows the org's EVM and Solana addresses and reads its holdings, so it never asks you for your own address. | [`lib/wallet/`](lib/wallet/) · [`lib/holdings.ts`](lib/holdings.ts) |
 
+## Execution evidence
+
+Real contract calls composed in the chat, authorized on a card, and executed through KeeperHub.
+Both were verified on chain by reading the receipt back — not by trusting the acknowledgement — and
+both ran with KeeperHub's sponsored gas.
+
+Network: **Ethereum Sepolia (11155111)**. This is testnet; see [What is unfinished](#what-is-unfinished).
+
+| What ran | Transaction | Block | KeeperHub execution |
+| --- | --- | --- | --- |
+| `deposit()` on WETH9 — wrapping 0.01 ETH | [`0xe00f4897…29d6bc`](https://sepolia.etherscan.io/tx/0xe00f48977c50cd3a7b8bc10f2b06379ff3ca025e5136add0159818ea0829d6bc) | 11721925 | `8pl4ybwwgn9tanlst7ern` |
+| `approve(spender, amount)` — 0.01 WETH to the Aave v3 pool | [`0xbdc610fc…69a9ad`](https://sepolia.etherscan.io/tx/0xbdc610fc1f7d562dfca47856a8003dec39fa164e77f805a43a7e774a3a69a9ad) | 11721932 | `pjcexb9xhmlge7o2u50kc` |
+
+<details>
+<summary>What the ledger stored for the first one</summary>
+
+```json
+{
+  "status": "completed",
+  "network": "11155111",
+  "executionId": "8pl4ybwwgn9tanlst7ern",
+  "sponsored": true,
+  "gasUsedUnits": "73925",
+  "receipts": [
+    {
+      "hash": "0xe00f48977c50cd3a7b8bc10f2b06379ff3ca025e5136add0159818ea0829d6bc",
+      "chainId": 11155111,
+      "blockNumber": 11721925,
+      "receiptStatus": "success",
+      "verified": true,
+      "verifiedAt": "2026-09-17T06:15:52.568Z"
+    }
+  ]
+}
+```
+
+`verified: true` is the point. The app polls KeeperHub for the terminal state and reads the receipt
+off the chain; a card only reaches `EXECUTED` once that has come back. See
+[`lib/execution/index.ts`](lib/execution/index.ts).
+</details>
+
 ## Running it yourself
 
 ```bash
