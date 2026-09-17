@@ -514,6 +514,32 @@ headlines. **Not verified:** nothing was clicked signed in, so no card, no sound
 been heard or exercised — that is the look check. A wider viewport was not reachable on this display, so
 the desktop fan and the desktop nav were only read, not seen.
 
+## 15 · The docs, rebuilt as a guide (2026-09-17)
+Decisions 49-50. Abu, on the old pages: *"the documentation is lying... it's supposed to be like a
+walkthrough... documentation for users, not developers"*, with `~/dev/hackathon/masayume-docs` as the
+reference to work from.
+
+- [x] **15.1 The shape.** Sixteen pages in five sections, replacing three. Start here / Using it /
+  Under the hood / Builders / Need a hand?. `components/docs/docs-nav.tsx` is sectioned; `/docs/mcp`
+  moved to `/docs/builders/mcp` (nav registry, its test, and `NAVIGABLE_ROUTE_PATHS` with it), and the
+  `.env.local` block that used to open the first page now lives on `/docs/builders/self-host`.
+- [x] **15.2 The furniture.** `components/docs/prose.tsx` — a numbered `Steps` rail, a callout, a
+  two-column table, `Next` links so no page is a dead end. Deliberately no component for a config
+  block.
+- [x] **15.3 The architecture page.** `components/docs/architecture-diagram.tsx`, a hand-laid SVG of
+  the real flow: you, the chat, the one door, the card that waits, KeeperHub, the org wallet, the
+  chain, the ledger. Colours are the app's own — green gate, amber waits for you, cyan outside this
+  app — so it teaches the same language the cards page does. Written from `lib/execution/index.ts`,
+  `lib/mcp/index.ts` and `lib/registry`.
+- [x] **15.4 Annotated captures.** `lib/docs/guides.ts` + `components/docs/guide-shot.tsx`
+  (decision 50). **The nine captures themselves are not taken** — they render as "capture pending"
+  and need Abu signed in.
+
+**Slice 15 report (2026-09-17).** Typecheck, lint and build clean; 975 tests in 83 files (the nav
+registry test moved with the route). All sixteen routes serve 200. Looked at in a browser at 1310px:
+the sectioned sidebar, the architecture diagram and the tables. **Not done:** the captures, and
+nothing was read signed in.
+
 ## End-to-end walk (after slice 9)
 Landing type → sign-in modal → OAuth → arrive with draft auto-sent → read shows "Used N tools" +
 card → "send 0 ETH to myself on Base Sepolia" → write card → edit → dry-run → approve → EXECUTED +

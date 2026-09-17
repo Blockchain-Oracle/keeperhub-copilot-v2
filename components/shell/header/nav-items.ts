@@ -92,7 +92,7 @@ export const NAV_ITEMS = {
   mcp: {
     id: "mcp",
     ...text("shell.nav.items.mcp"),
-    href: "/docs/mcp",
+    href: "/docs/builders/mcp",
     icon: Plug,
   },
   howItWorks: {
@@ -144,7 +144,7 @@ export const MOBILE_OVERFLOW: readonly NavItem[] = MOBILE_DRAWER_SECTIONS.flatMa
 
 /** Every real, user-facing page that must retain an explicit navigation home. */
 export const NAVIGABLE_ROUTE_PATHS = [
-  "/app", "/app/activity", "/app/automations", "/app/history", "/docs", "/docs/actions", "/docs/mcp",
+  "/app", "/app/activity", "/app/automations", "/app/history", "/docs", "/docs/actions", "/docs/builders/mcp",
 ] as const;
 
 export function isActiveNavItem(pathname: string | null, item: NavItem): boolean {

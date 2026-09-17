@@ -49,9 +49,13 @@ describe("navigation registry", () => {
 
   it("keeps Getting started from lighting up on the other docs pages", () => {
     expect(isActiveNavItem("/docs", NAV_ITEMS.gettingStarted)).toBe(true);
-    expect(isActiveNavItem("/docs/mcp", NAV_ITEMS.gettingStarted)).toBe(false);
-    expect(isActiveNavItem("/docs/mcp", NAV_ITEMS.mcp)).toBe(true);
+    expect(isActiveNavItem("/docs/builders/mcp", NAV_ITEMS.gettingStarted)).toBe(false);
+    expect(isActiveNavItem("/docs/builders/mcp", NAV_ITEMS.mcp)).toBe(true);
     expect(isActiveNavItem("/docs/actions", NAV_ITEMS.actions)).toBe(true);
+    // The guide pages are their own section in the docs sidebar, so the header's
+    // "Getting started" must not claim them either.
+    expect(isActiveNavItem("/docs/start/connect", NAV_ITEMS.gettingStarted)).toBe(false);
+    expect(isActiveNavItem("/docs/how/architecture", NAV_ITEMS.gettingStarted)).toBe(false);
   });
 
   it("keeps every destination internal and never marks the landing section active", () => {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TriangleAlert } from "lucide-react";
 
 import { CopyRow } from "@/components/docs/copy-row";
 import { InstallCommand, type InstallClient } from "@/components/docs/install-command";
@@ -46,13 +47,30 @@ export default function McpSetupPage() {
 
   return (
     <div className="max-w-2xl">
-      <span className="font-mono text-xs tracking-widest text-primary uppercase">MCP setup</span>
-      <h1 className="mt-3 text-3xl font-semibold tracking-[-0.02em] text-foreground">Use KeeperHub from your MCP client</h1>
-      <p className="mt-3 text-base text-muted-foreground">
-        KeeperHub runs its own MCP server with the same {registryMeta.actionCount} actions. Connect Claude Code, Cursor or
-        any MCP client with a KeeperHub API key. This app&apos;s cards only apply here: in another client, what needs
-        approval is up to that client.
+      <span className="font-mono text-xs tracking-widest text-primary uppercase">Builders</span>
+      <h1
+        className="mt-3 text-[34px] leading-tight tracking-[-0.02em] text-foreground"
+        style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
+      >
+        Use KeeperHub from your own MCP client
+      </h1>
+      <p className="mt-3 text-base leading-relaxed text-fg-secondary">
+        This page is for connecting your own tools. You do not need any of it to use the copilot —
+        that only needs you to sign in.
       </p>
+      <p className="mt-3 text-base leading-relaxed text-fg-secondary">
+        KeeperHub runs its own MCP server carrying the same {registryMeta.actionCount} actions, so
+        Claude Code, Cursor or any MCP client can reach them with a KeeperHub API key.
+      </p>
+      <div className="mt-5 flex gap-3 rounded-xl border border-pending/30 bg-pending/8 px-4 py-3 text-[14px] leading-relaxed text-fg-secondary">
+        <TriangleAlert className="mt-0.5 size-4 shrink-0 text-pending" />
+        <p>
+          The cards in this app are this app&apos;s. In another client there are none: whatever you
+          connect decides for itself what it asks you before it runs something. A key with{" "}
+          <code className="rounded bg-secondary px-1.5 py-0.5 font-mono text-[13px] text-foreground">mcp:read</code>{" "}
+          can only read.
+        </p>
+      </div>
 
       <div className="mt-8">
         <InstallCommand clients={clients} />

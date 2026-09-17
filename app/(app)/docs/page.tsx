@@ -1,99 +1,132 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, KeyRound, MessageSquareText, ShieldCheck } from "lucide-react";
+import {
+  Activity as ActivityIcon,
+  AudioLines,
+  Blocks,
+  MessageSquareText,
+  ScrollText,
+  Workflow,
+} from "lucide-react";
 
-import { copilotEnvFile } from "@/components/docs/copilot-env";
-import { CodeBlock, CodeBlockCode } from "@/components/ui/code-block";
+import { DocPage, H2, Next, P, UI } from "@/components/docs/prose";
 import { integrations, registryMeta } from "@/lib/registry";
 
-export const metadata: Metadata = { title: "Getting started" };
+export const metadata: Metadata = { title: "What this is" };
 
-/*
- * Portaldot app/docs/page.tsx: eyebrow, title, lede, three numbered step
- * cards, a Configuration code block and the call to the catalog.
- *
- * Changes: the steps are this app's (Connect KeeperHub, ask, authorize);
- * Portaldot's install terminal lives on MCP setup, because this app is used in
- * the browser rather than installed; the configuration block lists the
- * variables the copilot actually reads (lib/config.ts). Copy is ours.
- */
+const INTEGRATIONS = Object.keys(integrations).length;
 
-const INTEGRATION_COUNT = Object.keys(integrations).length;
-
-// The same settings the landing's Copilot and Vercel tabs show (decision 22).
-const envCode = copilotEnvFile({ comments: true });
-
-const steps = [
-  {
-    icon: KeyRound,
-    title: "Connect KeeperHub",
-    body: "Sign in with your KeeperHub account. Your organisation's wallet signs everything; there is no browser wallet to install.",
-  },
+const MAP = [
   {
     icon: MessageSquareText,
-    title: "Ask",
-    body: "Ask in plain words, like “What's the latest ETH/USD price on Chainlink?” or “Send 0 ETH to myself on Base Sepolia”. Reads answer straight away.",
+    href: "/app",
+    title: "Chat",
+    body: "Where you ask for things. Answers come back as cards you can read at a glance.",
   },
   {
-    icon: ShieldCheck,
-    title: "Authorize",
-    body: "Anything that moves value stops as a card. Edit it, check the dry run, then authorize. The receipt stays in Activity.",
+    icon: AudioLines,
+    href: "/docs/use/voice",
+    title: "Voice",
+    body: "The same copilot, out loud. It can look things up and propose, but it never authorizes.",
+  },
+  {
+    icon: Workflow,
+    href: "/app/automations",
+    title: "Automations",
+    body: "Things it keeps doing for you after you describe them once.",
+  },
+  {
+    icon: ScrollText,
+    href: "/app/history",
+    title: "History",
+    body: "Every conversation you have had, and the cards that were in it.",
+  },
+  {
+    icon: ActivityIcon,
+    href: "/app/activity",
+    title: "Activity",
+    body: "The record of what actually ran — kept separately, so deleting a chat never deletes it.",
+  },
+  {
+    icon: Blocks,
+    href: "/docs/actions",
+    title: "Actions",
+    body: `All ${registryMeta.actionCount} things KeeperHub can do, and what each one touches.`,
   },
 ];
 
 export default function DocsHome() {
   return (
-    <div className="max-w-2xl">
-      <span className="font-mono text-xs tracking-widest text-primary uppercase">Getting started</span>
-      <h1 className="mt-3 text-3xl font-semibold tracking-[-0.02em] text-foreground">Start with KeeperHub Copilot</h1>
-      <p className="mt-3 text-base text-muted-foreground">
-        Chat with KeeperHub&apos;s {registryMeta.actionCount} actions across {INTEGRATION_COUNT} integrations. Sign in, ask
-        in plain words, and authorize every write on a card.
-      </p>
+    <DocPage
+      eyebrow="Guide"
+      title="What this is"
+      lede="KeeperHub Copilot is a way of using KeeperHub by describing what you want instead of building it. These pages walk through it one part at a time."
+    >
+      <H2>KeeperHub, and this</H2>
+      <P>
+        <UI>KeeperHub</UI> is the platform underneath. It automates things onchain: it can read
+        prices and balances, move tokens, work with lending and staking protocols, and keep workflows
+        running on a schedule, on a contract event, or when a payment arrives. It signs with your
+        organisation&apos;s own wallet, and it handles gas, ordering and retries so you do not have to.
+      </P>
+      <P>
+        <UI>This app</UI> is a copilot for that. It does not replace KeeperHub or do anything
+        KeeperHub cannot — it is a way in. You say what you want in your own words; it works out which
+        of KeeperHub&apos;s {registryMeta.actionCount} actions across {INTEGRATIONS} integrations you
+        meant, fills the action in, shows you, and asks KeeperHub to run it.
+      </P>
+      <P>
+        You never install a browser wallet. You sign in with your KeeperHub account, and your
+        organisation&apos;s wallet is what signs.
+      </P>
 
-      <div className="mt-8 space-y-4">
-        {steps.map((s, i) => (
-          <div key={s.title} className="flex gap-4 rounded-2xl border border-border bg-card p-5">
-            <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/12 text-primary">
-              <s.icon className="size-[18px]" />
-            </div>
-            <div>
-              <h3 className="flex items-center gap-2 font-medium text-foreground">
-                <span className="font-mono text-xs text-fg-muted">0{i + 1}</span>
-                {s.title}
-              </h3>
-              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
-            </div>
-          </div>
+      <H2>One app, a few places to be</H2>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {MAP.map((entry) => (
+          <Link
+            key={entry.href}
+            href={entry.href}
+            className="group rounded-xl border border-card-bezel bg-card p-4 shadow-[var(--lift-card)] transition-shadow hover:shadow-[var(--lift-card-hover)]"
+          >
+            <span className="flex size-8 items-center justify-center rounded-lg bg-surface-2 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              <entry.icon className="size-4" />
+            </span>
+            <span className="mt-3 block font-medium text-[15px] text-foreground">{entry.title}</span>
+            <span className="mt-1 block text-[13px] leading-relaxed text-fg-muted">{entry.body}</span>
+          </Link>
         ))}
       </div>
 
-      <h2 className="mt-12 text-xl font-semibold tracking-tight text-foreground">Configuration</h2>
-      <p className="mt-2 text-sm text-muted-foreground">
-        To run the copilot yourself, set these in{" "}
-        <code className="rounded bg-secondary px-1 py-0.5 font-mono text-xs">.env.local</code>. The two secrets need at least
-        32 characters each.
-      </p>
-      <div className="mt-4">
-        <CodeBlock>
-          <div className="border-b border-border px-4 py-2 font-mono text-xs text-muted-foreground">.env.local</div>
-          <CodeBlockCode code={envCode} language="bash" theme="github-dark" />
-        </CodeBlock>
-      </div>
+      <H2>Where to start</H2>
+      <P>
+        If you have never opened it, go in order: connect, ask something, then do something. The first
+        two cost nothing and move nothing.
+      </P>
 
-      <div className="mt-12 flex flex-wrap items-center gap-4 rounded-2xl border border-border bg-card p-5">
-        <div className="min-w-0">
-          <h3 className="font-medium text-foreground">Browse all {registryMeta.actionCount} actions</h3>
-          <p className="text-sm text-muted-foreground">Prices, balances, lending, staking, transfers and more, each with an example prompt.</p>
-        </div>
-        <Link
-          href="/docs/actions"
-          className="ml-auto inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-2 text-sm font-medium text-primary-foreground transition-[transform,filter] hover:-translate-y-px hover:brightness-110"
-        >
-          Actions
-          <ArrowRight className="size-4" />
-        </Link>
-      </div>
-    </div>
+      <Next
+        links={[
+          {
+            href: "/docs/start/connect",
+            title: "Connect KeeperHub",
+            body: "Signing in, and what the organisation wallet is.",
+          },
+          {
+            href: "/docs/start/first-answer",
+            title: "Ask your first question",
+            body: "A question answers straight away and moves nothing.",
+          },
+          {
+            href: "/docs/how/architecture",
+            title: "How it connects",
+            body: "What happens between your sentence and the chain.",
+          },
+          {
+            href: "/docs/help/glossary",
+            title: "Glossary",
+            body: "Plain meanings for the words these pages use.",
+          },
+        ]}
+      />
+    </DocPage>
   );
 }
