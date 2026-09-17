@@ -33,6 +33,7 @@ import {
   recordWriteDecline,
   requiresConfirmation,
   routeToolCall,
+  type ToolOutput,
 } from "@/lib/execution";
 import { __resetCredentialCache } from "@/lib/execution/credentials";
 import { getOperationEntry } from "@/lib/registry";
@@ -1558,5 +1559,152 @@ describe("readSettledReceipt — verified receipt vs decoded failure vs pending"
     expect(readSettledReceipt({ status: "pending", receipts: [] })).toBeNull();
     expect(readSettledReceipt({ status: "pending" })).toBeNull();
     expect(readSettledReceipt({ receipts: [{ hash: "0xhash" }] })).toBeNull();
+  });
+});
+
+/*
+ * The hosted walk (Abu, 2026-09-17): an `aave-v3/borrow` that reverted for want
+ * of collateral was written to the ledger as a receipt and stamped EXECUTED with
+ * no transaction. KeeperHub answers a protocol write with 202
+ * { executionId, status } and settles it out of band, so an MCP-ok answer is not
+ * proof: only a status it already calls failed, or the poll, decides.
+ */
+describe("routeToolCall — a protocol write is settled, never taken on trust", () => {
+  /** web3 bound; the protocol execute answers `exec`; a status poll answers `status`. */
+  function mockProtocolBroadcast(exec: unknown, status: unknown = {}): void {
+    callTool.mockImplementation((opts: { name: string }) => {
+      if (opts.name === "list_integrations") {
+        return Promise.resolve({ ok: true, data: [{ id: "web3", name: "web3", type: "web3" }] });
+      }
+      if (opts.name === "get_direct_execution_status") {
+        return Promise.resolve({ ok: true, data: status });
+      }
+      return Promise.resolve({ ok: true, data: exec });
+    });
+  }
+
+  function broadcastSupply(): Promise<ToolOutput> {
+    return routeToolCall({
+      ...base,
+      toolName: "execute_protocol_action",
+      args: { actionType: SUPPLY, params: VALID_SUPPLY_PARAMS },
+      write: "broadcast",
+    });
+  }
+
+  it("a status KeeperHub already calls failed is a failure terminal, not a receipt", async () => {
+    // The exact shape the borrow came back with: no `success` key at all.
+    mockProtocolBroadcast({
+      executionId: "eu1o1qkugz89u81tj4ph1",
+      status: "failed",
+      error: 'Contract call failed: execution reverted (reason="require(false)")',
+    });
+
+    const out = await broadcastSupply();
+
+    expect(out.ok).toBe(false);
+    if (!out.ok) expect(out.error.message).toContain("execution reverted");
+    expect(writeTerminal).toHaveBeenCalledTimes(1);
+    expect(writeTerminal.mock.calls[0][0].state).toBe("failure");
+    expect(writeTerminal.mock.calls[0][0].txHash ?? null).toBeNull();
+  });
+
+  it("an accepted-but-unsettled write is decided by the poll, and carries its transaction", async () => {
+    mockProtocolBroadcast(
+      { executionId: "exec-1", status: "pending" },
+      {
+        executionId: "exec-1",
+        status: "completed",
+        transactionHash: "0xproto",
+        receipts: [
+          { hash: "0xproto", chainId: "1", verified: true, receiptStatus: "success", blockNumber: 7, gasUsed: "21000" },
+        ],
+      },
+    );
+
+    const out = await broadcastSupply();
+
+    expect(out.ok).toBe(true);
+    if (out.ok && "state" in out && out.state === "receipt") {
+      expect(out.txHash).toBe("0xproto");
+      expect(out.opId).toBe(SUPPLY);
+    } else {
+      throw new Error("expected a receipt terminal");
+    }
+    expect(callTool).toHaveBeenCalledWith(
+      expect.objectContaining({ name: "get_direct_execution_status", args: { execution_id: "exec-1" } }),
+    );
+    expect(writeTerminal.mock.calls[0][0].state).toBe("receipt");
+    expect(writeTerminal.mock.calls[0][0].txHash).toBe("0xproto");
+  });
+
+  it("a broadcast the chain reverted is a failure terminal, keeping the transaction that failed", async () => {
+    mockProtocolBroadcast(
+      { executionId: "exec-1", status: "pending" },
+      {
+        executionId: "exec-1",
+        status: "completed",
+        transactionHash: "0xreverted",
+        receipts: [
+          { hash: "0xreverted", chainId: "1", verified: true, receiptStatus: "reverted", blockNumber: 7, gasUsed: "21000" },
+        ],
+      },
+    );
+
+    const out = await broadcastSupply();
+
+    expect(out.ok).toBe(false);
+    expect(writeTerminal).toHaveBeenCalledTimes(1);
+    expect(writeTerminal.mock.calls[0][0].state).toBe("failure");
+    expect(writeTerminal.mock.calls[0][0].txHash).toBe("0xreverted");
+  });
+});
+
+/*
+ * An optional the model left blank (Abu, hosted, 2026-09-17): KeeperHub refuses
+ * a blank fee outright and the card hides empty rows, so the write failed with
+ * nothing on screen to explain it.
+ */
+describe("routeToolCall — a blank optional is an absent optional", () => {
+  it("drops an empty or whitespace fee, value and multiplier instead of sending them", async () => {
+    callTool.mockImplementation((opts: { name: string }) =>
+      Promise.resolve(
+        opts.name === "get_direct_execution_status"
+          ? {
+              ok: true,
+              data: {
+                executionId: "exec-1",
+                status: "completed",
+                transactionHash: "0xhash",
+                receipts: [{ hash: "0xhash", chainId: "1", verified: true, receiptStatus: "success", blockNumber: 1, gasUsed: "21000" }],
+              },
+            }
+          : { ok: true, data: { executionId: "exec-1", status: "pending" } },
+      ),
+    );
+
+    const out = await routeToolCall({
+      ...base,
+      toolName: "execute_contract_call",
+      args: {
+        contract_address: "0xabc",
+        chain_id: "1",
+        function_name: "deposit",
+        function_args: "[]",
+        stateMutability: "payable",
+        value: "0.01",
+        priority_fee_gwei: "",
+        gas_limit_multiplier: "  ",
+      },
+      write: "broadcast",
+    });
+
+    expect(out.ok).toBe(true);
+    const sent = (executeCalls() as Array<[{ args: Record<string, unknown> }]>)[0][0].args;
+    expect(sent).not.toHaveProperty("priority_fee_gwei");
+    expect(sent).not.toHaveProperty("gas_limit_multiplier");
+    expect(sent.value).toBe("0.01");
+    // The intent row records exactly what was sent, so the receipt cannot claim otherwise.
+    expect(writeIntent.mock.calls[0][0].confirmedInputs).not.toHaveProperty("priority_fee_gwei");
   });
 });

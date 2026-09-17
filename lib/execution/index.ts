@@ -911,9 +911,14 @@ async function broadcastContractCall(input: {
     chain_id: input.chainId,
     function_name: input.functionName,
   };
+  // An empty optional is the same as an absent one. KeeperHub refuses a blank
+  // fee or value outright ("priorityFeeGwei must be a non-empty decimal string
+  // in gwei", schemas.ts:115-135), and the card hides empty rows, so a model
+  // that sent "" produced a 400 with nothing on screen to explain it (Abu,
+  // hosted, 2026-09-17). Whitespace is trimmed for the same reason.
   for (const key of ["function_args", "abi", "value", "gas_limit_multiplier", "priority_fee_gwei"]) {
-    const value = asString(record[key]);
-    if (value !== undefined) {
+    const value = asString(record[key])?.trim();
+    if (value !== undefined && value !== "") {
       confirmedInputs[key] = value;
     }
   }
@@ -1343,14 +1348,17 @@ async function broadcastProtocolAction(input: {
     return toErrorOutput(tool, result.error);
   }
 
-  // A protocol action returns its outcome inline (D15). An MCP-ok result is NOT
-  // proof of on-chain success (review P1, NFR1): KeeperHub re-verifies the tx and
-  // returns HTTP 200 { success:false, error } on a broadcast-then-reverted write,
-  // which the wire surfaces as ok:true. Treat an explicit success:false as a
-  // FAILURE terminal with the decoded reason (AC 5), never a receipt.
+  // An MCP-ok result is NOT proof of on-chain success (review P1, NFR1).
+  // KeeperHub answers a protocol write with 202 { executionId, status } and
+  // settles it out of band (fork app/api/execute/[...slug]/route.ts:322-338;
+  // its tool says "poll get_direct_execution_status for the full receipt"), and
+  // returns HTTP 200 { success:false, error } on a broadcast-then-reverted
+  // write, which the wire surfaces as ok:true. Both an explicit success:false
+  // and a status KeeperHub already calls failed are FAILURE terminals with the
+  // decoded reason (AC 5), never a receipt.
   const data = asRecord(result.data);
   const txHash = extractTxHash(result.data);
-  if (data.success === false) {
+  if (data.success === false || asString(data.status) === "failed") {
     const reason = asString(data.error) ?? "The transaction did not succeed.";
     const failed = await writeTerminal({
       session,
@@ -1369,7 +1377,57 @@ async function broadcastProtocolAction(input: {
       error: { code: "tool_error", message: reason, decoded: result.data },
     };
   }
-  // The verified inline hash is the receipt evidence. Store it verbatim (AD-2).
+  // Anything still in flight is settled by the poll, exactly as runContractCall
+  // and runTransfer do. Without it an accepted-but-unsettled 202 was recorded as
+  // a receipt and stamped EXECUTED with no transaction — an aave-v3/borrow that
+  // reverted for want of collateral read as executed (Abu, hosted, 2026-09-17).
+  const executionId = extractExecutionId(result.data);
+  if (executionId !== null) {
+    await recordExecutionId({ session, id: intentId, executionId, requestId });
+    const polled = await pollForReceipt({ session, executionId, requestId, signal });
+    if (!polled.ok) {
+      const failed = await writeTerminal({
+        session,
+        id: intentId,
+        state: "failure",
+        txHash: polled.txHash ?? null,
+        receipt: polled.receipt,
+        requestId,
+        conversationId,
+        toolCallId,
+        executionId,
+      });
+      logTerminalIfNotLanded(failed, { tool, toolCallId, conversationId, requestId, session });
+      return {
+        ok: false,
+        tool,
+        error: { code: "tool_error", message: polled.message, decoded: polled.decoded },
+      };
+    }
+    const landed = await writeTerminal({
+      session,
+      id: intentId,
+      state: "receipt",
+      txHash: polled.txHash,
+      receipt: polled.receipt,
+      requestId,
+      conversationId,
+      toolCallId,
+      executionId,
+    });
+    logTerminalIfNotLanded(landed, { tool, toolCallId, conversationId, requestId, session });
+    return {
+      ok: true,
+      tool,
+      state: "receipt",
+      opId: actionType,
+      txHash: polled.txHash,
+      receipt: polled.receipt,
+      executionId,
+    };
+  }
+  // No execution id: the action answered inline. The verified inline hash is the
+  // receipt evidence. Store it verbatim (AD-2).
   const settled = await writeTerminal({
     session,
     id: intentId,

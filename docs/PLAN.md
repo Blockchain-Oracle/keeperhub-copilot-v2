@@ -395,7 +395,9 @@ Notes for the walk:
   - [ ] **Stop.** Spanish browser → Spanish landing, app and replies; 日本語 / हिन्दी / 한국어 fonts; German cards and pages at ~390px; amounts and addresses unchanged; wording notes for reviewers.
 
 ## 11 · Proof
-- [ ] One real transaction through the app on hosted KeeperHub (Base Sepolia zero-value self-transfer, sponsored gas; `simulate` must be a JSON boolean in the body). Source link. Demo video.
+- [x] **One real transaction through the app on hosted KeeperHub.** Abu, 2026-09-17 on https://keeperhub-copilot-v2.vercel.app: two sponsored writes on Ethereum Sepolia went through the card and landed on chain — `deposit` 0.01 ETH to WETH (`0xe00f48977c…`) and `approve` of the Aave pool (`0xbdc610fc1f…`), both stored with KeeperHub's receipt `status: completed`. The planned shape was a Base Sepolia self-transfer; what he actually ran proves the same path (dry run → Authorize → KeeperHub → receipt → Activity).
+- [x] **Source link:** https://github.com/Blockchain-Oracle/keeperhub-copilot-v2 (private, created 2026-09-17; v1's repo is private too). Flip to public before judging with `gh repo edit Blockchain-Oracle/keeperhub-copilot-v2 --visibility public`.
+- [ ] Demo video.
 
 ## 12 · Hosted on Vercel
 Done 2026-09-15 (decision 43). Public address: **https://keeperhub-copilot-v2.vercel.app**.
@@ -406,7 +408,7 @@ Done 2026-09-15 (decision 43). Public address: **https://keeperhub-copilot-v2.ve
 
 **Hosting report (2026-09-15).** Local typecheck, lint, build and `pnpm test` (953 in 82 files) clean before deploying. Two Vercel-side stumbles, both fixed: the unanchored `.vercelignore` line (12.3), and the project being created without a framework preset, which made Vercel publish the build as a static site (every route `NOT_FOUND`, only `public/` served) until the preset was set to Next.js. **Not done:** nobody has signed in on the hosted address yet, so the OAuth round trip through KeeperHub's consent page and the callback is unproven there; no model or voice call made on the hosted app.
 - [x] **12.5 Fix: write cards never reached KeeperHub** (found by Abu on the hosted app, 2026-09-15). Authorize, Cancel and Try again answered "Your answer did not reach KeeperHub" because the route got the decision with no conversation id and refused it with 400. The AI SDK posts a card's decision by itself and sends only the options given with it; the card callbacks gave none (form answers did). Now `cardDecision` in `components/chat/chat-transport.ts` carries the id, and the transport moved to that file. New `tests/chat/chat-transport.test.ts` drives the real SDK `Chat` and checks the posted body (3 of its 4 fail on the old code). Typecheck, lint, build, `pnpm test` 957 in 83 files; redeployed, and the shipped chat code carries the id. **Not verified:** a real card authorized end to end, since that needs Abu signed in; an Aave borrow also needs collateral supplied first, and its amount is in the token's smallest unit.
-- [ ] **Stop.** Abu: open https://keeperhub-copilot-v2.vercel.app, sign in with KeeperHub (first proof of the hosted callback), ask a price, send 0 ETH to yourself on Base Sepolia through the card, try voice; desktop + phone. Decide whether v1's address `keeperhub-copilot.vercel.app` should point at v2 later.
+- [~] **Stop.** *(2026-09-17: Abu signed in on the hosted app and ran writes — the hosted sign-in round trip and hosted execution are proven. The rest of this walk is still open.)* Abu: open https://keeperhub-copilot-v2.vercel.app, sign in with KeeperHub (first proof of the hosted callback), ask a price, send 0 ETH to yourself on Base Sepolia through the card, try voice; desktop + phone. Decide whether v1's address `keeperhub-copilot.vercel.app` should point at v2 later.
 
 ## End-to-end walk (after slice 9)
 Landing type → sign-in modal → OAuth → arrive with draft auto-sent → read shows "Used N tools" +
