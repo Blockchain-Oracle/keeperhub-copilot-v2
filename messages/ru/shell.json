@@ -86,7 +86,10 @@
     "limitUnavailable": "KeeperHub сейчас не смог сообщить дневной лимит.",
     "copyAddress": "Копировать адрес",
     "viewOnExplorer": "Открыть в обозревателе",
-    "disconnect": "Отключить"
+    "disconnect": "Отключить",
+    "sound": "Звук",
+    "soundOn": "Вкл.",
+    "soundOff": "Выкл."
   },
   "moneyPill": {
     "unavailable": "Баланс в этой сети сейчас недоступен",

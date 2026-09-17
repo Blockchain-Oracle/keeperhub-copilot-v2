@@ -1,9 +1,9 @@
 {
   "floatingNav": {
     "links": {
-      "features": "Recursos",
-      "how": "Como funciona",
-      "install": "Instalar",
+      "ask": "O que faz",
+      "cards": "Cartões",
+      "automations": "Automações",
       "docs": "Docs"
     },
     "openApp": "Abrir o app",
@@ -22,91 +22,155 @@
       "supply": "Forneça 50 USDC ao Aave, mas antes me diga o APY",
       "gas": "Me avise quando o gas cair abaixo de 20 gwei"
     },
-    "title": "Onchain, em <em>linguagem simples</em><stop>.</stop>",
-    "subtitle": "Seu copiloto para o KeeperHub. Pergunte qualquer coisa e ele responde na hora — mas nada que movimenta valor acontece por conta própria. <highlight>Ele para, mostra a ação exata e espera.</highlight>",
+    "title": "Tudo o que a KeeperHub faz. <accent>É só pedir.</accent>",
+    "subtitle": "A KeeperHub automatiza qualquer coisa onchain. É assim que você usa: diga o que quer com suas palavras e o copiloto acha a ação certa, preenche e executa.",
     "inputLabel": "Pergunte ao seu copiloto",
     "placeholder": "Pergunte ao seu copiloto…",
     "submit": "Abrir o app",
     "enterHint": "pressione enter para abrir no app"
   },
-  "features": {
+  "ask": {
     "heading": {
-      "eyebrow": "O QUE ELE FAZ",
-      "title": "Leituras fluem. Escritas <em>param e perguntam</em>.",
-      "subtitle": "Faça uma pergunta e ele responde na hora. Peça para movimentar valor e ele para, preenche todos os campos e espera o seu clique."
+      "eyebrow": "PERGUNTE QUALQUER COISA",
+      "title": "Você não aprende a KeeperHub. <accent>Você conversa com ela.</accent>",
+      "subtitle": "442 ações, 34 integrações, 24 redes. Você nunca precisa saber qual delas usar: diga o que quer e o copiloto escolhe."
     },
-    "spec": "ESPEC",
     "items": {
-      "registry": {
-        "tag": "REGISTRO · 442 AÇÕES",
-        "title": "Gerado, não escrito à mão.",
-        "description": "Swaps, transferências, empréstimos, staking, pontes, feeds de preço, carteiras, permissões, alertas — 442 ações em 34 integrações, geradas a partir do próprio registro do KeeperHub e fixadas em um hash de snapshot."
+      "price": {
+        "tag": "PREÇO",
+        "title": "Quanto vale ETH agora?",
+        "description": "Feeds Chainlink ao vivo, lidos direto da rede, com as últimas doze atualizações desenhadas ao lado do número."
       },
-      "effect": {
-        "tag": "EFEITO · 292 / 148",
-        "title": "A trava é derivada.",
-        "description": "Cada ação é classificada pelo efeito a partir do próprio registro — 292 fazem leitura, 148 movimentam valor ou concedem autorização. Tudo o que o classificador não consegue enquadrar fica em quarentena e se recusa a executar."
+      "holdings": {
+        "tag": "CARTEIRA",
+        "title": "O que eu tenho?",
+        "description": "A carteira da sua organização em todas as redes que ela toca, com as vazias esmaecidas em vez de escondidas."
       },
-      "confirm": {
-        "tag": "CONFIRMAR",
-        "title": "O que você aprova é o que executa.",
-        "description": "Uma escrita pausa o chat e mostra um cartão: todos os campos preenchidos, todos editáveis. Simulada antes quando a plataforma consegue pré-visualizar, sinalizada com clareza quando não consegue. O que você aprovou é o que executa, byte por byte."
+      "send": {
+        "tag": "TRANSFERÊNCIA",
+        "title": "Envie 10 USDC para alice.eth",
+        "description": "Ele preenche o valor, o destinatário, a rede e o token, mostra para você e espera o seu clique."
       },
-      "failLoudly": {
-        "tag": "FALHA VISÍVEL",
-        "title": "Um recibo. Não um ok.",
-        "description": "Sucesso é um recibo on-chain verificado — bloco, hash, status, lidos direto da blockchain. Uma ferramenta que retorna ok ainda não moveu nada."
+      "supply": {
+        "tag": "DEFI",
+        "title": "Deposite 50 USDC na Aave",
+        "description": "Empréstimo, staking, swaps, pontes. Confere a posição antes e avisa se não fosse funcionar."
       },
-      "voice": {
-        "tag": "VOZ",
-        "title": "A voz pode perguntar. A voz não pode enviar.",
-        "description": "Fale uma pergunta, peça uma prévia — a voz faz as duas coisas. Confirmar uma escrita exige um clique deliberado no cartão."
+      "automate": {
+        "tag": "AUTOMAÇÃO",
+        "title": "Vigie o gas e me avise a 20 gwei",
+        "description": "Descreva uma vez e vira uma automação de verdade na KeeperHub, salva desligada até você ligar."
       },
-      "ledger": {
-        "tag": "LIVRO-RAZÃO",
-        "title": "O registro sobrevive ao chat.",
-        "description": "Cada execução é gravada como um fato durável, separado da transcrição, então apagar uma conversa nunca apaga a evidência. Os valores ficam como strings inteiras em unidades base de ponta a ponta e só são formatados na exibição."
+      "explain": {
+        "tag": "CATÁLOGO",
+        "title": "O que você consegue fazer mesmo?",
+        "description": "Pergunte e ele busca no próprio registro: cada ação que a KeeperHub traz, com o que cada uma toca."
+      }
+    },
+    "tryIt": "pedir isso"
+  },
+  "cards": {
+    "heading": {
+      "eyebrow": "O QUE VOLTA",
+      "title": "Não um muro de texto. <accent>Um cartão.</accent>",
+      "subtitle": "Toda resposta chega como algo que dá para ler de relance e usar. Arraste a pilha."
+    },
+    "items": {
+      "price": {
+        "tag": "LEITURA",
+        "title": "Um preço, e de onde ele veio",
+        "description": "O número, o feed, a rede e a hora em que foi publicado."
+      },
+      "write": {
+        "tag": "ANTES DE RODAR",
+        "title": "Cada campo, preenchido e editável",
+        "description": "Mude o valor ou o destinatário e ele confere tudo de novo."
+      },
+      "dryRun": {
+        "tag": "A CONFERÊNCIA",
+        "title": "A KeeperHub testa antes",
+        "description": "Se não fosse dar certo, você fica sabendo por quê antes de assinar qualquer coisa."
+      },
+      "receipt": {
+        "tag": "DEPOIS",
+        "title": "Um recibo lido de volta da rede",
+        "description": "Bloco, hash e status — não uma ferramenta dizendo que deu certo."
+      },
+      "automation": {
+        "tag": "AUTOMAÇÃO",
+        "title": "Um fluxo que dá para ler",
+        "description": "O gatilho, cada passo em ordem e um botão que liga."
       }
     }
+  },
+  "automations": {
+    "heading": {
+      "eyebrow": "AUTOMAÇÕES",
+      "title": "Descreva uma vez. <accent>Ela continua rodando.</accent>",
+      "subtitle": "O copiloto monta qualquer tipo de início que a KeeperHub tenha, a partir de uma frase. Salva desligada, mostra o que faria e espera você ligar."
+    },
+    "triggers": {
+      "manual": {
+        "title": "Sob demanda",
+        "body": "Roda quando você mandar, e só então."
+      },
+      "schedule": {
+        "title": "Com horário",
+        "body": "Toda hora, toda manhã, todo dia primeiro."
+      },
+      "block": {
+        "title": "A cada N blocos",
+        "body": "Contados na própria rede, não num relógio."
+      },
+      "event": {
+        "title": "Com um evento de contrato",
+        "body": "Um log dispara e seus passos rodam."
+      },
+      "webhook": {
+        "title": "Com um webhook",
+        "body": "Qualquer coisa que faça uma requisição consegue iniciar."
+      },
+      "payment": {
+        "title": "Com um pagamento",
+        "body": "O dinheiro cai e o fluxo assume dali."
+      }
+    },
+    "footnote": "Listar, mudar, rodar agora ou apagar — tudo pelo chat."
   },
   "howItWorks": {
     "heading": {
       "eyebrow": "COMO FUNCIONA",
-      "title": "De uma frase a um recibo <em>verificado</em>.",
-      "subtitle": "Cinco etapas. Leituras fluem. Escritas param e perguntam."
+      "title": "Entra uma frase. <accent>Sai um recibo.</accent>",
+      "subtitle": "Quatro passos. Perguntas respondem na hora; o que mexe com valor para e pergunta."
     },
-    "meta": "CERIMÔNIA · ETAPA {num}",
-    "issued": "EMITIDO",
-    "pending": "PENDENTE",
+    "meta": "PASSO {num}",
+    "issued": "PRONTO",
+    "pending": "AGUARDANDO",
     "step": "ETAPA",
     "steps": {
       "ask": {
-        "title": "Você pede em linguagem simples",
-        "body": "Sem SDK, sem ABI, sem calldata. Digite o que você realmente quer fazer, e o copiloto entende isso como uma intenção, não como um comando."
+        "title": "Você diz o que quer",
+        "body": "Sem SDK, sem endereço de contrato, sem calldata. Escreva do jeito que você falaria com uma pessoa."
       },
       "resolve": {
-        "title": "Ele identifica a ação",
-        "body": "442 ações em 34 integrações, geradas a partir do próprio registro do KeeperHub, com hash de snapshot. Cada uma é classificada pelo efeito: 292 fazem leitura, 148 movimentam valor ou concedem autorização."
-      },
-      "gate": {
-        "title": "Leituras fluem. Escritas param.",
-        "body": "Uma leitura responde na hora — não há nada em jogo. Tudo o que movimenta valor mostra um cartão: todos os campos preenchidos, todos editáveis."
+        "title": "Ele acha a ação",
+        "body": "442 delas em 34 integrações, geradas do próprio registro da KeeperHub. Ele pega a que você quis dizer e descobre o que ainda falta saber."
       },
       "confirm": {
-        "title": "Você confere e confirma",
-        "body": "Os argumentos ficam congelados no momento em que o cartão aparece. O que executa é, byte por byte, o que você aprovou, e não o que o modelo disser depois."
+        "title": "Ele mostra antes de rodar",
+        "body": "Tudo que mexe com valor para como um cartão, com cada campo preenchido e editável. A KeeperHub testa antes e avisa se fosse falhar."
       },
       "receipt": {
-        "title": "Você recebe um recibo",
-        "body": "Sucesso é um recibo on-chain verificado, nunca uma confirmação da ferramenta — guardado como um registro durável, então apagar a conversa nunca apaga a evidência."
+        "title": "Você fica com a prova",
+        "body": "A transação lida de volta da rede, guardada como registro próprio — então apagar a conversa nunca apaga a evidência."
       }
     }
   },
   "install": {
     "heading": {
       "eyebrow": "CONECTAR",
-      "title": "Uma chave para o <em>seu</em> KeeperHub.",
-      "subtitle": "Uma chave kh_ com escopo mcp:write conecta qualquer cliente MCP que você já usa. O próprio copiloto entra com o KeeperHub, então só precisa das próprias configurações."
+      "title": "Uma chave para a <accent>sua</accent> KeeperHub.",
+      "subtitle": "O copiloto entra com a KeeperHub, então só precisa das próprias configurações. Uma chave kh_ com escopo mcp:write conecta qualquer outro cliente MCP que você já use."
     },
     "createKey": "Criar uma chave · todas as 442 ações",
     "shellTab": "Shell"
@@ -114,21 +178,21 @@
   "finalCta": {
     "invitation": "CONVITE",
     "nonCustodial": "NÃO CUSTODIAL",
-    "title": "Leituras fluem. Escritas <em>param e perguntam</em>.",
-    "body": "Pergunte qualquer coisa e a resposta volta na hora. Peça para movimentar valor e ele para, preenche todos os campos e espera o seu clique.",
+    "title": "Tudo o que a KeeperHub faz. <accent>É só pedir.</accent>",
+    "body": "Pergunte e a resposta volta na hora. Peça para fazer algo e ele mostra exatamente o que é, e então espera o seu clique.",
     "openApp": "Abrir o app",
     "signed": "ASSINADO",
     "snapshot": "SNAPSHOT DO REGISTRO <highlight>442 AÇÕES</highlight>"
   },
   "footer": {
-    "tagline": "leituras fluem, escritas param e perguntam",
+    "tagline": "tudo o que a keeperhub faz, é só pedir",
     "live": "ATIVO",
     "networks": "REDES {count}",
-    "effectSplit": "292 LEITURAS / 148 ESCRITAS",
+    "effectSplit": "442 AÇÕES / 34 INTEGRAÇÕES",
     "nav": {
-      "features": "Recursos",
-      "how": "Como",
-      "install": "Instalar",
+      "ask": "O que faz",
+      "cards": "Cartões",
+      "automations": "Automações",
       "app": "App",
       "docs": "Docs"
     }

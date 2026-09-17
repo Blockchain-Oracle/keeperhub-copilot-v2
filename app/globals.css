@@ -2,16 +2,17 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/* PP Neue Montreal is loaded via <link rel="stylesheet"> in app/layout.tsx
-   to satisfy the CSS-spec @import-order rule. */
-
 @custom-variant dark (&:is(.dark *));
 
 /*
-  ───── INSTRUMENT PANEL — token system ──────────────────────────────────────
-  Ported verbatim from references/portaldot-mcp/packages/web/app/globals.css
-  @ 86699dc. One deliberate difference: the receipt watermark says KEEPERHUB.
-  Dark-only canvas. Violet is action-only. Cyan is telemetry-only.
+  ───── KeeperHub Copilot — token system ─────────────────────────────────────
+  The paint comes from KeeperHub's own mark: a near-black ground with a faint
+  green cast, and green as the action colour. Supersedes decision 5 (Portaldot
+  verbatim, violet). Dark-only canvas.
+
+  Green is the action: anything that does something is a green fill.
+  Neon (#00FF4F, KeeperHub's logo green) is the mark, live dots and glows only.
+  Cyan is telemetry — live data being read — and never a button.
 */
 @theme inline {
   /* shadcn semantic roles */
@@ -39,9 +40,13 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
-  /* Instrument Panel — new semantic tokens */
+  /* semantic tokens beyond shadcn's set */
   --color-telemetry: var(--telemetry);
   --color-telemetry-soft: var(--telemetry-soft);
+  --color-neon: var(--neon);
+  --color-neon-soft: var(--neon-soft);
+  --color-card-bezel: var(--card-bezel);
+  --color-card-bezel-strong: var(--card-bezel-strong);
   --color-primary-press: var(--primary-press);
   --color-border-strong: var(--border-strong);
 
@@ -61,7 +66,7 @@
   /* type */
   --font-sans: var(--font-geist-sans), var(--font-locale, ui-sans-serif), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-  --font-display: "Neue Montreal", var(--font-geist-sans), var(--font-locale, ui-sans-serif), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-anek-latin), var(--font-geist-sans), var(--font-locale, ui-sans-serif), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-display);
   --font-stamp: var(--font-geist-mono), ui-monospace, monospace;
 
@@ -92,112 +97,163 @@
 }
 
 :root {
-  --radius: 0.875rem; /* 14px */
+  --radius: 1rem; /* 16px — the card-stack's rounded-2xl */
 
-  /* canvas + surfaces */
-  --background: oklch(0.118 0.008 282);
-  --foreground: oklch(0.975 0.003 282);
-  --card: oklch(0.158 0.010 282);
-  --card-foreground: oklch(0.975 0.003 282);
-  --popover: oklch(0.158 0.010 282);
-  --popover-foreground: oklch(0.975 0.003 282);
-  --surface-2: oklch(0.198 0.012 282);
+  /* canvas + surfaces — near-black with a faint green cast */
+  --background: oklch(0.162 0.010 159);   /* #0A0F0C */
+  --foreground: oklch(0.972 0.007 160);   /* #F2F7F4 */
+  --card: oklch(0.208 0.014 160);         /* #121A16 */
+  --card-foreground: oklch(0.972 0.007 160);
+  --popover: oklch(0.208 0.014 160);
+  --popover-foreground: oklch(0.972 0.007 160);
+  --surface-2: oklch(0.248 0.018 160);    /* #1A241E */
 
-  /* action — violet only */
-  --primary: oklch(0.66 0.22 288);
-  --primary-press: oklch(0.58 0.24 288);
-  --primary-foreground: oklch(0.16 0.02 285);
-  --ring: oklch(0.66 0.22 288 / 55%);
+  /* action — green, and green only */
+  --primary: oklch(0.80 0.195 152);
+  --primary-press: oklch(0.72 0.190 152);
+  --primary-foreground: oklch(0.16 0.020 158);
+  --ring: oklch(0.80 0.195 152 / 55%);
 
-  /* telemetry — cyan only (never a button) */
-  --telemetry: oklch(0.78 0.13 220);
-  --telemetry-soft: oklch(0.78 0.13 220 / 14%);
+  /* neon — KeeperHub's own #00FF4F. The mark, live dots and glows. Never a fill. */
+  --neon: oklch(0.870 0.270 145);         /* #00FF4F, KeeperHub's own */
+  --neon-soft: oklch(0.870 0.270 145 / 16%);
 
-  /* state */
-  --success: oklch(0.78 0.13 175);
-  --pending: oklch(0.79 0.14 70);
-  --destructive: oklch(0.66 0.21 25);
+  /* telemetry — cyan, pushed cool so it never smears into the green */
+  --telemetry: oklch(0.79 0.120 218);
+  --telemetry-soft: oklch(0.79 0.120 218 / 14%);
+
+  /* state — success is the brighter sibling of primary, not a twin */
+  --success: oklch(0.86 0.220 150);
+  --pending: oklch(0.79 0.140 70);
+  --destructive: oklch(0.66 0.210 25);
 
   /* neutrals + borders */
-  --secondary: oklch(0.198 0.012 282);
-  --secondary-foreground: oklch(0.975 0.003 282);
-  --muted: oklch(0.198 0.012 282);
-  --muted-foreground: oklch(0.74 0.010 282);
-  --fg-secondary: oklch(0.74 0.010 282);
-  --fg-muted: oklch(0.52 0.012 282);
-  --accent: oklch(0.66 0.22 288 / 14%);
-  --accent-foreground: oklch(0.78 0.14 288);
-  --accent-soft: oklch(0.66 0.22 288 / 14%);
-  --border: oklch(0.265 0.014 282);
-  --border-strong: oklch(0.345 0.018 282);
-  --input: oklch(0.198 0.012 282);
+  --secondary: oklch(0.248 0.018 160);
+  --secondary-foreground: oklch(0.972 0.007 160);
+  --muted: oklch(0.248 0.018 160);
+  --muted-foreground: oklch(0.760 0.014 160);
+  --fg-secondary: oklch(0.760 0.014 160);
+  --fg-muted: oklch(0.560 0.016 160);
+  --accent: oklch(0.80 0.195 152 / 14%);
+  --accent-foreground: oklch(0.86 0.200 150);
+  --accent-soft: oklch(0.80 0.195 152 / 14%);
+  --border: oklch(0.307 0.022 160);       /* #26332C */
+  --border-strong: oklch(0.380 0.024 160);
+  --input: oklch(0.248 0.018 160);
 
-  /* charts — kept compatible with shadcn; map to our palette */
-  --chart-1: oklch(0.66 0.22 288);    /* violet */
-  --chart-2: oklch(0.78 0.13 220);    /* telemetry cyan */
-  --chart-3: oklch(0.78 0.13 175);    /* success */
-  --chart-4: oklch(0.79 0.14 70);     /* pending */
-  --chart-5: oklch(0.66 0.21 25);     /* destructive */
+  /* the card bezel — a thick soft light edge, not a hairline. This is what
+     makes a card read as glass floating on the ground rather than a box
+     drawn on it. Ported from ruixen.ui/card-stack's border-4 border-white/10. */
+  --card-bezel: oklch(1 0 0 / 8%);
+  --card-bezel-strong: oklch(1 0 0 / 14%);
+
+  /* action glows — every green-button shadow in the app resolves here, so a
+     retint is one line rather than a sweep through nine components. */
+  --glow-action: 0 0 20px -4px color-mix(in oklch, var(--primary) 60%, transparent);
+  --lift-action: 0 10px 30px -12px color-mix(in oklch, var(--primary) 60%, transparent);
+  --lift-action-lg: 0 18px 55px -16px color-mix(in oklch, var(--primary) 65%, transparent);
+  --halo-neon: 0 0 0 1px var(--border-strong), 0 0 20px color-mix(in oklch, var(--neon) 40%, transparent);
+
+  /* the float a card sits on, and the deeper one it rises to on hover */
+  --lift-card: 0 18px 44px -28px oklch(0 0 0 / 80%);
+  --lift-card-hover: 0 28px 64px -30px oklch(0 0 0 / 85%);
+
+  /* charts — no two greens adjacent */
+  --chart-1: oklch(0.80 0.195 152);
+  --chart-2: oklch(0.79 0.120 218);
+  --chart-3: oklch(0.79 0.140 70);
+  --chart-4: oklch(0.88 0.080 160);
+  --chart-5: oklch(0.66 0.210 25);
 
   /* sidebar — match the rest */
-  --sidebar: oklch(0.158 0.010 282);
-  --sidebar-foreground: oklch(0.975 0.003 282);
-  --sidebar-primary: oklch(0.66 0.22 288);
-  --sidebar-primary-foreground: oklch(0.16 0.02 285);
-  --sidebar-accent: oklch(0.198 0.012 282);
-  --sidebar-accent-foreground: oklch(0.975 0.003 282);
-  --sidebar-border: oklch(0.265 0.014 282);
-  --sidebar-ring: oklch(0.66 0.22 288);
+  --sidebar: oklch(0.208 0.014 160);
+  --sidebar-foreground: oklch(0.972 0.007 160);
+  --sidebar-primary: oklch(0.80 0.195 152);
+  --sidebar-primary-foreground: oklch(0.16 0.020 158);
+  --sidebar-accent: oklch(0.248 0.018 160);
+  --sidebar-accent-foreground: oklch(0.972 0.007 160);
+  --sidebar-border: oklch(0.307 0.022 160);
+  --sidebar-ring: oklch(0.80 0.195 152);
 }
 
+/* The app is dark-only (html carries .dark), so this mirrors :root exactly,
+   minus --radius. Kept as two blocks so `dark:` utilities still resolve. */
 .dark {
-  --background: oklch(0.118 0.008 282);
-  --foreground: oklch(0.975 0.003 282);
-  --card: oklch(0.158 0.010 282);
-  --card-foreground: oklch(0.975 0.003 282);
-  --popover: oklch(0.158 0.010 282);
-  --popover-foreground: oklch(0.975 0.003 282);
-  --surface-2: oklch(0.198 0.012 282);
+  /* canvas + surfaces — near-black with a faint green cast */
+  --background: oklch(0.162 0.010 159);   /* #0A0F0C */
+  --foreground: oklch(0.972 0.007 160);   /* #F2F7F4 */
+  --card: oklch(0.208 0.014 160);         /* #121A16 */
+  --card-foreground: oklch(0.972 0.007 160);
+  --popover: oklch(0.208 0.014 160);
+  --popover-foreground: oklch(0.972 0.007 160);
+  --surface-2: oklch(0.248 0.018 160);    /* #1A241E */
 
-  --primary: oklch(0.66 0.22 288);
-  --primary-press: oklch(0.58 0.24 288);
-  --primary-foreground: oklch(0.16 0.02 285);
-  --ring: oklch(0.66 0.22 288 / 55%);
+  /* action — green, and green only */
+  --primary: oklch(0.80 0.195 152);
+  --primary-press: oklch(0.72 0.190 152);
+  --primary-foreground: oklch(0.16 0.020 158);
+  --ring: oklch(0.80 0.195 152 / 55%);
 
-  --telemetry: oklch(0.78 0.13 220);
-  --telemetry-soft: oklch(0.78 0.13 220 / 14%);
+  /* neon — KeeperHub's own #00FF4F. The mark, live dots and glows. Never a fill. */
+  --neon: oklch(0.870 0.270 145);         /* #00FF4F, KeeperHub's own */
+  --neon-soft: oklch(0.870 0.270 145 / 16%);
 
-  --success: oklch(0.78 0.13 175);
-  --pending: oklch(0.79 0.14 70);
-  --destructive: oklch(0.66 0.21 25);
+  /* telemetry — cyan, pushed cool so it never smears into the green */
+  --telemetry: oklch(0.79 0.120 218);
+  --telemetry-soft: oklch(0.79 0.120 218 / 14%);
 
-  --secondary: oklch(0.198 0.012 282);
-  --secondary-foreground: oklch(0.975 0.003 282);
-  --muted: oklch(0.198 0.012 282);
-  --muted-foreground: oklch(0.74 0.010 282);
-  --fg-secondary: oklch(0.74 0.010 282);
-  --fg-muted: oklch(0.52 0.012 282);
-  --accent: oklch(0.66 0.22 288 / 14%);
-  --accent-foreground: oklch(0.78 0.14 288);
-  --accent-soft: oklch(0.66 0.22 288 / 14%);
-  --border: oklch(0.265 0.014 282);
-  --border-strong: oklch(0.345 0.018 282);
-  --input: oklch(0.198 0.012 282);
+  /* state — success is the brighter sibling of primary, not a twin */
+  --success: oklch(0.86 0.220 150);
+  --pending: oklch(0.79 0.140 70);
+  --destructive: oklch(0.66 0.210 25);
 
-  --chart-1: oklch(0.66 0.22 288);
-  --chart-2: oklch(0.78 0.13 220);
-  --chart-3: oklch(0.78 0.13 175);
-  --chart-4: oklch(0.79 0.14 70);
-  --chart-5: oklch(0.66 0.21 25);
+  /* neutrals + borders */
+  --secondary: oklch(0.248 0.018 160);
+  --secondary-foreground: oklch(0.972 0.007 160);
+  --muted: oklch(0.248 0.018 160);
+  --muted-foreground: oklch(0.760 0.014 160);
+  --fg-secondary: oklch(0.760 0.014 160);
+  --fg-muted: oklch(0.560 0.016 160);
+  --accent: oklch(0.80 0.195 152 / 14%);
+  --accent-foreground: oklch(0.86 0.200 150);
+  --accent-soft: oklch(0.80 0.195 152 / 14%);
+  --border: oklch(0.307 0.022 160);       /* #26332C */
+  --border-strong: oklch(0.380 0.024 160);
+  --input: oklch(0.248 0.018 160);
 
-  --sidebar: oklch(0.158 0.010 282);
-  --sidebar-foreground: oklch(0.975 0.003 282);
-  --sidebar-primary: oklch(0.66 0.22 288);
-  --sidebar-primary-foreground: oklch(0.16 0.02 285);
-  --sidebar-accent: oklch(0.198 0.012 282);
-  --sidebar-accent-foreground: oklch(0.975 0.003 282);
-  --sidebar-border: oklch(0.265 0.014 282);
-  --sidebar-ring: oklch(0.66 0.22 288);
+  /* the card bezel — a thick soft light edge, not a hairline. This is what
+     makes a card read as glass floating on the ground rather than a box
+     drawn on it. Ported from ruixen.ui/card-stack's border-4 border-white/10. */
+  --card-bezel: oklch(1 0 0 / 8%);
+  --card-bezel-strong: oklch(1 0 0 / 14%);
+
+  /* action glows — every green-button shadow in the app resolves here, so a
+     retint is one line rather than a sweep through nine components. */
+  --glow-action: 0 0 20px -4px color-mix(in oklch, var(--primary) 60%, transparent);
+  --lift-action: 0 10px 30px -12px color-mix(in oklch, var(--primary) 60%, transparent);
+  --lift-action-lg: 0 18px 55px -16px color-mix(in oklch, var(--primary) 65%, transparent);
+  --halo-neon: 0 0 0 1px var(--border-strong), 0 0 20px color-mix(in oklch, var(--neon) 40%, transparent);
+
+  /* the float a card sits on, and the deeper one it rises to on hover */
+  --lift-card: 0 18px 44px -28px oklch(0 0 0 / 80%);
+  --lift-card-hover: 0 28px 64px -30px oklch(0 0 0 / 85%);
+
+  /* charts — no two greens adjacent */
+  --chart-1: oklch(0.80 0.195 152);
+  --chart-2: oklch(0.79 0.120 218);
+  --chart-3: oklch(0.79 0.140 70);
+  --chart-4: oklch(0.88 0.080 160);
+  --chart-5: oklch(0.66 0.210 25);
+
+  /* sidebar — match the rest */
+  --sidebar: oklch(0.208 0.014 160);
+  --sidebar-foreground: oklch(0.972 0.007 160);
+  --sidebar-primary: oklch(0.80 0.195 152);
+  --sidebar-primary-foreground: oklch(0.16 0.020 158);
+  --sidebar-accent: oklch(0.248 0.018 160);
+  --sidebar-accent-foreground: oklch(0.972 0.007 160);
+  --sidebar-border: oklch(0.307 0.022 160);
+  --sidebar-ring: oklch(0.80 0.195 152);
 }
 
 @layer base {
@@ -272,8 +328,13 @@ body::after {
 .glow-telemetry {
   box-shadow: 0 0 10px var(--telemetry), 0 0 22px var(--telemetry-soft);
 }
+/* Green action glow — buttons and the mark */
 .glow-primary {
-  box-shadow: 0 0 14px var(--primary), 0 0 36px oklch(0.66 0.22 288 / 35%);
+  box-shadow: 0 0 14px var(--primary), 0 0 36px var(--accent-soft);
+}
+/* Neon glow — the live dot, the mark when it is thinking. Loud on purpose. */
+.glow-neon {
+  box-shadow: 0 0 8px var(--neon), 0 0 20px var(--neon-soft);
 }
 
 /* Receipt watermark — repeating "KEEPERHUB" diagonal across surface-2.
@@ -304,6 +365,26 @@ body::after {
   );
   background-size: 6px 1px;
   background-repeat: repeat-x;
+}
+
+/* ───── The mark's flight shard ─────────────────────────────────────────── */
+
+/* It banks while the copilot is thinking and breathes while it is listening.
+   Both are decoration on one path, so they cost nothing and stop when asked. */
+[data-mark-shard="thinking"] {
+  animation: shard-bank 2.8s var(--ease-print) infinite;
+}
+[data-mark-shard="listening"] {
+  animation: shard-breathe 1.6s ease-in-out infinite;
+}
+@keyframes shard-bank {
+  0%, 100% { transform: rotate(0deg) translateX(0); }
+  40% { transform: rotate(-9deg) translateX(6px); }
+  70% { transform: rotate(4deg) translateX(-2px); }
+}
+@keyframes shard-breathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.14); opacity: 0.78; }
 }
 
 /* ───── Keyframes ───────────────────────────────────────────────────────── */
@@ -358,7 +439,7 @@ body::after {
 
 /*
  * Languages (decision 41): the script font for the page's language, after
- * Geist and Neue Montreal in every stack, so Latin text keeps its faces and
+ * Geist and Anek Latin in every stack, so Latin text keeps its faces and
  * Japanese, Korean, Chinese or Hindi text gets its script's system font (macOS,
  * Windows, then Android/Linux Noto). Naming them in order also picks the right
  * local glyph shapes for characters these scripts share.

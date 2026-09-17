@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
-import { DiamondMark } from "@/components/ui/diamond-mark";
+import { KeeperHubMark } from "@/components/ui/keeperhub-mark";
 import { useTranslate } from "@/lib/i18n/use-translate";
 
 import { PaletteTrigger } from "../command/palette-trigger";
@@ -55,7 +55,7 @@ export function Header() {
           aria-label="KeeperHub Copilot"
           className="flex items-center gap-2.5 font-display text-[15px] font-bold tracking-[0.18em] text-foreground max-[720px]:gap-2 max-[720px]:text-sm max-[720px]:tracking-[0.12em] max-[380px]:gap-1.5 max-[380px]:text-[13px] max-[380px]:tracking-[0.09em]"
         >
-          <DiamondMark className="size-[18px] text-primary max-[720px]:size-4" />
+          <KeeperHubMark className="h-[18px] text-neon max-[720px]:h-4" />
           <span className="min-[721px]:max-[1040px]:hidden">KEEPERHUB</span>
         </Link>
 

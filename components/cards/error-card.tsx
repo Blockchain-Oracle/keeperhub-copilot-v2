@@ -1,7 +1,9 @@
 "use client";
 
+import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 
+import { useSound } from "@/components/shell/sound-context";
 import { cn } from "@/lib/utils";
 
 import { Inset, Row } from "./parts";
@@ -32,8 +34,16 @@ const BOUNDARY: Record<string, "notAvailable" | "paused" | "needsAccess" | "reco
 
 export function ErrorCard({ toolName, error }: { toolName: string; error: RenderableError }) {
   const t = useTranslations("cards");
+  const { cue } = useSound();
   const boundaryKey = error.code !== undefined ? BOUNDARY[error.code] : undefined;
   const boundary = boundaryKey !== undefined ? t(`error.boundary.${boundaryKey}`) : undefined;
+
+  // A boundary is a "not here, not now" and gets no sound. Only a real failure
+  // is VOID, and only that has a voice.
+  useEffect(() => {
+    if (boundary === undefined) cue("void");
+  }, [boundary, cue]);
+
   const reason = decodedReason(error);
   const reauth = reauthHref(error);
   return (
@@ -74,7 +84,7 @@ export function ErrorCard({ toolName, error }: { toolName: string; error: Render
       {reauth !== undefined && (
         <a
           href={reauth}
-          className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground shadow-[0_10px_30px_-12px_oklch(0.66_0.22_288_/_70%)] transition-[transform,filter] hover:-translate-y-px hover:brightness-110 focus-visible:outline-2 focus-visible:outline-ring"
+          className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground shadow-[var(--lift-action)] transition-[transform,filter] hover:-translate-y-px hover:brightness-110 focus-visible:outline-2 focus-visible:outline-ring"
         >
           {error.code === "unauthorized" ? t("error.connect") : t("error.reauthorize")}
         </a>

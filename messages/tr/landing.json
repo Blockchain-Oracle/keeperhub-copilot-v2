@@ -1,9 +1,9 @@
 {
   "floatingNav": {
     "links": {
-      "features": "Özellikler",
-      "how": "Nasıl çalışır",
-      "install": "Kurulum",
+      "ask": "Ne yapar",
+      "cards": "Kartlar",
+      "automations": "Otomasyonlar",
       "docs": "Belgeler"
     },
     "openApp": "Uygulamayı aç",
@@ -22,91 +22,155 @@
       "supply": "Aave’ye 50 USDC yatır, ama önce APY’yi söyle",
       "gas": "Gas 20 gwei’nin altına düşünce bana haber ver"
     },
-    "title": "Zincir üstünde, <em>sade bir dille</em><stop>.</stop>",
-    "subtitle": "KeeperHub için Copilot’un. Ne sorarsan anında yanıtlar — ama değer taşıyan hiçbir şey kendiliğinden olmaz. <highlight>Durur, sana eylemin tam hâlini gösterir ve bekler.</highlight>",
+    "title": "KeeperHub ne yapıyorsa hepsi. <accent>Sorman yeter.</accent>",
+    "subtitle": "KeeperHub zincir üstünde her şeyi otomatikleştirir. Onu böyle kullanırsın: ne istediğini kendi cümlelerinle söyle, kopilot doğru eylemi bulsun, doldursun ve çalıştırsın.",
     "inputLabel": "Copilot’una sor",
     "placeholder": "Copilot’una sor…",
     "submit": "Uygulamayı aç",
     "enterHint": "uygulamada açmak için enter’a bas"
   },
-  "features": {
+  "ask": {
     "heading": {
-      "eyebrow": "NE YAPAR",
-      "title": "Okumalar akar. Yazmalar <em>durup sorar</em>.",
-      "subtitle": "Bir soru sor, anında yanıtlasın. Değer taşımasını iste; durur, her alanı doldurur ve tıklamanı bekler."
+      "eyebrow": "NE İSTERSEN SOR",
+      "title": "KeeperHub'ı öğrenmiyorsun. <accent>Onunla konuşuyorsun.</accent>",
+      "subtitle": "442 eylem, 34 entegrasyon, 24 ağ. Hangisine ihtiyacın olduğunu bilmen hiç gerekmiyor: ne istediğini söyle, kopilot seçsin."
     },
-    "spec": "TEKNİK",
     "items": {
-      "registry": {
-        "tag": "KAYIT DEFTERİ · 442 EYLEM",
-        "title": "Elle yazılmadı, üretildi.",
-        "description": "Takaslar, transferler, borç verme, staking, köprüler, fiyat beslemeleri, cüzdanlar, harcama izinleri, uyarılar — 34 entegrasyonda 442 eylem; KeeperHub’ın kendi kayıt defterinden üretildi ve bir anlık görüntü hash’ine sabitlendi."
+      "price": {
+        "tag": "FİYAT",
+        "title": "ETH şu an ne kadar?",
+        "description": "Canlı Chainlink beslemeleri, doğrudan zincirden okunur; son on iki güncelleme rakamın yanına çizilir."
       },
-      "effect": {
-        "tag": "ETKİ · 292 / 148",
-        "title": "Onay kapısı türetilir.",
-        "description": "Her eylem, doğrudan kayıt defterinden etkisine göre sınıflandırılır — 292’si okuma yapar, 148’i değer taşır ya da yetki verir. Sınıflandırıcının yerleştiremediği her şey karantinaya alınır ve çalışmayı reddeder."
+      "holdings": {
+        "tag": "CÜZDAN",
+        "title": "Elimde ne var?",
+        "description": "Kurumunun cüzdanı, dokunduğu her ağda. Boş olanlar gizlenmez, soluklaştırılır."
       },
-      "confirm": {
-        "tag": "ONAY",
-        "title": "Ne onaylarsan o çalışır.",
-        "description": "Bir yazma eylemi sohbeti durdurur ve bir kart çıkarır: her alan dolu, her alan düzenlenebilir. Platform önizleyebiliyorsa önce simüle edilir, edemiyorsa bu açıkça belirtilir. Onayladığın şey bayt bayt aynen gerçekleşir."
+      "send": {
+        "tag": "TRANSFER",
+        "title": "alice.eth adresine 10 USDC gönder",
+        "description": "Tutarı, alıcıyı, ağı ve tokenı doldurur, sana gösterir ve tıklamanı bekler."
       },
-      "failLoudly": {
-        "tag": "AÇIKÇA HATA VER",
-        "title": "Makbuz, onay mesajı değil.",
-        "description": "Başarı, doğrulanmış bir zincir üstü makbuzdur — blok, hash, durum, zincirden geri okunur. ok döndüren bir araç henüz hiçbir şey taşımamıştır."
+      "supply": {
+        "tag": "DEFI",
+        "title": "Aave'ye 50 USDC yatır",
+        "description": "Borç verme, staking, takas, köprü. Önce pozisyonu kontrol eder ve olmayacaksa söyler."
       },
-      "voice": {
-        "tag": "SES",
-        "title": "Ses sorabilir. Ses gönderemez.",
-        "description": "Bir soru söyle, bir önizleme iste — ses ikisini de yapar. Bir yazmayı onaylamak, kartta bilinçli bir tıklama gerektirir."
+      "automate": {
+        "tag": "OTOMASYON",
+        "title": "Gas'i izle, 20 gwei'de haber ver",
+        "description": "Bir kez anlat, gerçek bir KeeperHub otomasyonuna dönüşsün; sen açana kadar kapalı kaydedilir."
       },
-      "ledger": {
-        "tag": "DEFTER",
-        "title": "Kayıt sohbetten uzun yaşar.",
-        "description": "Her gerçekleştirme, sohbet dökümünden ayrı, kalıcı bir olgu olarak yazılır; bu yüzden bir sohbeti silmek kanıtı asla silmez. Tutarlar baştan sona tam sayı temel birim dizeleri olarak kalır ve yalnızca en son aşamada biçimlendirilir."
+      "explain": {
+        "tag": "KATALOG",
+        "title": "Sen aslında ne yapabiliyorsun?",
+        "description": "Sor, kendi kayıt defterini tarasın: KeeperHub'ın getirdiği her eylem ve her birinin neye dokunduğu."
+      }
+    },
+    "tryIt": "bunu sor"
+  },
+  "cards": {
+    "heading": {
+      "eyebrow": "GERİ GELEN",
+      "title": "Metin duvarı değil. <accent>Bir kart.</accent>",
+      "subtitle": "Her cevap bir bakışta okunup üzerine tıklanabilecek şekilde gelir. Desteyi sürükle."
+    },
+    "items": {
+      "price": {
+        "tag": "OKUMA",
+        "title": "Bir fiyat ve nereden geldiği",
+        "description": "Rakam, besleme, ağ ve yayımlandığı an."
+      },
+      "write": {
+        "tag": "ÇALIŞMADAN ÖNCE",
+        "title": "Her alan dolu ve düzenlenebilir",
+        "description": "Tutarı ya da alıcıyı değiştir, her şeyi baştan kontrol etsin."
+      },
+      "dryRun": {
+        "tag": "KONTROL",
+        "title": "KeeperHub önce deniyor",
+        "description": "Başarılı olmayacaksa, hiçbir şey imzalanmadan önce nedenini öğreniyorsun."
+      },
+      "receipt": {
+        "tag": "SONRASI",
+        "title": "Zincirden geri okunmuş bir makbuz",
+        "description": "Blok, hash ve durum — iyi gitti diyen bir araç değil."
+      },
+      "automation": {
+        "tag": "OTOMASYON",
+        "title": "Okunabilen bir akış",
+        "description": "Tetikleyici, sırayla her adım ve onu başlatan bir anahtar."
       }
     }
+  },
+  "automations": {
+    "heading": {
+      "eyebrow": "OTOMASYONLAR",
+      "title": "Bir kez anlat. <accent>Çalışmaya devam etsin.</accent>",
+      "subtitle": "Kopilot, KeeperHub'ın sahip olduğu her tür başlangıcı tek cümleden kurar. Kapalı kaydeder, ne yapacağını gösterir ve açmanı bekler."
+    },
+    "triggers": {
+      "manual": {
+        "title": "İstediğinde",
+        "body": "Sen söyleyince çalışır, başka türlü değil."
+      },
+      "schedule": {
+        "title": "Zamanlamayla",
+        "body": "Her saat, her sabah, ayın biri."
+      },
+      "block": {
+        "title": "Her N blokta",
+        "body": "Saatte değil, zincirin kendisinde sayılır."
+      },
+      "event": {
+        "title": "Sözleşme olayında",
+        "body": "Bir log tetiklenir, adımların çalışır."
+      },
+      "webhook": {
+        "title": "Webhook'la",
+        "body": "İstek atabilen her şey onu başlatabilir."
+      },
+      "payment": {
+        "title": "Ödeme gelince",
+        "body": "Para düşer, akış devralır."
+      }
+    },
+    "footnote": "Listelemek, değiştirmek, birini şimdi çalıştırmak ya da silmek — hepsi sohbetten."
   },
   "howItWorks": {
     "heading": {
       "eyebrow": "NASIL ÇALIŞIR",
-      "title": "Bir cümleden <em>doğrulanmış</em> bir makbuza.",
-      "subtitle": "Beş adım. Okumalar akar. Yazmalar durup sorar."
+      "title": "Bir cümle girer. <accent>Bir makbuz çıkar.</accent>",
+      "subtitle": "Dört adım. Sorular anında yanıtlanır; değer taşıyan her şey durur ve sorar."
     },
-    "meta": "SÜREÇ · ADIM {num}",
-    "issued": "VERİLDİ",
+    "meta": "ADIM {num}",
+    "issued": "TAMAM",
     "pending": "BEKLİYOR",
     "step": "ADIM",
     "steps": {
       "ask": {
-        "title": "Sade bir dille sorarsın",
-        "body": "SDK yok, ABI yok, calldata yok. Gerçekten yapılmasını istediğin şeyi yaz; Copilot bunu bir komut olarak değil, bir niyet olarak okur."
+        "title": "Ne istediğini söylüyorsun",
+        "body": "SDK yok, sözleşme adresi yok, calldata yok. Bir insana nasıl söyleyeceksen öyle yaz."
       },
       "resolve": {
-        "title": "Eylemi belirler",
-        "body": "34 entegrasyonda 442 eylem; KeeperHub’ın kendi kayıt defterinden üretilir ve anlık görüntü hash’iyle sabitlenir. Her biri etkisine göre sınıflandırılır: 292’si okuma yapar, 148’i değer taşır ya da yetki verir."
-      },
-      "gate": {
-        "title": "Okumalar akar. Yazmalar durur.",
-        "body": "Bir okuma hemen yanıt verir — riske giren hiçbir şey yoktur. Değer taşıyan her şey ise bir kart gösterir: her alan dolu, her alan düzenlenebilir."
+        "title": "Eylemi buluyor",
+        "body": "34 entegrasyonda 442 eylem, KeeperHub'ın kendi kayıt defterinden üretilmiş. Kastettiğini seçiyor ve daha neyi bilmesi gerektiğini çıkarıyor."
       },
       "confirm": {
-        "title": "Kontrol eder ve onaylarsın",
-        "body": "Kart göründüğü anda argümanlar sabitlenir. Gerçekleşen şey, modelin sonradan söylediği değil, bayt bayt senin onayladığındır."
+        "title": "Çalıştırmadan önce sana gösteriyor",
+        "body": "Değer taşıyan her şey, her alanı dolu ve düzenlenebilir bir kart olarak duruyor. KeeperHub önce deniyor ve başarısız olacaksa söylüyor."
       },
       "receipt": {
-        "title": "Bir makbuz alırsın",
-        "body": "Başarı, bir aracın onay mesajı değil, doğrulanmış bir zincir üstü makbuzdur — kalıcı bir kayıt olarak saklanır; bu yüzden sohbeti silmek kanıtı asla silmez."
+        "title": "Olduğunun kanıtını alıyorsun",
+        "body": "İşlem zincirden geri okunur ve kendi kaydı olarak saklanır — yani sohbeti silmek kanıtı asla silmez."
       }
     }
   },
   "install": {
     "heading": {
       "eyebrow": "BAĞLAN",
-      "title": "<em>Kendi</em> KeeperHub’ına tek anahtar.",
-      "subtitle": "mcp:write kapsamlı bir kh_ anahtarı, zaten kullandığın her MCP istemcisini bağlar. Copilot’un kendisi KeeperHub ile oturum açar; bu yüzden yalnızca kendi ayarlarına ihtiyaç duyar."
+      "title": "<accent>Senin</accent> KeeperHub'ına tek anahtar.",
+      "subtitle": "Kopilot KeeperHub ile giriş yapar, bu yüzden yalnızca kendi ayarlarına ihtiyacı vardır. mcp:write kapsamlı bir kh_ anahtarı, hâlihazırda çalıştırdığın diğer MCP istemcilerini bağlar."
     },
     "createKey": "Anahtar oluştur · 442 eylemin tümü",
     "shellTab": "Kabuk"
@@ -114,21 +178,21 @@
   "finalCta": {
     "invitation": "DAVET",
     "nonCustodial": "GÖZETİMSİZ",
-    "title": "Okumalar akar. Yazmalar <em>durup sorar</em>.",
-    "body": "Ne sorarsan sor, yanıt hemen gelir. Değer taşımasını iste; durur, her alanı doldurur ve tıklamanı bekler.",
+    "title": "KeeperHub ne yapıyorsa hepsi. <accent>Sorman yeter.</accent>",
+    "body": "Bir soru sor, cevap hemen gelsin. Bir şey yapmasını iste, tam olarak neyi yapacağını göstersin ve tıklamanı beklesin.",
     "openApp": "Uygulamayı aç",
     "signed": "İMZALANDI",
     "snapshot": "KAYIT ANLIK GÖRÜNTÜSÜ <highlight>442 EYLEM</highlight>"
   },
   "footer": {
-    "tagline": "okumalar akar, yazmalar durup sorar",
+    "tagline": "keeperhub ne yapıyorsa hepsi, sorman yeter",
     "live": "CANLI",
     "networks": "AĞLAR {count}",
-    "effectSplit": "292 OKUMA / 148 YAZMA",
+    "effectSplit": "442 EYLEM / 34 ENTEGRASYON",
     "nav": {
-      "features": "Özellikler",
-      "how": "Nasıl",
-      "install": "Kurulum",
+      "ask": "Ne yapar",
+      "cards": "Kartlar",
+      "automations": "Otomasyonlar",
       "app": "Uygulama",
       "docs": "Belgeler"
     }

@@ -1,9 +1,9 @@
 {
   "floatingNav": {
     "links": {
-      "features": "Tính năng",
-      "how": "Cách hoạt động",
-      "install": "Cài đặt",
+      "ask": "Nó làm gì",
+      "cards": "Thẻ",
+      "automations": "Tự động hoá",
       "docs": "Tài liệu"
     },
     "openApp": "Mở ứng dụng",
@@ -22,91 +22,155 @@
       "supply": "Gửi 50 USDC vào Aave, nhưng cho tôi biết APY trước",
       "gas": "Báo tôi khi phí gas giảm xuống dưới 20 gwei"
     },
-    "title": "Onchain, bằng <em>ngôn ngữ thường ngày</em><stop>.</stop>",
-    "subtitle": "Copilot của bạn cho KeeperHub. Hỏi bất cứ điều gì và nó trả lời ngay — nhưng không thao tác chuyển giá trị nào tự diễn ra. <highlight>Nó dừng lại, cho bạn xem chính xác thao tác, và chờ.</highlight>",
+    "title": "Mọi thứ KeeperHub làm được. <accent>Cứ hỏi thôi.</accent>",
+    "subtitle": "KeeperHub tự động hoá mọi thứ onchain. Đây là cách bạn dùng nó: nói điều bạn muốn bằng lời của bạn, copilot tìm đúng hành động, điền đủ rồi chạy.",
     "inputLabel": "Hỏi copilot của bạn",
     "placeholder": "Hỏi copilot của bạn…",
     "submit": "Mở ứng dụng",
     "enterHint": "nhấn enter để mở trong ứng dụng"
   },
-  "features": {
+  "ask": {
     "heading": {
-      "eyebrow": "CHỨC NĂNG",
-      "title": "Đọc thì chạy ngay. Ghi thì <em>dừng lại và hỏi</em>.",
-      "subtitle": "Đặt câu hỏi và nó trả lời ngay. Yêu cầu chuyển giá trị thì nó dừng lại, điền sẵn mọi trường, và chờ bạn bấm."
+      "eyebrow": "HỎI BẤT CỨ ĐIỀU GÌ",
+      "title": "Bạn không học KeeperHub. <accent>Bạn nói chuyện với nó.</accent>",
+      "subtitle": "442 hành động, 34 tích hợp, 24 mạng. Bạn không bao giờ phải biết mình cần cái nào: cứ nói điều bạn muốn, copilot chọn giúp."
     },
-    "spec": "THÔNG SỐ",
     "items": {
-      "registry": {
-        "tag": "DANH MỤC · 442 THAO TÁC",
-        "title": "Được tạo tự động, không viết tay.",
-        "description": "Hoán đổi, chuyển khoản, cho vay, staking, cầu nối, nguồn giá, ví, hạn mức phê duyệt, cảnh báo — 442 thao tác trên 34 tích hợp, được tạo từ danh mục của chính KeeperHub và gắn với mã băm của một snapshot."
+      "price": {
+        "tag": "GIÁ",
+        "title": "ETH giờ bao nhiêu?",
+        "description": "Nguồn Chainlink trực tiếp, đọc thẳng từ chuỗi, kèm mười hai lần cập nhật gần nhất vẽ bên cạnh con số."
       },
-      "effect": {
-        "tag": "TÁC ĐỘNG · 292 / 148",
-        "title": "Cơ chế chặn được suy ra.",
-        "description": "Mọi thao tác được phân loại theo tác động ngay từ danh mục — 292 thao tác đọc, 148 thao tác chuyển giá trị hoặc cấp quyền. Thao tác nào bộ phân loại không xếp được sẽ bị cách ly và từ chối chạy."
+      "holdings": {
+        "tag": "VÍ",
+        "title": "Tôi đang giữ những gì?",
+        "description": "Ví của tổ chức bạn trên mọi mạng nó chạm tới, những mạng trống được làm mờ chứ không bị giấu đi."
       },
-      "confirm": {
-        "tag": "XÁC NHẬN",
-        "title": "Bạn phê duyệt gì thì chạy đúng như vậy.",
-        "description": "Thao tác ghi sẽ dừng cuộc trò chuyện và hiện một thẻ: mọi trường đã điền sẵn, mọi trường đều sửa được. Được mô phỏng trước khi nền tảng hỗ trợ xem trước, và ghi rõ khi không thể. Những gì bạn phê duyệt được thực thi đúng từng byte."
+      "send": {
+        "tag": "CHUYỂN",
+        "title": "Gửi 10 USDC cho alice.eth",
+        "description": "Nó điền số tiền, người nhận, mạng và token, đưa bạn xem rồi chờ bạn bấm."
       },
-      "failLoudly": {
-        "tag": "BÁO LỖI RÕ RÀNG",
-        "title": "Một biên nhận. Không chỉ là phản hồi.",
-        "description": "Thành công là một biên nhận on-chain đã xác minh — khối, hash, trạng thái, đọc lại từ chuỗi. Một công cụ trả về ok thì vẫn chưa chuyển gì cả."
+      "supply": {
+        "tag": "DEFI",
+        "title": "Gửi 50 USDC vào Aave",
+        "description": "Cho vay, staking, hoán đổi, cầu nối. Nó kiểm tra vị thế trước và báo nếu việc đó sẽ không chạy được."
       },
-      "voice": {
-        "tag": "GIỌNG NÓI",
-        "title": "Giọng nói có thể hỏi. Giọng nói không thể gửi.",
-        "description": "Nói một câu hỏi, nói để xem trước — giọng nói làm được cả hai. Xác nhận thao tác ghi cần một cú bấm có chủ ý trên thẻ."
+      "automate": {
+        "tag": "TỰ ĐỘNG HOÁ",
+        "title": "Canh gas và báo tôi ở mức 20 gwei",
+        "description": "Mô tả một lần và nó thành một tự động hoá KeeperHub thật, lưu ở trạng thái tắt cho tới khi bạn bật."
       },
-      "ledger": {
-        "tag": "SỔ CÁI",
-        "title": "Bản ghi tồn tại lâu hơn cuộc trò chuyện.",
-        "description": "Mỗi lần thực thi được ghi thành một dữ kiện bền vững, tách khỏi nội dung hội thoại, nên xóa cuộc trò chuyện không bao giờ xóa bằng chứng. Số lượng luôn là chuỗi số nguyên theo đơn vị cơ sở từ đầu đến cuối và chỉ được định dạng ở lớp hiển thị."
+      "explain": {
+        "tag": "DANH MỤC",
+        "title": "Bạn làm được những gì?",
+        "description": "Cứ hỏi và nó tra chính sổ đăng ký của mình: mọi hành động KeeperHub có, kèm thứ mà từng hành động chạm tới."
+      }
+    },
+    "tryIt": "hỏi câu này"
+  },
+  "cards": {
+    "heading": {
+      "eyebrow": "THỨ TRẢ VỀ",
+      "title": "Không phải một bức tường chữ. <accent>Một tấm thẻ.</accent>",
+      "subtitle": "Mọi câu trả lời đến dưới dạng bạn đọc lướt là hiểu và bấm được luôn. Kéo chồng thẻ thử xem."
+    },
+    "items": {
+      "price": {
+        "tag": "ĐỌC",
+        "title": "Một mức giá, và nó từ đâu ra",
+        "description": "Con số, nguồn dữ liệu, mạng và thời điểm được công bố."
+      },
+      "write": {
+        "tag": "TRƯỚC KHI CHẠY",
+        "title": "Mọi ô đều điền sẵn và sửa được",
+        "description": "Đổi số tiền hay người nhận là nó kiểm tra lại toàn bộ."
+      },
+      "dryRun": {
+        "tag": "BƯỚC KIỂM TRA",
+        "title": "KeeperHub thử trước",
+        "description": "Nếu việc đó sẽ không thành, bạn được cho biết lý do trước khi ký bất cứ thứ gì."
+      },
+      "receipt": {
+        "tag": "SAU ĐÓ",
+        "title": "Biên nhận đọc ngược lại từ chuỗi",
+        "description": "Khối, hash và trạng thái — không phải một công cụ bảo rằng ổn rồi."
+      },
+      "automation": {
+        "tag": "TỰ ĐỘNG HOÁ",
+        "title": "Một luồng bạn đọc được",
+        "description": "Cái kích hoạt, từng bước theo thứ tự, và một công tắc để bật lên."
       }
     }
+  },
+  "automations": {
+    "heading": {
+      "eyebrow": "TỰ ĐỘNG HOÁ",
+      "title": "Mô tả một lần. <accent>Nó cứ thế chạy.</accent>",
+      "subtitle": "Copilot dựng được mọi kiểu khởi động mà KeeperHub có, chỉ từ một câu. Nó lưu ở trạng thái tắt, cho bạn xem nó sẽ làm gì, rồi chờ bạn bật."
+    },
+    "triggers": {
+      "manual": {
+        "title": "Khi bạn yêu cầu",
+        "body": "Chạy khi bạn bảo, và chỉ khi đó."
+      },
+      "schedule": {
+        "title": "Theo lịch",
+        "body": "Mỗi giờ, mỗi sáng, ngày đầu mỗi tháng."
+      },
+      "block": {
+        "title": "Mỗi N khối",
+        "body": "Đếm trên chính chuỗi, không phải trên đồng hồ."
+      },
+      "event": {
+        "title": "Khi hợp đồng phát sự kiện",
+        "body": "Một log bắn ra, các bước của bạn chạy."
+      },
+      "webhook": {
+        "title": "Khi có webhook",
+        "body": "Bất cứ thứ gì gửi được yêu cầu đều khởi động được nó."
+      },
+      "payment": {
+        "title": "Khi có khoản thanh toán",
+        "body": "Tiền về là luồng tiếp quản."
+      }
+    },
+    "footnote": "Liệt kê, sửa, chạy ngay một cái hay xoá đi — tất cả từ khung trò chuyện."
   },
   "howItWorks": {
     "heading": {
       "eyebrow": "CÁCH HOẠT ĐỘNG",
-      "title": "Từ một câu nói đến biên nhận <em>đã xác minh</em>.",
-      "subtitle": "Năm bước. Đọc thì chạy ngay. Ghi thì dừng lại và hỏi."
+      "title": "Một câu đi vào. <accent>Một biên nhận đi ra.</accent>",
+      "subtitle": "Bốn bước. Câu hỏi trả lời ngay; thứ gì dịch chuyển giá trị thì dừng lại và hỏi."
     },
-    "meta": "QUY TRÌNH · BƯỚC {num}",
-    "issued": "ĐÃ CẤP",
+    "meta": "BƯỚC {num}",
+    "issued": "XONG",
     "pending": "ĐANG CHỜ",
     "step": "BƯỚC",
     "steps": {
       "ask": {
-        "title": "Bạn hỏi bằng ngôn ngữ thường ngày",
-        "body": "Không SDK, không ABI, không calldata. Gõ điều bạn thực sự muốn làm, và copilot hiểu đó là ý định chứ không phải một lệnh."
+        "title": "Bạn nói điều bạn muốn",
+        "body": "Không SDK, không địa chỉ hợp đồng, không calldata. Gõ đúng như cách bạn nói với một người."
       },
       "resolve": {
-        "title": "Nó xác định thao tác",
-        "body": "442 thao tác trên 34 tích hợp, được tạo từ danh mục của chính KeeperHub và gắn mã băm snapshot. Mỗi thao tác được phân loại theo tác động: 292 đọc, 148 chuyển giá trị hoặc cấp quyền."
-      },
-      "gate": {
-        "title": "Đọc thì chạy. Ghi thì dừng.",
-        "body": "Thao tác đọc trả lời ngay — không có rủi ro nào. Mọi thao tác chuyển giá trị sẽ hiện một thẻ thay vào đó: mọi trường điền sẵn, mọi trường đều sửa được."
+        "title": "Nó tìm ra hành động",
+        "body": "442 hành động trên 34 tích hợp, sinh ra từ chính sổ đăng ký của KeeperHub. Nó chọn đúng cái bạn muốn nói và tìm xem còn thiếu thông tin gì."
       },
       "confirm": {
-        "title": "Bạn kiểm tra và xác nhận",
-        "body": "Các tham số được cố định ngay khi thẻ hiện ra. Thứ được thực thi giống từng byte với những gì bạn đã phê duyệt, không phải điều mô hình nói tiếp theo."
+        "title": "Nó đưa bạn xem trước khi chạy",
+        "body": "Thứ gì dịch chuyển giá trị sẽ dừng lại thành một tấm thẻ, mọi ô điền sẵn và sửa được. KeeperHub thử trước và báo nếu việc đó sẽ hỏng."
       },
       "receipt": {
-        "title": "Bạn nhận được biên nhận",
-        "body": "Thành công là biên nhận on-chain đã xác minh, không bao giờ chỉ là phản hồi của công cụ — được lưu thành bản ghi bền vững, nên xóa cuộc trò chuyện không bao giờ xóa bằng chứng."
+        "title": "Bạn có bằng chứng là nó đã xảy ra",
+        "body": "Giao dịch được đọc ngược lại từ chuỗi và giữ như một bản ghi riêng — nên xoá cuộc trò chuyện không bao giờ xoá mất bằng chứng."
       }
     }
   },
   "install": {
     "heading": {
       "eyebrow": "KẾT NỐI",
-      "title": "Một khóa vào KeeperHub <em>của bạn</em>.",
-      "subtitle": "Một khóa kh_ có quyền mcp:write kết nối mọi MCP client bạn đang dùng. Bản thân copilot đăng nhập bằng KeeperHub, nên nó chỉ cần cài đặt riêng của mình."
+      "title": "Một khoá vào KeeperHub <accent>của bạn</accent>.",
+      "subtitle": "Copilot đăng nhập bằng KeeperHub nên chỉ cần các thiết lập của chính nó. Một khoá kh_ với phạm vi mcp:write kết nối được mọi client MCP khác bạn đang chạy."
     },
     "createKey": "Tạo khóa · cả 442 thao tác",
     "shellTab": "Shell"
@@ -114,21 +178,21 @@
   "finalCta": {
     "invitation": "LỜI MỜI",
     "nonCustodial": "KHÔNG LƯU KÝ",
-    "title": "Đọc thì chạy ngay. Ghi thì <em>dừng lại và hỏi</em>.",
-    "body": "Hỏi bất cứ điều gì và câu trả lời đến ngay. Yêu cầu chuyển giá trị thì nó dừng lại, điền sẵn mọi trường, và chờ bạn bấm.",
+    "title": "Mọi thứ KeeperHub làm được. <accent>Cứ hỏi thôi.</accent>",
+    "body": "Hỏi một câu và câu trả lời quay lại ngay. Bảo nó làm gì đó và nó cho bạn xem chính xác đó là gì, rồi chờ bạn bấm.",
     "openApp": "Mở ứng dụng",
     "signed": "ĐÃ KÝ",
     "snapshot": "SNAPSHOT DANH MỤC <highlight>442 THAO TÁC</highlight>"
   },
   "footer": {
-    "tagline": "đọc chạy ngay, ghi dừng lại và hỏi",
+    "tagline": "mọi thứ keeperhub làm được, cứ hỏi thôi",
     "live": "TRỰC TUYẾN",
     "networks": "MẠNG {count}",
-    "effectSplit": "292 ĐỌC / 148 GHI",
+    "effectSplit": "442 HÀNH ĐỘNG / 34 TÍCH HỢP",
     "nav": {
-      "features": "Tính năng",
-      "how": "Cách dùng",
-      "install": "Cài đặt",
+      "ask": "Nó làm gì",
+      "cards": "Thẻ",
+      "automations": "Tự động hoá",
       "app": "Ứng dụng",
       "docs": "Tài liệu"
     }

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -39,10 +39,10 @@ export function FinalCta() {
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 -z-10 translate-y-6 scale-95 rounded-[28px] blur-3xl"
-          style={{ background: "radial-gradient(closest-side, oklch(0.66 0.22 288 / 28%), transparent 70%)" }}
+          style={{ background: "radial-gradient(closest-side, color-mix(in oklch, var(--primary) 28%, transparent), transparent 70%)" }}
         />
 
-        <div className="overflow-hidden rounded-3xl bg-card p-1 ring-1 ring-border-strong/70 shadow-[0_36px_80px_-30px_oklch(0_0_0_/_70%)]">
+        <div className="overflow-hidden rounded-3xl bg-card p-1 ring-[1.5px] ring-card-bezel shadow-[0_36px_80px_-30px_oklch(0_0_0_/_70%)]">
           <div className="relative rounded-[calc(var(--radius)*1.5)] border border-border bg-card receipt-watermark">
             {/* meta strip — top */}
             <div className="flex items-center justify-between gap-3 px-6 py-3 text-[10px] font-mono uppercase tracking-[0.22em] text-fg-muted">
@@ -61,7 +61,7 @@ export function FinalCta() {
                 style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
               >
                 {t.rich("finalCta.title", {
-                  em: (chunks) => <em className="font-normal italic text-telemetry">{chunks}</em>,
+                  accent: (chunks) => <span className="text-primary">{chunks}</span>,
                 })}
               </h2>
               <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-fg-secondary">
@@ -70,7 +70,7 @@ export function FinalCta() {
               <div className="mt-8 flex items-center justify-center">
                 <Link
                   href="/app"
-                  className="group inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[0_18px_60px_-12px_oklch(0.66_0.22_288_/_70%)] transition-[transform,filter] hover:-translate-y-px hover:brightness-110 focus-visible:outline-2 focus-visible:outline-ring"
+                  className="group inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[var(--lift-action-lg)] transition-[transform,filter] hover:-translate-y-px hover:brightness-110 focus-visible:outline-2 focus-visible:outline-ring"
                 >
                   {t("finalCta.openApp")}
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />

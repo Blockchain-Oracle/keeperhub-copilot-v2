@@ -1,7 +1,7 @@
 {
   "title": "KeeperHub Copilot",
   "titleTemplate": "%s · KeeperHub Copilot",
-  "description": "Demandez une action on-chain en langage courant. Consultez tout, approuvez tout ce qui déplace des fonds, et transformez une phrase en automatisation KeeperHub permanente.",
+  "description": "KeeperHub automatise tout onchain. Le copilote, c'est la façon de s'en servir : dites ce que vous voulez avec vos mots, il trouve l'action, vous la montre avant de l'exécuter et vous en donne la preuve.",
   "chat": "Discussion",
   "history": "Historique",
   "activity": "Activité",

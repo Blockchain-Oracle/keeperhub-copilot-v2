@@ -86,7 +86,10 @@
     "limitUnavailable": "KeeperHub could not report the daily limit just now.",
     "copyAddress": "Copy address",
     "viewOnExplorer": "View on explorer",
-    "disconnect": "Disconnect"
+    "disconnect": "Disconnect",
+    "sound": "Sound",
+    "soundOn": "On",
+    "soundOff": "Off"
   },
   "moneyPill": {
     "unavailable": "The balance on this network is unavailable right now",

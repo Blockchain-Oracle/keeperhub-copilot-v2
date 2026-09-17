@@ -169,7 +169,7 @@ export function Composer({
         className={cn(
           "relative cursor-text rounded-[26px] border bg-card/75 backdrop-blur-xl transition-[border-color,box-shadow] duration-300",
           expanded
-            ? "border-primary/45 shadow-[0_18px_50px_-24px_oklch(0.66_0.22_288_/_55%)]"
+            ? "border-primary/45 shadow-[var(--lift-action-lg)]"
             : "border-border-strong shadow-[0_10px_30px_-20px_oklch(0_0_0_/_60%)]",
         )}
       >

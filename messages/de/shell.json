@@ -86,7 +86,10 @@
     "limitUnavailable": "KeeperHub konnte das Tageslimit gerade nicht abrufen.",
     "copyAddress": "Adresse kopieren",
     "viewOnExplorer": "Im Explorer ansehen",
-    "disconnect": "Trennen"
+    "disconnect": "Trennen",
+    "sound": "Ton",
+    "soundOn": "An",
+    "soundOff": "Aus"
   },
   "moneyPill": {
     "unavailable": "Das Guthaben in diesem Netzwerk ist gerade nicht verfügbar",

@@ -72,7 +72,7 @@ export function FoundationGallery() {
           </header>
 
           <Section title="Type & colour">
-            <span className="font-display text-2xl">Neue Montreal display</span>
+            <span className="font-display text-2xl">Anek Latin display</span>
             <span className="text-sm">Geist body</span>
             <span className="font-mono text-sm tabular-nums">Geist Mono 0123456789</span>
             <span className="rounded-full bg-primary px-3 py-1 text-xs text-primary-foreground">primary</span>

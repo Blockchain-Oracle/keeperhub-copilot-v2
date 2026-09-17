@@ -17,9 +17,9 @@ import { Motif, type MotifFacts } from "./motifs";
  */
 
 const CARD =
-  "group relative flex h-[188px] w-[246px] shrink-0 snap-start flex-col overflow-hidden rounded-card border border-border bg-card px-[15px] pt-[14px] pb-[13px] text-left";
+  "group relative flex h-[188px] w-[246px] shrink-0 snap-start flex-col overflow-hidden rounded-card border-[1.5px] border-card-bezel bg-card px-[15px] pt-[14px] pb-[13px] text-left shadow-[var(--lift-card)]";
 const HOVER =
-  "animate-rise cursor-pointer transition-[transform,box-shadow,border-color] duration-200 [transition-timing-function:cubic-bezier(.2,.7,.2,1)] hover:-translate-y-1 hover:border-border-strong hover:shadow-[0_10px_28px_-12px_oklch(0_0_0_/_60%)] focus-visible:outline-2 focus-visible:outline-ring active:-translate-y-px active:scale-[0.992]";
+  "animate-rise cursor-pointer transition-[transform,box-shadow,border-color] duration-200 [transition-timing-function:cubic-bezier(.2,.7,.2,1)] hover:-translate-y-1 hover:border-card-bezel-strong hover:shadow-[var(--lift-card-hover)] focus-visible:outline-2 focus-visible:outline-ring active:-translate-y-px active:scale-[0.992]";
 
 function Header({ category }: { category: Category }) {
   return (

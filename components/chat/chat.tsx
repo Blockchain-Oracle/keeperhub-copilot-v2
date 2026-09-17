@@ -12,6 +12,7 @@ import { useAccount } from "@/components/shell/account-context";
 import { useSelectedNetwork } from "@/components/shell/header/network-pill";
 import { takeDraft } from "@/components/shell/sign-in/pending-draft";
 import { useSignIn } from "@/components/shell/sign-in/sign-in";
+import { useSound } from "@/components/shell/sound-context";
 import { SignInGate } from "@/components/shell/sign-in/sign-in-gate";
 import { useVoiceSession } from "@/components/voice/use-voice-session";
 import { VoiceFormContext } from "@/components/voice/voice-form-context";
@@ -98,6 +99,7 @@ export function Chat({
   const translate = useTranslate();
   const errorMessage = useErrorMessage();
   const { identity } = useAccount();
+  const { cue } = useSound();
   const { openSignIn } = useSignIn();
   const network = useSelectedNetwork();
   const signedIn = identity.status === "signed-in";
@@ -130,6 +132,16 @@ export function Chat({
   );
   const { voice, engine: voiceEngine } = useVoiceSession(applyVoiceMessages);
   const voiceOn = voice.phase !== "idle" && voice.phase !== "error";
+
+  // Voice opening and closing, heard on the phase rather than on the buttons —
+  // a session also ends on its ten-minute limit (decision 29) and on an error,
+  // and all three should sound the same.
+  const wasVoiceOn = useRef(false);
+  useEffect(() => {
+    if (voiceOn === wasVoiceOn.current) return;
+    wasVoiceOn.current = voiceOn;
+    cue(voiceOn ? "voiceStart" : "voiceEnd");
+  }, [voiceOn, cue]);
 
   // The form voice waits on (decision 33): shown above the voice bar while it is still open, and its chat card steps aside.
   const voiceFormId = voice.waitingKind === "form" ? voice.waitingCard : null;

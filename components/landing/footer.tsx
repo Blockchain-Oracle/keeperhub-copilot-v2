@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 import { LanguageDialog } from "@/components/shell/header/language-dialog";
 import { useLocale } from "@/components/shell/locale-context";
-import { DiamondMark } from "@/components/ui/diamond-mark";
+import { KeeperHubMark } from "@/components/ui/keeperhub-mark";
 import { getLocale } from "@/lib/locale";
 
 /*
@@ -55,9 +55,9 @@ export function Footer() {
   const t = useTranslations("landing");
   const networks = useNetworkCount();
   const nav: FooterLink[] = [
-    { title: t("footer.nav.features"), href: "#features" },
-    { title: t("footer.nav.how"), href: "#how" },
-    { title: t("footer.nav.install"), href: "#install" },
+    { title: t("footer.nav.ask"), href: "#ask" },
+    { title: t("footer.nav.cards"), href: "#cards" },
+    { title: t("footer.nav.automations"), href: "#automations" },
     { title: t("footer.nav.app"), href: "/app" },
     { title: t("footer.nav.docs"), href: "https://docs.keeperhub.com", external: true },
     {
@@ -77,7 +77,7 @@ export function Footer() {
           {/* Row 1 — brand */}
           <div className="flex flex-col items-start justify-between gap-4 px-5 py-4 sm:flex-row sm:items-center">
             <Link href="/" className="inline-flex items-center gap-2 text-foreground">
-              <DiamondMark className="size-5 text-primary" />
+              <KeeperHubMark className="h-5 text-neon" />
               <span className="font-semibold tracking-tight">KeeperHub Copilot</span>
               <span className="ml-2 hidden font-mono text-[11px] text-fg-muted sm:inline">
                 · {t("footer.tagline")}

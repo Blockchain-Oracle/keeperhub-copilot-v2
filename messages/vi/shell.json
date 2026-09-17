@@ -86,7 +86,10 @@
     "limitUnavailable": "KeeperHub hiện chưa báo được hạn mức hằng ngày.",
     "copyAddress": "Sao chép địa chỉ",
     "viewOnExplorer": "Xem trên explorer",
-    "disconnect": "Ngắt kết nối"
+    "disconnect": "Ngắt kết nối",
+    "sound": "Âm thanh",
+    "soundOn": "Bật",
+    "soundOff": "Tắt"
   },
   "moneyPill": {
     "unavailable": "Số dư trên mạng này hiện không khả dụng",

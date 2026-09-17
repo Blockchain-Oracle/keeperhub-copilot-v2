@@ -468,11 +468,51 @@ https://keeperhub-copilot-v2.vercel.app and pushed to the repo. **Not verified i
 here was clicked signed in — the dry-run Try again, the per-argument edit fields and the network-named
 starters are all waiting on Abu's walk.
 
-## 14 · The revamp (parked until 13 is done — Abu, 2026-09-17)
-- [ ] **Colours and look.** Abu wants to rework the paint. Needs a conversation first; decision 5 (Portaldot
-  verbatim) is what it would supersede.
-- [ ] **Sounds.** Clicks and cues: a form popping up, Authorize, Cancel, a transaction landing. Aesthetic,
-  his idea, to be designed with the look.
+## 14 · The revamp (2026-09-17)
+Decisions 44–48. Abu settled the ground, green's job and sound in conversation; the mark he left to the
+agent ("figure out the logo"), then asked mid-build for a fly rather than a dot.
+
+- [x] **14.1 The paint.** `app/globals.css` — the `:root`/`.dark` palette replaced wholesale, same token
+  names throughout, so everything written as `bg-card` / `text-primary` / `border-border` followed for
+  free. New tokens: `--neon` (KeeperHub's own #00FF4F), `--card-bezel`, and named action glows
+  (`--glow-action`, `--lift-action`, `--lift-card`) so a retint is one line rather than a sweep through
+  nine components. Then the 72 hardcoded colour literals across 20 files, all routed onto tokens —
+  `lib/chains.ts`'s 19 are third-party chain brand colours and correctly stay. `shell.css`'s voice orb
+  now glows cyan → green → neon.
+- [x] **14.2 The mark and the type.** New `components/ui/keeperhub-mark.tsx` replacing
+  `diamond-mark.tsx` at its four call sites, plus `app/icon.tsx`, `app/apple-icon.tsx` and a root
+  `app/opengraph-image.tsx` — the app had none of the three, and `/favicon.ico` 404'd. The shared-receipt
+  OG card was repainted and wears the mark. The sign-in gate's rotating hexagon now holds the mark in its
+  middle with the shard banking. Display face → Anek Latin via next/font, which removed the external
+  Fontshare stylesheet and two preconnects.
+- [x] **14.3 The card frame.** `components/cards/receipt-card.tsx` — one file every card in the app wraps.
+  The hairline ring became the card-stack's thick soft light bezel, cards now float at rest rather than
+  only on hover, and the four tone maps are token-driven (`ring-success/45`, not a hardcoded oklch). The
+  launcher cards and the landing's cards use the same bezel.
+- [x] **14.4 Three 21st components ported** into `components/ui/` by hand (no `components.json`, and the
+  primitives are Base UI, not Radix): `grid-pulse.tsx`, `card-stack.tsx`, `card-rail.tsx`. Notes in
+  decision 48. The card stack's photo card was deleted and `renderCard` made required, since rendering
+  the app's own cards is the whole reason it was chosen; its index is now clamped at render instead of
+  corrected in an effect.
+- [x] **14.5 The landing, rebuilt.** `hero-wave.tsx` (166 lines of three.js) deleted for Grid Pulse, which
+  dropped five dependencies. `features.tsx` deleted for two new sections — `ask.tsx` (a rail of prompts
+  that really open the app with that prompt) and `cards.tsx` (the stack fanning five real card faces from
+  `card-previews.tsx`). New `automations.tsx`: the app builds every KeeperHub trigger and the landing had
+  never said so. `SectionHeading` moved out of the deleted file into its own. Copy rewritten (decision 46)
+  and translated into all 12 languages.
+- [x] **14.6 The launcher rail.** `chat-home.tsx`'s bare scroll box now has the same hover arrows the
+  landing rail uses — Abu: *"the carousel is not done correctly"*. The card content itself was left alone;
+  he signed it off in slice 5.
+- [x] **14.7 Sound.** `lib/sound/{cues,player}.ts` and `components/shell/sound-context.tsx`, wired into the
+  write card (proposal, Authorize, Cancel, EXECUTED), the error card (VOID), the form card and the voice
+  phase. Toggle in the account menu. Decision 47.
+
+**Slice 14 report (2026-09-17).** Typecheck, lint and build clean; `pnpm test` 975 passing in 83 files —
+the i18n parity test was the gate, and it is green in all 13 languages. Checked in a browser at 735px:
+the landing end to end, `/dev/foundation`, `/app` signed out, and `ja` and `es` rendering their own
+headlines. **Not verified:** nothing was clicked signed in, so no card, no sound and no voice has actually
+been heard or exercised — that is the look check. A wider viewport was not reachable on this display, so
+the desktop fan and the desktop nav were only read, not seen.
 
 ## End-to-end walk (after slice 9)
 Landing type → sign-in modal → OAuth → arrive with draft auto-sent → read shows "Used N tools" +

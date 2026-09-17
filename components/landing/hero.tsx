@@ -1,30 +1,27 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
+
+import { GridPulse } from "@/components/ui/grid-pulse";
 
 import { StatusTicker } from "./status-ticker";
 
 /*
  * The hero.
  *
- * Structure ported from references/portaldot-mcp/packages/web/components/landing/hero.tsx.
- * Everything load-bearing in that file is here: the full-bleed canvas behind
- * the content, the floor gradient that fades the animation into the page, the
- * vignette that darkens the corners so the eye stays on the copy, the
- * instrument chip above the headline, the display-font headline with one
- * italic word and a coloured full stop, and the pill composer that takes a
- * real prompt and carries it into the app.
+ * The ground is a hairline grid that takes colour where the pointer passes
+ * (components/ui/grid-pulse). It replaced a three.js wave, which cost five
+ * dependencies to say less, and it reads as KeeperHub's own node-graph
+ * language rather than as a generic shader.
  *
- * The canvas is Portaldot's own r3f wave (./hero-wave, verbatim), dynamically
- * imported so three.js never enters the SSR bundle, exactly as Portaldot does.
+ * The grid holds its light back from the lines of text marked data-grid-avoid,
+ * so the headline never has to fight it.
  *
  * Text: messages/en/landing.json (decision 41).
  */
-const HeroWave = dynamic(() => import("./hero-wave"), { ssr: false });
 
 const ROTATING_PROMPTS = ["price", "balances", "send", "supply", "gas"] as const;
 
@@ -46,19 +43,19 @@ export function Hero() {
 
   return (
     <section className="relative isolate flex min-h-[92vh] items-center overflow-hidden">
-      {/* The animated canvas sits behind everything. */}
-      <div className="absolute inset-0 -z-10">
-        <HeroWave />
-      </div>
+      {/* The grid, under everything. It masks its own bottom edge, so the
+          section below climbs over it rather than meeting a hard line. */}
+      <GridPulse className="-z-10" />
 
-      {/* Floor gradient — pulls the bottom to the page colour so the wave
-          dissolves into the next section instead of stopping at an edge. */}
+      {/* A wash of the mark's green from the top, the way KeeperHub's own
+          landing does it — enough to tint the air, not enough to read as a
+          gradient. */}
       <div
         aria-hidden
-        className="absolute inset-x-0 bottom-0 -z-10 h-2/3"
+        className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(to top, var(--background) 8%, transparent 90%)",
+            "radial-gradient(ellipse 80% 55% at 50% -10%, color-mix(in oklab, var(--neon) 7%, transparent), transparent)",
         }}
       />
       {/* Vignette — darkens the corners to hold the eye on the copy. */}
@@ -67,7 +64,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse at center 30%, transparent 0%, var(--background) 92%)",
+            "radial-gradient(ellipse at center 35%, transparent 0%, color-mix(in oklab, var(--background) 82%, transparent) 95%)",
         }}
       />
 
@@ -75,19 +72,20 @@ export function Hero() {
         <StatusTicker />
 
         <h1
-          className="mt-7 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.025em] text-foreground sm:text-6xl md:text-7xl"
+          data-grid-avoid
+          className="mt-7 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.03em] text-foreground sm:text-6xl md:text-7xl"
           style={{ fontFamily: "var(--font-display)" }}
         >
           {t.rich("hero.title", {
-            em: (chunks) => <em className="font-medium italic text-foreground">{chunks}</em>,
-            stop: (chunks) => <span className="text-primary">{chunks}</span>,
+            accent: (chunks) => <span className="text-primary">{chunks}</span>,
           })}
         </h1>
 
-        <p className="mt-6 max-w-xl text-balance text-base leading-relaxed text-fg-secondary sm:text-lg">
-          {t.rich("hero.subtitle", {
-            highlight: (chunks) => <span className="text-foreground">{chunks}</span>,
-          })}
+        <p
+          data-grid-avoid
+          className="mt-6 max-w-xl text-balance text-base leading-relaxed text-fg-secondary sm:text-lg"
+        >
+          {t("hero.subtitle")}
         </p>
 
         <form
@@ -120,7 +118,7 @@ export function Hero() {
                 "inline-flex shrink-0 items-center gap-1.5 rounded-full " +
                 "bg-primary px-4 h-10 text-[13px] font-semibold text-primary-foreground " +
                 "transition-[transform,filter] hover:-translate-y-px hover:brightness-110 " +
-                "shadow-[0_0_22px_-4px_oklch(0.66_0.22_288/65%)]"
+                "shadow-[var(--glow-action)]"
               }
             >
               <span className="hidden sm:inline">{t("hero.submit")}</span>

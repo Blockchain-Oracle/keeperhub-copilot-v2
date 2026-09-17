@@ -86,7 +86,10 @@
     "limitUnavailable": "KeeperHub から 1 日の上限を今は取得できませんでした。",
     "copyAddress": "アドレスをコピー",
     "viewOnExplorer": "エクスプローラーで表示",
-    "disconnect": "接続を解除"
+    "disconnect": "接続を解除",
+    "sound": "サウンド",
+    "soundOn": "オン",
+    "soundOff": "オフ"
   },
   "moneyPill": {
     "unavailable": "このネットワークの残高は現在取得できません",

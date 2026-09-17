@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 
 import { StatusTicker } from "@/components/landing/status-ticker";
+import { KeeperHubMark } from "@/components/ui/keeperhub-mark";
 import { integrations, registryMeta } from "@/lib/registry/generated/meta";
 
 import { useAccount } from "../account-context";
@@ -44,7 +45,7 @@ export function SignInGate() {
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 -z-10 translate-y-6 scale-95 rounded-[28px] blur-3xl"
-          style={{ background: "radial-gradient(closest-side, oklch(0.66 0.22 288 / 32%), transparent 70%)" }}
+          style={{ background: "radial-gradient(closest-side, color-mix(in oklch, var(--primary) 32%, transparent), transparent 70%)" }}
         />
 
         <div className="overflow-hidden rounded-[26px] border border-border-strong/70 bg-card/65 p-1 shadow-[0_36px_80px_-30px_oklch(0_0_0_/_70%)] ring-1 ring-white/5 backdrop-blur-xl">
@@ -60,24 +61,27 @@ export function SignInGate() {
               </div>
             </div>
 
-            {/* greyscale geometry placeholder — sits where the identicon will materialize */}
+            {/* Sits where the identicon will materialize once you are signed in.
+                The mark waits in the middle with its shard banking; the ring
+                turns slowly around it. */}
             <div className="mx-auto mb-6 flex size-24 items-center justify-center rounded-full border border-border-strong/60 bg-surface-2/60">
-              <svg viewBox="0 0 96 96" width="64" height="64" aria-hidden>
-                <defs>
-                  <linearGradient id="gateGeom" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stopColor="oklch(0.345 0.018 282)" />
-                    <stop offset="1" stopColor="oklch(0.52 0.012 282)" />
-                  </linearGradient>
-                </defs>
-                <motion.g
-                  style={{ originX: "48px", originY: "48px" }}
+              <div className="relative flex size-16 items-center justify-center">
+                <motion.svg
+                  viewBox="0 0 96 96"
+                  className="absolute inset-0 size-full"
+                  aria-hidden
                   animate={{ rotate: 360 }}
                   transition={{ duration: 28, ease: "linear", repeat: Infinity }}
                 >
-                  <polygon points="48,12 78,30 78,66 48,84 18,66 18,30" fill="url(#gateGeom)" opacity="0.55" />
-                  <polygon points="48,24 70,36 70,60 48,72 26,60 26,36" stroke="oklch(0.66 0.22 288 / 60%)" strokeWidth="1.2" fill="none" />
-                </motion.g>
-              </svg>
+                  <polygon
+                    points="48,10 81,29 81,67 48,86 15,67 15,29"
+                    stroke="color-mix(in oklch, var(--primary) 45%, transparent)"
+                    strokeWidth="1.2"
+                    fill="none"
+                  />
+                </motion.svg>
+                <KeeperHubMark state="thinking" className="relative h-8 text-neon" />
+              </div>
             </div>
 
             <h1 className="text-center font-display text-[28px] leading-tight font-medium tracking-tight text-foreground">
@@ -105,7 +109,7 @@ export function SignInGate() {
                   type="button"
                   onClick={() => openSignIn()}
                   disabled={connecting}
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[0_18px_60px_-12px_oklch(0.66_0.22_288_/_70%)] transition-[transform,filter] hover:-translate-y-px hover:brightness-110 focus-visible:outline-2 focus-visible:outline-ring disabled:opacity-50"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[var(--lift-action-lg)] transition-[transform,filter] hover:-translate-y-px hover:brightness-110 focus-visible:outline-2 focus-visible:outline-ring disabled:opacity-50"
                 >
                   <KeyRound className="size-4" />
                   {connecting ? t("connect.connecting") : t("connect.connect")}

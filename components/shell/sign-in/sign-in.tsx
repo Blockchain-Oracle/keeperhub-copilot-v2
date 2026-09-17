@@ -13,7 +13,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { DiamondMark } from "@/components/ui/diamond-mark";
+import { KeeperHubMark } from "@/components/ui/keeperhub-mark";
 import { cn } from "@/lib/utils";
 
 import { usePlatformChains } from "../use-platform-chains";
@@ -124,13 +124,13 @@ export function SignInProvider({ children }: { children: ReactNode }) {
               onClick={continueWithKeeperHub}
               className={cn(
                 "group flex w-full items-center gap-3 rounded-2xl border border-border bg-surface-2/60 p-3 text-left transition-all",
-                "hover:-translate-y-px hover:border-border-strong hover:bg-surface-2 hover:shadow-[0_10px_30px_-12px_oklch(0.66_0.22_288_/_45%)]",
+                "hover:-translate-y-px hover:border-border-strong hover:bg-surface-2 hover:shadow-[var(--lift-action)]",
                 "focus-visible:outline-2 focus-visible:outline-ring",
                 "disabled:cursor-not-allowed disabled:opacity-60",
               )}
             >
               <span aria-hidden className="grid size-9 shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground">
-                <DiamondMark className="size-4" />
+                <KeeperHubMark className="h-4" />
               </span>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">

@@ -86,7 +86,10 @@
     "limitUnavailable": "KeeperHub가 지금은 일일 한도를 알려 주지 못했습니다.",
     "copyAddress": "주소 복사",
     "viewOnExplorer": "익스플로러에서 보기",
-    "disconnect": "연결 해제"
+    "disconnect": "연결 해제",
+    "sound": "소리",
+    "soundOn": "켜짐",
+    "soundOff": "꺼짐"
   },
   "moneyPill": {
     "unavailable": "지금은 이 네트워크의 잔액을 확인할 수 없습니다",

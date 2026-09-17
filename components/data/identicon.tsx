@@ -41,7 +41,7 @@ export function Identicon({ address, size = 24, halo, ariaLabel, className }: Id
       role="img"
       className={cn(
         "relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-secondary",
-        halo && "shadow-[0_0_0_1px_var(--border-strong),0_0_20px_oklch(0.66_0.22_288_/_45%)]",
+        halo && "shadow-[var(--halo-neon)]",
         className,
       )}
       style={{ width: size, height: size }}

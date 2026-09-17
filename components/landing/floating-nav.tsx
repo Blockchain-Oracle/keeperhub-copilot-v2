@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { createPortal } from "react-dom";
 import { buttonVariants } from "@/components/ui/button";
-import { DiamondMark } from "@/components/ui/diamond-mark";
+import { KeeperHubMark } from "@/components/ui/keeperhub-mark";
 import { cn } from "@/lib/utils";
 import { MenuToggleIcon } from "@/components/ui/menu-toggle-icon";
 import { useScroll } from "@/components/ui/use-scroll";
@@ -20,9 +20,9 @@ import { useScroll } from "@/components/ui/use-scroll";
 
 // Each label lives under landing.floatingNav.links.<label>.
 const NAV = [
-	{ label: "features", href: "/#features" },
-	{ label: "how", href: "/#how" },
-	{ label: "install", href: "/#install" },
+	{ label: "ask", href: "/#ask" },
+	{ label: "cards", href: "/#cards" },
+	{ label: "automations", href: "/#automations" },
 	{ label: "docs", href: "/docs" },
 ] as const;
 
@@ -66,7 +66,7 @@ export function FloatingNav() {
 					href="/"
 					className="flex items-center gap-2 rounded-full px-1.5 py-1 text-foreground transition-opacity hover:opacity-80"
 				>
-					<DiamondMark className="size-5 text-primary" />
+					<KeeperHubMark className="h-5 text-neon" />
 					<span
 						className={cn(
 							"font-semibold tracking-tight text-sm transition-[opacity,width] duration-300 overflow-hidden",
@@ -113,7 +113,7 @@ export function FloatingNav() {
 						"bg-primary hover:bg-primary-press text-primary-foreground",
 						"px-3.5 h-8 text-[13px] font-semibold",
 						"transition-[transform,filter] hover:-translate-y-px hover:brightness-110",
-						"shadow-[0_0_18px_-4px_oklch(0.66_0.22_288/55%)]",
+						"shadow-[var(--glow-action)]",
 					)}
 				>
 					{t("floatingNav.openApp")}
@@ -185,7 +185,7 @@ function MobileSheet({ open, onClose }: { open: boolean; onClose: () => void }) 
 					className={cn(
 						"inline-flex items-center justify-center gap-1.5 rounded-xl h-12 text-base font-semibold",
 						"bg-primary text-primary-foreground hover:bg-primary-press",
-						"shadow-[0_0_20px_-6px_oklch(0.66_0.22_288/60%)]",
+						"shadow-[var(--glow-action)]",
 					)}
 				>
 					{t("floatingNav.openApp")}

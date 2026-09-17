@@ -8,6 +8,7 @@ import { Header } from "@/components/shell/header/header";
 import { Marquee } from "@/components/shell/marquee";
 import { NetworkProvider } from "@/components/shell/network-context";
 import { SignInProvider } from "@/components/shell/sign-in/sign-in";
+import { SoundProvider } from "@/components/shell/sound-context";
 import { WriteRecovery } from "@/components/shell/write-recovery";
 import { Toaster } from "@/components/ui/toast";
 import { NETWORK_COOKIE_NAME, parseNetworkCookie } from "@/lib/network";
@@ -28,23 +29,25 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
 
   return (
     <NetworkProvider initialChainId={initialChainId}>
-      <AccountProvider>
-        <SignInProvider>
-          <CommandPaletteProvider>
-            <AppStrip />
-            <Toaster limit={1}>
-              <WriteRecovery />
-              <Marquee />
-              <Header />
-              {/* Clears the fixed chrome: strip + ticker (28) + header (64) = 92, and on phones 20 + 46 = 66.
-                  The bottom pad keeps content clear of the floating phone pill. */}
-              <main className="min-h-screen pt-[calc(var(--appstrip)+92px)] pb-24 max-[720px]:pt-[calc(var(--appstrip)+66px)] max-[720px]:pb-28">
-                {children}
-              </main>
-            </Toaster>
-          </CommandPaletteProvider>
-        </SignInProvider>
-      </AccountProvider>
+      <SoundProvider>
+        <AccountProvider>
+          <SignInProvider>
+            <CommandPaletteProvider>
+              <AppStrip />
+              <Toaster limit={1}>
+                <WriteRecovery />
+                <Marquee />
+                <Header />
+                {/* Clears the fixed chrome: strip + ticker (28) + header (64) = 92, and on phones 20 + 46 = 66.
+                    The bottom pad keeps content clear of the floating phone pill. */}
+                <main className="min-h-screen pt-[calc(var(--appstrip)+92px)] pb-24 max-[720px]:pt-[calc(var(--appstrip)+66px)] max-[720px]:pb-28">
+                  {children}
+                </main>
+              </Toaster>
+            </CommandPaletteProvider>
+          </SignInProvider>
+        </AccountProvider>
+      </SoundProvider>
     </NetworkProvider>
   );
 }

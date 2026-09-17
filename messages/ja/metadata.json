@@ -1,7 +1,7 @@
 {
   "title": "KeeperHub Copilot",
   "titleTemplate": "%s · KeeperHub Copilot",
-  "description": "オンチェーンの操作を、ふだんの言葉で依頼できます。あらゆる情報を読み取り、価値を動かす操作はすべて自分で承認し、一文を常設の KeeperHub オートメーションに変えられます。",
+  "description": "KeeperHub はオンチェーンのあらゆる処理を自動化します。コパイロットはその使い方そのものです。やりたいことを自分の言葉で話せば、該当するアクションを見つけ、実行前に見せ、実行された証拠を返します。",
   "chat": "チャット",
   "history": "履歴",
   "activity": "アクティビティ",

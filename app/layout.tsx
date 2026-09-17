@@ -16,9 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 /*
- * Portaldot's root layout (references/portaldot-mcp/packages/web/app/layout.tsx):
- * dark is forced — there is no light palette — and Neue Montreal arrives from
- * Fontshare before first paint.
+ * The root layout. Dark is forced — there is no light palette.
  *
  * Languages (decisions 41–42): the page's language is the person's pick, else
  * their browser's. The screens' messages and the language picker live here,
@@ -30,14 +28,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang={locale} className={`dark ${fontVariables}`}>
-      <head>
-        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://api.fontshare.com/v2/css?f[]=neue-montreal@400,500,700,400i,500i&display=swap"
-        />
-      </head>
       <body>
         <NextIntlClientProvider>
           <LocaleProvider initialLocale={locale}>{children}</LocaleProvider>

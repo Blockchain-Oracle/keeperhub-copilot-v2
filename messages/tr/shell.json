@@ -86,7 +86,10 @@
     "limitUnavailable": "KeeperHub şu an günlük limiti bildiremedi.",
     "copyAddress": "Adresi kopyala",
     "viewOnExplorer": "Gezginde görüntüle",
-    "disconnect": "Bağlantıyı kes"
+    "disconnect": "Bağlantıyı kes",
+    "sound": "Ses",
+    "soundOn": "Açık",
+    "soundOff": "Kapalı"
   },
   "moneyPill": {
     "unavailable": "Bu ağdaki bakiye şu an alınamıyor",

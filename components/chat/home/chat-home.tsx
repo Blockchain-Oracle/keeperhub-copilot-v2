@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import { usePlatformChains } from "@/components/shell/use-platform-chains";
 import { integrations, registryMeta } from "@/lib/registry/generated/meta";
+import { ScrollArrow, useRailScroll } from "@/components/ui/card-rail";
 import { cn } from "@/lib/utils";
 
 import type { Category } from "./categories";
@@ -70,6 +71,7 @@ export function ChatHome({
         : [t("status.checking"), "bg-fg-muted/60"];
 
   const [hero, ...rest] = categories;
+  const { track, scroll } = useRailScroll();
 
   return (
     <div className="py-8">
@@ -86,15 +88,22 @@ export function ChatHome({
         </p>
       </div>
 
-      {/* md and up: a horizontal rail with edge fades */}
-      <div className="relative mt-6 hidden md:block">
-        <div className="pointer-events-none absolute top-0 bottom-3.5 left-0 z-[2] w-[30px] bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute top-0 right-0 bottom-3.5 z-[2] w-[46px] bg-gradient-to-l from-background to-transparent" />
-        <div className="flex snap-x snap-mandatory gap-3.5 overflow-x-auto px-[18px] pt-1.5 pb-4 [scrollbar-color:var(--border-strong)_transparent] [scrollbar-width:thin]">
+      {/* md and up: a horizontal rail with edge fades and arrows. The arrows
+          are the ones the landing's rail uses, so the two behave alike — it
+          used to be a bare scroll box with nothing to click. */}
+      <div className="group/rail relative mt-6 hidden md:block">
+        <ScrollArrow side="left" onClick={() => scroll("left")} />
+        <div
+          ref={track}
+          className="flex snap-x snap-mandatory gap-3.5 overflow-x-auto px-[18px] pt-1.5 pb-4 [scrollbar-color:var(--border-strong)_transparent] [scrollbar-width:thin]"
+        >
           {categories.map((category, index) => (
             <CategoryCard key={category.id} category={category} index={index} facts={facts} onAction={onAction} />
           ))}
         </div>
+        <div className="pointer-events-none absolute top-0 bottom-3.5 left-0 z-[2] w-[30px] bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute top-0 right-0 bottom-3.5 z-[2] w-[46px] bg-gradient-to-l from-background to-transparent" />
+        <ScrollArrow side="right" onClick={() => scroll("right")} />
       </div>
 
       {/* phones: a featured hero and a 2-column grid, no sideways scroll */}

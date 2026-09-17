@@ -1,8 +1,10 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 
 import { CopyChip } from "@/components/data/copy-chip";
+import { useSound } from "@/components/shell/sound-context";
 import { Identicon } from "@/components/data/identicon";
 import { useVoiceFormId } from "@/components/voice/voice-form-context";
 import { readInputAnswer, readInputRequest, type InputField } from "@/lib/chat/input-request";
@@ -42,6 +44,17 @@ export function InputRequestCard({
   const tc = useTranslations("common");
   const request = readInputRequest(input);
   const answer = output === undefined ? null : readInputAnswer(output);
+
+  // The assistant wants a detail it does not have. Sounds once, when the form
+  // first appears in a live chat — reopening a stored one is not a question.
+  // Declared above the early return below, because hooks have to be.
+  const { cue } = useSound();
+  const asked = useRef(false);
+  useEffect(() => {
+    if (!live || answer !== null || asked.current) return;
+    asked.current = true;
+    cue("form");
+  }, [live, answer, cue]);
 
   if (request === null) {
     return (

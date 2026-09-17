@@ -16,6 +16,8 @@ import { cn } from "@/lib/utils";
 import { useAccount } from "../account-context";
 import { useLocale } from "../locale-context";
 import { useNetwork } from "../network-context";
+import { useSound } from "../sound-context";
+
 import { LanguageDialog } from "./language-dialog";
 import { useFloatingMenus } from "./use-floating-menus";
 
@@ -60,6 +62,7 @@ export function AccountMenu({ walletAddress }: { walletAddress: string | null })
   const [copied, setCopied] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const language = getLocale(useLocale().locale);
+  const { muted, toggle: toggleSound } = useSound();
   const menuRef = useRef<HTMLDivElement>(null);
   const refs = useMemo(() => [menuRef], []);
   const close = useCallback(() => setOpenOn(null), []);
@@ -158,6 +161,18 @@ export function AccountMenu({ walletAddress }: { walletAddress: string | null })
             <span>{tc("language")}</span>
             <span lang={language.code} className="text-fg-muted">
               {language.native}
+            </span>
+          </button>
+          <button
+            type="button"
+            role="menuitemcheckbox"
+            aria-checked={!muted}
+            onClick={toggleSound}
+            className={cn(linkClassName, "flex items-center justify-between gap-4")}
+          >
+            <span>{t("accountMenu.sound")}</span>
+            <span className="text-fg-muted">
+              {muted ? t("accountMenu.soundOff") : t("accountMenu.soundOn")}
             </span>
           </button>
           <form action="/api/auth/logout" method="post">

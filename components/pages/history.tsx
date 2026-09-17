@@ -111,7 +111,7 @@ function ConversationCard({ item }: { item: ConversationSummary }) {
   return (
     <Link
       href={`/app/c/${item.id}`}
-      className="group relative flex min-h-[124px] flex-col overflow-hidden rounded-xl border border-border bg-card p-4 text-left transition duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:shadow-[0_24px_60px_-30px_oklch(0_0_0_/_70%)] focus-visible:outline-2 focus-visible:outline-ring"
+      className="group relative flex min-h-[124px] flex-col overflow-hidden rounded-xl border border-border bg-card p-4 text-left transition duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:shadow-[var(--lift-card-hover)] focus-visible:outline-2 focus-visible:outline-ring"
     >
       <span aria-hidden className="perforation pointer-events-none absolute inset-x-0 top-0" />
       <div className="flex items-start justify-between gap-2">

@@ -173,7 +173,7 @@ function HelpTip({ label, text }: { label: string; text: string }) {
           role="tooltip"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="absolute top-6 right-0 z-10 w-56 rounded-xl border border-border-strong bg-popover p-2.5 text-[12px] text-fg-secondary shadow-[0_24px_60px_-30px_oklch(0_0_0_/_70%)]"
+          className="absolute top-6 right-0 z-10 w-56 rounded-xl border border-border-strong bg-popover p-2.5 text-[12px] text-fg-secondary shadow-[var(--lift-card-hover)]"
         >
           {text}
         </span>

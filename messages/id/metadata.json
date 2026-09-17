@@ -1,7 +1,7 @@
 {
   "title": "KeeperHub Copilot",
   "titleTemplate": "%s · KeeperHub Copilot",
-  "description": "Minta aksi on-chain dengan bahasa sehari-hari. Baca apa saja, setujui apa pun yang memindahkan dana, dan ubah satu kalimat menjadi otomatisasi KeeperHub yang terus berjalan.",
+  "description": "KeeperHub mengotomatiskan apa pun onchain. Copilot adalah cara memakainya: katakan yang kamu mau dengan bahasamu sendiri, ia menemukan aksinya, menunjukkannya sebelum berjalan, dan memberi bukti bahwa itu terjadi.",
   "chat": "Obrolan",
   "history": "Riwayat",
   "activity": "Aktivitas",

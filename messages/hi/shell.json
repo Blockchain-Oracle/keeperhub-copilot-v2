@@ -86,7 +86,10 @@
     "limitUnavailable": "KeeperHub अभी दैनिक सीमा नहीं बता सका।",
     "copyAddress": "पता कॉपी करें",
     "viewOnExplorer": "एक्सप्लोरर पर देखें",
-    "disconnect": "डिस्कनेक्ट करें"
+    "disconnect": "डिस्कनेक्ट करें",
+    "sound": "ध्वनि",
+    "soundOn": "चालू",
+    "soundOff": "बंद"
   },
   "moneyPill": {
     "unavailable": "इस नेटवर्क पर बैलेंस अभी उपलब्ध नहीं है",

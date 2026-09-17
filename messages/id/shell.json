@@ -86,7 +86,10 @@
     "limitUnavailable": "KeeperHub tidak dapat melaporkan batas harian saat ini.",
     "copyAddress": "Salin alamat",
     "viewOnExplorer": "Lihat di explorer",
-    "disconnect": "Putuskan"
+    "disconnect": "Putuskan",
+    "sound": "Suara",
+    "soundOn": "Aktif",
+    "soundOff": "Nonaktif"
   },
   "moneyPill": {
     "unavailable": "Saldo di jaringan ini sedang tidak tersedia",

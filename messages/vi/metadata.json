@@ -1,7 +1,7 @@
 {
   "title": "KeeperHub Copilot",
   "titleTemplate": "%s · KeeperHub Copilot",
-  "description": "Yêu cầu thao tác on-chain bằng ngôn ngữ thường ngày. Đọc mọi dữ liệu, tự phê duyệt mọi thao tác chuyển giá trị, và biến một câu nói thành tự động hóa KeeperHub chạy thường trực.",
+  "description": "KeeperHub tự động hoá mọi thứ onchain. Copilot là cách bạn dùng nó: nói điều bạn muốn bằng lời của bạn, nó tìm đúng hành động, cho bạn xem trước khi chạy và đưa bằng chứng là đã xong.",
   "chat": "Trò chuyện",
   "history": "Lịch sử",
   "activity": "Hoạt động",

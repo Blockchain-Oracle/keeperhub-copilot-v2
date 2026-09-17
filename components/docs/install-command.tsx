@@ -64,7 +64,7 @@ export function InstallCommand({ clients, className }: { clients: readonly Insta
     <div
       className={cn(
         "w-full overflow-hidden rounded-2xl bg-card p-1 ring-1 ring-border-strong/60",
-        "shadow-[0_24px_60px_-30px_oklch(0_0_0_/_70%)]",
+        "shadow-[var(--lift-card-hover)]",
         className,
       )}
     >

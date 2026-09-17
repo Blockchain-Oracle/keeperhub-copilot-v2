@@ -18,6 +18,8 @@ import type { FieldError, FormValues } from "./editable.ts";
 import { shortMiddle } from "./format.ts";
 import { buildMoneyMoverView, effectClassLabel } from "./money-mover.ts";
 import { Inset } from "./parts";
+import { useSound } from "@/components/shell/sound-context";
+
 import { ReceiptCard, ReceiptStamp } from "./receipt-card";
 import { ShareReceipt } from "./share-receipt";
 import {
@@ -99,6 +101,7 @@ export function WriteCard({
   resumeErrored = false,
 }: WriteCardProps) {
   const { identity, refresh } = useAccount();
+  const { cue } = useSound();
   const t = useTranslations("cards");
   const tc = useTranslations("common");
   const translate = useTranslate();
@@ -154,6 +157,36 @@ export function WriteCard({
 
   // A receipt that lands while this card watches: announce it (the first per org gets the welcome) and re-read the balance.
   const watchedOpen = useRef(phase !== "receipt");
+
+  /*
+   * Sound (slice 14). Two moments, both of them things that happened to you
+   * rather than things you asked for:
+   *
+   *   - a write card arriving and waiting, which is a "stop and look";
+   *   - that card settling into a receipt.
+   *
+   * Both fire once. A card that was already a receipt when this session found
+   * it — an old conversation reopened — announces nothing, because nothing
+   * happened. A write that failed is rendered by error-card rather than this
+   * component, so reaching "receipt" here always means it landed; the VOID cue
+   * lives over there.
+   *
+   * Declared here, above the early return further down, because hooks must be.
+   */
+  const announcedProposal = useRef(false);
+  useEffect(() => {
+    if (!awaiting || announcedProposal.current) return;
+    announcedProposal.current = true;
+    cue("card");
+  }, [awaiting, cue]);
+
+  const settled = useRef(phase === "receipt");
+  useEffect(() => {
+    if (phase !== "receipt" || settled.current) return;
+    settled.current = true;
+    cue("executed");
+  }, [phase, cue]);
+
   const announced = useRef(false);
   const orgId = identity.status === "signed-in" ? identity.orgId : undefined;
   useEffect(() => {
@@ -248,6 +281,7 @@ export function WriteCard({
 
   async function authorize() {
     if (!canAuthorize || inFlight.current || ceremony === undefined || approvalId === undefined) return;
+    cue("authorize");
     inFlight.current = true;
     setSubmitted(true);
     setAuthorizedPreview(preview);
@@ -262,6 +296,7 @@ export function WriteCard({
 
   async function cancel() {
     if (!awaiting || inFlight.current || ceremony === undefined || approvalId === undefined) return;
+    cue("cancel");
     inFlight.current = true;
     setSubmitted(true);
     try {

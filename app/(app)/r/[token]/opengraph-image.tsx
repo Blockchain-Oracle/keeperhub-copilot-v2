@@ -1,21 +1,28 @@
 import { ImageResponse } from "next/og";
 
+import { KeeperHubMark } from "@/components/ui/keeperhub-mark";
 import { readSharedReceipt } from "@/lib/data/shares";
 import { sharedReceiptTitle, sharedReceiptView } from "@/lib/shares";
 
 /*
  * The preview a shared receipt link unfurls into on X or Slack (decision 37):
- * Portaldot's dark ground and card, the success stamp, the action, where it ran
- * and the start and end of its transaction. A link that is off shows only that.
+ * the app's ground and card, the success stamp, the action, where it ran and
+ * the start and end of its transaction. A link that is off shows only that.
+ *
+ * Rendered on the server, so it cannot read the CSS variables. These are the
+ * literal values of the tokens in app/globals.css — keep the two in step.
  */
 export const alt = "A receipt shared from KeeperHub Copilot";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-const INK = "#f3f1f8";
-const MUTED = "#8e8a9c";
-const VIOLET = "#8f6bff";
-const SUCCESS = "#3fd8b8";
+const GROUND = "#0a0f0c"; // --background
+const CARD = "#121a16"; // --card
+const BORDER = "#26332c"; // --border
+const INK = "#f2f7f4"; // --foreground
+const MUTED = "#69736d"; // --fg-muted
+const NEON = "#00ff4f"; // --neon, KeeperHub's mark green
+const SUCCESS = "#3af77e"; // --success
 
 export default async function Image({ params }: { params: Promise<{ token: string }> }) {
   const { token } = await params;
@@ -32,13 +39,13 @@ export default async function Image({ params }: { params: Promise<{ token: strin
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 64,
-          background: "#0b0a10",
+          background: GROUND,
           color: INK,
           fontFamily: "sans-serif",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 14, fontSize: 26, letterSpacing: 6, color: INK }}>
-          <div style={{ width: 22, height: 22, background: VIOLET, transform: "rotate(45deg)", borderRadius: 4 }} />
+          <KeeperHubMark height={34} fill={NEON} />
           KEEPERHUB COPILOT
         </div>
 
@@ -49,8 +56,8 @@ export default async function Image({ params }: { params: Promise<{ token: strin
             gap: 20,
             padding: 48,
             borderRadius: 28,
-            border: "2px solid #2a2735",
-            background: "#14121c",
+            border: `2px solid ${BORDER}`,
+            background: CARD,
           }}
         >
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>

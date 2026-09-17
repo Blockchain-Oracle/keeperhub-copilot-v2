@@ -1,7 +1,7 @@
 {
   "title": "KeeperHub Copilot",
   "titleTemplate": "%s · KeeperHub Copilot",
-  "description": "온체인 작업을 쉬운 말로 요청하세요. 무엇이든 조회하고, 자산이 움직이는 작업은 직접 승인하고, 한 문장을 상시 실행되는 KeeperHub 자동화로 바꿀 수 있습니다.",
+  "description": "KeeperHub는 온체인의 모든 것을 자동화합니다. 코파일럿은 그것을 쓰는 방법입니다. 원하는 것을 자기 말로 이야기하면 알맞은 액션을 찾아 실행 전에 보여주고, 실행됐다는 증거를 남깁니다.",
   "chat": "채팅",
   "history": "기록",
   "activity": "활동",

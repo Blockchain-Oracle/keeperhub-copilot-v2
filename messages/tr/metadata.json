@@ -1,7 +1,7 @@
 {
   "title": "KeeperHub Copilot",
   "titleTemplate": "%s · KeeperHub Copilot",
-  "description": "Zincir üstü bir eylemi sade bir dille iste. İstediğini oku, değer taşıyan her şeyi sen onayla ve bir cümleyi kalıcı bir KeeperHub otomasyonuna dönüştür.",
+  "description": "KeeperHub zincir üstünde her şeyi otomatikleştirir. Kopilot da onu kullanma biçimin: ne istediğini kendi cümlelerinle söyle; doğru eylemi bulur, çalıştırmadan önce gösterir ve olduğunun kanıtını verir.",
   "chat": "Sohbet",
   "history": "Geçmiş",
   "activity": "Etkinlik",

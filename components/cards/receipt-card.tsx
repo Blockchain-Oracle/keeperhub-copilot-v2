@@ -6,24 +6,26 @@ import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 /*
- * Portaldot components/cards/receipt-card.tsx, verbatim. One change: motion is
- * imported from motion/react, the same library under its current name.
+ * The frame every card in the app wraps. Originally Portaldot's receipt card;
+ * the bezel now carries the card-stack's thick soft light edge rather than a
+ * hairline ring, which is what makes a card read as glass floating on the
+ * ground instead of a box drawn on it.
  */
 
 export type ReceiptTone = "default" | "success" | "pending" | "destructive";
 
 const bezelTone: Record<ReceiptTone, string> = {
-  default: "ring-border-strong/70",
-  success: "ring-[oklch(0.78_0.13_175_/_55%)]",
-  pending: "ring-[oklch(0.79_0.14_70_/_55%)]",
-  destructive: "ring-[oklch(0.66_0.21_25_/_55%)]",
+  default: "ring-card-bezel",
+  success: "ring-success/45",
+  pending: "ring-pending/45",
+  destructive: "ring-destructive/45",
 };
 
 const innerTone: Record<ReceiptTone, string> = {
   default: "border-border",
-  success: "border-[oklch(0.78_0.13_175_/_30%)]",
-  pending: "border-[oklch(0.79_0.14_70_/_30%)]",
-  destructive: "border-[oklch(0.66_0.21_25_/_30%)]",
+  success: "border-success/30",
+  pending: "border-pending/30",
+  destructive: "border-destructive/30",
 };
 
 const dotTone: Record<ReceiptTone, string> = {
@@ -99,8 +101,8 @@ export function ReceiptCard({
         ref={ref}
         onMouseMove={onMouseMove}
         className={cn(
-          "relative overflow-hidden rounded-2xl bg-card p-1 ring-1 transition-[box-shadow,transform]",
-          "hover:shadow-[0_24px_60px_-30px_oklch(0_0_0_/_70%)] hover:-translate-y-px",
+          "relative overflow-hidden rounded-2xl bg-card p-1 ring-[1.5px] transition-[box-shadow,transform]",
+          "shadow-[var(--lift-card)] hover:shadow-[var(--lift-card-hover)] hover:-translate-y-px",
           bezelTone[tone],
         )}
         style={{
@@ -119,7 +121,7 @@ export function ReceiptCard({
           className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           style={{
             background:
-              "radial-gradient(180px circle at var(--mx, 50%) var(--my, 0%), oklch(0.66 0.22 288 / 14%), transparent 70%)",
+              "radial-gradient(180px circle at var(--mx, 50%) var(--my, 0%), var(--accent-soft), transparent 70%)",
           }}
         />
 

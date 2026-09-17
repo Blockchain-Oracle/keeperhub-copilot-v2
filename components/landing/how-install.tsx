@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { SectionHeading } from "./features";
+import { SectionHeading } from "./section-heading";
 import { copilotEnvFile, vercelEnvCommands } from "@/components/docs/copilot-env";
 import { InstallCommand, type InstallClient } from "@/components/docs/install-command";
 import { cn } from "@/lib/utils";
@@ -27,8 +27,8 @@ import { cn } from "@/lib/utils";
  * Substituted: the words, and one token — --surface-2 → --secondary
  * (identical value, oklch(0.198 0.012 282)).
  *
- * Portaldot's three steps describe Portaldot's flow. Ours describe the
- * ceremony: reads flow, writes stop and ask.
+ * The four steps describe this app's flow: you say it, it finds the action, it
+ * shows you before it runs, you get proof it happened.
  *
  * Text: messages/en/landing.json (decision 41).
  */
@@ -37,9 +37,8 @@ import { cn } from "@/lib/utils";
 const steps = [
   { num: "01", id: "ask", tone: "default" },
   { num: "02", id: "resolve", tone: "default" },
-  { num: "03", id: "gate", tone: "default" },
-  { num: "04", id: "confirm", tone: "default" },
-  { num: "05", id: "receipt", tone: "success" },
+  { num: "03", id: "confirm", tone: "default" },
+  { num: "04", id: "receipt", tone: "success" },
 ] as const;
 
 export function HowItWorks() {
@@ -50,11 +49,11 @@ export function HowItWorks() {
         <SectionHeading
           eyebrow={t("howItWorks.heading.eyebrow")}
           title={t.rich("howItWorks.heading.title", {
-            em: (chunks) => <em className="font-normal italic text-telemetry">{chunks}</em>,
+            accent: (chunks) => <span className="text-primary">{chunks}</span>,
           })}
           subtitle={t("howItWorks.heading.subtitle")}
         />
-        <div className="mt-12 grid gap-3 sm:grid-cols-3">
+        <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
             <motion.div
               key={s.num}
@@ -97,9 +96,9 @@ function BoardingPass({
   return (
     <article
       className={cn(
-        "group relative h-full overflow-hidden rounded-2xl bg-card p-1 ring-1 transition-shadow",
-        tone === "success" ? "ring-success/40" : "ring-border-strong/60",
-        "hover:shadow-[0_24px_60px_-30px_oklch(0_0_0_/_70%)]",
+        "group relative h-full overflow-hidden rounded-2xl bg-card p-1 ring-[1.5px] transition-shadow",
+        tone === "success" ? "ring-success/45" : "ring-card-bezel",
+        "shadow-[var(--lift-card)] hover:shadow-[var(--lift-card-hover)]",
       )}
     >
       <div className="relative h-full overflow-hidden rounded-[calc(var(--radius)*1.5)] border border-border bg-card receipt-watermark">
@@ -153,7 +152,7 @@ export function Install() {
         <SectionHeading
           eyebrow={t("install.heading.eyebrow")}
           title={t.rich("install.heading.title", {
-            em: (chunks) => <em className="font-normal italic text-telemetry">{chunks}</em>,
+            accent: (chunks) => <span className="text-primary">{chunks}</span>,
           })}
           subtitle={t("install.heading.subtitle")}
         />

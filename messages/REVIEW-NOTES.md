@@ -334,3 +334,44 @@ I wrote all 10 Turkish files, and the check passes: `pnpm exec vitest run tests/
 - **Titles with a name:** these use a colon so the name needs no ending: "Çalıştır: {name}", "Sil: {name}", "Aç: {name}", "Çağır: {name}". Also "created <time></time>" became "<time></time> oluşturuldu", assuming the time shows as something like "3 gün önce".
 - **Other choices:** CEREMONY is "SÜREÇ", SPEC is "TEKNİK", the Shell tab is "Kabuk", and the language-switch toast is "Yanıt dili artık {language}". The search hint suggests "etkinlik" instead of "activity", because page names are searched in the translated language.
 - **Still long:** Turkish runs longer than the 1.3x aim on some stamps, such as KAYDEDİLİYOR (SAVING) and KAYDEDİLDİ · KAPALI (SAVED · OFF). Worth a look on narrow cards.
+
+---
+
+# The revamp's copy (2026-09-17, slice 14)
+
+The landing page was rewritten. Its old pitch — "reads flow, writes stop and
+ask" — described the confirm-before-you-move behaviour, which is a feature in
+the middle of the page rather than what the product is. The new line is that
+KeeperHub automates anything onchain and the copilot is how you use it. Three
+sections are new (`ask`, `cards`, `automations`), `features` is gone, and
+`howItWorks` dropped from five steps to four.
+
+All 12 languages were rewritten to match and pass `tests/i18n/messages.test.ts`.
+**None has been checked by a native speaker.** Also changed: every locale's
+`metadata.description`, and three new `shell.accountMenu` keys for the sound
+toggle (`sound`, `soundOn`, `soundOff`).
+
+Keys whose English meaning did not change — the rotating hero prompts, the
+status ticker, the install tabs, the final CTA's stamps, the footer's live row —
+kept each language's existing wording rather than being translated again.
+
+**Wording a reviewer should look at first:**
+
+- **The headline.** English is "Everything KeeperHub does. Just ask." It has to
+  stay short enough to set at 72px on two lines, and the `<accent>` half is the
+  part that turns green — so the split has to fall somewhere that makes sense in
+  the language, not just after the first sentence.
+- **"Copilot" as a common noun.** Spanish "copiloto", Portuguese "copiloto",
+  German "Copilot", Japanese "コパイロット", Chinese "副驾", Korean "코파일럿",
+  Hindi "कोपायलट", Russian "копилот". Some of these may read better left as the
+  English product word.
+- **"Card"** (`cards.*`) means the thing an answer arrives in, not a payment
+  card. Check that the chosen word does not suggest a bank card — Spanish
+  "tarjeta", Portuguese "cartão" and Turkish "kart" all carry that risk.
+- **"Trigger"** in `automations.triggers.*` is KeeperHub's own domain word for
+  what starts a workflow. Where a language has no natural noun the translation
+  uses a phrase ("when you ask", "on a schedule") rather than inventing one.
+- **"ask this"** (`ask.tryIt`) is a lowercase mono label under a card, roughly
+  "put this question to it". Short is more important than literal.
+- **"onchain"** was left as one untranslated word everywhere, matching how the
+  rest of the app already treats it.

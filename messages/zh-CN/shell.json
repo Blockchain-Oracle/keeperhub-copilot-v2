@@ -86,7 +86,10 @@
     "limitUnavailable": "KeeperHub 暂时无法报告每日限额。",
     "copyAddress": "复制地址",
     "viewOnExplorer": "在区块浏览器中查看",
-    "disconnect": "断开连接"
+    "disconnect": "断开连接",
+    "sound": "声音",
+    "soundOn": "开",
+    "soundOff": "关"
   },
   "moneyPill": {
     "unavailable": "暂时无法获取此网络上的余额",

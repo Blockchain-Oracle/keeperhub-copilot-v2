@@ -156,7 +156,7 @@
   --voice-level: 0;
   --glow-a: var(--telemetry);
   --glow-b: var(--primary);
-  --glow-c: oklch(0.72 0.16 250);
+  --glow-c: var(--neon);
 }
 
 .voice-orb[data-phase="waiting"],

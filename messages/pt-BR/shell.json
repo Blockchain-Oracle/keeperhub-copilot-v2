@@ -86,7 +86,10 @@
     "limitUnavailable": "O KeeperHub não conseguiu informar o limite diário agora.",
     "copyAddress": "Copiar endereço",
     "viewOnExplorer": "Ver no explorador",
-    "disconnect": "Desconectar"
+    "disconnect": "Desconectar",
+    "sound": "Som",
+    "soundOn": "Ligado",
+    "soundOff": "Desligado"
   },
   "moneyPill": {
     "unavailable": "O saldo nesta rede não está disponível agora",
