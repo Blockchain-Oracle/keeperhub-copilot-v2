@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="470" viewBox="0 0 1000 470" role="img" aria-label="You ask in the browser. The chat picks an action and every call goes through one door. A question goes straight through to KeeperHub. Anything that moves value stops as a card and waits for your click. Once you authorize, KeeperHub runs it, your organisation wallet signs it and it lands on the chain. The receipt is read back off the chain and kept in the ledger.">
+<defs>
+<marker id="q" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#3A4640"/></marker>
+<marker id="w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#F3A949"/></marker>
+</defs>
+<rect width="1000" height="470" rx="14" fill="#0A0F0C"/>
+<path d="M170 71 H210" fill="none" stroke="#3A4640" stroke-width="1.6" marker-end="url(#q)"/>
+<path d="M400 71 H440" fill="none" stroke="#3A4640" stroke-width="1.6" marker-end="url(#q)"/>
+<path d="M630 71 H670" fill="none" stroke="#3A4640" stroke-width="1.6" marker-end="url(#q)"/>
+<text x="650" y="26" text-anchor="middle" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">a question goes straight through</text>
+<path d="M535 102 V176" fill="none" stroke="#F3A949" stroke-width="1.6" marker-end="url(#w)"/>
+<text x="452" y="146" text-anchor="middle" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">a write stops here</text>
+<path d="M440 209 H300 Q280 209 280 189 V102" fill="none" stroke="#F3A949" stroke-width="1.6" marker-end="url(#w)"/>
+<text x="216" y="146" text-anchor="middle" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">you check it</text>
+<path d="M630 209 H670" fill="none" stroke="#F3A949" stroke-width="1.6" marker-end="url(#w)"/>
+<text x="650" y="166" text-anchor="middle" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">you authorize</text>
+<path d="M765 102 V176" fill="none" stroke="#3A4640" stroke-width="1.6" marker-end="url(#q)"/>
+<path d="M765 238 V320" fill="none" stroke="#3A4640" stroke-width="1.6" marker-end="url(#q)"/>
+<text x="765" y="285" text-anchor="middle" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">signed</text>
+<path d="M670 351 H430 Q400 351 400 351" fill="none" stroke="#3A4640" stroke-width="1.6" stroke-dasharray="5 5" marker-end="url(#q)"/>
+<text x="535" y="336" text-anchor="middle" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">read back off the chain</text>
+<rect x="20" y="40" width="150" height="62" rx="12" fill="#121A16" stroke="#3A4640" stroke-width="1"/>
+<rect x="20" y="40" width="3" height="62" rx="1.5" fill="#3A4640"/>
+<text x="36" y="66" fill="#F2F7F4" font-size="15" font-weight="600" font-family="Verdana,DejaVu Sans,sans-serif">You</text>
+<text x="36" y="85" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">in the browser</text>
+<rect x="210" y="40" width="190" height="62" rx="12" fill="#121A16" stroke="#3A4640" stroke-width="1"/>
+<rect x="210" y="40" width="3" height="62" rx="1.5" fill="#3A4640"/>
+<text x="226" y="66" fill="#F2F7F4" font-size="15" font-weight="600" font-family="Verdana,DejaVu Sans,sans-serif">Chat and the model</text>
+<text x="226" y="85" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">picks the action</text>
+<rect x="440" y="40" width="190" height="62" rx="12" fill="#121A16" stroke="#00FF4F" stroke-width="1.5"/>
+<rect x="440" y="40" width="3" height="62" rx="1.5" fill="#00FF4F"/>
+<text x="456" y="66" fill="#F2F7F4" font-size="15" font-weight="600" font-family="Verdana,DejaVu Sans,sans-serif">The one door</text>
+<text x="456" y="85" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">checks every call</text>
+<rect x="670" y="40" width="190" height="62" rx="12" fill="#121A16" stroke="#4BCDEE" stroke-width="1.5"/>
+<rect x="670" y="40" width="3" height="62" rx="1.5" fill="#4BCDEE"/>
+<text x="686" y="66" fill="#F2F7F4" font-size="15" font-weight="600" font-family="Verdana,DejaVu Sans,sans-serif">KeeperHub</text>
+<text x="686" y="85" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">runs the action</text>
+<rect x="440" y="176" width="190" height="66" rx="12" fill="#121A16" stroke="#F3A949" stroke-width="1.5"/>
+<rect x="440" y="176" width="3" height="66" rx="1.5" fill="#F3A949"/>
+<text x="456" y="202" fill="#F2F7F4" font-size="15" font-weight="600" font-family="Verdana,DejaVu Sans,sans-serif">The card</text>
+<text x="456" y="221" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">waits for your click</text>
+<rect x="670" y="176" width="190" height="62" rx="12" fill="#121A16" stroke="#4BCDEE" stroke-width="1.5"/>
+<rect x="670" y="176" width="3" height="62" rx="1.5" fill="#4BCDEE"/>
+<text x="686" y="202" fill="#F2F7F4" font-size="15" font-weight="600" font-family="Verdana,DejaVu Sans,sans-serif">Your org wallet</text>
+<text x="686" y="221" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">signs it</text>
+<rect x="210" y="320" width="190" height="62" rx="12" fill="#121A16" stroke="#3A4640" stroke-width="1"/>
+<rect x="210" y="320" width="3" height="62" rx="1.5" fill="#3A4640"/>
+<text x="226" y="346" fill="#F2F7F4" font-size="15" font-weight="600" font-family="Verdana,DejaVu Sans,sans-serif">The ledger</text>
+<text x="226" y="365" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">keeps the receipt</text>
+<rect x="670" y="320" width="190" height="62" rx="12" fill="#121A16" stroke="#4BCDEE" stroke-width="1.5"/>
+<rect x="670" y="320" width="3" height="62" rx="1.5" fill="#4BCDEE"/>
+<text x="686" y="346" fill="#F2F7F4" font-size="15" font-weight="600" font-family="Verdana,DejaVu Sans,sans-serif">The chain</text>
+<text x="686" y="365" fill="#8A948E" font-size="12.5" font-family="DejaVu Sans Mono,Consolas,monospace">where it lands</text>
+<rect x="20" y="426" width="9" height="9" rx="2" fill="#00FF4F"/>
+<text x="36" y="435" fill="#8A948E" font-size="12" letter-spacing="1.6" font-family="DejaVu Sans Mono,Consolas,monospace">THE GATE</text>
+<rect x="150" y="426" width="9" height="9" rx="2" fill="#F3A949"/>
+<text x="166" y="435" fill="#8A948E" font-size="12" letter-spacing="1.6" font-family="DejaVu Sans Mono,Consolas,monospace">WAITS FOR YOU</text>
+<rect x="330" y="426" width="9" height="9" rx="2" fill="#4BCDEE"/>
+<text x="346" y="435" fill="#8A948E" font-size="12" letter-spacing="1.6" font-family="DejaVu Sans Mono,Consolas,monospace">OUTSIDE THIS APP</text>
+</svg>

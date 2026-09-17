@@ -1,0 +1,152 @@
+<p align="center">
+  <a href="https://keeperhub-copilot-v2.vercel.app">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="docs/assets/banner-light.svg" />
+      <img src="docs/assets/banner-dark.svg" width="960" alt="KeeperHub Copilot — everything KeeperHub does, just ask. 442 actions, 34 integrations, 24 networks, 13 languages." />
+    </picture>
+  </a>
+</p>
+
+<h1 align="center">KeeperHub Copilot</h1>
+<p align="center">Everything KeeperHub does. Just ask.</p>
+
+<p align="center">
+  <a href="https://keeperhub-copilot-v2.vercel.app"><b>Open the app</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://keeperhub-copilot-v2.vercel.app/docs"><b>Documentation</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://keeperhub-copilot-v2.vercel.app/docs/start/first-action"><b>Your first action</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://keeperhub-copilot-v2.vercel.app/docs/how/architecture"><b>Architecture</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://keeperhub-copilot-v2.vercel.app/docs/actions"><b>Every action</b></a>
+</p>
+
+---
+
+**KeeperHub** automates anything onchain — it reads prices and balances, moves tokens, drives lending
+and staking protocols, and keeps workflows running on a schedule, a contract event or a payment. It
+signs with your organisation's own non-custodial wallet and handles gas, nonces, ordering and retries.
+
+**KeeperHub Copilot is how a person uses it without learning any of that.** You say what you want in
+your own words. It resolves which of KeeperHub's **442 actions** across **34 integrations** you meant,
+fills the action in, shows you every field before anything happens, has KeeperHub dry-run it, and only
+then — on your click — asks KeeperHub to execute. The receipt is read back off the chain.
+
+There is no browser wallet. You sign in with KeeperHub over OAuth; the organisation's Turnkey wallet
+signs.
+
+## What it does
+
+| | |
+| --- | --- |
+| **Ask in plain language** | Questions answer immediately and move nothing. 13 languages, picked by you, never guessed from your accent. |
+| **Every write stops on a card** | Amount, recipient, network, token and the action's own parameters — all filled in, all editable. An edit re-runs the check and re-arms the button. |
+| **KeeperHub checks it first** | A dry run before anything is signed. A predicted revert is shown as "this would not succeed", with the reason, and the card stays open. |
+| **A receipt, not an acknowledgement** | `EXECUTED` requires a transaction hash and a status read back off the chain. A failure is stamped `VOID` and never dressed up. |
+| **Voice** | The same copilot out loud, with the same cards. It can read, propose and preview — it can never authorize. That takes a click. |
+| **Automations from a sentence** | All six KeeperHub trigger types. Saved switched **off**; a second, separate click starts it. |
+| **A record that outlives the chat** | Executions are written to a ledger separate from the transcript, so deleting a conversation never deletes the evidence. |
+| **Shareable receipts** | Public onchain facts only — never the chat, never the org. Revocable for good. |
+
+## Documentation
+
+The full guide is in the app. It is written for people using it, not for developers.
+
+| What you want | Page |
+| --- | --- |
+| What this even is | [What this is](https://keeperhub-copilot-v2.vercel.app/docs) |
+| Sign in and fund the wallet | [Connect KeeperHub](https://keeperhub-copilot-v2.vercel.app/docs/start/connect) |
+| Ask something that costs nothing | [Ask your first question](https://keeperhub-copilot-v2.vercel.app/docs/start/first-answer) |
+| Move value, end to end | [Your first action](https://keeperhub-copilot-v2.vercel.app/docs/start/first-action) |
+| Read any card and every stamp | [The cards](https://keeperhub-copilot-v2.vercel.app/docs/use/cards) |
+| Talk to it | [Talking to it](https://keeperhub-copilot-v2.vercel.app/docs/use/voice) |
+| Build something that keeps running | [Automations](https://keeperhub-copilot-v2.vercel.app/docs/use/automations) |
+| Find what ran, and share a receipt | [History and Activity](https://keeperhub-copilot-v2.vercel.app/docs/use/record) |
+| Use it in your language | [Your language](https://keeperhub-copilot-v2.vercel.app/docs/use/language) |
+| How it connects to KeeperHub | [Architecture](https://keeperhub-copilot-v2.vercel.app/docs/how/architecture) |
+| Point your own client at KeeperHub | [MCP setup](https://keeperhub-copilot-v2.vercel.app/docs/builders/mcp) |
+| Run your own copy | [Run it yourself](https://keeperhub-copilot-v2.vercel.app/docs/builders/self-host) |
+| A word you do not know | [Glossary](https://keeperhub-copilot-v2.vercel.app/docs/help/glossary) · [When it looks wrong](https://keeperhub-copilot-v2.vercel.app/docs/help/troubleshooting) |
+
+## How the parts connect
+
+<p align="center">
+  <a href="https://keeperhub-copilot-v2.vercel.app/docs/how/architecture">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/architecture-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="docs/assets/architecture-light.svg" />
+      <img src="docs/assets/architecture-dark.svg" width="960" alt="You ask in the browser. The chat picks an action and every call goes through one door. A question goes straight through to KeeperHub. Anything that moves value stops as a card and waits for your click. Once you authorize, KeeperHub runs it, the org wallet signs it and it lands on the chain. The receipt is read back off the chain and kept in the ledger." />
+    </picture>
+  </a>
+</p>
+
+- **One door.** Every tool the model can call goes through a single function, `routeToolCall` in
+  [`lib/execution/index.ts`](lib/execution/index.ts). Not most of them — all of them. The AI SDK has
+  no path to KeeperHub around it. The door resolves the action, gates it by effect, validates the
+  arguments against the action's own schema, calls KeeperHub, and maps whatever comes back.
+- **Reads pass, writes stop.** The effect classification comes from KeeperHub's registry, not from a
+  hand-maintained list. Anything the classifier cannot place is quarantined and refuses to run.
+- **Arguments freeze when the card renders.** What executes is what you approved, field for field.
+  Editing re-runs the dry run and re-arms the button, so an edit cannot slip past the look you took.
+- **Nothing throws.** A refusal, a rate limit and a failure all return as structured output the model
+  can explain, so the conversation continues instead of dying.
+
+## How this uses KeeperHub
+
+Every surface, what it is used for, and where to read the code.
+
+| KeeperHub surface | Used for | Code |
+| --- | --- | --- |
+| **MCP server** (streamable HTTP, JSON-RPC) | Every read and every write. A hand-rolled client — deliberately **not** `@ai-sdk/mcp`, whose `.tools()` would auto-execute around the gate. | [`lib/mcp/index.ts`](lib/mcp/index.ts) · [`lib/mcp/wire.ts`](lib/mcp/wire.ts) |
+| **Action registry** | All 442 tools are generated from KeeperHub's own registry and pinned to snapshot `sha256:a53bf5a5…` (source commit `9d510a1`). CI rejects hand edits. | [`lib/registry/`](lib/registry/) · [`scripts/generate-registry.ts`](scripts/generate-registry.ts) |
+| **Dry run / simulate** | The check on every write card before it can be authorized. | [`app/api/chat/simulate`](app/api/chat/simulate) · [`components/cards/write-card-parts.tsx`](components/cards/write-card-parts.tsx) |
+| **Execution + receipt poll** | A protocol write returns `202 {executionId, status}` and settles out of band, so the app polls for the terminal state and its transaction hash rather than trusting the ack. | [`lib/execution/index.ts`](lib/execution/index.ts) |
+| **Agent-authored workflows** | Automations composed from a sentence, across all six trigger types, saved off and started by a second click. | [`lib/automations/`](lib/automations/) · [`components/cards/automation-card.tsx`](components/cards/automation-card.tsx) |
+| **Audit trail** | This app's own ledger, written as durable facts separate from the transcript. | [`lib/ledger/`](lib/ledger/) · [`components/pages/activity.tsx`](components/pages/) |
+| **OAuth sign-in** | KeeperHub is the identity provider; the org's Turnkey wallet signs. No key is held here. | [`lib/session/`](lib/session/) · [`app/api/auth`](app/api/auth) |
+| **Org wallet + holdings** | The assistant knows the org's EVM and Solana addresses and reads its holdings, so it never asks you for your own address. | [`lib/wallet/`](lib/wallet/) · [`lib/holdings.ts`](lib/holdings.ts) |
+
+## Running it yourself
+
+```bash
+pnpm install
+cp .env.example .env.local   # then fill it in
+pnpm dev
+```
+
+The eight settings are documented on [Run it yourself](https://keeperhub-copilot-v2.vercel.app/docs/builders/self-host).
+The copilot signs in with KeeperHub, so it needs only its own settings — the sign-in client is
+registered against one exact callback address, so a copy running elsewhere needs its own.
+
+```bash
+pnpm typecheck && pnpm lint && pnpm test   # 975 tests in 83 files
+pnpm build
+```
+
+**Stack.** Next.js 16 (App Router) · React 19 · TypeScript 5 · Tailwind v4 (CSS-first) · Base UI ·
+Vercel AI SDK with OpenAI · OpenAI Realtime for voice · Drizzle + Postgres · next-intl (13 locales) ·
+Vitest.
+
+## What is unfinished
+
+Candidly, because a README that only lists wins is not much use to anyone picking this up.
+
+- **The nine documentation screen captures are not taken.** Each renders a "capture pending"
+  placeholder rather than a broken image. The pages read without them.
+- **The 12 translations are machine-produced** and complete — key parity, ICU arguments and rich-text
+  tags are enforced by `tests/i18n/messages.test.ts` — but **none has been reviewed by a native
+  speaker**. Noted per language in [`messages/REVIEW-NOTES.md`](messages/REVIEW-NOTES.md).
+- **The sign-in screen still says "Insert your credentials"**, which is wrong: nothing is inserted,
+  you click one button. Rewording it touches all 13 locales.
+- **Interface sound is new and lightly exercised.** Cues fire on the write ceremony, the form card and
+  voice; reads are deliberately silent.
+- **Mainnet is untested at scale.** Development and the walkthroughs run on **Base Sepolia**. Real
+  protocol writes have been executed through KeeperHub on the hosted app (Aave v3 supply/borrow,
+  WETH deposit, ERC-20 approve), but this has not been run in volume against mainnet.
+- **No automated end-to-end browser test.** The suite is unit and integration; the walk is manual.
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).
