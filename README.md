@@ -12,6 +12,8 @@
 <p align="center">Everything KeeperHub does. Just ask.</p>
 
 <p align="center">
+  <a href="https://youtu.be/SKPaus_YVHI"><b>▶ Watch the demo</b></a>
+  &nbsp;·&nbsp;
   <a href="https://keeperhub-copilot-v2.vercel.app"><b>Open the app</b></a>
   &nbsp;·&nbsp;
   <a href="https://keeperhub-copilot-v2.vercel.app/docs"><b>Documentation</b></a>
@@ -36,6 +38,24 @@ then — on your click — asks KeeperHub to execute. The receipt is read back o
 
 There is no browser wallet. You sign in with KeeperHub over OAuth; the organisation's Turnkey wallet
 signs.
+
+## Watch it work
+
+<p align="center">
+  <a href="https://youtu.be/SKPaus_YVHI">
+    <img src="https://raw.githubusercontent.com/Blockchain-Oracle/keeperhub-copilot-v2/main/docs/assets/brand/copilot-demo-cover.jpg" width="720" alt="Play the KeeperHub Copilot demo on YouTube. Just ask. Check the card. Watch it land." />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://youtu.be/SKPaus_YVHI"><b>▶ Watch the demo on YouTube · 4:51</b></a>
+</p>
+
+Under five minutes, all on the hosted app: signing in with KeeperHub, then a transfer that stops on a
+card — dry-run first, amount and address edited, then authorized — and the same transfer showing up in
+KeeperHub's own dashboard. After that, an automation from one sentence ("tell me when gas drops below
+20 gwei") switched on and listed among KeeperHub's workflows, and the whole app switched into Japanese.
+Last, a voice session that sets up a transfer but still waits for your click — and then answers in French.
 
 ## "KeeperHub already has an MCP"
 
