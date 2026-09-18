@@ -27,6 +27,12 @@
 
 ---
 
+<p align="center">
+  <a href="https://keeperhub-copilot-v2.vercel.app/app">
+    <img src="https://raw.githubusercontent.com/Blockchain-Oracle/keeperhub-copilot-v2/main/docs/assets/brand/copilot-app-home.png" width="960" alt="The KeeperHub Copilot app: KeeperHub online on 24 networks, 'What should KeeperHub do for you?', and a fan of cards to start from — Prices, Your org wallet, Send to yourself with its Approve and Cancel, Liquid staking and Rocket Pool — above the Ask KeeperHub box." />
+  </a>
+</p>
+
 **KeeperHub** automates anything onchain — it reads prices and balances, moves tokens, drives lending
 and staking protocols, and keeps workflows running on a schedule, a contract event or a payment. It
 signs with your organisation's own non-custodial wallet and handles gas, nonces, ordering and retries.
