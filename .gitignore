@@ -3,8 +3,8 @@ node_modules/
 .env
 .env.*
 !.env.example
-references/*/
-!references/README.md
+# reference repos and working notes — local only, never published
+references/
 .DS_Store
 *.log
 .playwright-mcp/

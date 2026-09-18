@@ -37,6 +37,31 @@ then — on your click — asks KeeperHub to execute. The receipt is read back o
 There is no browser wallet. You sign in with KeeperHub over OAuth; the organisation's Turnkey wallet
 signs.
 
+## "KeeperHub already has an MCP"
+
+It does, and this is built on it. Every read and write here goes through KeeperHub's own MCP server.
+The difference is who gets to use it.
+
+KeeperHub's MCP is for developers who already live in an AI client. You create a `kh_` API key, wire
+it into Claude Code or Cursor, and what comes back is JSON — the server answers every tool call as
+`{ type: "text", text: JSON.stringify(data, null, 2) }`
+([`lib/mcp/tools.ts`](https://github.com/KeeperHub/keeperhub/blob/staging/lib/mcp/tools.ts) in
+KeeperHub's repo). The one AI feature inside KeeperHub's own app generates edits to the workflow
+canvas; it does not answer questions or run actions. And there is no language but English.
+
+KeeperHub Copilot is KeeperHub for everyone else.
+
+| | KeeperHub MCP | KeeperHub Copilot |
+| --- | --- | --- |
+| **Who it is for** | Developers with an AI client and an API key | Anyone with a KeeperHub account |
+| **Getting started** | Create a `kh_` key, configure Claude Code or Cursor | Open a browser, sign in with KeeperHub |
+| **What an answer looks like** | Pretty-printed JSON | A card — a price with its feed and history, a balance, a receipt |
+| **Before value moves** | Whatever your client happens to ask | Every field shown and editable, KeeperHub's dry run, the button re-arms on any edit |
+| **After value moves** | An execution id | The receipt read back off the chain, `EXECUTED` or `VOID`, an explorer link, a permanent ledger |
+| **Languages** | English | 13 — the screens, the answers and the voice |
+| **Voice** | — | A full voice session that can propose but never authorize |
+| **Automations** | Tool calls, or AI-generated canvas edits | One sentence in chat, saved off, switched on with a click |
+
 ## What it does
 
 | | |
