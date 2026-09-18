@@ -84,7 +84,6 @@
       "checking": "verificando KeeperHub"
     },
     "greeting": "¿Qué quieres que KeeperHub haga por ti?",
-    "intro": "Pide un precio, un saldo o una transferencia. Las lecturas responden de inmediato; <b>todo lo que mueve valor espera tu clic.</b> O empieza con una tarjeta de abajo.",
     "orPickACard": "O elige una tarjeta",
     "quoted": "“{text}”",
     "askThis": "pedir esto",

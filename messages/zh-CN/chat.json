@@ -84,7 +84,6 @@
       "checking": "正在检查 KeeperHub"
     },
     "greeting": "想让 KeeperHub 为你做什么？",
-    "intro": "询问价格、余额，或发起转账。读取会立即作答；<b>任何转移资产的操作都会等你点击。</b>也可以从下方的卡片开始。",
     "orPickACard": "或选择一张卡片",
     "quoted": "“{text}”",
     "askThis": "问这个",

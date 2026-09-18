@@ -84,7 +84,6 @@
       "checking": "prüfe KeeperHub"
     },
     "greeting": "Was soll KeeperHub für dich tun?",
-    "intro": "Frag nach einem Preis, einem Guthaben oder einem Transfer. Abfragen antworten sofort; <b>alles, was Werte bewegt, wartet auf deinen Klick.</b> Oder starte mit einer Karte unten.",
     "orPickACard": "Oder wähl eine Karte",
     "quoted": "„{text}“",
     "askThis": "das fragen",

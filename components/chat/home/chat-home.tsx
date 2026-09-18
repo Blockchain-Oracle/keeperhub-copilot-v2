@@ -24,7 +24,9 @@ import type { MotifFacts } from "./motifs";
  * signed out), so it has no connect modal of its own. From md up the cards are
  * the landing's (see category-card.tsx) fanned in the landing's "What comes
  * back" stack — drag it, click a card or a dot to bring it forward — where
- * DeepBookie has an edge-to-edge rail. Abu, 2026-09-18: no scrolling sideways.
+ * DeepBookie has an edge-to-edge rail. Abu, 2026-09-18: no scrolling sideways,
+ * and no scrolling down either — the whole launcher fits the screen, so the
+ * intro line under the greeting is gone and the stack takes the height left.
  */
 
 const CATALOG_LABELS = ["Aave V3", "Uniswap V3"];
@@ -76,22 +78,19 @@ export function ChatHome({
   const [stage, size] = useStackSize();
 
   return (
-    <div className="py-8">
-      <div className="px-4 text-center">
-        <div className="mb-3.5 inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-[5px]">
+    <div className="flex h-full min-h-0 flex-col pt-4 pb-2">
+      <div className="shrink-0 px-4 text-center">
+        <div className="mb-2.5 inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-[5px]">
           <span aria-hidden className={cn("size-1.5 rounded-full", dot)} />
           <span className="font-mono text-[10.5px] text-fg-secondary">{label}</span>
         </div>
         <h2 className="font-display text-[22px] font-medium tracking-[-0.025em] text-foreground">
           {t("greeting")}
         </h2>
-        <p className="mx-auto mt-1.5 max-w-[440px] text-[13.5px] leading-[1.45] text-fg-secondary">
-          {t.rich("intro", { b: (chunks) => <b className="font-semibold text-foreground">{chunks}</b> })}
-        </p>
       </div>
 
       {/* md and up: the landing's cards in the landing's stack. */}
-      <div ref={stage} className="mx-auto mt-2 hidden w-[75%] max-w-[1180px] md:block">
+      <div ref={stage} className="mx-auto hidden min-h-0 w-[75%] max-w-[1180px] flex-1 flex-col justify-center md:flex">
         <CardStack
           key={size.maxVisible}
           items={categories}
@@ -105,6 +104,7 @@ export function ChatHome({
           intervalMs={4200}
           pauseOnHover
           showDots
+          minStageHeight={0}
           renderCard={(category, { active }) => (
             <CategoryCard category={category} facts={facts} active={active} onAction={onAction} />
           )}
@@ -132,27 +132,33 @@ export function ChatHome({
 
 /*
  * The landing's stack sizing (components/landing/cards.tsx) for portrait
- * cards: the stage is measured and the fan scales with it, so it always sits
- * inside its three quarters of the page.
+ * cards, measured on both axes: the fan fits its three quarters of the page
+ * across, and the height left under the greeting down, so nothing scrolls.
  */
+const DOTS = 44; // the dots row under the stage
+const ARC = 80; // what the stage adds to a card for the fan's arc and lift
+
 function useStackSize() {
   const stage = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(1024);
+  const [room, setRoom] = useState({ width: 1024, height: 520 });
 
   useEffect(() => {
     const el = stage.current;
     if (!el) return;
-    const observer = new ResizeObserver(([entry]) => setWidth(entry.contentRect.width));
+    const observer = new ResizeObserver(([entry]) =>
+      setRoom({ width: entry.contentRect.width, height: entry.contentRect.height }),
+    );
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
-  const wide = width >= 820;
+  const wide = room.width >= 820;
   const maxVisible = wide ? 5 : 3;
   const overlap = wide ? 0.46 : 0.55;
   // The fan spans the front card plus (maxVisible - 1) steps of the uncovered part of a card.
-  const fit = width / (1 + (maxVisible - 1) * (1 - overlap));
-  const cardWidth = Math.round(Math.max(230, Math.min(280, fit)));
+  const across = room.width / (1 + (maxVisible - 1) * (1 - overlap));
+  const down = (room.height - DOTS - ARC) / 1.2;
+  const cardWidth = Math.round(Math.max(200, Math.min(280, across, down)));
   return [
     stage,
     {

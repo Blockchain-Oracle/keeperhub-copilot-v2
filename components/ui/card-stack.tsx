@@ -71,6 +71,8 @@ export type CardStackProps<T extends CardStackItem> = {
 
   /** UI */
   showDots?: boolean;
+  /** The stage's minimum height; the chat home sizes its stack to the screen and passes 0. */
+  minStageHeight?: number;
   className?: string;
 
   /** Hooks */
@@ -127,6 +129,7 @@ export function CardStack<T extends CardStackItem>({
   pauseOnHover = true,
 
   showDots = true,
+  minStageHeight = 380,
   className,
 
   onChangeIndex,
@@ -214,7 +217,7 @@ export function CardStack<T extends CardStackItem>({
       {/* Stage */}
       <div
         className="relative w-full"
-        style={{ height: Math.max(380, cardHeight + 80) }}
+        style={{ height: Math.max(minStageHeight, cardHeight + 80) }}
         tabIndex={0}
         onKeyDown={onKeyDown}
       >

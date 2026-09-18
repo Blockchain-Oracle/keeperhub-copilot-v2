@@ -84,7 +84,6 @@
       "checking": "KeeperHub 확인 중"
     },
     "greeting": "KeeperHub가 무엇을 해 드릴까요?",
-    "intro": "가격, 잔액, 전송을 요청해 보세요. 읽기는 바로 답하고, <b>자산을 옮기는 작업은 클릭할 때까지 기다립니다.</b> 아래 카드에서 시작할 수도 있습니다.",
     "orPickACard": "또는 카드를 선택하세요",
     "quoted": "“{text}”",
     "askThis": "이걸 물어보기",

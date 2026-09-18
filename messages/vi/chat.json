@@ -84,7 +84,6 @@
       "checking": "đang kiểm tra KeeperHub"
     },
     "greeting": "Bạn muốn KeeperHub làm gì?",
-    "intro": "Hỏi giá, số dư hoặc chuyển tiền. Thao tác đọc trả lời ngay; <b>mọi thao tác chuyển giá trị đều chờ bạn bấm.</b> Hoặc bắt đầu từ một thẻ bên dưới.",
     "orPickACard": "Hoặc chọn một thẻ",
     "quoted": "“{text}”",
     "askThis": "hỏi câu này",

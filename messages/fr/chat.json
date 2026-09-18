@@ -84,7 +84,6 @@
       "checking": "vérification de KeeperHub"
     },
     "greeting": "Que peut faire KeeperHub pour vous ?",
-    "intro": "Demandez un prix, un solde ou un transfert. Les lectures répondent immédiatement ; <b>tout ce qui déplace des fonds attend votre clic.</b> Ou partez d’une carte ci-dessous.",
     "orPickACard": "Ou choisissez une carte",
     "quoted": "« {text} »",
     "askThis": "demander ça",
