@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://keeperhub-copilot-v2.vercel.app">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="docs/assets/banner-light.svg" />
-      <img src="docs/assets/banner-dark.svg" width="960" alt="KeeperHub Copilot — everything KeeperHub does, just ask. 442 actions, 34 integrations, 24 networks, 13 languages." />
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/brand/copilot-banner-dark.png" />
+      <source media="(prefers-color-scheme: light)" srcset="docs/assets/brand/copilot-banner-light.png" />
+      <img src="docs/assets/brand/copilot-banner-dark.png" width="960" alt="KeeperHub Copilot — everything KeeperHub does, just ask. 442 actions, 34 integrations, 24 networks, 13 languages." />
     </picture>
   </a>
 </p>
@@ -100,9 +100,9 @@ The full guide is in the app. It is written for people using it, not for develop
 <p align="center">
   <a href="https://keeperhub-copilot-v2.vercel.app/docs/how/architecture">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/architecture-dark.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="docs/assets/architecture-light.svg" />
-      <img src="docs/assets/architecture-dark.svg" width="960" alt="You ask in the browser. The chat picks an action and every call goes through one door. A question goes straight through to KeeperHub. Anything that moves value stops as a card and waits for your click. Once you authorize, KeeperHub runs it, the org wallet signs it and it lands on the chain. The receipt is read back off the chain and kept in the ledger." />
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/brand/copilot-architecture-dark.png" />
+      <source media="(prefers-color-scheme: light)" srcset="docs/assets/brand/copilot-architecture-light.png" />
+      <img src="docs/assets/brand/copilot-architecture-dark.png" width="960" alt="You ask in the browser. The chat picks an action and every call goes through one door. A question goes straight through to KeeperHub. Anything that moves value stops as a card and waits for your click. Once you authorize, KeeperHub runs it, the org wallet signs it and it lands on the chain. The receipt is read back off the chain and kept in the ledger." />
     </picture>
   </a>
 </p>
