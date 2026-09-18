@@ -14,3 +14,15 @@ references/*/
 
 # August planning artefacts — parked, never pushed
 legacy/
+
+# AI-assist and planning material — kept on disk, never published
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+PROMPT*.md
+PROMPT*.MD
+.claude/
+.cursor/
+.thoughts/
+docs/*.md
+messages/*.md

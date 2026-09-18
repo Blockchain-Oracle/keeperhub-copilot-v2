@@ -177,8 +177,8 @@ Candidly, because a README that only lists wins is not much use to anyone pickin
 - **The nine documentation screen captures are not taken.** Each renders a "capture pending"
   placeholder rather than a broken image. The pages read without them.
 - **The 12 translations are machine-produced** and complete — key parity, ICU arguments and rich-text
-  tags are enforced by `tests/i18n/messages.test.ts` — but **none has been reviewed by a native
-  speaker**. Noted per language in [`messages/REVIEW-NOTES.md`](messages/REVIEW-NOTES.md).
+  tags are enforced by [`tests/i18n/messages.test.ts`](tests/i18n/messages.test.ts) — but **none has
+  been reviewed by a native speaker**.
 - **The sign-in screen still says "Insert your credentials"**, which is wrong: nothing is inserted,
   you click one button. Rewording it touches all 13 locales.
 - **Interface sound is new and lightly exercised.** Cues fire on the write ceremony, the form card and
