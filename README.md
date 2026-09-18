@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://keeperhub-copilot-v2.vercel.app">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/brand/copilot-banner-dark.png" />
-      <source media="(prefers-color-scheme: light)" srcset="docs/assets/brand/copilot-banner-light.png" />
-      <img src="docs/assets/brand/copilot-banner-dark.png" width="960" alt="KeeperHub Copilot — everything KeeperHub does, just ask. 442 actions, 34 integrations, 24 networks, 13 languages." />
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Blockchain-Oracle/keeperhub-copilot-v2/main/docs/assets/brand/copilot-banner-dark.png" />
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Blockchain-Oracle/keeperhub-copilot-v2/main/docs/assets/brand/copilot-banner-light.png" />
+      <img src="https://raw.githubusercontent.com/Blockchain-Oracle/keeperhub-copilot-v2/main/docs/assets/brand/copilot-banner-dark.png" width="960" alt="KeeperHub Copilot — everything KeeperHub does, just ask. 442 actions, 34 integrations, 24 networks, 13 languages." />
     </picture>
   </a>
 </p>
@@ -100,15 +100,15 @@ The full guide is in the app. It is written for people using it, not for develop
 <p align="center">
   <a href="https://keeperhub-copilot-v2.vercel.app/docs/how/architecture">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/brand/copilot-architecture-dark.png" />
-      <source media="(prefers-color-scheme: light)" srcset="docs/assets/brand/copilot-architecture-light.png" />
-      <img src="docs/assets/brand/copilot-architecture-dark.png" width="960" alt="You ask in the browser. The chat picks an action and every call goes through one door. A question goes straight through to KeeperHub. Anything that moves value stops as a card and waits for your click. Once you authorize, KeeperHub runs it, the org wallet signs it and it lands on the chain. The receipt is read back off the chain and kept in the ledger." />
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Blockchain-Oracle/keeperhub-copilot-v2/main/docs/assets/brand/copilot-architecture-dark.png" />
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Blockchain-Oracle/keeperhub-copilot-v2/main/docs/assets/brand/copilot-architecture-light.png" />
+      <img src="https://raw.githubusercontent.com/Blockchain-Oracle/keeperhub-copilot-v2/main/docs/assets/brand/copilot-architecture-dark.png" width="960" alt="You ask in the browser. The chat picks an action and every call goes through one door. A question goes straight through to KeeperHub. Anything that moves value stops as a card and waits for your click. Once you authorize, KeeperHub runs it, the org wallet signs it and it lands on the chain. The receipt is read back off the chain and kept in the ledger." />
     </picture>
   </a>
 </p>
 
 - **One door.** Every tool the model can call goes through a single function, `routeToolCall` in
-  [`lib/execution/index.ts`](lib/execution/index.ts). Not most of them — all of them. The AI SDK has
+  [`lib/execution/index.ts`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/blob/main/lib/execution/index.ts). Not most of them — all of them. The AI SDK has
   no path to KeeperHub around it. The door resolves the action, gates it by effect, validates the
   arguments against the action's own schema, calls KeeperHub, and maps whatever comes back.
 - **Reads pass, writes stop.** The effect classification comes from KeeperHub's registry, not from a
@@ -124,14 +124,14 @@ Every surface, what it is used for, and where to read the code.
 
 | KeeperHub surface | Used for | Code |
 | --- | --- | --- |
-| **MCP server** (streamable HTTP, JSON-RPC) | Every read and every write. A hand-rolled client — deliberately **not** `@ai-sdk/mcp`, whose `.tools()` would auto-execute around the gate. | [`lib/mcp/index.ts`](lib/mcp/index.ts) · [`lib/mcp/wire.ts`](lib/mcp/wire.ts) |
-| **Action registry** | All 442 tools are generated from KeeperHub's own registry and pinned to snapshot `sha256:a53bf5a5…` (source commit `9d510a1`). CI rejects hand edits. | [`lib/registry/`](lib/registry/) · [`scripts/generate-registry.ts`](scripts/generate-registry.ts) |
-| **Dry run / simulate** | The check on every write card before it can be authorized. | [`app/api/chat/simulate`](app/api/chat/simulate) · [`components/cards/write-card-parts.tsx`](components/cards/write-card-parts.tsx) |
-| **Execution + receipt poll** | A protocol write returns `202 {executionId, status}` and settles out of band, so the app polls for the terminal state and its transaction hash rather than trusting the ack. | [`lib/execution/index.ts`](lib/execution/index.ts) |
-| **Agent-authored workflows** | Automations composed from a sentence, across all six trigger types, saved off and started by a second click. | [`lib/automations/`](lib/automations/) · [`components/cards/automation-card.tsx`](components/cards/automation-card.tsx) |
-| **Audit trail** | This app's own ledger, written as durable facts separate from the transcript. | [`lib/ledger/`](lib/ledger/) · [`components/pages/activity.tsx`](components/pages/) |
-| **OAuth sign-in** | KeeperHub is the identity provider; the org's Turnkey wallet signs. No key is held here. | [`lib/session/`](lib/session/) · [`app/api/auth`](app/api/auth) |
-| **Org wallet + holdings** | The assistant knows the org's EVM and Solana addresses and reads its holdings, so it never asks you for your own address. | [`lib/wallet/`](lib/wallet/) · [`lib/holdings.ts`](lib/holdings.ts) |
+| **MCP server** (streamable HTTP, JSON-RPC) | Every read and every write. A hand-rolled client — deliberately **not** `@ai-sdk/mcp`, whose `.tools()` would auto-execute around the gate. | [`lib/mcp/index.ts`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/blob/main/lib/mcp/index.ts) · [`lib/mcp/wire.ts`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/blob/main/lib/mcp/wire.ts) |
+| **Action registry** | All 442 tools are generated from KeeperHub's own registry and pinned to snapshot `sha256:a53bf5a5…` (source commit `9d510a1`). CI rejects hand edits. | [`lib/registry/`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/tree/main/lib/registry) · [`scripts/generate-registry.ts`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/blob/main/scripts/generate-registry.ts) |
+| **Dry run / simulate** | The check on every write card before it can be authorized. | [`app/api/chat/simulate`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/tree/main/app/api/chat/simulate) · [`components/cards/write-card-parts.tsx`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/blob/main/components/cards/write-card-parts.tsx) |
+| **Execution + receipt poll** | A protocol write returns `202 {executionId, status}` and settles out of band, so the app polls for the terminal state and its transaction hash rather than trusting the ack. | [`lib/execution/index.ts`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/blob/main/lib/execution/index.ts) |
+| **Agent-authored workflows** | Automations composed from a sentence, across all six trigger types, saved off and started by a second click. | [`lib/automations/`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/tree/main/lib/automations) · [`components/cards/automation-card.tsx`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/blob/main/components/cards/automation-card.tsx) |
+| **Audit trail** | This app's own ledger, written as durable facts separate from the transcript. | [`lib/ledger/`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/tree/main/lib/ledger) · [`components/pages/activity.tsx`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/tree/main/components/pages) |
+| **OAuth sign-in** | KeeperHub is the identity provider; the org's Turnkey wallet signs. No key is held here. | [`lib/session/`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/tree/main/lib/session) · [`app/api/auth`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/tree/main/app/api/auth) |
+| **Org wallet + holdings** | The assistant knows the org's EVM and Solana addresses and reads its holdings, so it never asks you for your own address. | [`lib/wallet/`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/tree/main/lib/wallet) · [`lib/holdings.ts`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/blob/main/lib/holdings.ts) |
 
 ## Execution evidence
 
@@ -171,7 +171,7 @@ Network: **Ethereum Sepolia (11155111)**. This is testnet; see [What is unfinish
 
 `verified: true` is the point. The app polls KeeperHub for the terminal state and reads the receipt
 off the chain; a card only reaches `EXECUTED` once that has come back. See
-[`lib/execution/index.ts`](lib/execution/index.ts).
+[`lib/execution/index.ts`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/blob/main/lib/execution/index.ts).
 </details>
 
 ## Running it yourself
@@ -202,7 +202,7 @@ Candidly, because a README that only lists wins is not much use to anyone pickin
 - **The nine documentation screen captures are not taken.** Each renders a "capture pending"
   placeholder rather than a broken image. The pages read without them.
 - **The 12 translations are machine-produced** and complete — key parity, ICU arguments and rich-text
-  tags are enforced by [`tests/i18n/messages.test.ts`](tests/i18n/messages.test.ts) — but **none has
+  tags are enforced by [`tests/i18n/messages.test.ts`](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/blob/main/tests/i18n/messages.test.ts) — but **none has
   been reviewed by a native speaker**.
 - **The sign-in screen still says "Insert your credentials"**, which is wrong: nothing is inserted,
   you click one button. Rewording it touches all 13 locales.
@@ -215,4 +215,4 @@ Candidly, because a README that only lists wins is not much use to anyone pickin
 
 ## Licence
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](https://github.com/Blockchain-Oracle/keeperhub-copilot-v2/blob/main/LICENSE).
