@@ -113,5 +113,14 @@
       "title": "This receipt isn't shared",
       "body": "The link was turned off, or it never existed."
     }
+  },
+  "notFound": {
+    "metaTitle": "Page not found",
+    "kicker": "404 · Page not found",
+    "title": "Nothing lives at <accent>this address.</accent>",
+    "body": "The link may be old or mistyped. Everything the copilot does is one question away in the app.",
+    "openApp": "Open the app",
+    "home": "Home page",
+    "docs": "Read the guide"
   }
 }

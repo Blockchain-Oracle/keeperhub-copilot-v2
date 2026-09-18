@@ -113,5 +113,14 @@
       "title": "Biên nhận này không được chia sẻ",
       "body": "Liên kết đã bị tắt, hoặc chưa từng tồn tại."
     }
+  },
+  "notFound": {
+    "metaTitle": "Không tìm thấy trang",
+    "kicker": "404 · Không tìm thấy trang",
+    "title": "Không có gì ở <accent>địa chỉ này.</accent>",
+    "body": "Liên kết có thể đã cũ hoặc bị gõ sai. Mọi việc copilot làm chỉ cách bạn một câu hỏi trong ứng dụng.",
+    "openApp": "Mở ứng dụng",
+    "home": "Trang chủ",
+    "docs": "Đọc hướng dẫn"
   }
 }

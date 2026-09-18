@@ -86,7 +86,9 @@
     "greeting": "What should KeeperHub do for you?",
     "intro": "Ask for a price, a balance or a transfer. Reads answer straight away; <b>anything that moves value waits for your click.</b> Or start from a card below.",
     "orPickACard": "Or pick a card",
-    "quoted": "“{text}”"
+    "quoted": "“{text}”",
+    "askThis": "ask this",
+    "open": "Open {name}"
   },
   "motifs": {
     "noOrgWallet": "no org wallet yet",

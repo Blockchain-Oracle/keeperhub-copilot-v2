@@ -86,7 +86,9 @@
     "greeting": "KeeperHub senin için ne yapsın?",
     "intro": "Bir fiyat, bakiye ya da transfer iste. Okumalar hemen yanıtlanır; <b>değer taşıyan her şey tıklamanı bekler.</b> Ya da aşağıdaki kartlardan biriyle başla.",
     "orPickACard": "Ya da bir kart seç",
-    "quoted": "“{text}”"
+    "quoted": "“{text}”",
+    "askThis": "bunu sor",
+    "open": "{name} sayfasını aç"
   },
   "motifs": {
     "noOrgWallet": "henüz kuruluş cüzdanı yok",

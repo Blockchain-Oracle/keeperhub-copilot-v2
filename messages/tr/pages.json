@@ -113,5 +113,14 @@
       "title": "Bu makbuz paylaşılmıyor",
       "body": "Bağlantı kapatıldı ya da hiç var olmadı."
     }
+  },
+  "notFound": {
+    "metaTitle": "Sayfa bulunamadı",
+    "kicker": "404 · Sayfa bulunamadı",
+    "title": "<accent>Bu adreste</accent> hiçbir şey yok.",
+    "body": "Bağlantı eski ya da yanlış yazılmış olabilir. Kopilotun yaptığı her şey uygulamada bir soru uzağında.",
+    "openApp": "Uygulamayı aç",
+    "home": "Ana sayfa",
+    "docs": "Kılavuzu oku"
   }
 }

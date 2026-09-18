@@ -113,5 +113,14 @@
       "title": "Tanda terima ini tidak dibagikan",
       "body": "Tautannya telah dinonaktifkan, atau tidak pernah ada."
     }
+  },
+  "notFound": {
+    "metaTitle": "Halaman tidak ditemukan",
+    "kicker": "404 · Halaman tidak ditemukan",
+    "title": "Tidak ada apa-apa di <accent>alamat ini.</accent>",
+    "body": "Tautannya mungkin sudah lama atau salah ketik. Semua yang dikerjakan copilot hanya berjarak satu pertanyaan di aplikasi.",
+    "openApp": "Buka aplikasi",
+    "home": "Beranda",
+    "docs": "Baca panduan"
   }
 }

@@ -39,7 +39,8 @@ export interface RailCardItem {
   onSelect?: () => void;
 }
 
-export function RailCard({ item, className }: { item: RailCardItem; className?: string }) {
+/** `lift: false` when something else moves the card, as the chat home's stack does. */
+export function RailCard({ item, className, lift = true }: { item: RailCardItem; className?: string; lift?: boolean }) {
   const body = (
     <>
       {/* top half — the living detail */}
@@ -97,7 +98,7 @@ export function RailCard({ item, className }: { item: RailCardItem; className?: 
       <motion.a
         href={item.href}
         className={shell}
-        whileHover={{ y: -8 }}
+        whileHover={lift ? { y: -8 } : undefined}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
         {body}
@@ -110,7 +111,7 @@ export function RailCard({ item, className }: { item: RailCardItem; className?: 
       type="button"
       onClick={item.onSelect}
       className={shell}
-      whileHover={{ y: -8 }}
+      whileHover={lift ? { y: -8 } : undefined}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
       {body}

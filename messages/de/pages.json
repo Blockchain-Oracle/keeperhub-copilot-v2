@@ -113,5 +113,14 @@
       "title": "Dieser Beleg ist nicht geteilt",
       "body": "Der Link wurde deaktiviert oder hat nie existiert."
     }
+  },
+  "notFound": {
+    "metaTitle": "Seite nicht gefunden",
+    "kicker": "404 · Seite nicht gefunden",
+    "title": "Unter <accent>dieser Adresse</accent> gibt es nichts.",
+    "body": "Der Link ist vielleicht veraltet oder vertippt. Alles, was der Copilot kann, ist in der App nur eine Frage entfernt.",
+    "openApp": "App öffnen",
+    "home": "Startseite",
+    "docs": "Zur Anleitung"
   }
 }

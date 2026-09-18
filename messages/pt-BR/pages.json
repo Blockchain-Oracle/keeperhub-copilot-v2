@@ -113,5 +113,14 @@
       "title": "Este recibo não está compartilhado",
       "body": "O link foi desativado ou nunca existiu."
     }
+  },
+  "notFound": {
+    "metaTitle": "Página não encontrada",
+    "kicker": "404 · Página não encontrada",
+    "title": "Não há nada <accent>neste endereço.</accent>",
+    "body": "O link pode estar antigo ou digitado errado. Tudo o que o copiloto faz está a uma pergunta de distância no app.",
+    "openApp": "Abrir o app",
+    "home": "Página inicial",
+    "docs": "Ler o guia"
   }
 }

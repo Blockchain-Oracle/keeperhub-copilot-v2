@@ -1,85 +1,127 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { useRef } from "react";
+
+import { IntegrationMark } from "@/components/data/integration-mark";
+import { Identicon } from "@/components/data/identicon";
+import { RailCard } from "@/components/ui/card-rail";
+import { cn } from "@/lib/utils";
 
 import type { Category } from "./categories";
-import { Motif, type MotifFacts } from "./motifs";
+import { CURVE, Motif, type MotifFacts } from "./motifs";
 
 /*
- * DeepBookie components/chat/chatHome/CategoryCard.tsx — one 246×188 rail card:
- * family dot and label, title, description, motif, the quoted prompt strip that
- * inverts on hover. Changes: Portaldot inks (ink hover → border-strong; the
- * strip inverts to primary, the action colour); the family label is mono like
- * Portaldot's meta strips; the entrance is Portaldot's `animate-rise` with
- * DeepBookie's stagger; no "Connect wallet to use" state, because signed out
- * the identity card stands where the launcher would be.
+ * One launcher card, as the landing draws its Ask cards: `RailCard`
+ * (components/ui/card-rail — the 21st offer-carousel anatomy), so the app's
+ * first screen and the landing's are the same card. Abu, 2026-09-18: the
+ * DeepBookie 246×188 rail cards were meant to become these in the revamp.
+ *
+ * What goes in each slot: the family dot and label on the tag row; the card's
+ * live motif in the top half, over the hairline grid the landing's visuals
+ * sit on; the words it will send (or where it goes) in the footer, beside the
+ * integration's own mark or the org wallet's identicon.
+ *
+ * It sits in the landing's card stack (chat-home.tsx), so only the card in
+ * front answers a click — a card behind it is brought forward by the stack —
+ * and a click that ends a drag is not a click.
  */
 
-const CARD =
-  "group relative flex h-[188px] w-[246px] shrink-0 snap-start flex-col overflow-hidden rounded-card border-[1.5px] border-card-bezel bg-card px-[15px] pt-[14px] pb-[13px] text-left shadow-[var(--lift-card)]";
-const HOVER =
-  "animate-rise cursor-pointer transition-[transform,box-shadow,border-color] duration-200 [transition-timing-function:cubic-bezier(.2,.7,.2,1)] hover:-translate-y-1 hover:border-card-bezel-strong hover:shadow-[var(--lift-card-hover)] focus-visible:outline-2 focus-visible:outline-ring active:-translate-y-px active:scale-[0.992]";
+/* Which footer mark a card wears: its integration's logo, or the org wallet. */
+const MARK: Record<string, string> = {
+  chainlink: "chainlink",
+  lido: "lido",
+  "rocket-pool": "rocket-pool",
+  sky: "sky",
+  discover: "search",
+};
 
-function Header({ category }: { category: Category }) {
-  return (
-    <div className="mb-2 flex items-center justify-between">
-      <span className="flex items-center gap-1.5">
-        <span className={`size-2 rounded-full ${category.dot}`} />
-        <span className="font-mono text-[8.5px] font-bold tracking-[0.1em] text-fg-muted uppercase">{category.familyLabel}</span>
-      </span>
-    </div>
-  );
-}
-
-function Body({ category, facts }: { category: Category; facts: MotifFacts }) {
-  return (
-    <>
-      <div className="mt-0.5 mb-[3px] text-[14.5px] font-bold tracking-[-0.02em] text-foreground">{category.title}</div>
-      <div className="text-[11.5px] leading-[1.35] text-fg-secondary">{category.description}</div>
-      <Motif kind={category.motif} facts={facts} />
-    </>
-  );
-}
-
-function Prompt({ text }: { text: string }) {
-  const t = useTranslations("chat.home");
-  return (
-    <div className="mt-auto flex items-center gap-1.5 rounded-[8px] border border-border bg-surface-2 px-2.5 py-[7px] font-mono text-[10.5px] text-fg-secondary transition-[background,color,border-color] duration-200 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground">
-      <span className="min-w-0 flex-1 truncate">{t("quoted", { text })}</span>
-      <span className="ml-auto flex-none transition-transform duration-200 group-hover:translate-x-0.5">→</span>
-    </div>
-  );
-}
+const WALLET_CARDS = new Set(["org-wallet", "send-to-self"]);
 
 export function CategoryCard({
   category,
-  index,
   facts,
+  active,
   onAction,
 }: {
   category: Category;
-  index: number;
   facts: MotifFacts;
+  active: boolean;
   onAction: (text: string) => void;
 }) {
-  const style = { animationDelay: `${0.04 + index * 0.06}s` } as const;
-
-  if (category.href) {
-    return (
-      <Link href={category.href} className={`${CARD} ${HOVER}`} style={style}>
-        <Header category={category} />
-        <Body category={category} facts={facts} />
-        <Prompt text={category.description} />
-      </Link>
-    );
-  }
+  const t = useTranslations("chat.home");
+  const router = useRouter();
+  const href = category.href;
+  const pressedAt = useRef<number | null>(null);
 
   return (
-    <button type="button" onClick={() => onAction(category.prompt ?? "")} className={`${CARD} ${HOVER}`} style={style}>
-      <Header category={category} />
-      <Body category={category} facts={facts} />
-      <Prompt text={category.prompt ?? ""} />
-    </button>
+    <div
+      className={cn("size-full", !active && "pointer-events-none")}
+      onPointerDownCapture={(event) => {
+        pressedAt.current = event.clientX;
+      }}
+      onClickCapture={(event) => {
+        const from = pressedAt.current;
+        if (from !== null && Math.abs(event.clientX - from) > 6) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      }}
+    >
+      <RailCard
+        lift={false}
+        className="size-full rounded-none border-0 shadow-none hover:shadow-none"
+        item={{
+          id: category.id,
+          tag: category.familyLabel,
+          tagIcon: <span aria-hidden className={cn("block size-2 rounded-full", category.dot)} />,
+          title: category.title,
+          description: category.description,
+          visual: <Visual category={category} facts={facts} />,
+          mark: <FooterMark category={category} walletAddress={facts.walletAddress} />,
+          markLabel: href ? t("open", { name: category.title }) : t("quoted", { text: category.prompt ?? "" }),
+          markSubLabel: href ? undefined : t("askThis"),
+          onSelect: href ? () => router.push(href) : () => onAction(category.prompt ?? ""),
+        }}
+      />
+    </div>
   );
+}
+
+/* The top half: the motif, larger, on the landing's hairline grid. The price
+   curve runs edge to edge instead, the way the landing's price card does. */
+function Visual({ category, facts }: { category: Category; facts: MotifFacts }) {
+  return (
+    <div className="relative size-full">
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-50 [background-image:linear-gradient(var(--border)_1px,transparent_1px),linear-gradient(90deg,var(--border)_1px,transparent_1px)] [background-size:16px_16px]"
+      />
+      {category.motif === "priceCurve" ? (
+        <svg
+          viewBox="0 0 200 40"
+          preserveAspectRatio="none"
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 h-[72%] w-full"
+        >
+          <path d={`${CURVE} L198 40 L2 40 Z`} className="fill-telemetry" opacity="0.12" />
+          <path d={CURVE} fill="none" className="stroke-telemetry" strokeWidth="1.6" vectorEffect="non-scaling-stroke" />
+        </svg>
+      ) : (
+        <div className="relative flex size-full items-center justify-center px-6">
+          <div className="w-full max-w-[220px] scale-[1.12]">
+            <Motif kind={category.motif} facts={facts} />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function FooterMark({ category, walletAddress }: { category: Category; walletAddress: string | null }) {
+  const integration = MARK[category.id];
+  if (integration) return <IntegrationMark integration={integration} size={22} />;
+  if (WALLET_CARDS.has(category.id) && walletAddress) return <Identicon address={walletAddress} size={22} />;
+  return null;
 }

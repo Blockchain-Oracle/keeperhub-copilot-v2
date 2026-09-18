@@ -23,7 +23,10 @@ import { DESKTOP_NAV, isActiveNavItem, navName, type NavGroup } from "./nav-item
  * `.nav*`), part-15.css (≤720px) and navigation.css (721–1040px, ≤380px).
  * Logo left; links, menus and the right-hand pills right. The header owns which
  * group menu is open, so only one ever is; menus close on route change and at
- * 720px or less. Changes: our wordmark and Portaldot's diamond; the theme
+ * 720px or less. Changes: the wordmark is the landing nav's, "KeeperHub
+ * Copilot", and like Masayume's logo it goes home — to the landing, since Chat
+ * already goes to /app (Abu, 2026-09-18: the logo that said "KEEPERHUB" and
+ * stayed in the app was the complaint); the theme
  * toggle is gone (dark only); a network pill sits before the money pill. Like
  * Masayume's, it mounts the funds modal and the one-time welcome (ours greets
  * an org's first receipt rather than a first credit).
@@ -51,12 +54,12 @@ export function Header() {
     <>
       <header className="fixed inset-x-0 top-[calc(var(--appstrip)+28px)] z-[800] flex h-16 items-center justify-between border-b border-border bg-background/96 px-8 backdrop-blur-[20px] min-[721px]:max-[1040px]:px-5 max-[720px]:top-[calc(var(--appstrip)+20px)] max-[720px]:h-[46px] max-[720px]:px-3.5 max-[380px]:gap-1 max-[380px]:px-2.5">
         <Link
-          href="/app"
+          href="/"
           aria-label="KeeperHub Copilot"
-          className="flex items-center gap-2.5 font-display text-[15px] font-bold tracking-[0.18em] text-foreground max-[720px]:gap-2 max-[720px]:text-sm max-[720px]:tracking-[0.12em] max-[380px]:gap-1.5 max-[380px]:text-[13px] max-[380px]:tracking-[0.09em]"
+          className="flex shrink-0 items-center gap-2.5 text-[15px] font-semibold tracking-tight text-foreground transition-opacity hover:opacity-80 max-[720px]:gap-2 max-[720px]:text-sm max-[380px]:gap-1.5 max-[380px]:text-[13px]"
         >
-          <KeeperHubMark className="h-[18px] text-neon max-[720px]:h-4" />
-          <span className="min-[721px]:max-[1040px]:hidden">KEEPERHUB</span>
+          <KeeperHubMark className="h-5 text-neon max-[720px]:h-4" />
+          <span className="whitespace-nowrap min-[721px]:max-[1040px]:hidden">KeeperHub Copilot</span>
         </Link>
 
         <nav aria-label={t("primary")} className="flex items-center gap-7 min-[721px]:max-[1040px]:gap-[1.1rem]">

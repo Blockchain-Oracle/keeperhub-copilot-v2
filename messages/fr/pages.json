@@ -113,5 +113,14 @@
       "title": "Ce reçu n’est pas partagé",
       "body": "Le lien a été désactivé, ou il n’a jamais existé."
     }
+  },
+  "notFound": {
+    "metaTitle": "Page introuvable",
+    "kicker": "404 · Page introuvable",
+    "title": "Il n'y a rien à <accent>cette adresse.</accent>",
+    "body": "Le lien est peut-être ancien ou mal saisi. Tout ce que fait le copilote n'est qu'à une question de vous dans l'app.",
+    "openApp": "Ouvrir l'app",
+    "home": "Page d'accueil",
+    "docs": "Lire le guide"
   }
 }

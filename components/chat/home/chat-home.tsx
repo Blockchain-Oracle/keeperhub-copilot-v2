@@ -1,11 +1,11 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { usePlatformChains } from "@/components/shell/use-platform-chains";
+import { CardStack } from "@/components/ui/card-stack";
 import { integrations, registryMeta } from "@/lib/registry/generated/meta";
-import { ScrollArrow, useRailScroll } from "@/components/ui/card-rail";
 import { cn } from "@/lib/utils";
 
 import type { Category } from "./categories";
@@ -16,13 +16,15 @@ import type { MotifFacts } from "./motifs";
 /*
  * DeepBookie components/chat/chatHome/ChatHome.tsx — the empty-conversation
  * launcher: a status pill, a greeting, then one set of cards in two layouts (a
- * snap-scrolling rail with edge fades from md up; a featured hero and a 2-column
- * grid on phones). Tapping a card sends its prompt.
+ * featured hero and a 2-column grid on phones). Tapping a card sends its prompt.
  *
  * Changes: the pill reports KeeperHub's live network list instead of "agent
  * online · reads live markets"; the greeting and every card are ours; Portaldot
  * inks and display face; it renders only signed in (the identity card covers
- * signed out), so it has no connect modal of its own.
+ * signed out), so it has no connect modal of its own. From md up the cards are
+ * the landing's (see category-card.tsx) fanned in the landing's "What comes
+ * back" stack — drag it, click a card or a dot to bring it forward — where
+ * DeepBookie has an edge-to-edge rail. Abu, 2026-09-18: no scrolling sideways.
  */
 
 const CATALOG_LABELS = ["Aave V3", "Uniswap V3"];
@@ -71,7 +73,7 @@ export function ChatHome({
         : [t("status.checking"), "bg-fg-muted/60"];
 
   const [hero, ...rest] = categories;
-  const { track, scroll } = useRailScroll();
+  const [stage, size] = useStackSize();
 
   return (
     <div className="py-8">
@@ -88,22 +90,25 @@ export function ChatHome({
         </p>
       </div>
 
-      {/* md and up: a horizontal rail with edge fades and arrows. The arrows
-          are the ones the landing's rail uses, so the two behave alike — it
-          used to be a bare scroll box with nothing to click. */}
-      <div className="group/rail relative mt-6 hidden md:block">
-        <ScrollArrow side="left" onClick={() => scroll("left")} />
-        <div
-          ref={track}
-          className="flex snap-x snap-mandatory gap-3.5 overflow-x-auto px-[18px] pt-1.5 pb-4 [scrollbar-color:var(--border-strong)_transparent] [scrollbar-width:thin]"
-        >
-          {categories.map((category, index) => (
-            <CategoryCard key={category.id} category={category} index={index} facts={facts} onAction={onAction} />
-          ))}
-        </div>
-        <div className="pointer-events-none absolute top-0 bottom-3.5 left-0 z-[2] w-[30px] bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute top-0 right-0 bottom-3.5 z-[2] w-[46px] bg-gradient-to-l from-background to-transparent" />
-        <ScrollArrow side="right" onClick={() => scroll("right")} />
+      {/* md and up: the landing's cards in the landing's stack. */}
+      <div ref={stage} className="mx-auto mt-2 hidden w-[75%] max-w-[1180px] md:block">
+        <CardStack
+          key={size.maxVisible}
+          items={categories}
+          initialIndex={0}
+          cardWidth={size.cardWidth}
+          cardHeight={size.cardHeight}
+          spreadDeg={size.spreadDeg}
+          maxVisible={size.maxVisible}
+          overlap={size.overlap}
+          autoAdvance
+          intervalMs={4200}
+          pauseOnHover
+          showDots
+          renderCard={(category, { active }) => (
+            <CategoryCard category={category} facts={facts} active={active} onAction={onAction} />
+          )}
+        />
       </div>
 
       {/* phones: a featured hero and a 2-column grid, no sideways scroll */}
@@ -123,4 +128,39 @@ export function ChatHome({
       )}
     </div>
   );
+}
+
+/*
+ * The landing's stack sizing (components/landing/cards.tsx) for portrait
+ * cards: the stage is measured and the fan scales with it, so it always sits
+ * inside its three quarters of the page.
+ */
+function useStackSize() {
+  const stage = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(1024);
+
+  useEffect(() => {
+    const el = stage.current;
+    if (!el) return;
+    const observer = new ResizeObserver(([entry]) => setWidth(entry.contentRect.width));
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const wide = width >= 820;
+  const maxVisible = wide ? 5 : 3;
+  const overlap = wide ? 0.46 : 0.55;
+  // The fan spans the front card plus (maxVisible - 1) steps of the uncovered part of a card.
+  const fit = width / (1 + (maxVisible - 1) * (1 - overlap));
+  const cardWidth = Math.round(Math.max(230, Math.min(280, fit)));
+  return [
+    stage,
+    {
+      cardWidth,
+      cardHeight: Math.round(cardWidth * 1.2),
+      spreadDeg: 12 * Math.floor(maxVisible / 2),
+      maxVisible,
+      overlap,
+    },
+  ] as const;
 }

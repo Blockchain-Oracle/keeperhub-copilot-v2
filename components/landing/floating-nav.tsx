@@ -56,7 +56,9 @@ export function FloatingNav() {
 					"transition-[max-width,height,padding] duration-500",
 					"px-3",
 					// max-width caps for desktop; on mobile we always span the width
-					"w-[calc(100%-1.5rem)] md:w-auto",
+					// w-max, not w-auto: centred with left-1/2, an auto width may only use the
+					// half of the screen right of centre, which squeezed "Open the app" onto two lines
+					"w-[calc(100%-1.5rem)] md:w-max",
 					compressed ? "md:max-w-[640px] h-11" : "md:max-w-[760px] h-14",
 				)}
 				style={{ transitionTimingFunction: "var(--ease-snap, cubic-bezier(0.32,0.72,0,1))" }}
@@ -69,7 +71,7 @@ export function FloatingNav() {
 					<KeeperHubMark className="h-5 text-neon" />
 					<span
 						className={cn(
-							"font-semibold tracking-tight text-sm transition-[opacity,width] duration-300 overflow-hidden",
+							"whitespace-nowrap font-semibold tracking-tight text-sm transition-[opacity,width] duration-300 overflow-hidden",
 							compressed ? "md:opacity-0 md:max-w-0" : "md:opacity-100 md:max-w-[140px]",
 						)}
 					>
@@ -109,7 +111,7 @@ export function FloatingNav() {
 				<Link
 					href="/app"
 					className={cn(
-						"hidden md:inline-flex items-center gap-1.5 ml-auto rounded-full",
+						"hidden md:inline-flex shrink-0 items-center gap-1.5 ml-auto whitespace-nowrap rounded-full",
 						"bg-primary hover:bg-primary-press text-primary-foreground",
 						"px-3.5 h-8 text-[13px] font-semibold",
 						"transition-[transform,filter] hover:-translate-y-px hover:brightness-110",

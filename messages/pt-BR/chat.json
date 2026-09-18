@@ -86,7 +86,9 @@
     "greeting": "O que o KeeperHub pode fazer por você?",
     "intro": "Peça um preço, um saldo ou uma transferência. Leituras respondem na hora; <b>tudo o que movimenta valor espera o seu clique.</b> Ou comece por um cartão abaixo.",
     "orPickACard": "Ou escolha um cartão",
-    "quoted": "“{text}”"
+    "quoted": "“{text}”",
+    "askThis": "pedir isso",
+    "open": "Abrir {name}"
   },
   "motifs": {
     "noOrgWallet": "ainda sem carteira da organização",

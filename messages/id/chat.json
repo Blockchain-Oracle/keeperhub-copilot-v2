@@ -86,7 +86,9 @@
     "greeting": "Apa yang bisa KeeperHub lakukan untuk Anda?",
     "intro": "Minta harga, saldo, atau transfer. Aksi baca langsung dijawab; <b>apa pun yang memindahkan dana menunggu klik Anda.</b> Atau mulai dari kartu di bawah.",
     "orPickACard": "Atau pilih kartu",
-    "quoted": "“{text}”"
+    "quoted": "“{text}”",
+    "askThis": "tanya ini",
+    "open": "Buka {name}"
   },
   "motifs": {
     "noOrgWallet": "belum ada dompet organisasi",
