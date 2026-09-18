@@ -1,34 +1,28 @@
 import { cn } from "@/lib/utils";
 
 /*
- * The Copilot's mark.
+ * The Copilot's mark: a jet climbing, lifting off KeeperHub's square.
  *
- * KeeperHub's own bracket, lifted verbatim from their
- * components/icons/keeperhub-logo.tsx — a vertical bar pinched inward to a
- * point facing right, which is a "K" with its two arms fused into one concave
- * curve. Their mark puts a solid square in the gap to the right of that pinch.
+ * It is related to KeeperHub's own mark without copying it. KeeperHub draws a
+ * concave bracket beside a solid square; this keeps the square — tucked into
+ * the jet's tail as the thruster it lifts off from — and cuts the jet's tail
+ * with the same concave curve as the bracket. The wingtips are cut flat rather
+ * than rounded, KeeperHub's hard corners. Flat fill, no gradient, no stroke.
  *
- * Ours puts a flight shard there instead, cut from the same 90.79 square so the
- * silhouette still reads as KeeperHub at favicon size. The bracket is the
- * platform; the thing flying alongside it is the copilot.
- *
- * Flat fill, hard corners, no gradient and no stroke — the same discipline as
- * the original. Colour comes from `currentColor` unless `fill` is passed, which
- * server-rendered OG images need since they cannot resolve CSS variables.
+ * Square aspect, so it sits cleanly in a tab, an app icon and a line of text.
+ * Colour comes from `currentColor` unless `fill` is passed, which server-rendered
+ * images need, since they cannot resolve CSS variables.
  */
 
-const BRACKET =
-  "M204.28 90.79V0H113.49V90.79C113.456 120.879 101.488 149.725 80.2115 171.002C58.9355 192.278 30.0889 204.246 0 204.28V295.07C30.0889 295.104 58.9355 307.072 80.2115 328.348C101.488 349.625 113.456 378.471 113.49 408.56V499.35H204.28V408.56C204.28 378.075 197.445 347.977 184.279 320.482C171.113 292.987 151.95 268.793 128.2 249.68C151.948 230.563 171.109 206.367 184.275 178.871C197.441 151.374 204.277 121.276 204.28 90.79Z";
+/* The jet, nose up. Leading edges near-straight with a slight outward bow, the
+   wingtips cut flat, the tail a deep concave notch. */
+const JET =
+  "M256 40Q350 188 440 352L418 380Q326 312 256 300Q186 312 94 380L72 352Q162 188 256 40Z";
 
-/* A delta on KeeperHub's square (x 226.98–317.77, y 204.279–295.069), notched on
-   its trailing edge so it reads as a wing rather than a triangle. Slightly taller
-   than the square it replaces and shallowly notched, so it still carries at 16px. */
-const SHARD = "M224 197.5L317.77 249.674L224 301.85L241 249.674Z";
+/* KeeperHub's square, nested in the notch. */
+const SQUARE = { x: 223, y: 322, size: 66 };
 
 export type MarkState = "idle" | "thinking" | "listening";
-
-/** 318 : 500, so a height picks the width. */
-const RATIO = 318 / 500;
 
 export function KeeperHubMark({
   className,
@@ -46,22 +40,30 @@ export function KeeperHubMark({
 }) {
   return (
     <svg
-      viewBox="0 0 318 500"
+      viewBox="0 0 512 512"
       fill="none"
       height={height}
-      width={height === undefined ? undefined : Math.round(height * RATIO)}
+      width={height}
       className={cn("w-auto shrink-0", className)}
       role={title ? "img" : undefined}
       aria-hidden={title ? undefined : true}
       aria-label={title}
     >
       {title ? <title>{title}</title> : null}
-      <path d={BRACKET} fill={fill ?? "currentColor"} />
+      {/* The jet banks while the copilot thinks and breathes while it listens
+          (globals.css); the square it lifts off from stays put. */}
       <path
-        d={SHARD}
+        d={JET}
         fill={fill ?? "currentColor"}
         data-mark-shard={state === "idle" ? undefined : state}
-        style={{ transformOrigin: "272px 250px", transformBox: "view-box" }}
+        style={{ transformOrigin: "256px 220px", transformBox: "view-box" }}
+      />
+      <rect
+        x={SQUARE.x}
+        y={SQUARE.y}
+        width={SQUARE.size}
+        height={SQUARE.size}
+        fill={fill ?? "currentColor"}
       />
     </svg>
   );

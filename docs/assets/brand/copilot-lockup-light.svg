@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420">
+  <rect width="1600" height="420" fill="#FFFFFF"/>
+  <g transform="translate(90,90) scale(0.46875)" fill="#0A7A36"><path d="M256 40Q350 188 440 352L418 380Q326 312 256 300Q186 312 94 380L72 352Q162 188 256 40Z"/><rect x="223" y="322" width="66" height="66"/></g>
+  <text x="370" y="232" font-family="Verdana,DejaVu Sans,sans-serif" font-size="96" font-weight="700" fill="#0A0F0C" letter-spacing="-2">KeeperHub Copilot</text>
+  <text x="374" y="300" font-family="Verdana,DejaVu Sans,sans-serif" font-size="38" fill="#5A645E">Everything KeeperHub does. Just ask.</text>
+</svg>
